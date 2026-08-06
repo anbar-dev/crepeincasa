@@ -19,13 +19,15 @@
 
 ## Phase 1 — Design + Homepage
 
-- [ ] Design system
-- [ ] Homepage
-- [ ] Posizionamento editoriale indipendente
-- [ ] CTA informative
-- [ ] CTA richiesta valutazione
-- [ ] Disclaimer corretti
-- [ ] Controllo mobile
+- [x] Design system
+- [x] Homepage
+- [x] Posizionamento editoriale indipendente
+- [x] CTA informative
+- [x] CTA richiesta valutazione
+- [x] Disclaimer corretti
+- [x] Controllo mobile
+
+> Phase 1 completata il 2026-08-06. Homepage verificata su desktop e mobile senza overflow orizzontale; le CTA restano interne alla homepage finché il funnel lead non sarà implementato.
 
 ## Phase 2 — Articolo modello
 

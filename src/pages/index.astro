@@ -1,18 +1,144 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const steps = [
+  {
+    number: '01',
+    title: 'Osserva senza conclusioni affrettate',
+    text: 'Dove si trova la crepa? Quale direzione segue? Notare i dettagli aiuta a descrivere meglio ciò che si vede.',
+  },
+  {
+    number: '02',
+    title: 'Raccogli informazioni utili',
+    text: 'Data, cambiamenti percepiti, lavori recenti e fotografie possono diventare un punto di partenza ordinato.',
+  },
+  {
+    number: '03',
+    title: 'Scegli il passo successivo',
+    text: 'Quando serve comprendere la causa, una valutazione sul posto da parte di un tecnico qualificato può essere utile.',
+  },
+];
+
+const observationPoints = [
+  'La posizione: parete interna, esterna, soffitto o pavimento.',
+  'La forma e l’orientamento, se sono facili da descrivere.',
+  'Quando è comparsa e se nel tempo sembra cambiata.',
+  'Eventuali lavori recenti, infiltrazioni o cambiamenti nell’ambiente.',
+];
 ---
 
 <BaseLayout
-  title="Crepe in Casa | Informazioni sulle crepe e sulle fessurazioni"
-  description="Crepe in Casa è un progetto editoriale italiano sulle crepe, le fessurazioni e i problemi che possono richiedere una verifica professionale."
+  title="Crepe in Casa | Hai notato delle crepe?"
+  description="Informazioni indipendenti per osservare crepe e fessurazioni in casa, raccogliere dati utili e capire quando può essere utile una valutazione professionale."
   canonical="https://crepeincasa.it/"
 >
-  <section class="hero container" aria-labelledby="page-title">
-    <p class="eyebrow">Un progetto in preparazione</p>
-    <h1 id="page-title">Capire meglio le crepe in casa, con prudenza.</h1>
-    <p class="intro">
-      Stiamo preparando una risorsa italiana per raccogliere informazioni utili su crepe,
-      fessurazioni e possibili cause, senza sostituire la verifica sul posto di un tecnico qualificato.
-    </p>
+  <section class="hero" aria-labelledby="page-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Informazioni indipendenti sulla casa</p>
+        <h1 id="page-title">Hai notato delle <em>crepe</em> in casa?</h1>
+        <p class="hero-intro">
+          Una crepa può avere molte cause. Qui trovi un punto di partenza chiaro per capire
+          cosa osservare, quali informazioni raccogliere e quando può essere utile chiedere
+          una valutazione professionale.
+        </p>
+        <div class="hero-actions" aria-label="Azioni principali">
+          <a class="button button-primary" href="#capire">Capire meglio il problema <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="#valutazione">Richiedi una valutazione</a>
+        </div>
+        <p class="hero-disclaimer"><span aria-hidden="true">●</span> Nessuna diagnosi online: una causa richiede una verifica sul posto.</p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-card visual-card-back"></div>
+        <div class="visual-card visual-card-front">
+          <span class="visual-label">Osservare</span>
+          <span class="visual-line visual-line-one"></span>
+          <span class="visual-line visual-line-two"></span>
+          <span class="visual-line visual-line-three"></span>
+          <span class="visual-dot visual-dot-one"></span>
+          <span class="visual-dot visual-dot-two"></span>
+        </div>
+        <span class="visual-caption">Un dettaglio da descrivere<br />non è ancora una diagnosi.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-intro" id="capire" aria-labelledby="capire-title">
+    <div class="container split-layout">
+      <div>
+        <p class="eyebrow">Un metodo semplice</p>
+        <h2 id="capire-title">Prima di chiederti “che cosa significa?”, parti da ciò che puoi osservare.</h2>
+      </div>
+      <div class="section-copy">
+        <p>
+          Le immagini e le descrizioni possono aiutare a preparare un confronto, ma non bastano
+          per stabilire l’origine di una fessurazione. Il nostro obiettivo è aiutarti a fare ordine,
+          con parole comprensibili e senza allarmismi.
+        </p>
+        <a class="inline-link" href="#osservazioni">Scopri cosa annotare <span aria-hidden="true">↘</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-steps" aria-labelledby="steps-title">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Da dove cominciare</p>
+        <h2 id="steps-title">Tre passi per arrivare più preparati a una valutazione.</h2>
+      </div>
+      <div class="steps-grid">
+        {steps.map((step) => (
+          <article class="step-card">
+            <p class="step-number">{step.number}</p>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-observations" id="osservazioni" aria-labelledby="observations-title">
+    <div class="container observations-layout">
+      <div class="observations-panel">
+        <p class="eyebrow">Una nota alla volta</p>
+        <h2 id="observations-title">Quali informazioni possono essere utili?</h2>
+        <p>Non serve usare termini tecnici. Una descrizione concreta è già un buon inizio.</p>
+      </div>
+      <ul class="observation-list">
+        {observationPoints.map((point) => (
+          <li><span class="list-check" aria-hidden="true">✓</span>{point}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-caution" aria-labelledby="caution-title">
+    <div class="container caution-box">
+      <div class="caution-icon" aria-hidden="true">i</div>
+      <div>
+        <p class="eyebrow">Un limite importante</p>
+        <h2 id="caution-title">Online possiamo aiutarti a preparare le informazioni, non a stabilire la causa.</h2>
+        <p>
+          Se la situazione ti preoccupa, se noti cambiamenti o se hai bisogno di capire meglio
+          cosa sta accadendo, rivolgiti a un professionista qualificato. In presenza di condizioni
+          che potrebbero richiedere attenzione urgente, chiedi tempestivamente supporto competente.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cta" id="valutazione" aria-labelledby="evaluation-title">
+    <div class="container cta-card">
+      <div>
+        <p class="eyebrow">Il prossimo passo</p>
+        <h2 id="evaluation-title">Vuoi arrivare preparato a una valutazione?</h2>
+        <p>
+          Stiamo preparando una richiesta strutturata per raccogliere le tue osservazioni in modo
+          neutro e ordinato. Sarà disponibile nella prossima fase del progetto.
+        </p>
+      </div>
+      <a class="button button-light" href="#osservazioni">Prepara le tue osservazioni <span aria-hidden="true">→</span></a>
+    </div>
   </section>
 </BaseLayout>
