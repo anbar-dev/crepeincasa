@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crepeincasa.it/sitemap-index.xml

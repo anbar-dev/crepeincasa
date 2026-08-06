@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Pagina non trovata | Crepe in Casa"
+  description="La pagina richiesta non è disponibile."
+  canonical="https://crepeincasa.it/404.html"
+  noIndex={true}
+>
+  <section class="not-found container" aria-labelledby="page-title">
+    <p class="eyebrow">404</p>
+    <h1 id="page-title">Pagina non trovata</h1>
+    <p>La pagina che cerchi non è disponibile.</p>
+    <a class="text-link" href="/">Torna alla home</a>
+  </section>
+</BaseLayout>

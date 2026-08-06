@@ -1,0 +1,414 @@
+PROMPT 01 — FOUNDATION
+======================
+
+Leggi VISION.md, AGENTS.md, ROADMAP.md e docs/SEO_STRATEGY.md.
+
+Non costruire ancora l'intero sito.
+
+Esegui solo la Phase 0:
+1. inizializza Astro;
+2. output statico;
+3. GitHub Pages;
+4. GitHub Actions per deploy su push main;
+5. configura dominio custom crepeincasa.it;
+6. layout minimale;
+7. componente SEO;
+8. header/footer minimali;
+9. sitemap;
+10. robots.txt;
+11. 404;
+12. homepage placeholder.
+
+Non creare ancora articoli, form lead, città o tool.
+
+Esegui npm run build.
+Correggi errori.
+Aggiorna ROADMAP.md.
+Commit e push se possibile. https://github.com/anbar-dev/crepeincasa.git, repo già creata, altrimenti dammi tu i comandi da eseguire in git cmd
+
+
+PROMPT 02 — DESIGN + HOMEPAGE
+=============================
+
+Leggi tutti i file di progetto.
+
+Lavora solo sulla Phase 1.
+
+Crea il design system e la homepage definitiva.
+
+Il sito deve apparire:
+- indipendente;
+- serio;
+- tecnico ma comprensibile;
+- non allarmistico;
+- non commerciale in modo aggressivo.
+
+Hero indicativo:
+"Hai notato delle crepe in casa?"
+
+Spiega che le crepe possono avere molte cause e che il sito aiuta a capire quali informazioni osservare e quando può essere utile chiedere una valutazione professionale.
+
+CTA:
+- Capire meglio il problema
+- Richiedi una valutazione
+
+Non diagnosticare.
+Non creare articoli multipli.
+Non creare città.
+
+Build, mobile review, ROADMAP, commit e push.
+
+
+PROMPT 03 — ARTICOLO MODELLO: CREPE NEI MURI
+=============================================
+
+Leggi tutti i file di progetto.
+
+Crea una sola pagina modello:
+- /crepe-nei-muri/
+
+Deve essere una risorsa realmente utile.
+
+Struttura indicativa:
+1. risposta breve;
+2. possibili categorie di cause;
+3. cosa osservare;
+4. cosa non è possibile stabilire online;
+5. quando può essere utile una verifica professionale;
+6. cosa può controllare un tecnico;
+7. panoramica degli interventi possibili senza raccomandarne uno;
+8. FAQ;
+9. related content;
+10. CTA discreta.
+
+Usa linguaggio prudente.
+Niente diagnosi.
+Niente allarmismo.
+Niente fonti inventate.
+
+Non creare ancora gli altri articoli.
+
+Fai una seconda revisione critica del testo prima di terminare.
+
+Build, ROADMAP, commit e push.
+
+
+PROMPT 04 — REVISIONE EDITORIALE DEL MODELLO
+============================================
+
+Rivedi /crepe-nei-muri/ come:
+
+1. proprietario di casa;
+2. SEO specialist;
+3. editor tecnico;
+4. revisore anti-allarmismo;
+5. revisore che cerca segnali di contenuto AI.
+
+Trova:
+- testi generici;
+- ripetizioni;
+- affermazioni troppo certe;
+- allarmismo;
+- CTA aggressive;
+- contenuti inutilmente lunghi;
+- keyword stuffing;
+- problemi di trust;
+- problemi SEO.
+
+Correggi direttamente.
+
+Non creare altre pagine.
+
+Build, ROADMAP, commit e push.
+
+
+PROMPT 05 — FUNNEL LEAD
+=======================
+
+Leggi tutti i file di progetto.
+
+Implementa:
+- /richiedi-valutazione/
+
+Crea un form progressivo.
+
+Campi:
+IMMOBILE
+- comune;
+- provincia;
+- CAP;
+- tipologia immobile;
+- anno approssimativo;
+- numero piani.
+
+OSSERVAZIONI
+- dove sono le crepe;
+- interne/esterne;
+- orientamento se noto;
+- quando sono comparse;
+- se sembrano cambiare;
+- problemi a porte/finestre;
+- pavimenti apparentemente fuori livello;
+- lavori recenti;
+- infiltrazioni;
+- note.
+
+RICHIESTA
+- sopralluogo;
+- valutazione problema;
+- preventivo intervento;
+- non so.
+
+CONTATTI
+- nome;
+- email;
+- telefono.
+
+Il sistema deve creare soltanto:
+"Riepilogo delle osservazioni fornite dall'utente".
+
+NON creare diagnosi o classificazioni.
+
+Prevedi backend adapter/mock separato.
+Prevedi configurazione partner.
+Prevedi consenso esplicito per eventuale inoltro.
+
+In development non inviare email reali.
+
+Build, ROADMAP, commit e push.
+
+
+PROMPT 06 — CLUSTER CREPE
+=========================
+
+Solo dopo aver validato la pagina modello, crea pagine distinte per:
+
+- crepe diagonali;
+- crepe verticali;
+- crepe orizzontali;
+- crepe sopra porte e finestre;
+- crepe muri esterni;
+- crepe muri interni;
+- crepe soffitto;
+- crepe pavimento;
+- crepe casa vecchia;
+- crepe che aumentano.
+
+Non usare la stessa pagina cambiando keyword.
+
+Per ciascuna differenzia:
+- spiegazione;
+- contesto;
+- possibili categorie di cause;
+- osservazioni utili;
+- limiti della valutazione online;
+- FAQ;
+- related content.
+
+Audit duplicazioni.
+Build, ROADMAP, commit e push.
+
+
+PROMPT 07 — CLUSTER CEDIMENTI
+=============================
+
+Crea pagine realmente distinte per:
+- cedimento fondazioni;
+- cedimento terreno;
+- cedimento differenziale;
+- casa che cede;
+- pavimento che sprofonda.
+
+Mantieni prudenza tecnica.
+Non concludere che sintomi specifici dimostrino un cedimento.
+
+Aggiungi internal linking con il cluster crepe.
+
+Build, ROADMAP, commit e push.
+
+
+PROMPT 08 — CONSOLIDAMENTO E TECNICHE
+====================================
+
+Crea pagine:
+- consolidamento fondazioni;
+- micropali fondazioni;
+- resine espandenti;
+- sottofondazioni;
+- panoramica tecniche.
+
+Spiega:
+- cosa sono;
+- in quali contesti vengono generalmente valutate;
+- vantaggi e limiti generali;
+- cosa richiede valutazione sul posto.
+
+Non raccomandare una tecnica specifica a un singolo utente.
+
+Build, audit prudenza tecnica, ROADMAP, commit e push.
+
+
+PROMPT 09 — COSTI
+=================
+
+Crea:
+- costo consolidamento fondazioni;
+- costo micropali;
+- costo resine;
+- fattori che influenzano il prezzo.
+
+Evita prezzi inventati se non supportati da fonti disponibili nel progetto.
+
+Se mancano fonti affidabili, usa una struttura che spieghi i fattori di costo e inserisci TODO per dati verificati.
+
+Non fingere precisione.
+
+Build, ROADMAP, commit e push.
+
+
+PROMPT 10 — TOOL INTERATTIVO
+============================
+
+Crea il tool:
+"Prepara le informazioni sulle tue crepe"
+
+Il tool NON deve fare diagnosi.
+
+Può chiedere:
+- posizione;
+- direzione;
+- lunghezza approssimativa;
+- larghezza approssimativa se misurabile;
+- quando osservata;
+- evoluzione percepita;
+- note;
+- foto tramite integrazione futura.
+
+Output:
+"Riepilogo delle osservazioni"
+
+CTA:
+"Invia queste informazioni per richiedere una valutazione."
+
+Integra con il form lead.
+
+Build, ROADMAP, commit e push.
+
+
+PROMPT 11 — PER PROFESSIONISTI
+==============================
+
+Crea:
+- /per-professionisti/
+
+Obiettivo:
+reclutare imprese o professionisti partner.
+
+Messaggio:
+"Ricevi richieste strutturate da proprietari nella tua zona."
+
+Spiega che una richiesta può includere:
+- zona;
+- tipologia immobile;
+- descrizione;
+- osservazioni;
+- eventuali fotografie;
+- interesse espresso volontariamente.
+
+Non pubblicare ancora prezzi lead.
+
+Aggiungi form candidatura partner con adapter/mock.
+
+Build, ROADMAP, commit e push.
+
+
+PROMPT 12 — AUDIT PRE-LANCIO
+============================
+
+Rivedi l'intero sito come:
+
+- SEO tecnico;
+- editor tecnico;
+- CRO specialist;
+- proprietario di casa;
+- revisore anti-allarmismo;
+- revisore anti-spam.
+
+Controlla:
+- duplicazioni;
+- pagine thin;
+- claim troppo certi;
+- diagnosi implicite;
+- allarmismo;
+- title/meta;
+- canonical;
+- sitemap;
+- broken links;
+- internal linking;
+- responsive;
+- performance;
+- accessibilità;
+- CTA;
+- privacy;
+- structured data.
+
+Correggi tutto ciò che è ragionevole.
+
+Build, ROADMAP, commit e push.
+
+
+PROMPT 13 — SEARCH CONSOLE
+==========================
+
+Usa questo prompt solo quando esistono dati reali Search Console.
+
+Analizza i dati forniti.
+
+Trova:
+- query con impression;
+- query posizione 8-30;
+- CTR basso;
+- cluster non soddisfatti;
+- opportunità di miglioramento.
+
+Non creare pagine città o nuove pagine sulla base di brainstorming.
+
+Per ogni opportunità indica:
+1. query;
+2. impression;
+3. posizione;
+4. URL;
+5. intervento consigliato;
+6. nuova pagina soltanto se necessaria.
+
+Implementa le 5 opportunità migliori.
+
+Build, ROADMAP, commit e push.
+
+
+PROMPT 14 — PRIME LOCATION PAGE
+===============================
+
+Usare soltanto dopo validazione SEO e commerciale.
+
+Scegli massimo 1-3 città basandoti su:
+- dati Search Console;
+- partner disponibili;
+- domanda reale;
+- opportunità concreta.
+
+Crea pagine locali realmente distinte.
+
+Non inventare:
+- sedi;
+- casi;
+- tecnici;
+- recensioni;
+- interventi;
+- prezzi locali.
+
+Non creare automaticamente tutta Italia.
+
+Misura prima i risultati.
+
+Build, ROADMAP, commit e push.
