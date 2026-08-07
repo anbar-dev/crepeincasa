@@ -68,7 +68,7 @@
 - [x] Riconoscere che "diagonali", "verticali" e "orizzontali" non meritano
   automaticamente URL autonome
 - [x] Ritirare dal build le dieci pagine del vecchio cluster crepe
-- [x] Conservare il materiale come archivio editoriale non pubblicato
+- [x] Eliminare dal codice i testi delle vecchie pagine
 - [x] Aggiornare `docs/SEO_STRATEGY.md`
 - [x] Aggiornare questa roadmap
 - [ ] Dopo il deploy, controllare in Search Console eventuali URL già indicizzate
@@ -76,7 +76,8 @@
   link e storico reale
 
 > Phase 4 completata il 2026-08-07 per il codice locale. Le pagine ritirate non
-> vengono più generate dalla route dinamica `/crepe/[slug]/`.
+> vengono più generate dalla route dinamica `/crepe/[slug]/` e i relativi testi
+> non sono più presenti nel progetto.
 
 ## Phase 5 — Misurazione prima dell’espansione
 
