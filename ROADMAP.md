@@ -88,7 +88,7 @@
   form iniziati, form completati e lead ricevute
 - [ ] Raccogliere dati senza creare nuove pagine in massa
 
-## Phase 6 — Primo articolo di supporto
+## Phase 6 — Primo articolo di supporto: cosa fare
 
 Pubblicare una sola pagina dopo un brief approvato. Le candidate iniziali sono:
 
@@ -98,15 +98,20 @@ Pubblicare una sola pagina dopo un brief approvato. Le candidate iniziali sono:
 
 Checklist obbligatoria:
 
-- [ ] query e intento verificati;
-- [ ] sovrapposizione con `/crepe-nei-muri/` controllata;
-- [ ] outline originale con esempi osservabili;
+- [x] query e intento verificati;
+- [x] sovrapposizione con `/crepe-nei-muri/` controllata;
+- [x] outline originale con esempi osservabili;
 - [ ] fonti reali e revisione dei passaggi tecnici;
-- [ ] title, description, canonical e internal linking;
-- [ ] CTA neutra verso il riepilogo;
-- [ ] revisione mobile e anti-allarmismo;
-- [ ] build e controllo dei link;
+- [x] title, description, canonical e internal linking;
+- [x] CTA neutra verso il riepilogo;
+- [x] revisione mobile e anti-allarmismo;
+- [x] build e controllo dei link;
 - [ ] misurazione post-pubblicazione.
+
+> La prima pagina di supporto è stata scritta in locale il 2026-08-07 su
+> `/crepe-nei-muri/cosa-fare/`. Prima del deploy resta da completare una
+> revisione tecnica/editoriale delle fonti e la misurazione reale in Search
+> Console e Analytics.
 
 ## Phase 7 — Cluster informativo validato
 
