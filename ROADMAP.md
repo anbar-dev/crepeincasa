@@ -127,7 +127,21 @@ Checklist obbligatoria:
 > del deploy resta da completare la revisione tecnica/editoriale delle fonti e
 > la misurazione reale in Search Console e Analytics.
 
-## Phase 8 — Cluster informativo validato
+## Phase 8 — Terzo articolo di supporto: casa nuova o dopo lavori
+
+- [x] query e intento distinti dalle guide precedenti;
+- [x] outline originale basato su cronologia e contesto dell’immobile;
+- [x] pagina `/crepe-nei-muri/casa-nuova-dopo-lavori/` scritta;
+- [x] FAQ, internal linking e CTA neutra;
+- [x] responsive e build verificati;
+- [ ] fonti reali e revisione dei passaggi tecnici;
+- [ ] misurazione post-pubblicazione.
+
+> La terza pagina di supporto è stata scritta in locale il 2026-08-07. Prima
+> del deploy resta da completare la revisione tecnica/editoriale delle fonti e
+> la misurazione reale in Search Console e Analytics.
+
+## Phase 9 — Cluster informativo validato
 
 Da valutare una pagina alla volta, solo se i dati o l’analisi dell’intento lo
 giustificano:
@@ -144,7 +158,7 @@ giustificano:
 Le pagine "crepe diagonali", "verticali" e "orizzontali" restano ritirate
 finché non emerge un intento autonomo e un contenuto realmente differente.
 
-## Phase 9 — Cedimenti e fondazioni
+## Phase 10 — Cedimenti e fondazioni
 
 - [ ] cedimento delle fondazioni;
 - [ ] cedimento del terreno;
@@ -155,7 +169,7 @@ finché non emerge un intento autonomo e un contenuto realmente differente.
 Queste pagine richiedono particolare prudenza: descrivere il problema e il
 bisogno di verifica, senza concludere che esista un cedimento.
 
-## Phase 10 — Tecniche e costi
+## Phase 11 — Tecniche e costi
 
 - [ ] consolidamento fondazioni;
 - [ ] micropali per fondazioni;
@@ -170,7 +184,7 @@ bisogno di verifica, senza concludere che esista un cedimento.
 Nessun prezzo locale inventato e nessuna tecnica proposta per un caso
 individuale.
 
-## Phase 11 — Utility editoriale
+## Phase 12 — Utility editoriale
 
 - [ ] tool "Prepara le informazioni sulle tue crepe";
 - [ ] riepilogo osservazioni;
@@ -178,7 +192,7 @@ individuale.
 - [ ] integrazione con form lead;
 - [ ] checklist o schema scaricabile realmente utile e linkabile.
 
-## Phase 12 — Partner e local SEO
+## Phase 13 — Partner e local SEO
 
 - [ ] `/per-professionisti/`;
 - [ ] form candidatura partner;
@@ -188,7 +202,7 @@ individuale.
 - [ ] nessuna sede, recensione o caso inventato;
 - [ ] misurare prima di espandere.
 
-## Phase 13 — Audit continuativo
+## Phase 14 — Audit continuativo
 
 - [ ] contenuti sottili e sovrapposizione d’intento;
 - [ ] title e meta description duplicati;

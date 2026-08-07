@@ -1,0 +1,310 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const timelines = [
+  {
+    number: '01',
+    title: 'Quando l’hai notata?',
+    text: 'Indica il periodo o la data approssimativa. Se hai fotografie precedenti, usale per ricostruire ciò che era visibile allora, senza considerarle una prova della causa.',
+  },
+  {
+    number: '02',
+    title: 'Che cosa è stato fatto?',
+    text: 'Descrivi i lavori che ricordi: tinteggiature, rasature, aperture, chiusure, impianti, sostituzioni o modifiche d’uso. Anche ciò che non sai va indicato come non noto.',
+  },
+  {
+    number: '03',
+    title: 'Dove compare?',
+    text: 'Collega la posizione alla zona interessata dai lavori e agli ambienti vicini. Il rapporto temporale o spaziale è un’informazione da verificare, non una conclusione.',
+  },
+];
+
+const records = [
+  'data di consegna, acquisto, ristrutturazione o fine dei lavori, anche approssimativa;',
+  'locale, parete, soffitto o pavimento in cui hai notato il segno;',
+  'tipo di superficie visibile: pittura, intonaco, piastrella, cartongesso o altro;',
+  'fotografie precedenti e successive, conservando le date degli scatti;',
+  'lavori eseguiti nella stessa zona o in ambienti collegati;',
+  'infiltrazioni, umidità, distacchi o altri elementi osservati nello stesso periodo.',
+];
+
+const documents = [
+  {
+    title: 'Fotografie e cronologia',
+    text: 'Conserva immagini della zona prima e dopo i lavori, se disponibili. Aggiungi note con data e punto di ripresa, senza modificare la superficie per renderla più leggibile.',
+  },
+  {
+    title: 'Descrizione dei lavori',
+    text: 'Raccogli ciò che ricordi o che compare nella documentazione: quali ambienti sono stati interessati, in quale periodo e quali finiture sono state applicate.',
+  },
+  {
+    title: 'Documenti disponibili',
+    text: 'Tieni ordinati preventivi, fatture, relazioni, fotografie di cantiere o comunicazioni già in tuo possesso. Non è necessario interpretarli online.',
+  },
+  {
+    title: 'Domande da chiarire',
+    text: 'Scrivi che cosa vuoi capire: come descrivere il segno, quali informazioni portare, se può essere utile un sopralluogo o quali controlli chiedere.',
+  },
+];
+
+const reasons = [
+  'la fessurazione è comparsa o è stata notata dopo lavori recenti;',
+  'il segno ricompare dopo un ripristino o una tinteggiatura;',
+  'non sai se riguarda la finitura visibile o un elemento sottostante;',
+  'sono presenti acqua, umidità, distacchi o altri cambiamenti da raccontare;',
+  'devi valutare altri lavori e vuoi prima raccogliere informazioni sull’immobile reale.',
+];
+
+const faq = [
+  {
+    question: 'Una crepa comparsa dopo i lavori è stata causata dai lavori?',
+    answer: 'La vicinanza nel tempo può essere un’informazione importante, ma non dimostra da sola un rapporto di causa. Servono il contesto dell’immobile, i materiali e una valutazione appropriata.',
+  },
+  {
+    question: 'Una casa nuova dovrebbe essere priva di crepe?',
+    answer: 'Non è possibile stabilirlo in modo generale dalla sola età o dalla data di consegna. Occorre descrivere il segno, il punto in cui compare, la storia dei lavori e ciò che è cambiato.',
+  },
+  {
+    question: 'Devo contattare subito l’impresa che ha fatto i lavori?',
+    answer: 'Puoi raccogliere prima fotografie, date e documenti disponibili. Per capire quali valutazioni tecniche o contrattuali siano appropriate, può essere utile confrontarti con professionisti qualificati; questa pagina non fornisce consulenza legale.',
+  },
+  {
+    question: 'Posso far ritoccare la parete prima di chiedere una verifica?',
+    answer: 'Se la situazione è sicura, documenta ciò che vedi prima di alterare la superficie. La scelta del ripristino dipende dal caso concreto e non dovrebbe basarsi soltanto su una fotografia.',
+  },
+  {
+    question: 'Quali informazioni devo dare nella richiesta?',
+    answer: 'Indica quando hai notato il segno, dove si trova, quali lavori sono stati eseguiti, quali cambiamenti hai osservato e quali fotografie o documenti puoi condividere.',
+  },
+];
+---
+
+<BaseLayout
+  title="Crepe in casa nuova o dopo lavori: cosa annotare"
+  description="Crepe in casa nuova o dopo lavori: come ricostruire date, interventi, fotografie e contesto senza attribuire automaticamente una causa."
+  canonical="https://crepeincasa.it/crepe-nei-muri/casa-nuova-dopo-lavori/"
+>
+  <article class="timeline-page">
+    <header class="timeline-hero">
+      <div class="container timeline-hero-inner">
+        <p class="eyebrow">Guida al contesto dell’immobile</p>
+        <h1 id="page-title">Crepe in casa nuova o dopo lavori: cosa annotare</h1>
+        <p class="timeline-lead">
+          Quando una crepa compare dopo una ristrutturazione o in una casa appena acquistata, la
+          cronologia è un’informazione utile. Non basta però, da sola, per stabilire la causa.
+        </p>
+        <p class="timeline-meta">Lettura di circa 8 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container timeline-layout">
+      <aside class="timeline-index" aria-label="In questa guida">
+        <p class="timeline-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#cronologia">Ricostruire la cronologia</a>
+          <a href="#annotare">Cosa annotare</a>
+          <a href="#documenti">Documenti utili</a>
+          <a href="#verifica">Quando chiedere un confronto</a>
+          <a href="#faq">Domande frequenti</a>
+        </nav>
+      </aside>
+
+      <div class="timeline-content">
+        <section class="timeline-section timeline-intro" id="risposta" aria-labelledby="answer-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="answer-title">Il “dopo” è un dato da ricostruire, non una spiegazione già pronta</h2>
+          <p>
+            Una fessurazione notata dopo la consegna di una casa o dopo un intervento può spingere a
+            collegare immediatamente i due eventi. La sequenza temporale merita di essere annotata,
+            ma non dimostra da sola che esista un rapporto di causa.
+          </p>
+          <p>
+            Parti quindi da date, luoghi, materiali e fotografie. Se devi valutare un ripristino, una
+            contestazione o altri lavori, conserva anche i documenti disponibili e chiedi un confronto
+            qualificato sul caso reale quando ne hai bisogno.
+          </p>
+        </section>
+
+        <section class="timeline-section" id="cronologia" aria-labelledby="timeline-title">
+          <p class="eyebrow">Mettere in ordine gli eventi</p>
+          <h2 id="timeline-title">Tre domande per ricostruire che cosa è successo nel tempo</h2>
+          <div class="timeline-questions">
+            {timelines.map((item) => (
+              <article class="timeline-question">
+                <p class="timeline-number">{item.number}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <div class="timeline-note">
+            <strong>Se non conosci una data, scrivilo</strong>
+            <p>
+              “Non so quando è stato fatto” è più utile di una data ipotizzata. Separare informazioni
+              certe, ricordi e domande aiuta a preparare un confronto più chiaro.
+            </p>
+          </div>
+        </section>
+
+        <section class="timeline-section" id="annotare" aria-labelledby="records-title">
+          <p class="eyebrow">Informazioni osservabili</p>
+          <h2 id="records-title">Cosa annotare sulla crepa e sulla zona interessata</h2>
+          <p>
+            Non serve descrivere il lavoro con parole tecniche. Indica ciò che ricordi e ciò che vedi,
+            lasciando a una verifica professionale il compito di valutare il significato del quadro.
+          </p>
+          <ul class="timeline-list">
+            {records.map((record, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{record}</p></li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="timeline-section" id="documenti" aria-labelledby="documents-title">
+          <p class="eyebrow">Prima di chiedere aiuto</p>
+          <h2 id="documents-title">Quali documenti e immagini possono essere utili</h2>
+          <p>
+            Una raccolta ordinata non sostituisce un sopralluogo, ma riduce il rischio di dimenticare
+            passaggi importanti e permette di raccontare la storia dell’immobile con maggiore precisione.
+          </p>
+          <div class="timeline-cards">
+            {documents.map((document) => (
+              <article class="timeline-card">
+                <h3>{document.title}</h3>
+                <p>{document.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="timeline-section timeline-limit" aria-labelledby="limit-title">
+          <p class="eyebrow">Un limite importante</p>
+          <h2 id="limit-title">Casa nuova o lavori recenti non indicano automaticamente la causa</h2>
+          <p>
+            La data di costruzione, la consegna o la presenza di un cantiere sono elementi di contesto.
+            Non permettono da soli di concludere che una crepa sia strutturale, che esista un cedimento,
+            che l’edificio sia sicuro o pericoloso oppure che un’impresa abbia causato il fenomeno.
+          </p>
+          <p>
+            Anche la forma, la posizione e la ricomparsa dopo un ripristino devono essere valutate nel
+            loro insieme. Una fotografia può documentare l’osservazione, ma non sostituisce l’esame
+            dell’immobile reale.
+          </p>
+        </section>
+
+        <section class="timeline-section" id="verifica" aria-labelledby="verification-title">
+          <p class="eyebrow">Il prossimo passo</p>
+          <h2 id="verification-title">Quando può essere utile chiedere un confronto</h2>
+          <p>
+            Puoi preparare una richiesta se il segno è comparso dopo lavori, se ricompare dopo un
+            ripristino, se non sai quali strati siano coinvolti o se vuoi valutare con maggiore ordine
+            il da farsi.
+          </p>
+          <ul class="timeline-list timeline-list-plain">
+            {reasons.map((reason) => <li><span aria-hidden="true">—</span><p>{reason}</p></li>)}
+          </ul>
+          <div class="timeline-warning">
+            <strong>Non fare prove rischiose per raccogliere informazioni</strong>
+            <p>
+              Non raschiare, forare o rimuovere materiale per capire che cosa c’è sotto. Se noti
+              distacchi, caduta di materiale o condizioni che potrebbero richiedere attenzione urgente,
+              evita la zona e rivolgiti tempestivamente a un professionista qualificato o alle autorità
+              competenti.
+            </p>
+          </div>
+          <a class="timeline-button" href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="timeline-section" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Crepe in casa nuova o dopo lavori</h2>
+          <div class="timeline-faq">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="timeline-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua da qui</p>
+          <h2 id="related-title">Dalla cronologia alla richiesta</h2>
+          <p>
+            Se vuoi prima capire come documentare una crepa o quando chiedere una verifica, puoi leggere
+            le altre guide del percorso.
+          </p>
+          <div class="timeline-links">
+            <a href="/crepe-nei-muri/cosa-fare/">Cosa fare dopo aver notato una crepa <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/quando-chiedere-verifica/">Quando chiedere una verifica <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/">Guida generale sulle crepe nei muri <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .timeline-page { background: var(--paper); }
+  .timeline-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .timeline-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .timeline-hero h1 { max-width: 14ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .timeline-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .timeline-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .timeline-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .timeline-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .timeline-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .timeline-index nav { display: grid; gap: 0.7rem; }
+  .timeline-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .timeline-index a:hover, .timeline-index a:focus-visible { color: var(--accent); }
+  .timeline-content { min-width: 0; }
+  .timeline-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .timeline-section:first-child { padding-top: 0; border-top: 0; }
+  .timeline-section h2, .timeline-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .timeline-section > p:not(.eyebrow), .timeline-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .timeline-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .timeline-questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .timeline-question { padding: 1.5rem; background: var(--surface); }
+  .timeline-number { margin: 0 0 1.3rem; color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
+  .timeline-question h3, .timeline-card h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .timeline-question p:last-child, .timeline-card p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .timeline-note, .timeline-warning { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .timeline-note strong, .timeline-warning strong { color: var(--brand-dark); }
+  .timeline-note p, .timeline-warning p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .timeline-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .timeline-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .timeline-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .timeline-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .timeline-list-plain li { grid-template-columns: 1rem 1fr; }
+  .timeline-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+  .timeline-card { padding: 1.5rem; border: 1px solid var(--line); border-radius: 0.9rem; background: var(--surface); }
+  .timeline-limit { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .timeline-limit + .timeline-section { margin-top: clamp(1rem, 3vw, 2.5rem); }
+  .timeline-warning { border-left-color: var(--brand); background: var(--surface-alt); }
+  .timeline-button { display: inline-flex; align-items: center; gap: 0.65rem; margin-top: 2rem; padding: 0.8rem 1.15rem; border-radius: 999px; background: var(--brand); color: #fffdf9; font-size: 0.9rem; font-weight: 750; text-decoration: none; }
+  .timeline-button:hover, .timeline-button:focus-visible { background: var(--accent); }
+  .timeline-faq { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .timeline-faq details { border-bottom: 1px solid var(--line); }
+  .timeline-faq summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .timeline-faq p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .timeline-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; background: var(--surface-alt); }
+  .timeline-links { display: grid; gap: 0.8rem; margin-top: 1.6rem; }
+  .timeline-links a { color: var(--brand); font-size: 0.9rem; font-weight: 750; text-underline-offset: 0.2em; }
+  .timeline-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .timeline-layout { grid-template-columns: 1fr; }
+    .timeline-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .timeline-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .timeline-index a { font-size: 0.82rem; }
+    .timeline-questions { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .timeline-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .timeline-cards { grid-template-columns: 1fr; }
+  }
+</style>
