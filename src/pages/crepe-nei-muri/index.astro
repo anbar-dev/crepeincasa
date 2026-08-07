@@ -1,0 +1,275 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const possibleCauses = [
+  {
+    title: 'Movimenti e assestamenti',
+    text: 'Un edificio e i materiali che lo compongono possono subire piccoli movimenti nel tempo. Anche variazioni di umidità e temperatura possono influire su alcuni elementi.',
+  },
+  {
+    title: 'Materiali e finiture',
+    text: 'La fessurazione può riguardare l’intonaco, la tinteggiatura o altri strati superficiali, senza che dalla sola vista sia possibile capire quanto sia profonda.',
+  },
+  {
+    title: 'Acqua e ambiente',
+    text: 'Infiltrazioni, umidità o cambiamenti nel drenaggio delle acque sono tra gli aspetti che un tecnico può considerare insieme alle altre informazioni sull’immobile.',
+  },
+  {
+    title: 'Lavori o modifiche recenti',
+    text: 'Ristrutturazioni, aperture, chiusure di vani o altri interventi possono costituire un elemento di contesto da riferire durante una verifica.',
+  },
+];
+
+const observations = [
+  'Dove si trova: parete interna o esterna, soffitto, pavimento, vicino a un angolo, a una porta o a una finestra.',
+  'Che aspetto ha: direzione, andamento, continuità e rapporto con giunti, rivestimenti o altri elementi visibili.',
+  'Quando l’hai notata e se, secondo la tua osservazione, è cambiata nel tempo.',
+  'Se sono presenti altri elementi da annotare, come infiltrazioni, distacchi di finitura, porte o finestre che funzionano diversamente dal solito.',
+  'Se ci sono stati lavori recenti, variazioni d’uso dei locali o eventi ambientali che vale la pena raccontare.',
+];
+
+const interventions = [
+  'ripristino di intonaci, finiture o rivestimenti, quando il problema riguarda gli strati superficiali;',
+  'interventi per gestire umidità o acqua, se questo aspetto viene confermato come rilevante;',
+  'opere locali o di riparazione, definite in base all’elemento coinvolto e alle sue condizioni;',
+  'soluzioni che interessano terreno, fondazioni o altri elementi dell’edificio, solo quando una valutazione tecnica ne chiarisce la necessità e la fattibilità.',
+];
+---
+
+<BaseLayout
+  title="Crepe nei muri: cosa osservare e quando chiedere una verifica"
+  description="Una guida prudente alle crepe nei muri: possibili categorie di cause, informazioni da osservare, limiti della valutazione online e ruolo del tecnico."
+  canonical="https://crepeincasa.it/crepe-nei-muri/"
+>
+  <article class="article-page">
+    <header class="article-hero">
+      <div class="container article-hero-inner">
+        <p class="eyebrow">Guida alle osservazioni</p>
+        <h1 id="article-title">Crepe nei muri: da dove cominciare</h1>
+        <p class="article-lead">
+          Una crepa può avere cause diverse. Osservarne il contesto aiuta a descrivere ciò che si vede,
+          ma non permette da solo di stabilirne l’origine o la rilevanza.
+        </p>
+        <p class="article-meta">Tempo di lettura: circa 7 minuti</p>
+      </div>
+    </header>
+
+    <div class="container article-layout">
+      <aside class="article-index" aria-label="In questa guida">
+        <p class="article-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta-breve">La risposta breve</a>
+          <a href="#cause">Possibili categorie di cause</a>
+          <a href="#osservare">Cosa osservare</a>
+          <a href="#verifica">Quando chiedere una verifica</a>
+          <a href="#faq">Domande frequenti</a>
+        </nav>
+      </aside>
+
+      <div class="article-content">
+        <section id="risposta-breve" class="article-section" aria-labelledby="risposta-title">
+          <p class="eyebrow">In breve</p>
+          <h2 id="risposta-title">Che cosa significa una crepa nel muro?</h2>
+          <p>
+            Significa che in una finitura o in un elemento dell’edificio è visibile una discontinuità.
+            La parola “crepa” descrive ciò che si osserva, non una diagnosi: la causa può dipendere da
+            materiali, umidità, movimenti, lavori o da una combinazione di fattori.
+          </p>
+          <p>
+            Per capire meglio una situazione servono il contesto dell’immobile, l’osservazione diretta
+            e, quando opportuno, una verifica sul posto. Una fotografia o una descrizione online può
+            aiutare a preparare le informazioni, ma non sostituisce questo passaggio.
+          </p>
+        </section>
+
+        <section id="cause" class="article-section" aria-labelledby="cause-title">
+          <p class="eyebrow">Possibili contesti</p>
+          <h2 id="cause-title">Le categorie da tenere presenti</h2>
+          <p>
+            Questi esempi servono a organizzare le osservazioni. Non indicano quale causa sia presente
+            nel tuo caso e non permettono di scegliere un intervento senza una valutazione qualificata.
+          </p>
+          <div class="article-cards">
+            {possibleCauses.map((cause) => (
+              <article class="article-card">
+                <h3>{cause.title}</h3>
+                <p>{cause.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="osservare" class="article-section" aria-labelledby="observe-title">
+          <p class="eyebrow">Raccogliere informazioni</p>
+          <h2 id="observe-title">Cosa puoi osservare senza fare diagnosi</h2>
+          <p>
+            Non servono strumenti speciali né termini tecnici. Annota solo ciò che hai visto o notato,
+            separando i fatti dalle interpretazioni.
+          </p>
+          <ul class="article-list">
+            {observations.map((observation, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{observation}</p></li>
+            ))}
+          </ul>
+          <div class="note-box">
+            <strong>Un accorgimento utile</strong>
+            <p>
+              Se scatti fotografie, includi sia una vista dell’ambiente sia un dettaglio della crepa.
+              Conserva la data e non modificare l’immagine in modo da alterare ciò che si vede.
+            </p>
+          </div>
+        </section>
+
+        <section class="article-section article-limit" aria-labelledby="limits-title">
+          <p class="eyebrow">Un limite importante</p>
+          <h2 id="limits-title">Cosa non è possibile stabilire online</h2>
+          <p>
+            Da testo, fotografie o questionari non è possibile concludere che una crepa sia strutturale,
+            che esista un cedimento, che l’edificio sia sicuro o pericoloso, oppure che serva una tecnica
+            specifica. La stessa descrizione può richiedere valutazioni diverse in contesti diversi.
+          </p>
+          <p>
+            Se noti condizioni che potrebbero richiedere attenzione urgente, allontanati dalla zona se
+            necessario e rivolgiti tempestivamente a un professionista qualificato o alle autorità
+            competenti. Le informazioni di questa pagina non sostituiscono una valutazione sul posto.
+          </p>
+        </section>
+
+        <section id="verifica" class="article-section" aria-labelledby="check-title">
+          <p class="eyebrow">Il passo successivo</p>
+          <h2 id="check-title">Quando può essere utile una verifica professionale</h2>
+          <p>
+            Può essere ragionevole chiedere un confronto qualificato quando la situazione persiste,
+            sembra cambiare, si accompagna ad altri fenomeni che non sai interpretare o semplicemente
+            quando hai bisogno di una valutazione riferita all’immobile reale.
+          </p>
+          <p>
+            Un tecnico può esaminare la posizione e l’estensione visibile, i materiali coinvolti, la
+            storia dell’edificio, eventuali lavori e il rapporto con altri elementi. In base al contesto
+            può decidere se servono ulteriori controlli: la scelta dipende dal sopralluogo e dai dati
+            raccolti.
+          </p>
+        </section>
+
+        <section class="article-section" aria-labelledby="interventions-title">
+          <p class="eyebrow">Panoramica</p>
+          <h2 id="interventions-title">Quali interventi possono essere valutati</h2>
+          <p>
+            Non esiste un rimedio universale per le crepe nei muri. A seconda della causa accertata e
+            dell’elemento interessato, un professionista può prendere in considerazione, ad esempio:
+          </p>
+          <ul class="article-list article-list-plain">
+            {interventions.map((intervention) => (
+              <li><span aria-hidden="true">—</span><p>{intervention}</p></li>
+            ))}
+          </ul>
+          <p>
+            Questa panoramica non è una raccomandazione per il tuo caso. Prima di valutare lavori è
+            importante capire il contesto e confrontare la proposta con un tecnico qualificato.
+          </p>
+        </section>
+
+        <section id="faq" class="article-section article-faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Crepe nei muri: le domande più comuni</h2>
+          <div class="faq-list">
+            <details>
+              <summary>Una crepa è sempre un problema strutturale?</summary>
+              <p>No. La sola presenza o forma visibile non permette di stabilirlo: possono essere coinvolti strati superficiali o altri fattori da verificare.</p>
+            </details>
+            <details>
+              <summary>Una foto può bastare per capire la causa?</summary>
+              <p>Una foto può essere utile per documentare un’osservazione, ma non mostra tutto il contesto e non sostituisce una verifica sul posto quando necessaria.</p>
+            </details>
+            <details>
+              <summary>Devo misurare la crepa?</summary>
+              <p>Puoi annotare le dimensioni solo se riesci a farlo in modo semplice e senza rischi. È altrettanto utile indicare posizione, data e cambiamenti percepiti.</p>
+            </details>
+            <details>
+              <summary>Chi può valutare una crepa nell’immobile?</summary>
+              <p>Un professionista qualificato può valutare il caso sul posto e indicare quali controlli siano appropriati rispetto al contesto.</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="related-content" aria-labelledby="related-title">
+          <div>
+            <p class="eyebrow">Per continuare</p>
+            <h2 id="related-title">Metti in ordine ciò che hai osservato</h2>
+            <p>La homepage raccoglie un metodo semplice per descrivere posizione, contesto e cambiamenti senza formulare conclusioni.</p>
+          </div>
+          <a class="button button-primary" href="/#osservazioni">Vai alle osservazioni <span aria-hidden="true">→</span></a>
+        </section>
+
+        <aside class="article-cta" aria-labelledby="cta-title">
+          <p class="eyebrow">Un aiuto pratico</p>
+          <h2 id="cta-title">Vuoi preparare le informazioni per una valutazione?</h2>
+          <p>Puoi partire da una descrizione neutra della situazione e portarla a un professionista qualificato.</p>
+          <a class="inline-link" href="/#valutazione">Scopri il prossimo passo <span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-page { background: var(--paper); }
+  .article-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .article-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .article-hero h1 { max-width: 16ch; font-size: clamp(3.1rem, 7vw, 6.4rem); }
+  .article-lead { max-width: 43rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .article-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .article-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .article-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .article-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .article-index nav { display: grid; gap: 0.7rem; }
+  .article-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .article-index a:hover, .article-index a:focus-visible { color: var(--accent); }
+  .article-content { min-width: 0; }
+  .article-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .article-section:first-child { padding-top: 0; border-top: 0; }
+  .article-section h2, .related-content h2, .article-cta h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .article-section > p:not(.eyebrow), .article-cta > p:not(.eyebrow), .related-content p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .article-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .article-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .article-card { padding: 1.5rem; background: var(--surface); }
+  .article-card h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .article-card p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .article-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .article-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .article-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .article-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .note-box { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .note-box strong { color: var(--brand-dark); }
+  .note-box p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .article-limit { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .article-limit + .article-section { margin-top: clamp(1rem, 3vw, 2.5rem); }
+  .article-list-plain li { grid-template-columns: 1rem 1fr; }
+  .faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .faq-list details { border-bottom: 1px solid var(--line); }
+  .faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .related-content, .article-cta { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; }
+  .related-content { display: flex; align-items: end; justify-content: space-between; gap: 2rem; background: var(--surface-alt); }
+  .related-content .button { flex: 0 0 auto; }
+  .article-cta { background: var(--brand-dark); }
+  .article-cta h2 { color: var(--paper); }
+  .article-cta .eyebrow { color: #e6a47c; }
+  .article-cta > p:not(.eyebrow) { color: #cbd8cf; }
+  .article-cta .inline-link { color: var(--paper); }
+  .article-cta .inline-link:hover, .article-cta .inline-link:focus-visible { color: #e6a47c; }
+
+  @media (max-width: 820px) {
+    .article-layout { grid-template-columns: 1fr; }
+    .article-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .article-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .article-index a { font-size: 0.82rem; }
+  }
+
+  @media (max-width: 620px) {
+    .article-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .article-cards { grid-template-columns: 1fr; }
+    .related-content { align-items: start; flex-direction: column; }
+    .related-content .button { width: 100%; }
+  }
+</style>

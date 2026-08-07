@@ -31,13 +31,17 @@
 
 ## Phase 2 — Articolo modello
 
-- [ ] `/crepe-nei-muri/`
-- [ ] Struttura editoriale modello
-- [ ] Box prudenza tecnica
-- [ ] FAQ
-- [ ] Related content
-- [ ] CTA discreta
-- [ ] Revisione anti-allarmismo
+- [x] `/crepe-nei-muri/`
+- [x] Struttura editoriale modello
+- [x] Box prudenza tecnica
+- [x] FAQ
+- [x] Related content
+- [x] CTA discreta
+- [x] Revisione anti-allarmismo
+
+> Phase 2 completata il 2026-08-07. La pagina modello è stata verificata per contenuti prudenti,
+> limiti della valutazione online, collegamenti interni e assenza di diagnosi o raccomandazioni
+> individuali.
 
 ## Phase 3 — Funnel lead
 
