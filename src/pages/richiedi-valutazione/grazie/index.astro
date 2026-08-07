@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Richiesta inviata | Crepe in Casa"
+  description="Conferma dell’invio della richiesta a Crepe in Casa."
+  canonical="https://crepeincasa.it/richiedi-valutazione/grazie/"
+  noIndex
+>
+  <article class="thanks-page">
+    <div class="container thanks-content">
+      <p class="eyebrow">Richiesta inviata</p>
+      <h1>Grazie, abbiamo ricevuto la tua richiesta.</h1>
+      <p>
+        Le informazioni sono state inviate a Crepe in Casa e verranno gestite manualmente. Se hai
+        inserito un indirizzo email, potrai essere ricontattato per eventuali chiarimenti.
+      </p>
+      <p>
+        Il riepilogo non formula una diagnosi e non sostituisce una verifica sul posto. Per condizioni
+        che potrebbero richiedere attenzione urgente, rivolgiti tempestivamente a un professionista
+        qualificato o alle autorità competenti.
+      </p>
+      <div class="thanks-actions">
+        <a class="button button-primary" href="/">Torna alla home</a>
+        <a class="inline-link" href="/crepe-nei-muri/">Rileggi la guida generale <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .thanks-page { min-height: 70vh; background: var(--paper); }
+  .thanks-content { max-width: 52rem; padding-block: clamp(5rem, 12vw, 10rem); }
+  .thanks-content h1 { max-width: 12ch; font-size: clamp(3.1rem, 7vw, 6rem); }
+  .thanks-content p:not(.eyebrow) { max-width: 40rem; margin: 1.5rem 0 0; color: var(--muted); font-size: 1.05rem; line-height: 1.75; }
+  .thanks-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 2rem; margin-top: 2.5rem; }
+</style>

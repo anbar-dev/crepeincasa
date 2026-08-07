@@ -49,17 +49,18 @@
 
 - [x] `/richiedi-valutazione/`
 - [x] Form progressivo
-- [x] Riepilogo neutro
-- [x] Backend mock/adapter
-- [x] Configurazione partner
-- [x] Consenso inoltro
+- [x] Invio email tramite FormSubmit
+- [x] Destinazione manuale a `andrea.baragiola@outlook.it`
+- [x] Pagina di conferma post-invio
+- [x] Gestione manuale delle lead senza inoltro automatico a partner
 - [x] Nessuna diagnosi automatica
-- [ ] Collegare un backend reale per ricezione e gestione delle richieste
+- [ ] Effettuare il primo invio reale e confermare FormSubmit dalla mail di attivazione
 - [ ] Definire partner attivi, compatibilità territoriale e limite destinatari
 - [ ] Configurare eventi GA4 per CTA, avvio, completamento e consenso
 
-> La versione attuale è statica e dimostrativa: non invia email e non inoltra
-> richieste reali.
+> Il form invia ora le richieste tramite FormSubmit alla casella personale indicata;
+> il primo invio deve essere confermato dal link di attivazione ricevuto via email.
+> Non esiste inoltro automatico a partner: la gestione delle lead resta manuale.
 
 ## Phase 4 — Reset SEO e ritiro contenuti sottili
 
