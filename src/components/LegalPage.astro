@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  eyebrow: string;
+}
+
+const { title, description, canonical, eyebrow } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical}>
+  <article class="legal-page">
+    <header class="legal-hero">
+      <div class="container legal-hero-inner">
+        <p class="eyebrow">{eyebrow}</p>
+        <h1>{title}</h1>
+        <p class="legal-meta">Ultimo aggiornamento: 7 agosto 2026</p>
+      </div>
+    </header>
+
+    <div class="container legal-layout">
+      <div class="legal-content">
+        <slot />
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .legal-page { background: var(--paper); }
+  .legal-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .legal-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3rem, 7vw, 5rem); }
+  .legal-hero h1 { max-width: 15ch; font-size: clamp(3.1rem, 7vw, 6.4rem); }
+  .legal-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .legal-layout { padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .legal-content { max-width: 52rem; }
+  .legal-content :global(section + section) { margin-top: 3.5rem; padding-top: 3.5rem; border-top: 1px solid var(--line); }
+  .legal-content :global(h2) { max-width: 22ch; font-size: clamp(2rem, 4vw, 3.5rem); }
+  .legal-content :global(h3) { margin: 2rem 0 0; color: var(--brand-dark); font-size: 1.2rem; }
+  .legal-content :global(p), .legal-content :global(li) { color: var(--muted); font-size: 0.98rem; line-height: 1.75; }
+  .legal-content :global(p) { max-width: 48rem; margin: 1.2rem 0 0; }
+  .legal-content :global(ul) { display: grid; gap: 0.7rem; margin: 1.2rem 0 0; padding-left: 1.2rem; }
+  .legal-content :global(a) { color: var(--brand); text-underline-offset: 0.2em; }
+  .legal-content :global(.legal-warning), .legal-content :global(.legal-note) { margin-top: 1.5rem; padding: 1.25rem 1.35rem; border-radius: 0.75rem; }
+  .legal-content :global(.legal-warning) { border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .legal-content :global(.legal-note) { background: var(--surface-alt); }
+  .legal-content :global(.legal-warning strong), .legal-content :global(.legal-note strong) { color: var(--brand-dark); }
+  .legal-content :global(.legal-warning p), .legal-content :global(.legal-note p) { margin-top: 0.45rem; font-size: 0.9rem; }
+  .legal-content :global(.legal-actions) { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.5rem; }
+
+  @media (max-width: 620px) {
+    .legal-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+  }
+</style>

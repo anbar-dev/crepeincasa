@@ -14,7 +14,7 @@
 - [x] robots.txt
 - [x] 404
 - [x] Build/deploy configurati e build verificata
-- [x] Google Analytics 4 integrato nel layout condiviso
+- [x] Google Analytics 4 integrato nel layout condiviso con consenso preventivo
 
 > Phase 0 completata il 2026-08-06. La build statica locale è verificata; il
 > deploy GitHub Pages va verificato dopo il push sul repository remoto.
@@ -54,7 +54,12 @@
 - [x] Pagina di conferma post-invio
 - [x] Gestione manuale delle lead senza inoltro automatico a partner
 - [x] Nessuna diagnosi automatica
+- [x] Privacy Policy collegata al form e al footer
+- [x] Cookie Policy e banner Analytics con scelta separata
+- [x] Termini d'uso e disclaimer pubblicati
 - [ ] Effettuare il primo invio reale e confermare FormSubmit dalla mail di attivazione
+- [ ] Completare i dati identificativi del titolare e i periodi di conservazione
+- [ ] Verificare fornitori, trasferimenti e documenti legali con un professionista
 - [ ] Definire partner attivi, compatibilità territoriale e limite destinatari
 - [ ] Configurare eventi GA4 per CTA, avvio, completamento e consenso
 

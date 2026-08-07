@@ -1,0 +1,85 @@
+---
+import LegalPage from '../../components/LegalPage.astro';
+---
+
+<LegalPage
+  title="Cookie Policy"
+  eyebrow="Preferenze e misurazione"
+  description="Cookie Policy e gestione del consenso Analytics di Crepe in Casa."
+  canonical="https://crepeincasa.it/cookie/"
+>
+  <section aria-labelledby="cookie-intro">
+    <p class="eyebrow">In breve</p>
+    <h2 id="cookie-intro">Prima la scelta, poi le statistiche</h2>
+    <p>
+      Crepe in Casa non carica Google Analytics prima che l'utente abbia scelto di accettare la
+      misurazione facoltativa. È possibile rifiutare senza perdere l'accesso alle pagine o al modulo.
+    </p>
+  </section>
+
+  <section aria-labelledby="cookie-tecnici">
+    <h2 id="cookie-tecnici">1. Memorizzazione necessaria</h2>
+    <p>
+      Il sito usa la memoria locale del browser per ricordare la scelta relativa alle statistiche.
+      La chiave utilizzata è <code>crepeincasa_cookie_consent</code>, con valore di accettazione o
+      rifiuto. Non serve a identificare l'utente né a creare un profilo.
+    </p>
+    <p>
+      Il normale funzionamento del sito statico può inoltre comportare log tecnici gestiti dai
+      fornitori di hosting e di rete. Il dettaglio di tali log dipende dal fornitore e deve essere
+      verificato dal titolare nei relativi accordi e documenti.
+    </p>
+  </section>
+
+  <section aria-labelledby="cookie-analytics">
+    <h2 id="cookie-analytics">2. Google Analytics 4, solo con consenso</h2>
+    <p>
+      Se l'utente seleziona “Accetta statistiche”, il sito carica Google Analytics 4 per comprendere
+      in forma aggregata quali pagine vengono consultate e migliorare contenuti e percorso di
+      richiesta. Il servizio è fornito da Google; possono essere utilizzati identificatori come
+      <code>_ga</code> e <code>_ga_*</code> secondo la configurazione e la documentazione vigente del
+      servizio.
+    </p>
+    <p>
+      Se l'utente seleziona “Rifiuta”, lo script Analytics non viene caricato. La scelta viene
+      conservata localmente per evitare di mostrare il banner a ogni pagina.
+    </p>
+    <div class="legal-note">
+      <strong>Configurazione da verificare</strong>
+      <p>
+        Prima della pubblicazione definitiva vanno verificati account Google, impostazioni di
+        conservazione, eventuali trasferimenti, strumenti attivi e testo del contratto con i fornitori.
+      </p>
+    </div>
+  </section>
+
+  <section aria-labelledby="cookie-form">
+    <h2 id="cookie-form">3. Modulo di richiesta</h2>
+    <p>
+      Il modulo non incorpora Google Analytics né un iframe di FormSubmit. Quando viene inviato,
+      effettua una richiesta verso FormSubmit per recapitare i dati alla casella indicata nella
+      <a href="/privacy/">Privacy Policy</a>. Il fornitore può applicare proprie tecnologie e proprie
+      regole al momento dell'elaborazione: consultale prima di definire l'informativa finale.
+    </p>
+  </section>
+
+  <section aria-labelledby="cookie-preferenze">
+    <h2 id="cookie-preferenze">4. Modificare la scelta</h2>
+    <p>
+      Puoi riaprire il banner e modificare la scelta. Dopo il reset, la pagina verrà ricaricata e
+      potrai accettare o rifiutare nuovamente le statistiche.
+    </p>
+    <div class="legal-actions">
+      <button class="button button-secondary" type="button" data-cookie-reset>Modifica preferenze statistiche</button>
+    </div>
+  </section>
+
+  <section aria-labelledby="cookie-fonti">
+    <h2 id="cookie-fonti">5. Riferimenti</h2>
+    <p>
+      Per il quadro generale sui cookie e sugli strumenti di tracciamento consulta le
+      <a href="https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9677876" rel="noreferrer">Linee guida del Garante Privacy</a>.
+      Per i dati personali consulta la <a href="/privacy/">Privacy Policy</a>.
+    </p>
+  </section>
+</LegalPage>

@@ -642,6 +642,20 @@ h2 {
   margin-top: 0.75rem;
 }
 
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.8rem;
+  margin-top: 1rem;
+}
+
+.footer-legal a {
+  margin-top: 0;
+  color: var(--soft-muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
 @media (max-width: 820px) {
   .hero-grid {
     grid-template-columns: 1fr;
