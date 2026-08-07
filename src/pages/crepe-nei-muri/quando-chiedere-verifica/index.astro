@@ -1,0 +1,305 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const questions = [
+  {
+    number: '01',
+    title: 'È cambiato qualcosa nel tempo?',
+    text: 'Annota se la linea ti sembra diversa, se è ricomparsa dopo un ripristino o se sono comparsi altri segni. Descrivi il confronto senza trasformarlo in una misurazione tecnica.',
+  },
+  {
+    number: '02',
+    title: 'Ci sono elementi di contesto?',
+    text: 'Lavori recenti, infiltrazioni, umidità, variazioni nell’ambiente o problemi d’uso sono informazioni da riferire. Non dimostrano da soli un rapporto di causa.',
+  },
+  {
+    number: '03',
+    title: 'Ti serve una valutazione dell’immobile reale?',
+    text: 'Se devi prendere una decisione su ripristini o lavori, una descrizione online non è sufficiente: può essere utile chiedere un confronto sul posto a un professionista qualificato.',
+  },
+];
+
+const urgentObservations = [
+  'materiale che sembra staccarsi o cadere;',
+  'acqua, gocciolamenti o una condizione che rende insicura l’osservazione;',
+  'un cambiamento che percepisci come rapido o associato ad altri fenomeni;',
+  'una zona che non puoi documentare senza avvicinarti, salire o fare prove rischiose.',
+];
+
+const ordinaryReasons = [
+  'la situazione persiste e vuoi capire come descriverla correttamente;',
+  'non sai se il segno riguarda una finitura, un rivestimento o un altro elemento;',
+  'è comparso dopo lavori, modifiche, infiltrazioni o un periodo di inutilizzo;',
+  'hai bisogno di raccogliere informazioni prima di valutare un ripristino;',
+  'vuoi consegnare al professionista una cronologia e fotografie ordinate.',
+];
+
+const requestChecklist = [
+  'dove si trova il segno e con quali elementi dell’ambiente è in rapporto;',
+  'che cosa vedi sulla superficie, senza attribuire una causa;',
+  'quando l’hai notato e che cosa è cambiato secondo la tua osservazione;',
+  'quali lavori, acqua, umidità o modifiche ricordi;',
+  'quali fotografie e note datate puoi mettere a disposizione;',
+  'che cosa vuoi capire o decidere, senza indicare già una tecnica.',
+];
+
+const faq = [
+  {
+    question: 'Devo aspettare che una crepa aumenti prima di chiedere una verifica?',
+    answer: 'Non è necessario aspettare un cambiamento per chiedere un confronto. Se hai bisogno di una valutazione riferita all’immobile, puoi preparare le informazioni disponibili senza presentarle come una diagnosi.',
+  },
+  {
+    question: 'La sola presenza di una crepa richiede sempre un tecnico?',
+    answer: 'La sola presenza o forma visibile non permette di stabilire la causa o il livello di attenzione necessario. La decisione dipende dal contesto, da ciò che osservi e dal tipo di valutazione di cui hai bisogno.',
+  },
+  {
+    question: 'La larghezza indica quando chiamare un professionista?',
+    answer: 'Una singola dimensione, soprattutto se rilevata senza strumenti e contesto, non è una regola sufficiente. Posizione, materiali, andamento nel tempo e altri elementi vanno considerati insieme sul posto.',
+  },
+  {
+    question: 'Posso chiedere un preventivo senza sapere la causa?',
+    answer: 'Puoi spiegare che stai cercando informazioni su un possibile lavoro, ma è prudente non indicare una tecnica come già necessaria. Prima di valutare opere, il caso concreto va esaminato.',
+  },
+  {
+    question: 'Cosa faccio se la situazione sembra urgente?',
+    answer: 'Evita la zona se necessario e chiedi tempestivamente supporto a un professionista qualificato o alle autorità competenti. Questo sito non è un servizio di emergenza e non può valutare la sicurezza dell’edificio.',
+  },
+];
+---
+
+<BaseLayout
+  title="Quando chiedere una verifica per una crepa nel muro"
+  description="Quando chiedere una verifica per una crepa nel muro: cambiamenti, contesto, documentazione e attenzione alla sicurezza, senza diagnosi a distanza."
+  canonical="https://crepeincasa.it/crepe-nei-muri/quando-chiedere-verifica/"
+>
+  <article class="verification-page">
+    <header class="verification-hero">
+      <div class="container verification-hero-inner">
+        <p class="eyebrow">Guida al prossimo passo</p>
+        <h1 id="page-title">Quando chiedere una verifica per una crepa nel muro</h1>
+        <p class="verification-lead">
+          Non esiste una regola online basata soltanto sulla forma. La domanda utile è quale contesto
+          hai osservato e se ti serve una valutazione riferita all’immobile reale.
+        </p>
+        <p class="verification-meta">Lettura di circa 7 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container verification-layout">
+      <aside class="verification-index" aria-label="In questa guida">
+        <p class="verification-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#domande">Tre domande utili</a>
+          <a href="#attenzione">Quando interrompere l’osservazione</a>
+          <a href="#verifica">Quando organizzare una verifica</a>
+          <a href="#richiesta">Come preparare la richiesta</a>
+          <a href="#faq">Domande frequenti</a>
+        </nav>
+      </aside>
+
+      <div class="verification-content">
+        <section class="verification-section verification-intro" id="risposta" aria-labelledby="answer-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="answer-title">Una verifica serve a leggere il caso concreto, non a confermare un’etichetta</h2>
+          <p>
+            Una fotografia o una descrizione possono aiutarti a mettere in ordine le osservazioni,
+            ma non mostrano tutto ciò che riguarda un immobile. Se la situazione persiste, cambia,
+            compare insieme ad altri elementi o ti richiede una decisione, può essere utile chiedere
+            un confronto sul posto.
+          </p>
+          <p>
+            Questo non significa che la forma della crepa abbia già spiegato la causa. Significa che
+            il contesto reale — materiali, posizione, storia dell’edificio e condizioni osservabili —
+            merita di essere valutato da chi può esaminarlo direttamente.
+          </p>
+        </section>
+
+        <section class="verification-section" id="domande" aria-labelledby="questions-title">
+          <p class="eyebrow">Un criterio pratico</p>
+          <h2 id="questions-title">Parti da tre domande, non da una classificazione</h2>
+          <div class="verification-questions">
+            {questions.map((question) => (
+              <article class="verification-question">
+                <p class="verification-number">{question.number}</p>
+                <h3>{question.title}</h3>
+                <p>{question.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="verification-section verification-alert" id="attenzione" aria-labelledby="attention-title">
+          <p class="eyebrow">Prima la sicurezza</p>
+          <h2 id="attention-title">Quando interrompere l’osservazione e chiedere aiuto</h2>
+          <p>
+            Se per capire meglio devi avvicinarti a materiale instabile, salire su una scala non sicura
+            o fare una prova sulla superficie, fermati. La documentazione non deve creare un rischio.
+          </p>
+          <ul class="verification-list verification-list-plain">
+            {urgentObservations.map((item) => <li><span aria-hidden="true">—</span><p>{item}</p></li>)}
+          </ul>
+          <p>
+            In presenza di condizioni che potrebbero richiedere attenzione urgente, evita la zona se
+            necessario e rivolgiti tempestivamente a un professionista qualificato o alle autorità
+            competenti. Questo sito non può stabilire se un edificio sia sicuro o pericoloso.
+          </p>
+        </section>
+
+        <section class="verification-section" id="verifica" aria-labelledby="ordinary-title">
+          <p class="eyebrow">Una verifica ordinaria</p>
+          <h2 id="ordinary-title">Quando può essere utile organizzare un confronto sul posto</h2>
+          <p>
+            Non devi aspettare di avere una spiegazione completa. Puoi chiedere una valutazione quando
+            vuoi capire meglio il contesto reale o quando devi decidere come procedere con manutenzione,
+            ripristini o altri lavori.
+          </p>
+          <ul class="verification-list">
+            {ordinaryReasons.map((reason, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{reason}</p></li>
+            ))}
+          </ul>
+          <div class="verification-note">
+            <strong>Il tempo è un’informazione, non una diagnosi</strong>
+            <p>
+              Una crepa che sembra stabile, una che sembra cambiata e una che è comparsa dopo un lavoro
+              sono situazioni da descrivere in modo diverso. Nessuna di queste descrizioni, da sola,
+              stabilisce causa, sicurezza o intervento necessario.
+            </p>
+          </div>
+        </section>
+
+        <section class="verification-section" aria-labelledby="limits-title">
+          <p class="eyebrow">Cosa non usare come regola</p>
+          <h2 id="limits-title">La forma, l’età della casa e una singola foto non bastano</h2>
+          <div class="verification-cards">
+            <article class="verification-card">
+              <h3>La direzione</h3>
+              <p>Diagonale, verticale o orizzontale sono descrizioni dell’andamento visibile. Non indicano automaticamente la causa.</p>
+            </article>
+            <article class="verification-card">
+              <h3>Una misura isolata</h3>
+              <p>Una larghezza rilevata senza contesto e senza strumenti appropriati non è una soglia universale per decidere cosa fare.</p>
+            </article>
+            <article class="verification-card">
+              <h3>L’età dell’edificio</h3>
+              <p>Una casa nuova o vecchia può avere storie, materiali e modifiche molto diverse. L’età non sostituisce l’osservazione del caso concreto.</p>
+            </article>
+            <article class="verification-card">
+              <h3>La fotografia</h3>
+              <p>Può documentare il segno, ma non mostra sempre strati, collegamenti, ambienti confinanti o storia dell’immobile.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="verification-section" id="richiesta" aria-labelledby="request-title">
+          <p class="eyebrow">Prepararsi bene</p>
+          <h2 id="request-title">Che cosa inserire nella richiesta di verifica</h2>
+          <p>
+            Una richiesta utile non deve anticipare la conclusione. Deve permettere a chi la riceve di
+            capire che cosa hai osservato e quali informazioni sono già disponibili.
+          </p>
+          <div class="verification-request">
+            <ul class="verification-list verification-list-compact">
+              {requestChecklist.map((item) => <li><span aria-hidden="true">✓</span><p>{item}</p></li>)}
+            </ul>
+          </div>
+          <p>
+            Puoi usare il nostro modulo per creare un riepilogo neutro delle osservazioni. Il riepilogo
+            non formula una diagnosi e non sostituisce una verifica sul posto.
+          </p>
+        </section>
+
+        <section class="verification-section" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Quando chiedere una verifica per una crepa</h2>
+          <div class="verification-faq">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="verification-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua da qui</p>
+          <h2 id="related-title">Prima osserva, poi prepara il confronto</h2>
+          <p>
+            La guida pratica spiega come documentare una crepa senza alterare la superficie. Dopo aver
+            raccolto le informazioni, puoi creare il tuo riepilogo neutro.
+          </p>
+          <div class="verification-links">
+            <a href="/crepe-nei-muri/cosa-fare/">Leggi cosa fare dopo aver notato una crepa <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/">Vai alla guida generale <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .verification-page { background: var(--paper); }
+  .verification-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .verification-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .verification-hero h1 { max-width: 14ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .verification-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .verification-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .verification-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .verification-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .verification-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .verification-index nav { display: grid; gap: 0.7rem; }
+  .verification-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .verification-index a:hover, .verification-index a:focus-visible { color: var(--accent); }
+  .verification-content { min-width: 0; }
+  .verification-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .verification-section:first-child { padding-top: 0; border-top: 0; }
+  .verification-section h2, .verification-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .verification-section > p:not(.eyebrow), .verification-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .verification-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .verification-questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .verification-question { padding: 1.5rem; background: var(--surface); }
+  .verification-number { margin: 0 0 1.3rem; color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
+  .verification-question h3, .verification-card h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .verification-question p:last-child, .verification-card p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .verification-alert { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .verification-alert + .verification-section { margin-top: clamp(1rem, 3vw, 2.5rem); }
+  .verification-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .verification-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .verification-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .verification-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .verification-list-plain li { grid-template-columns: 1rem 1fr; }
+  .verification-note, .verification-request { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .verification-note strong { color: var(--brand-dark); }
+  .verification-note p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .verification-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+  .verification-card { padding: 1.5rem; border: 1px solid var(--line); border-radius: 0.9rem; background: var(--surface); }
+  .verification-request { border-left-color: var(--brand); background: var(--surface-alt); }
+  .verification-list-compact { margin-top: 0; }
+  .verification-list-compact li { grid-template-columns: 1rem 1fr; }
+  .verification-list-compact li > span { color: var(--brand); font-family: inherit; font-weight: 800; }
+  .verification-faq { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .verification-faq details { border-bottom: 1px solid var(--line); }
+  .verification-faq summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .verification-faq p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .verification-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; background: var(--surface-alt); }
+  .verification-links { display: grid; gap: 0.8rem; margin-top: 1.6rem; }
+  .verification-links a { color: var(--brand); font-size: 0.9rem; font-weight: 750; text-underline-offset: 0.2em; }
+  .verification-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .verification-layout { grid-template-columns: 1fr; }
+    .verification-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .verification-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .verification-index a { font-size: 0.82rem; }
+    .verification-questions { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .verification-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .verification-cards { grid-template-columns: 1fr; }
+  }
+</style>
