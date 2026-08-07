@@ -1,5 +1,5 @@
 PROMPT 01 — FOUNDATION
-======================
+====================== 
 
 Leggi VISION.md, AGENTS.md, ROADMAP.md e docs/SEO_STRATEGY.md.
 
