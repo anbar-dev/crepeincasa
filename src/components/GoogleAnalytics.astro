@@ -1,35 +1,8 @@
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZPFJVV823"></script>
 <script is:inline>
-  (() => {
-    const consentKey = 'crepeincasa_cookie_consent';
-    const measurementId = 'G-KZPFJVV823';
-
-    const loadAnalytics = () => {
-      if (document.querySelector('[data-google-analytics-loader]')) return;
-
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-      script.dataset.googleAnalyticsLoader = 'true';
-      document.head.appendChild(script);
-
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = function gtag() { window.dataLayer.push(arguments); };
-      window.gtag('js', new Date());
-      window.gtag('config', measurementId, { anonymize_ip: true });
-    };
-
-    const init = () => {
-      try {
-        if (window.localStorage.getItem(consentKey) === 'accepted') loadAnalytics();
-      } catch {
-        // Analytics stays disabled if browser storage is unavailable.
-      }
-    };
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init, { once: true });
-    } else {
-      init();
-    }
-  })();
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-KZPFJVV823');
 </script>
