@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { crepeClusterPages } from '../../data/crepeCluster';
+import { supportingGuides } from '../../data/supportingGuides';
 
 const possibleCauses = [
   {
@@ -199,10 +199,13 @@ const interventions = [
           <div>
             <p class="eyebrow">Approfondisci il contesto</p>
             <h2 id="related-title">Scegli la guida più vicina alla tua osservazione</h2>
-            <p>Le pagine del cluster affrontano posizioni, forme e situazioni diverse. Descrivono ciò che si può osservare senza sostituire una verifica sul posto.</p>
+            <p>Le tre guide attive affrontano momenti diversi dello stesso percorso: capire cosa fare, decidere quando chiedere un confronto e ricostruire il contesto di una casa nuova o dopo lavori.</p>
             <nav class="cluster-link-grid" aria-label="Guide sulle crepe">
-              {crepeClusterPages.map((page) => (
-                <a href={`/crepe/${page.slug}/`}>{page.title.replace(':', ' —')} <span aria-hidden="true">→</span></a>
+              {supportingGuides.map((page) => (
+                <a href={page.href}>
+                  <span class="cluster-link-title">{page.title}<span class="cluster-link-arrow" aria-hidden="true">→</span></span>
+                  <small>{page.description}</small>
+                </a>
               ))}
             </nav>
           </div>
@@ -258,9 +261,12 @@ const interventions = [
   .faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
   .related-content, .article-cta { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; }
   .related-content { background: var(--surface-alt); }
-  .cluster-link-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
-  .cluster-link-grid a { color: var(--brand); font-size: 0.88rem; font-weight: 750; text-underline-offset: 0.2em; }
-  .cluster-link-grid a span { color: var(--accent); text-decoration: none; }
+  .cluster-link-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin-top: 1.6rem; }
+  .cluster-link-grid a { display: block; padding: 1rem; border: 1px solid var(--line); border-radius: 0.75rem; background: var(--surface); color: var(--brand); font-size: 0.88rem; font-weight: 750; text-decoration: none; }
+  .cluster-link-grid a:hover, .cluster-link-grid a:focus-visible { border-color: var(--brand); background: var(--paper); }
+  .cluster-link-title { display: flex; align-items: start; justify-content: space-between; gap: 0.75rem; }
+  .cluster-link-arrow { flex: 0 0 auto; color: var(--accent); text-decoration: none; }
+  .cluster-link-grid small { display: block; margin-top: 0.55rem; color: var(--muted); font-size: 0.8rem; font-weight: 500; line-height: 1.45; }
   .article-cta { background: var(--brand-dark); }
   .article-cta h2 { color: var(--paper); }
   .article-cta .eyebrow { color: #e6a47c; }
