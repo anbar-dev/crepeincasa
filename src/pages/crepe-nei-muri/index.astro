@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { crepeClusterPages } from '../../data/crepeCluster';
 
 const possibleCauses = [
   {
@@ -196,11 +197,15 @@ const interventions = [
 
         <section class="related-content" aria-labelledby="related-title">
           <div>
-            <p class="eyebrow">Per continuare</p>
-            <h2 id="related-title">Metti in ordine ciò che hai osservato</h2>
-            <p>Riparti dal metodo di osservazione della homepage per annotare posizione, contesto e cambiamenti senza formulare conclusioni.</p>
+            <p class="eyebrow">Approfondisci il contesto</p>
+            <h2 id="related-title">Scegli la guida più vicina alla tua osservazione</h2>
+            <p>Le pagine del cluster affrontano posizioni, forme e situazioni diverse. Descrivono ciò che si può osservare senza sostituire una verifica sul posto.</p>
+            <nav class="cluster-link-grid" aria-label="Guide sulle crepe">
+              {crepeClusterPages.map((page) => (
+                <a href={`/crepe/${page.slug}/`}>{page.title.replace(':', ' —')} <span aria-hidden="true">→</span></a>
+              ))}
+            </nav>
           </div>
-          <a class="button button-primary" href="/#osservazioni">Vai alle osservazioni <span aria-hidden="true">→</span></a>
         </section>
 
         <aside class="article-cta" aria-labelledby="cta-title">
@@ -252,8 +257,10 @@ const interventions = [
   .faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
   .faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
   .related-content, .article-cta { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; }
-  .related-content { display: flex; align-items: end; justify-content: space-between; gap: 2rem; background: var(--surface-alt); }
-  .related-content .button { flex: 0 0 auto; }
+  .related-content { background: var(--surface-alt); }
+  .cluster-link-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
+  .cluster-link-grid a { color: var(--brand); font-size: 0.88rem; font-weight: 750; text-underline-offset: 0.2em; }
+  .cluster-link-grid a span { color: var(--accent); text-decoration: none; }
   .article-cta { background: var(--brand-dark); }
   .article-cta h2 { color: var(--paper); }
   .article-cta .eyebrow { color: #e6a47c; }
@@ -271,7 +278,6 @@ const interventions = [
   @media (max-width: 620px) {
     .article-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
     .article-cards { grid-template-columns: 1fr; }
-    .related-content { align-items: start; flex-direction: column; }
-    .related-content .button { width: 100%; }
+    .cluster-link-grid { grid-template-columns: 1fr; }
   }
 </style>

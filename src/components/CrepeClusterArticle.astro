@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { crepeClusterPages, type CrepeClusterPage } from '../data/crepeCluster';
+
+interface Props {
+  page: CrepeClusterPage;
+}
+
+const { page } = Astro.props;
+const relatedPages = crepeClusterPages
+  .filter((candidate) => candidate.slug !== page.slug)
+  .slice(0, 3);
+const modelLink = '/crepe-nei-muri/';
+const leadLink = '/richiedi-valutazione/';
+---
+
+<BaseLayout
+  title={page.metaTitle}
+  description={page.description}
+  canonical={`https://crepeincasa.it/crepe/${page.slug}/`}
+>
+  <article class="article-page cluster-article">
+    <header class="article-hero">
+      <div class="container article-hero-inner">
+        <p class="eyebrow">{page.eyebrow}</p>
+        <h1 id="article-title">{page.title}</h1>
+        <p class="article-lead">{page.lead}</p>
+        <p class="article-meta">Guida alle osservazioni · lettura di circa 5 minuti</p>
+      </div>
+    </header>
+
+    <div class="container article-layout">
+      <aside class="article-index" aria-label="In questa guida">
+        <p class="article-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta-breve">La risposta breve</a>
+          <a href="#contesto">Il contesto</a>
+          <a href="#osservare">Cosa osservare</a>
+          <a href="#limiti">Limiti online</a>
+          <a href="#faq">Domande frequenti</a>
+        </nav>
+      </aside>
+
+      <div class="article-content">
+        <section id="risposta-breve" class="article-section" aria-labelledby="risposta-title">
+          <p class="eyebrow">In breve</p>
+          <h2 id="risposta-title">La forma si può descrivere, la causa va verificata</h2>
+          {page.shortAnswer.map((paragraph) => <p>{paragraph}</p>)}
+        </section>
+
+        <section id="contesto" class="article-section" aria-labelledby="context-title">
+          <p class="eyebrow">Possibili contesti</p>
+          <h2 id="context-title">{page.contextTitle}</h2>
+          <p>{page.contextIntro}</p>
+          <div class="article-cards">
+            {page.possibleCauses.map((cause) => (
+              <article class="article-card">
+                <h3>{cause.title}</h3>
+                <p>{cause.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="osservare" class="article-section" aria-labelledby="observe-title">
+          <p class="eyebrow">Raccogliere informazioni</p>
+          <h2 id="observe-title">Cosa puoi annotare senza fare diagnosi</h2>
+          <p>Indica ciò che vedi e ricordi, separando i fatti dalle interpretazioni. Non servono prove improvvisate né termini tecnici.</p>
+          <ul class="article-list">
+            {page.observations.map((observation, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{observation}</p></li>
+            ))}
+          </ul>
+          <div class="note-box">
+            <strong>Documentare con calma</strong>
+            <p>Una vista dell’ambiente, un dettaglio e la data della foto aiutano a ricordare il contesto. Non modificare la superficie per renderla più leggibile.</p>
+          </div>
+        </section>
+
+        <section id="limiti" class="article-section article-limit" aria-labelledby="limits-title">
+          <p class="eyebrow">Un limite importante</p>
+          <h2 id="limits-title">{page.limitsTitle}</h2>
+          <ul class="article-list article-list-plain">
+            {page.limits.map((limit) => <li><span aria-hidden="true">—</span><p>{limit}</p></li>)}
+          </ul>
+        </section>
+
+        <section class="article-section" aria-labelledby="verification-title">
+          <p class="eyebrow">Il passo successivo</p>
+          <h2 id="verification-title">{page.verificationTitle}</h2>
+          {page.verification.map((paragraph) => <p>{paragraph}</p>)}
+        </section>
+
+        <section id="faq" class="article-section article-faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">{page.title.replace(':', ': le domande')}</h2>
+          <div class="faq-list">
+            {page.faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="related-content" aria-labelledby="related-title">
+          <div>
+            <p class="eyebrow">Per continuare</p>
+            <h2 id="related-title">Confronta altri contesti</h2>
+            <p>Se la tua osservazione riguarda una forma o una posizione diversa, puoi consultare un’altra guida del cluster.</p>
+            <nav class="cluster-link-grid" aria-label="Guide correlate">
+              {relatedPages.map((related) => (
+                <a href={`/crepe/${related.slug}/`}>{related.title.replace(':', ' —')} <span aria-hidden="true">→</span></a>
+              ))}
+              <a href={modelLink}>Crepe nei muri: guida generale <span aria-hidden="true">→</span></a>
+            </nav>
+          </div>
+        </section>
+
+        <aside class="article-cta" aria-labelledby="cta-title">
+          <p class="eyebrow">Un aiuto pratico</p>
+          <h2 id="cta-title">Vuoi mettere in ordine ciò che hai osservato?</h2>
+          <p>Il modulo crea soltanto un riepilogo neutro delle informazioni fornite. Non stabilisce la causa e non sostituisce una verifica sul posto.</p>
+          <a class="inline-link" href={leadLink}>Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-page { background: var(--paper); }
+  .article-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .article-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .article-hero h1 { max-width: 16ch; font-size: clamp(3.1rem, 7vw, 6.4rem); }
+  .article-lead { max-width: 43rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .article-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .article-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .article-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .article-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .article-index nav { display: grid; gap: 0.7rem; }
+  .article-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .article-index a:hover, .article-index a:focus-visible { color: var(--accent); }
+  .article-content { min-width: 0; }
+  .article-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .article-section:first-child { padding-top: 0; border-top: 0; }
+  .article-section h2, .related-content h2, .article-cta h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .article-section > p:not(.eyebrow), .article-cta > p:not(.eyebrow), .related-content p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .article-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .article-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .article-card { padding: 1.5rem; background: var(--surface); }
+  .article-card h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .article-card p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .article-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .article-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .article-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .article-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .note-box { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .note-box strong { color: var(--brand-dark); }
+  .note-box p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .article-limit { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .article-limit + .article-section { margin-top: clamp(1rem, 3vw, 2.5rem); }
+  .article-list-plain { margin-top: 1.5rem; }
+  .article-list-plain li { grid-template-columns: 1rem 1fr; }
+  .faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .faq-list details { border-bottom: 1px solid var(--line); }
+  .faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .related-content, .article-cta { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; }
+  .related-content { background: var(--surface-alt); }
+  .cluster-link-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
+  .cluster-link-grid a { color: var(--brand); font-size: 0.88rem; font-weight: 750; text-underline-offset: 0.2em; }
+  .cluster-link-grid a span { color: var(--accent); text-decoration: none; }
+  .article-cta { background: var(--brand-dark); }
+  .article-cta h2 { color: var(--paper); }
+  .article-cta .eyebrow { color: #e6a47c; }
+  .article-cta > p:not(.eyebrow) { color: #cbd8cf; }
+  .article-cta .inline-link { color: var(--paper); }
+  .article-cta .inline-link:hover, .article-cta .inline-link:focus-visible { color: #e6a47c; }
+
+  @media (max-width: 820px) {
+    .article-layout { grid-template-columns: 1fr; }
+    .article-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .article-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .article-index a { font-size: 0.82rem; }
+  }
+
+  @media (max-width: 620px) {
+    .article-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .article-cards, .cluster-link-grid { grid-template-columns: 1fr; }
+  }
+</style>

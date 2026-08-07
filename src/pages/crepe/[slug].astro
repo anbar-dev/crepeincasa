@@ -1,0 +1,15 @@
+---
+import CrepeClusterArticle from '../../components/CrepeClusterArticle.astro';
+import { crepeClusterPages } from '../../data/crepeCluster';
+
+export function getStaticPaths() {
+  return crepeClusterPages.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+---
+
+<CrepeClusterArticle page={page} />

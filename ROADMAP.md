@@ -60,16 +60,21 @@
 
 ## Phase 4 — Cluster crepe
 
-- [ ] crepe diagonali
-- [ ] crepe verticali
-- [ ] crepe orizzontali
-- [ ] crepe sopra porte e finestre
-- [ ] crepe muri esterni
-- [ ] crepe muri interni
-- [ ] crepe soffitto
-- [ ] crepe pavimento
-- [ ] crepe casa vecchia
-- [ ] crepe che aumentano
+- [x] crepe diagonali
+- [x] crepe verticali
+- [x] crepe orizzontali
+- [x] crepe sopra porte e finestre
+- [x] crepe muri esterni
+- [x] crepe muri interni
+- [x] crepe soffitto
+- [x] crepe pavimento
+- [x] crepe casa vecchia
+- [x] crepe che aumentano
+
+> Phase 4 completata il 2026-08-07. Le dieci pagine sono generate da un template condiviso
+> con contenuti editoriali distinti per forma, posizione, contesto e andamento nel tempo.
+> Ogni pagina include limiti della valutazione online, FAQ e collegamenti interni al cluster,
+> alla guida modello e al riepilogo neutro della richiesta.
 
 ## Phase 5 — Cluster cedimenti
 
