@@ -17,7 +17,10 @@ export interface CrepeClusterPage {
   faq: { question: string; answer: string }[];
 }
 
-export const crepeClusterPages: CrepeClusterPage[] = [
+// Archivio editoriale non pubblicato. Le vecchie pagine del cluster sono state
+// ritirate dal build finché non verranno riscritte con un intento distinto e
+// contenuto sufficiente.
+const crepeClusterDrafts: CrepeClusterPage[] = [
   {
     slug: 'crepe-diagonali',
     title: 'Crepe diagonali: cosa osservare senza trarre conclusioni',
@@ -449,6 +452,8 @@ export const crepeClusterPages: CrepeClusterPage[] = [
     ],
   },
 ];
+
+export const crepeClusterPages: CrepeClusterPage[] = [];
 
 export const crepeClusterBySlug = Object.fromEntries(
   crepeClusterPages.map((page) => [page.slug, page]),

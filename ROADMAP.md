@@ -16,7 +16,8 @@
 - [x] Build/deploy configurati e build verificata
 - [x] Google Analytics 4 integrato nel layout condiviso
 
-> Phase 0 completata il 2026-08-06. La build statica locale è verificata; il deploy GitHub Pages sarà verificabile dopo il primo push sul repository remoto.
+> Phase 0 completata il 2026-08-06. La build statica locale è verificata; il
+> deploy GitHub Pages va verificato dopo il push sul repository remoto.
 
 ## Phase 1 — Design + Homepage
 
@@ -28,11 +29,9 @@
 - [x] Disclaimer corretti
 - [x] Controllo mobile
 
-> Phase 1 completata il 2026-08-06. Homepage verificata su desktop e mobile senza overflow orizzontale;
-> le CTA informative restano interne alla homepage, mentre le CTA di richiesta portano al funnel
-> strutturato completato nella Phase 3.
+> Phase 1 completata il 2026-08-06.
 
-## Phase 2 — Articolo modello
+## Phase 2 — Articolo pilastro
 
 - [x] `/crepe-nei-muri/`
 - [x] Struttura editoriale modello
@@ -42,9 +41,9 @@
 - [x] CTA discreta
 - [x] Revisione anti-allarmismo
 
-> Phase 2 completata il 2026-08-07. La pagina modello è stata verificata per contenuti prudenti,
-> limiti della valutazione online, collegamenti interni e assenza di diagnosi o raccomandazioni
-> individuali. La revisione editoriale del prompt 4 è stata completata il 2026-08-07.
+> Phase 2 completata il 2026-08-07. La pagina pilastro resta il punto di
+> partenza del progetto e non deve essere sostituita da molte pagine quasi
+> equivalenti.
 
 ## Phase 3 — Funnel lead
 
@@ -55,91 +54,127 @@
 - [x] Configurazione partner
 - [x] Consenso inoltro
 - [x] Nessuna diagnosi automatica
+- [ ] Collegare un backend reale per ricezione e gestione delle richieste
+- [ ] Definire partner attivi, compatibilità territoriale e limite destinatari
+- [ ] Configurare eventi GA4 per CTA, avvio, completamento e consenso
 
-> Phase 3 completata il 2026-08-07. Il form funziona in modalità statica con adapter mock,
-> senza email o inoltri reali; il consenso all’eventuale inoltro è separato e facoltativo.
+> La versione attuale è statica e dimostrativa: non invia email e non inoltra
+> richieste reali.
 
-## Phase 4 — Cluster crepe
+## Phase 4 — Reset SEO e ritiro contenuti sottili
 
-- [x] crepe diagonali
-- [x] crepe verticali
-- [x] crepe orizzontali
-- [x] crepe sopra porte e finestre
-- [x] crepe muri esterni
-- [x] crepe muri interni
-- [x] crepe soffitto
-- [x] crepe pavimento
-- [x] crepe casa vecchia
-- [x] crepe che aumentano
+- [x] Ricerca qualitativa delle SERP italiane principali
+- [x] Distinguere query, intento e semplice variante di forma
+- [x] Riconoscere che "diagonali", "verticali" e "orizzontali" non meritano
+  automaticamente URL autonome
+- [x] Ritirare dal build le dieci pagine del vecchio cluster crepe
+- [x] Conservare il materiale come archivio editoriale non pubblicato
+- [x] Aggiornare `docs/SEO_STRATEGY.md`
+- [x] Aggiornare questa roadmap
+- [ ] Dopo il deploy, controllare in Search Console eventuali URL già indicizzate
+- [ ] Decidere redirect o rimozione permanente solo sulla base di impression,
+  link e storico reale
 
-> Phase 4 completata il 2026-08-07. Le dieci pagine sono generate da un template condiviso
-> con contenuti editoriali distinti per forma, posizione, contesto e andamento nel tempo.
-> Ogni pagina include limiti della valutazione online, FAQ e collegamenti interni al cluster,
-> alla guida modello e al riepilogo neutro della richiesta.
+> Phase 4 completata il 2026-08-07 per il codice locale. Le pagine ritirate non
+> vengono più generate dalla route dinamica `/crepe/[slug]/`.
 
-## Phase 5 — Cluster cedimenti
+## Phase 5 — Misurazione prima dell’espansione
 
-- [ ] cedimento fondazioni
-- [ ] cedimento terreno
-- [ ] cedimento differenziale
-- [ ] casa che cede
-- [ ] pavimento che sprofonda
+- [ ] Collegare Google Search Console
+- [ ] Verificare sitemap e indicizzazione del dominio reale
+- [ ] Configurare eventi GA4 per il percorso di conversione
+- [ ] Definire un report minimo: query, impression, CTR, landing page, CTA,
+  form iniziati, form completati e lead ricevute
+- [ ] Raccogliere dati senza creare nuove pagine in massa
 
-## Phase 6 — Cluster consolidamento
+## Phase 6 — Primo articolo di supporto
 
-- [ ] consolidamento fondazioni
-- [ ] micropali fondazioni
-- [ ] resine espandenti
-- [ ] sottofondazioni
-- [ ] panoramica tecniche
+Pubblicare una sola pagina dopo un brief approvato. Le candidate iniziali sono:
 
-## Phase 7 — Costi
+- `crepe nei muri cosa fare`;
+- `crepe nei muri quando chiedere una verifica`;
+- `crepe in casa nuova o dopo lavori`.
 
-- [ ] costo consolidamento fondazioni
-- [ ] costo micropali
-- [ ] costo resine
-- [ ] fattori che influenzano il prezzo
+Checklist obbligatoria:
 
-## Phase 8 — Utility
+- [ ] query e intento verificati;
+- [ ] sovrapposizione con `/crepe-nei-muri/` controllata;
+- [ ] outline originale con esempi osservabili;
+- [ ] fonti reali e revisione dei passaggi tecnici;
+- [ ] title, description, canonical e internal linking;
+- [ ] CTA neutra verso il riepilogo;
+- [ ] revisione mobile e anti-allarmismo;
+- [ ] build e controllo dei link;
+- [ ] misurazione post-pubblicazione.
 
-- [ ] tool "Prepara le informazioni sulle tue crepe"
-- [ ] riepilogo osservazioni
-- [ ] nessuna diagnosi
-- [ ] integrazione con form lead
+## Phase 7 — Cluster informativo validato
 
-## Phase 9 — Per professionisti
+Da valutare una pagina alla volta, solo se i dati o l’analisi dell’intento lo
+giustificano:
 
-- [ ] `/per-professionisti/`
-- [ ] descrizione lead
-- [ ] form candidatura partner
-- [ ] niente prezzi lead iniziali
+- [ ] crepe vicino a porte e finestre;
+- [ ] crepe in casa nuova o dopo lavori;
+- [ ] crepe interne ed esterne;
+- [ ] crepe sul soffitto;
+- [ ] crepe sul pavimento;
+- [ ] crepe che cambiano nel tempo;
+- [ ] come fotografare e monitorare una fessurazione;
+- [ ] quali informazioni preparare per un tecnico.
 
-## Phase 10 — Search Console
+Le pagine "crepe diagonali", "verticali" e "orizzontali" restano ritirate
+finché non emerge un intento autonomo e un contenuto realmente differente.
 
-- [ ] collegare Search Console
-- [ ] raccogliere dati
-- [ ] analizzare query
-- [ ] migliorare pagine promettenti
-- [ ] trovare nuovi cluster
-- [ ] evitare espansione indiscriminata
+## Phase 8 — Cedimenti e fondazioni
 
-## Phase 11 — Local SEO sperimentale
+- [ ] cedimento delle fondazioni;
+- [ ] cedimento del terreno;
+- [ ] cedimento differenziale;
+- [ ] casa che cede;
+- [ ] pavimento che sprofonda.
 
-Non partire prima della validazione del sito.
+Queste pagine richiedono particolare prudenza: descrivere il problema e il
+bisogno di verifica, senza concludere che esista un cedimento.
 
-- [ ] definire data/locations
-- [ ] attivare 1-3 città test
-- [ ] contenuti locali distinti
-- [ ] nessuna sede inventata
-- [ ] misurare risultati
-- [ ] espandere solo se utile
+## Phase 9 — Tecniche e costi
+
+- [ ] consolidamento fondazioni;
+- [ ] micropali per fondazioni;
+- [ ] resine espandenti;
+- [ ] sottofondazioni;
+- [ ] confronto tra tecniche come guida generale;
+- [ ] costo consolidamento fondazioni;
+- [ ] costo micropali;
+- [ ] costo resine;
+- [ ] fattori che influenzano il prezzo.
+
+Nessun prezzo locale inventato e nessuna tecnica proposta per un caso
+individuale.
+
+## Phase 10 — Utility editoriale
+
+- [ ] tool "Prepara le informazioni sulle tue crepe";
+- [ ] riepilogo osservazioni;
+- [ ] nessuna diagnosi;
+- [ ] integrazione con form lead;
+- [ ] checklist o schema scaricabile realmente utile e linkabile.
+
+## Phase 11 — Partner e local SEO
+
+- [ ] `/per-professionisti/`;
+- [ ] form candidatura partner;
+- [ ] criteri partner e compatibilità territoriale;
+- [ ] definire data/locations;
+- [ ] attivare soltanto 1–3 località test con contenuto distinto;
+- [ ] nessuna sede, recensione o caso inventato;
+- [ ] misurare prima di espandere.
 
 ## Phase 12 — Audit continuativo
 
-- [ ] duplicate content
-- [ ] contenuti thin
-- [ ] prudenza tecnica
-- [ ] internal linking
-- [ ] Core Web Vitals
-- [ ] conversioni
-- [ ] qualità lead
+- [ ] contenuti sottili e sovrapposizione d’intento;
+- [ ] title e meta description duplicati;
+- [ ] prudenza tecnica;
+- [ ] internal linking;
+- [ ] Core Web Vitals e responsive;
+- [ ] conversioni e qualità dei lead;
+- [ ] aggiornamento trimestrale della mappa delle query;
+- [ ] ritiro o consolidamento delle pagine che non dimostrano utilità.
