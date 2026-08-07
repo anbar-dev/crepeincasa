@@ -27,7 +27,9 @@
 - [x] Disclaimer corretti
 - [x] Controllo mobile
 
-> Phase 1 completata il 2026-08-06. Homepage verificata su desktop e mobile senza overflow orizzontale; le CTA restano interne alla homepage finché il funnel lead non sarà implementato.
+> Phase 1 completata il 2026-08-06. Homepage verificata su desktop e mobile senza overflow orizzontale;
+> le CTA informative restano interne alla homepage, mentre le CTA di richiesta portano al funnel
+> strutturato completato nella Phase 3.
 
 ## Phase 2 — Articolo modello
 
@@ -45,13 +47,16 @@
 
 ## Phase 3 — Funnel lead
 
-- [ ] `/richiedi-valutazione/`
-- [ ] Form progressivo
-- [ ] Riepilogo neutro
-- [ ] Backend mock/adapter
-- [ ] Configurazione partner
-- [ ] Consenso inoltro
-- [ ] Nessuna diagnosi automatica
+- [x] `/richiedi-valutazione/`
+- [x] Form progressivo
+- [x] Riepilogo neutro
+- [x] Backend mock/adapter
+- [x] Configurazione partner
+- [x] Consenso inoltro
+- [x] Nessuna diagnosi automatica
+
+> Phase 3 completata il 2026-08-07. Il form funziona in modalità statica con adapter mock,
+> senza email o inoltri reali; il consenso all’eventuale inoltro è separato e facoltativo.
 
 ## Phase 4 — Cluster crepe
 
