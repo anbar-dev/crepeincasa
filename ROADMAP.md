@@ -41,7 +41,7 @@
 
 > Phase 2 completata il 2026-08-07. La pagina modello è stata verificata per contenuti prudenti,
 > limiti della valutazione online, collegamenti interni e assenza di diagnosi o raccomandazioni
-> individuali.
+> individuali. La revisione editoriale del prompt 4 è stata completata il 2026-08-07.
 
 ## Phase 3 — Funnel lead
 
