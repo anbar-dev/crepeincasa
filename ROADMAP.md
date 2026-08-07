@@ -14,6 +14,7 @@
 - [x] robots.txt
 - [x] 404
 - [x] Build/deploy configurati e build verificata
+- [x] Google Analytics 4 integrato nel layout condiviso
 
 > Phase 0 completata il 2026-08-06. La build statica locale è verificata; il deploy GitHub Pages sarà verificabile dopo il primo push sul repository remoto.
 
