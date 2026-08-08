@@ -1,0 +1,235 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const photoSteps = [
+  {
+    title: 'Una foto d’insieme',
+    text: 'Inquadra la parete o la zona completa per rendere riconoscibili stanza, angoli, porte, finestre e altri riferimenti.',
+  },
+  {
+    title: 'Una foto intermedia',
+    text: 'Avvicinati quanto basta per mostrare il rapporto tra la fessurazione e la superficie circostante, senza perdere il contesto.',
+  },
+  {
+    title: 'Un dettaglio ravvicinato',
+    text: 'Fotografa il segno da vicino, evitando riflessi e sfocature. Se usi un riferimento accanto alla superficie, non fissarlo né alterare la finitura.',
+  },
+];
+
+const faq = [
+  {
+    question: 'Ogni quanto devo fotografare una crepa?',
+    answer: 'Non esiste un intervallo valido per ogni situazione. Puoi scegliere un ritmo ragionevole in base a ciò che osservi e mantenere un diario ordinato, senza trasformare l’attesa in una prova per stabilire da solo la causa o il livello di attenzione.',
+  },
+  {
+    question: 'Posso mettere un righello vicino alla crepa?',
+    answer: 'Un riferimento visivo può aiutare a leggere una fotografia, ma non equivale a uno strumento di misura né consente una diagnosi. Usalo solo se puoi farlo senza premere, segnare o modificare la superficie.',
+  },
+  {
+    question: 'Devo usare un fessurimetro o mettere un segno sulla parete?',
+    answer: 'Non è necessario improvvisare prove, marcature o installazioni. Se un professionista ti indica una modalità di osservazione, segui le sue istruzioni; in caso contrario limita la documentazione a foto e note non invasive.',
+  },
+  {
+    question: 'Quando posso inviare una richiesta di valutazione?',
+    answer: 'Puoi farlo quando hai raccolto le informazioni disponibili, anche se non hai una sequenza completa di foto. Indica cosa hai osservato, quando e in quale contesto: il professionista valuterà sul posto quali verifiche siano appropriate.',
+  },
+];
+---
+
+<BaseLayout
+  title="Come fotografare e monitorare una crepa nel muro"
+  description="Come fotografare e monitorare una crepa nel muro: sequenza di foto, dati da annotare e limiti del monitoraggio domestico, senza diagnosi a distanza."
+  canonical="https://crepeincasa.it/crepe-nei-muri/come-fotografare-monitorare-crepa/"
+>
+  <article class="monitoring-page">
+    <header class="monitoring-hero">
+      <div class="container monitoring-hero-inner">
+        <p class="eyebrow">Guida alla documentazione</p>
+        <h1>Come fotografare e monitorare una crepa nel muro</h1>
+        <p class="monitoring-lead">
+          Foto ordinate, date e osservazioni possono aiutarti a ricostruire ciò che è cambiato nel tempo.
+          Servono a documentare il contesto, non a stabilire da soli la causa o la sicurezza dell’immobile.
+        </p>
+        <p class="monitoring-meta">Lettura di circa 6 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container monitoring-layout">
+      <aside class="monitoring-index" aria-label="In questa guida">
+        <p class="monitoring-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#foto">Come scattare le foto</a>
+          <a href="#scheda">Cosa annotare</a>
+          <a href="#tempo">Come confrontare nel tempo</a>
+          <a href="#verifica">Quando chiedere una verifica</a>
+          <a href="#faq">Domande frequenti</a>
+        </nav>
+      </aside>
+
+      <div class="monitoring-content">
+        <section class="monitoring-section monitoring-intro" id="risposta" aria-labelledby="risposta-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="risposta-title">Documentare bene significa rendere confrontabili le osservazioni</h2>
+          <p>
+            Una singola foto spesso non racconta dove si trova il segno, da quanto è presente o quali altri
+            elementi ci sono intorno. Una piccola sequenza ripetuta con inquadratura simile, insieme a note
+            datate, aiuta a descrivere meglio il caso quando vorrai confrontarti con un tecnico.
+          </p>
+          <div class="monitoring-note">
+            <strong>Il limite da ricordare</strong>
+            <p>Il monitoraggio domestico non permette di concludere che una crepa sia strutturale, sicura, pericolosa o in evoluzione. Mostra soltanto ciò che è stato osservato e registrato.</p>
+          </div>
+        </section>
+
+        <section class="monitoring-section" id="foto" aria-labelledby="foto-title">
+          <p class="eyebrow">Sequenza semplice</p>
+          <h2 id="foto-title">Scatta tre foto con funzioni diverse</h2>
+          <p>
+            Per ogni sessione prova a mantenere, per quanto possibile, stessa stanza, punto di ripresa e
+            illuminazione. Conserva gli originali e non affidarti soltanto a immagini ritagliate o modificate.
+          </p>
+          <div class="monitoring-cards">
+            {photoSteps.map((item) => (
+              <article class="monitoring-card">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="monitoring-section" id="scheda" aria-labelledby="scheda-title">
+          <p class="eyebrow">Note allegate alle immagini</p>
+          <h2 id="scheda-title">Scrivi prima i dati osservabili</h2>
+          <p>
+            Una nota breve e concreta vale più di un’interpretazione affrettata. Puoi usare il nome del file
+            o una scheda separata, purché ogni informazione resti collegata alla data della foto.
+          </p>
+          <ul class="monitoring-list">
+            <li><span aria-hidden="true">01</span><p>Data e, se utile, ora dello scatto.</p></li>
+            <li><span aria-hidden="true">02</span><p>Stanza, parete e posizione: interno, esterno, vicino a un’apertura o a un angolo.</p></li>
+            <li><span aria-hidden="true">03</span><p>Andamento e lunghezza apparente del segno, usando parole descrittive e non classificazioni.</p></li>
+            <li><span aria-hidden="true">04</span><p>Eventuali macchie, umidità, distacchi di finitura, lavori recenti o altri cambiamenti notati.</p></li>
+            <li><span aria-hidden="true">05</span><p>Che cosa è diverso rispetto alla foto precedente, oppure che non hai notato differenze.</p></li>
+          </ul>
+          <div class="monitoring-limit">
+            <strong>Separa osservazione e interpretazione</strong>
+            <p>“Il segno sembra più lungo nella foto del 10 agosto” è un’osservazione da verificare. “La parete sta cedendo” è una conclusione che una foto domestica non può dimostrare.</p>
+          </div>
+        </section>
+
+        <section class="monitoring-section" id="tempo" aria-labelledby="tempo-title">
+          <p class="eyebrow">Confronto nel tempo</p>
+          <h2 id="tempo-title">Crea una sequenza leggibile, senza fare prove sulla parete</h2>
+          <p>
+            Salva le immagini in una cartella con data e posizione, oppure usa nomi coerenti come
+            <em>salotto-parete-nord-2026-08-08</em>. Quando confronti due foto, controlla prima che punto di
+            ripresa, distanza, orientamento e luce non rendano il confronto fuorviante.
+          </p>
+          <p>
+            Se ti sembra di notare una variazione, annota esattamente quale differenza vedi e allega entrambe
+            le immagini. Non è necessario aspettare che il segno “cresca” per chiedere un confronto: una
+            valutazione professionale può indicare quali informazioni o controlli siano utili nel caso concreto.
+          </p>
+        </section>
+
+        <section class="monitoring-section" id="verifica" aria-labelledby="verifica-title">
+          <p class="eyebrow">Prossimo passo</p>
+          <h2 id="verifica-title">Quando la documentazione può accompagnare una richiesta</h2>
+          <p>
+            Può essere utile inviare una richiesta quando vuoi mettere in ordine la storia del punto, hai
+            osservato un cambiamento o ci sono più elementi da descrivere insieme. Il riepilogo deve riportare
+            le tue osservazioni: il significato tecnico richiede una valutazione sul posto.
+          </p>
+          <p>
+            Se la situazione potrebbe richiedere attenzione urgente, allontanati dalla zona se necessario e
+            rivolgiti tempestivamente a un professionista qualificato o alle autorità competenti. Questo sito
+            non è un servizio di emergenza.
+          </p>
+        </section>
+
+        <section class="monitoring-section monitoring-faq" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Fotografie e monitoraggio di una crepa</h2>
+          <div class="monitoring-faq-list">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="monitoring-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dalla documentazione alla richiesta</h2>
+          <p>
+            Se hai già raccolto qualche informazione, puoi approfondire il percorso generale o inviare un
+            riepilogo neutro delle osservazioni disponibili.
+          </p>
+          <div class="monitoring-links">
+            <a href="/crepe-nei-muri/">Guida generale sulle crepe nei muri <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/cosa-fare/">Cosa fare dopo aver notato una crepa <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/quando-chiedere-verifica/">Quando chiedere una verifica <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .monitoring-page { background: var(--paper); }
+  .monitoring-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .monitoring-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .monitoring-hero h1 { max-width: 15ch; font-size: clamp(3.1rem, 7vw, 6.4rem); }
+  .monitoring-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .monitoring-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .monitoring-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .monitoring-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .monitoring-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .monitoring-index nav { display: grid; gap: 0.7rem; }
+  .monitoring-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .monitoring-index a:hover, .monitoring-index a:focus-visible { color: var(--accent); }
+  .monitoring-content { min-width: 0; }
+  .monitoring-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .monitoring-intro { padding-top: 0; border-top: 0; }
+  .monitoring-section h2, .monitoring-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .monitoring-section > p:not(.eyebrow), .monitoring-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .monitoring-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .monitoring-note, .monitoring-limit { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .monitoring-note strong, .monitoring-limit strong { color: var(--brand-dark); }
+  .monitoring-note p, .monitoring-limit p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .monitoring-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .monitoring-card { padding: 1.5rem; background: var(--surface); }
+  .monitoring-card h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .monitoring-card p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .monitoring-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .monitoring-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .monitoring-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .monitoring-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .monitoring-faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .monitoring-faq-list details { border-bottom: 1px solid var(--line); }
+  .monitoring-faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .monitoring-faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .monitoring-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; background: var(--surface-alt); }
+  .monitoring-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
+  .monitoring-links a { color: var(--brand); font-size: 0.88rem; font-weight: 750; text-underline-offset: 0.2em; }
+  .monitoring-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .monitoring-layout { grid-template-columns: 1fr; }
+    .monitoring-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .monitoring-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .monitoring-index a { font-size: 0.82rem; }
+    .monitoring-cards { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .monitoring-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .monitoring-links { grid-template-columns: 1fr; }
+  }
+</style>

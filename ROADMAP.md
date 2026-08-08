@@ -159,7 +159,7 @@ giustificano:
 - [ ] crepe sul soffitto;
 - [ ] crepe sul pavimento;
 - [ ] crepe che cambiano nel tempo;
-- [ ] come fotografare e monitorare una fessurazione;
+- [x] `/crepe-nei-muri/come-fotografare-monitorare-crepa/` - guida a foto, date e confronto nel tempo;
 - [ ] quali informazioni preparare per un tecnico.
 
 > La prima pagina del Phase 9 è stata pubblicata il 2026-08-08. Il contenuto

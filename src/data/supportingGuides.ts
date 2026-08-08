@@ -19,4 +19,9 @@ export const supportingGuides = [
     title: 'Crepe vicino a porte e finestre',
     description: 'Come descrivere posizione, apertura e contesto senza dedurre la causa.',
   },
+  {
+    href: '/crepe-nei-muri/come-fotografare-monitorare-crepa/',
+    title: 'Come fotografare e monitorare una crepa',
+    description: 'Foto, date e osservazioni per confrontare il contesto senza fare diagnosi.',
+  },
 ] as const;
