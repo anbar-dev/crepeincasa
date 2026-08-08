@@ -1,0 +1,232 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const observations = [
+  {
+    title: 'Posizione precisa',
+    text: 'Annota se la fessurazione è sopra l’apertura, lungo un lato, vicino all’angolo, sotto il davanzale o in corrispondenza di una finitura.',
+  },
+  {
+    title: 'Andamento visibile',
+    text: 'Descrivi direzione, lunghezza apparente, continuità e se il segno segue il bordo dell’apertura oppure attraversa la parete.',
+  },
+  {
+    title: 'Rapporto con l’apertura',
+    text: 'Indica se porta o finestra funzionano come prima oppure se hai notato un cambiamento. È un’osservazione da riferire, non una diagnosi.',
+  },
+  {
+    title: 'Altri elementi',
+    text: 'Segnala eventuali macchie, umidità, distacchi di finitura, lavori recenti o una situazione simile sul lato opposto o all’esterno.',
+  },
+];
+
+const faq = [
+  {
+    question: 'Una crepa sopra una porta o una finestra indica sempre un problema importante?',
+    answer: 'No. La posizione è un’informazione utile per descrivere il contesto, ma da sola non permette di stabilire origine, profondità o livello di attenzione necessario.',
+  },
+  {
+    question: 'Devo stuccare subito la crepa vicino alla finestra?',
+    answer: 'Prima è prudente documentare ciò che vedi e annotare data, posizione e cambiamenti. Coprire subito il segno può rendere più difficile ricostruire l’osservazione.',
+  },
+  {
+    question: 'Se una porta o una finestra chiude diversamente devo fare una diagnosi?',
+    answer: 'No. Riporta semplicemente il cambiamento, quando lo hai notato e se è comparso insieme alla fessurazione. Per capire il significato del quadro serve una valutazione sul posto.',
+  },
+  {
+    question: 'Come posso fotografare una crepa vicino a un’apertura?',
+    answer: 'Scatta una foto dell’insieme della parete e una più ravvicinata, annotando stanza, lato dell’apertura e data. Evita di rimuovere finiture o fare prove che possano alterare la superficie.',
+  },
+];
+---
+
+<BaseLayout
+  title="Crepe vicino a porte e finestre: cosa osservare"
+  description="Crepe vicino a porte e finestre: come descrivere posizione, andamento, finiture, aperture e cambiamenti senza fare diagnosi a distanza."
+  canonical="https://crepeincasa.it/crepe-nei-muri/crepe-vicino-porte-finestre/"
+>
+  <article class="opening-page">
+    <header class="opening-hero">
+      <div class="container opening-hero-inner">
+        <p class="eyebrow">Guida a un contesto specifico</p>
+        <h1>Crepe vicino a porte e finestre: cosa osservare</h1>
+        <p class="opening-lead">
+          Una fessurazione vicino a un’apertura merita di essere descritta con precisione: posizione,
+          andamento, finiture e cambiamenti dell’apertura sono informazioni utili, ma non bastano da
+          soli per stabilire la causa.
+        </p>
+        <p class="opening-meta">Lettura di circa 6 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container opening-layout">
+      <aside class="opening-index" aria-label="In questa guida">
+        <p class="opening-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#osservare">Cosa osservare</a>
+          <a href="#contesto">Il contesto da annotare</a>
+          <a href="#documentare">Come documentare</a>
+          <a href="#verifica">Quando chiedere una verifica</a>
+          <a href="#faq">Domande frequenti</a>
+        </nav>
+      </aside>
+
+      <div class="opening-content">
+        <section class="opening-section opening-intro" id="risposta" aria-labelledby="risposta-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="risposta-title">La vicinanza all’apertura è un dato, non una conclusione</h2>
+          <p>
+            Porte e finestre interrompono la continuità di una parete e sono punti facili da descrivere:
+            puoi indicare se la crepa è sopra, di lato, sotto o vicino a un angolo. Questa informazione
+            aiuta a ricostruire il contesto, ma una fotografia o la sola posizione non mostrano tutto ciò
+            che serve per valutare l’immobile.
+          </p>
+          <div class="opening-note">
+            <strong>Regola pratica</strong>
+            <p>Descrivi ciò che vedi e ciò che è cambiato secondo la tua osservazione. Non provare a classificare la crepa come strutturale, sicura o pericolosa.</p>
+          </div>
+        </section>
+
+        <section class="opening-section" id="osservare" aria-labelledby="osservare-title">
+          <p class="eyebrow">Osservazioni utili</p>
+          <h2 id="osservare-title">Quattro dettagli da mettere in ordine</h2>
+          <div class="opening-cards">
+            {observations.map((item) => (
+              <article class="opening-card">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="opening-section" id="contesto" aria-labelledby="contesto-title">
+          <p class="eyebrow">Prima di interpretare</p>
+          <h2 id="contesto-title">Raccogli la storia del punto</h2>
+          <p>
+            Per rendere utile una descrizione, annota quando hai notato la fessurazione e se nel frattempo
+            hai osservato cambiamenti. Ricorda anche eventuali sostituzioni di infissi, lavori di pittura,
+            modifiche alla parete, infiltrazioni o interventi recenti nella stanza.
+          </p>
+          <ul class="opening-list">
+            <li><span aria-hidden="true">01</span><p>Indica stanza, parete e lato dell’apertura: interno, esterno o entrambi.</p></li>
+            <li><span aria-hidden="true">02</span><p>Scrivi se la fessurazione era già visibile prima di lavori o tinteggiature.</p></li>
+            <li><span aria-hidden="true">03</span><p>Annota se la porta o la finestra si comporta diversamente, senza attribuire il cambiamento alla crepa.</p></li>
+            <li><span aria-hidden="true">04</span><p>Segnala altri elementi osservati nella stessa zona, come umidità o distacchi di finitura.</p></li>
+          </ul>
+        </section>
+
+        <section class="opening-section" id="documentare" aria-labelledby="documentare-title">
+          <p class="eyebrow">Documentazione semplice</p>
+          <h2 id="documentare-title">Fotografa il punto senza alterarlo</h2>
+          <p>
+            Una foto non sostituisce una verifica, ma può aiutare a ricordare la posizione e confrontare
+            nel tempo ciò che hai osservato. Scatta prima una vista della parete, poi una foto ravvicinata
+            senza coprire il rapporto con porta, finestra, angoli e finiture.
+          </p>
+          <div class="opening-limit">
+            <strong>Evita prove invasive</strong>
+            <p>Non allargare la fessura, non rimuovere intonaco o rivestimenti e non usare il modulo per chiedere una valutazione urgente.</p>
+          </div>
+        </section>
+
+        <section class="opening-section" id="verifica" aria-labelledby="verifica-title">
+          <p class="eyebrow">Prossimo passo</p>
+          <h2 id="verifica-title">Quando può essere utile chiedere un confronto</h2>
+          <p>
+            Può avere senso preparare una richiesta quando vuoi ricostruire il contesto dell’immobile,
+            quando hai notato cambiamenti nel tempo o quando la fessurazione è accompagnata da altri
+            elementi che non riesci a interpretare. La decisione sul tipo di controllo adatto appartiene
+            al professionista che valuterà il caso concreto sul posto.
+          </p>
+          <p>
+            Se la situazione potrebbe richiedere attenzione urgente, allontanati dalla zona se necessario
+            e rivolgiti tempestivamente a un professionista qualificato o alle autorità competenti. Questo
+            sito non è un servizio di emergenza.
+          </p>
+        </section>
+
+        <section class="opening-section opening-faq" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Crepe vicino a porte e finestre</h2>
+          <div class="opening-faq-list">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="opening-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dall’osservazione alla richiesta</h2>
+          <p>
+            Puoi tornare alla guida generale, approfondire cosa fare dopo aver notato una crepa o preparare
+            direttamente una descrizione ordinata per un confronto.
+          </p>
+          <div class="opening-links">
+            <a href="/crepe-nei-muri/">Guida generale sulle crepe nei muri <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/cosa-fare/">Cosa fare dopo aver notato una crepa <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/quando-chiedere-verifica/">Quando chiedere una verifica <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .opening-page { background: var(--paper); }
+  .opening-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .opening-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .opening-hero h1 { max-width: 15ch; font-size: clamp(3.1rem, 7vw, 6.4rem); }
+  .opening-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .opening-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .opening-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .opening-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .opening-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .opening-index nav { display: grid; gap: 0.7rem; }
+  .opening-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .opening-index a:hover, .opening-index a:focus-visible { color: var(--accent); }
+  .opening-content { min-width: 0; }
+  .opening-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .opening-intro { padding-top: 0; border-top: 0; }
+  .opening-section h2, .opening-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .opening-section > p:not(.eyebrow), .opening-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .opening-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .opening-note, .opening-limit { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .opening-note strong, .opening-limit strong { color: var(--brand-dark); }
+  .opening-note p, .opening-limit p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .opening-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .opening-card { padding: 1.5rem; background: var(--surface); }
+  .opening-card h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .opening-card p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .opening-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .opening-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .opening-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .opening-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .opening-faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .opening-faq-list details { border-bottom: 1px solid var(--line); }
+  .opening-faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .opening-faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .opening-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; background: var(--surface-alt); }
+  .opening-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
+  .opening-links a { color: var(--brand); font-size: 0.88rem; font-weight: 750; text-underline-offset: 0.2em; }
+  .opening-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .opening-layout { grid-template-columns: 1fr; }
+    .opening-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .opening-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .opening-index a { font-size: 0.82rem; }
+  }
+
+  @media (max-width: 620px) {
+    .opening-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .opening-cards, .opening-links { grid-template-columns: 1fr; }
+  }
+</style>

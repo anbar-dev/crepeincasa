@@ -14,4 +14,9 @@ export const supportingGuides = [
     title: 'Casa nuova o dopo lavori',
     description: 'Cronologia, interventi recenti e documenti utili da raccogliere.',
   },
+  {
+    href: '/crepe-nei-muri/crepe-vicino-porte-finestre/',
+    title: 'Crepe vicino a porte e finestre',
+    description: 'Come descrivere posizione, apertura e contesto senza dedurre la causa.',
+  },
 ] as const;

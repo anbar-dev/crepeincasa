@@ -153,7 +153,7 @@ Checklist obbligatoria:
 Da valutare una pagina alla volta, solo se i dati o l’analisi dell’intento lo
 giustificano:
 
-- [ ] crepe vicino a porte e finestre;
+- [x] `/crepe-nei-muri/crepe-vicino-porte-finestre/` — pagina contestuale su posizione e osservazioni;
 - [ ] crepe in casa nuova o dopo lavori;
 - [ ] crepe interne ed esterne;
 - [ ] crepe sul soffitto;
@@ -161,6 +161,10 @@ giustificano:
 - [ ] crepe che cambiano nel tempo;
 - [ ] come fotografare e monitorare una fessurazione;
 - [ ] quali informazioni preparare per un tecnico.
+
+> La prima pagina del Phase 9 è stata pubblicata il 2026-08-08. Il contenuto
+> tratta il contesto vicino a porte e finestre senza attribuire automaticamente
+> una causa e collega le guide già attive al modulo di richiesta.
 
 Le pagine "crepe diagonali", "verticali" e "orizzontali" restano ritirate
 finché non emerge un intento autonomo e un contenuto realmente differente.
