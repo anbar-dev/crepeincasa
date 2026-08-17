@@ -1,0 +1,277 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const floorContexts = [
+  {
+    number: '01',
+    title: 'La finitura visibile',
+    text: 'Indica se il segno interessa piastrelle, fughe, massetto visibile, parquet, resina o un’altra superficie, senza sollevare o rompere il rivestimento.',
+  },
+  {
+    number: '02',
+    title: 'La posizione nella stanza',
+    text: 'Descrivi se si trova al centro, vicino a una parete, a un angolo, a una soglia o a un elemento fisso che può aiutarti a riconoscere il punto.',
+  },
+  {
+    number: '03',
+    title: 'Ciò che cambia intorno',
+    text: 'Annota acqua, umidità, distacchi, bordi rialzati o una differenza che percepisci camminando, sempre come osservazione e senza attribuire una causa.',
+  },
+];
+
+const checklist = [
+  'stanza e posizione del segno rispetto a pareti, angoli, soglie, colonne o altri riferimenti fissi;',
+  'materiale e finitura visibile: piastrella, fuga, parquet, massetto, resina o altro;',
+  'data in cui hai notato la fessurazione e fotografie precedenti, se disponibili;',
+  'presenza di umidità, acqua, distacchi, bordi rialzati o materiale che si muove senza essere spinto;',
+  'eventuali lavori recenti, perdite, modifiche o cambi d’uso dell’ambiente che ricordi;',
+  'limiti dell’osservazione e qualsiasi zona che non hai controllato per non spostare mobili o fare prove.',
+];
+
+const photoSteps = [
+  {
+    title: 'Inquadra il contesto',
+    text: 'Scatta una vista della stanza e una della superficie, mantenendo riferimenti come pareti, soglie o fughe per riconoscere il punto.',
+  },
+  {
+    title: 'Fotografa senza sollevare',
+    text: 'Conserva un dettaglio della finitura visibile, ma non staccare piastrelle, battiscopa o listelli per guardare sotto.',
+  },
+  {
+    title: 'Annota date e condizioni',
+    text: 'Segna quando hai fotografato e se nello stesso periodo hai notato acqua, umidità, lavori o altri cambiamenti.',
+  },
+];
+
+const attentionPoints = [
+  'bordi taglienti, piastrelle instabili o materiale che può far inciampare;',
+  'acqua, gocciolamenti o una superficie bagnata che rende rischioso il passaggio;',
+  'un dislivello che rende difficile camminare o usare normalmente l’ambiente;',
+  'una zona che richiede di spostare mobili pesanti, sollevare rivestimenti o fare prove.',
+];
+
+const faq = [
+  {
+    question: 'Una crepa sul pavimento significa che il pavimento sta cedendo?',
+    answer: 'No, la sola presenza di una fessurazione non permette di concludere che esista un cedimento. Descrivi superficie, posizione, storia dell’ambiente e cambiamenti osservati; il significato richiede una valutazione sul posto.',
+  },
+  {
+    question: 'Devo togliere una piastrella o il battiscopa per controllare?',
+    answer: 'Non è necessario improvvisare demolizioni o rimozioni. Documenta ciò che è visibile e indica quali parti non hai controllato: eventuali verifiche invasive vanno valutate da un professionista qualificato.',
+  },
+  {
+    question: 'È utile dire se il pavimento sembra inclinato?',
+    answer: 'Puoi riportare una differenza che percepisci o che hai osservato, specificando come l’hai notata. Non trasformarla però in una misura tecnica o in una conclusione sulla causa.',
+  },
+  {
+    question: 'Macchie o umidità sul pavimento spiegano la crepa?',
+    answer: 'Sono elementi da annotare con posizione e data, ma non spiegano da soli l’origine del segno. Possono essere valutati insieme agli altri dati durante un confronto sul posto.',
+  },
+  {
+    question: 'Quando conviene chiedere una verifica?',
+    answer: 'Puoi farlo quando la fessurazione persiste, è cambiata, si accompagna a umidità o distacchi, crea un ostacolo nell’uso dell’ambiente o quando devi decidere come procedere con un ripristino. In condizioni potenzialmente urgenti, evita la zona se necessario e chiedi tempestivamente aiuto qualificato.',
+  },
+];
+---
+
+<BaseLayout
+  title="Crepe sul pavimento: cosa osservare"
+  description="Crepe sul pavimento: come descrivere finitura, posizione, umidità, fotografie e cambiamenti senza concludere online che esista un cedimento."
+  canonical="https://crepeincasa.it/crepe-nei-muri/crepe-sul-pavimento/"
+>
+  <article class="floor-page">
+    <header class="floor-hero">
+      <div class="container floor-hero-inner">
+        <p class="eyebrow">Guida al contesto del pavimento</p>
+        <h1>Crepe sul pavimento: cosa osservare</h1>
+        <p class="floor-lead">
+          Una fessurazione sul pavimento va descritta insieme alla finitura, alla posizione e a ciò che
+          cambia intorno. Puoi documentare l’osservazione senza sollevare rivestimenti o fare prove.
+        </p>
+        <p class="floor-meta">Lettura di circa 7 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container floor-layout">
+      <aside class="floor-index" aria-label="In questa guida">
+        <p class="floor-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#contesto">Tre elementi di contesto</a>
+          <a href="#checklist">Checklist delle osservazioni</a>
+          <a href="#foto">Come fotografare</a>
+          <a href="#attenzione">Quando fermarsi</a>
+          <a href="#faq">Domande frequenti</a>
+        </nav>
+      </aside>
+
+      <div class="floor-content">
+        <section class="floor-section floor-intro" id="risposta" aria-labelledby="answer-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="answer-title">La superficie del pavimento è un dato da descrivere</h2>
+          <p>
+            Per preparare una richiesta indica che cosa vedi, dove si trova e quale finitura è coinvolta.
+            Se noti umidità, distacchi o una difficoltà nel camminare, annota anche questi elementi. Una
+            fotografia o una sensazione isolata non permettono di stabilire la causa.
+          </p>
+          <div class="floor-note">
+            <strong>Non confondere un’osservazione con un cedimento</strong>
+            <p>“Il pavimento sembra più basso vicino alla soglia” descrive ciò che percepisci. “Il terreno è ceduto” è una conclusione che richiede una verifica dell’immobile e del contesto.</p>
+          </div>
+        </section>
+
+        <section class="floor-section" id="contesto" aria-labelledby="context-title">
+          <p class="eyebrow">Prima di interpretare</p>
+          <h2 id="context-title">Tre elementi da osservare senza alterare il rivestimento</h2>
+          <p>
+            Parti da ciò che è visibile dalla posizione normale. Se un mobile copre una parte della zona o
+            un dettaglio non è accessibile, indicalo senza spostare oggetti pesanti per completare la verifica.
+          </p>
+          <div class="floor-contexts">
+            {floorContexts.map((item) => (
+              <article class="floor-context">
+                <p class="floor-number">{item.number}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="floor-section" id="checklist" aria-labelledby="checklist-title">
+          <p class="eyebrow">Raccogliere informazioni</p>
+          <h2 id="checklist-title">Checklist per descrivere una crepa sul pavimento</h2>
+          <p>
+            Completa i punti con parole semplici e date. Se non sai qualcosa, scrivilo: è meglio distinguere
+            un dato mancante da un’ipotesi.
+          </p>
+          <ul class="floor-list">
+            {checklist.map((item, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="floor-section" id="foto" aria-labelledby="photos-title">
+          <p class="eyebrow">Documentazione non invasiva</p>
+          <h2 id="photos-title">Come fotografare il pavimento senza fare prove</h2>
+          <p>
+            Fotografa dalla posizione più stabile e accessibile. Le immagini servono a ricordare contesto,
+            finitura e data dell’osservazione; non sono sufficienti per valutare strati o cause non visibili.
+          </p>
+          <div class="floor-cards">
+            {photoSteps.map((item) => (
+              <article class="floor-card">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <div class="floor-limit">
+            <strong>Non usare pressione o colpi come test</strong>
+            <p>Non battere, forare, sollevare o spingere la superficie per capire che cosa c’è sotto. Una prova domestica può alterare il pavimento e non sostituisce una verifica appropriata.</p>
+          </div>
+        </section>
+
+        <section class="floor-section floor-alert" id="attenzione" aria-labelledby="attention-title">
+          <p class="eyebrow">Prima la sicurezza</p>
+          <h2 id="attention-title">Quando interrompere l’osservazione</h2>
+          <p>
+            Se la superficie rende rischioso il passaggio o per documentarla dovresti spostare elementi
+            pesanti, fermati. In condizioni che potrebbero richiedere attenzione urgente, evita la zona se
+            necessario e rivolgiti tempestivamente a un professionista qualificato o alle autorità competenti.
+          </p>
+          <ul class="floor-list floor-list-plain">
+            {attentionPoints.map((item) => <li><span aria-hidden="true">—</span><p>{item}</p></li>)}
+          </ul>
+        </section>
+
+        <section class="floor-section" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Crepe sul pavimento</h2>
+          <div class="floor-faq">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="floor-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dalle osservazioni alla richiesta</h2>
+          <p>
+            Puoi approfondire come documentare una fessurazione, preparare le informazioni per un tecnico o
+            usare il modulo per creare un riepilogo neutro della situazione osservata.
+          </p>
+          <div class="floor-links">
+            <a href="/crepe-nei-muri/come-fotografare-monitorare-crepa/">Come fotografare e monitorare una crepa <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/informazioni-per-tecnico/">Quali informazioni preparare per un tecnico <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/interne-o-esterne/">Crepe interne o esterne <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .floor-page { background: var(--paper); }
+  .floor-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .floor-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .floor-hero h1 { max-width: 15ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .floor-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .floor-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .floor-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .floor-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .floor-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .floor-index nav { display: grid; gap: 0.7rem; }
+  .floor-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .floor-index a:hover, .floor-index a:focus-visible { color: var(--accent); }
+  .floor-content { min-width: 0; }
+  .floor-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .floor-intro { padding-top: 0; border-top: 0; }
+  .floor-section h2, .floor-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .floor-section > p:not(.eyebrow), .floor-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .floor-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .floor-note, .floor-limit { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .floor-note strong, .floor-limit strong { color: var(--brand-dark); }
+  .floor-note p, .floor-limit p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .floor-contexts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .floor-context { padding: 1.5rem; background: var(--surface); }
+  .floor-number { margin: 0 0 1.3rem; color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
+  .floor-context h3, .floor-card h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .floor-context p:last-child, .floor-card p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .floor-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .floor-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .floor-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .floor-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .floor-list-plain li { grid-template-columns: 1rem 1fr; }
+  .floor-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+  .floor-card { padding: 1.5rem; border: 1px solid var(--line); border-radius: 0.9rem; background: var(--surface); }
+  .floor-limit { border-left-color: var(--brand); background: var(--surface-alt); }
+  .floor-alert { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .floor-faq { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .floor-faq details { border-bottom: 1px solid var(--line); }
+  .floor-faq summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .floor-faq p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .floor-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; background: var(--surface-alt); }
+  .floor-links { display: grid; gap: 0.8rem; margin-top: 1.6rem; }
+  .floor-links a { color: var(--brand); font-size: 0.9rem; font-weight: 750; text-underline-offset: 0.2em; }
+  .floor-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .floor-layout { grid-template-columns: 1fr; }
+    .floor-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .floor-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .floor-index a { font-size: 0.82rem; }
+    .floor-contexts, .floor-cards { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .floor-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+  }
+</style>

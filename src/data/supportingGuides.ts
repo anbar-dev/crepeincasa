@@ -39,4 +39,9 @@ export const supportingGuides = [
     title: 'Crepe sul soffitto',
     description: 'Come osservare posizione, superficie e contesto del soffitto senza fare prove rischiose.',
   },
+  {
+    href: '/crepe-nei-muri/crepe-sul-pavimento/',
+    title: 'Crepe sul pavimento',
+    description: 'Come descrivere finitura, posizione, umidità e cambiamenti senza dedurre un cedimento.',
+  },
 ] as const;

@@ -157,7 +157,7 @@ giustificano:
 - [ ] crepe in casa nuova o dopo lavori;
 - [x] `/crepe-nei-muri/interne-o-esterne/` - guida comparativa su contesto interno, facciata e osservazioni corrispondenti;
 - [x] `/crepe-nei-muri/crepe-sul-soffitto/` - guida contestuale su posizione, superficie e osservazioni dal basso;
-- [ ] crepe sul pavimento;
+- [x] `/crepe-nei-muri/crepe-sul-pavimento/` - guida contestuale su finitura, posizione e cambiamenti osservabili;
 - [ ] crepe che cambiano nel tempo;
 - [x] `/crepe-nei-muri/come-fotografare-monitorare-crepa/` - guida a foto, date e confronto nel tempo;
 - [x] `/crepe-nei-muri/informazioni-per-tecnico/` - checklist di contesto, cronologia, allegati e domande da preparare.

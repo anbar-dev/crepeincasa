@@ -63,7 +63,8 @@ validare sono:
    Search Console mostrano domanda e se ogni pagina ha un contenuto realmente
    diverso. La guida `/crepe-nei-muri/interne-o-esterne/` accorpa i primi due
    contesti. La guida `/crepe-nei-muri/crepe-sul-soffitto/` copre il contesto
-   del soffitto; il pavimento resta da valutare separatamente.
+   del soffitto. La guida `/crepe-nei-muri/crepe-sul-pavimento/` copre il
+   contesto della superficie senza sovrapporsi alle future pagine sui cedimenti.
 6. **Come documentare e monitorare una fessurazione** — foto datate,
    posizione, confronto nel tempo e limiti delle misure domestiche.
 7. **Quali informazioni preparare per un tecnico** — cronologia, contesto,
