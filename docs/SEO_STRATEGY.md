@@ -64,6 +64,8 @@ validare sono:
    diverso.
 6. **Come documentare e monitorare una fessurazione** — foto datate,
    posizione, confronto nel tempo e limiti delle misure domestiche.
+7. **Quali informazioni preparare per un tecnico** — cronologia, contesto,
+   allegati pertinenti e domande da portare a un confronto sul posto.
 
 Le forme diagonale, verticale e orizzontale restano inizialmente sezioni della
 pagina pilastro o degli articoli contestuali. Non diventano URL autonome solo

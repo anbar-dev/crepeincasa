@@ -24,4 +24,9 @@ export const supportingGuides = [
     title: 'Come fotografare e monitorare una crepa',
     description: 'Foto, date e osservazioni per confrontare il contesto senza fare diagnosi.',
   },
+  {
+    href: '/crepe-nei-muri/informazioni-per-tecnico/',
+    title: 'Quali informazioni preparare per un tecnico',
+    description: 'Una checklist neutra di contesto, cronologia, foto e domande da portare al confronto.',
+  },
 ] as const;

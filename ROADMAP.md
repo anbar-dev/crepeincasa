@@ -160,7 +160,7 @@ giustificano:
 - [ ] crepe sul pavimento;
 - [ ] crepe che cambiano nel tempo;
 - [x] `/crepe-nei-muri/come-fotografare-monitorare-crepa/` - guida a foto, date e confronto nel tempo;
-- [ ] quali informazioni preparare per un tecnico.
+- [x] `/crepe-nei-muri/informazioni-per-tecnico/` - checklist di contesto, cronologia, allegati e domande da preparare.
 
 > La prima pagina del Phase 9 è stata pubblicata il 2026-08-08. Il contenuto
 > tratta il contesto vicino a porte e finestre senza attribuire automaticamente
