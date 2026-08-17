@@ -1,0 +1,276 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const ceilingContexts = [
+  {
+    number: '01',
+    title: 'La posizione nella stanza',
+    text: 'Indica se il segno è al centro, vicino a una parete, a un angolo, a un’apertura o a un elemento come una trave o un controsoffitto visibile.',
+  },
+  {
+    number: '02',
+    title: 'La superficie visibile',
+    text: 'Descrivi pittura, intonaco, cartongesso, pannello o altra finitura senza rimuovere materiale per capire che cosa ci sia sotto.',
+  },
+  {
+    number: '03',
+    title: 'Gli elementi vicini',
+    text: 'Annota macchie, umidità, distacchi di finitura, lampade o passaggi di impianti che puoi vedere senza smontare nulla.',
+  },
+];
+
+const checklist = [
+  'stanza e posizione del segno rispetto a pareti, angoli, porte, finestre o altri riferimenti fissi;',
+  'tipo di superficie visibile e presenza di pittura, intonaco, pannelli o rivestimenti;',
+  'data in cui hai notato la fessurazione e fotografie precedenti, se disponibili;',
+  'macchie, umidità, gocciolamenti, distacchi o altri cambiamenti osservati nella zona;',
+  'lavori recenti, perdite, modifiche o interventi eseguiti sopra o vicino all’ambiente, se noti;',
+  'limiti dell’osservazione: altezza, accessibilità e qualsiasi elemento che non hai potuto controllare.',
+];
+
+const photoSteps = [
+  {
+    title: 'Resta a terra',
+    text: 'Scatta soltanto da una posizione stabile e ordinaria. Non usare scale improvvisate, sedie o oggetti per avvicinarti al soffitto.',
+  },
+  {
+    title: 'Mostra la stanza',
+    text: 'Una vista ampia aiuta a riconoscere ambiente, pareti e posizione. Mantieni anche una fotografia più ravvicinata, se puoi farla senza rischio.',
+  },
+  {
+    title: 'Conserva data e originali',
+    text: 'Salva le immagini senza affidarti solo a ritagli o modifiche. Annota data, stanza e punto da cui hai scattato.',
+  },
+];
+
+const attentionPoints = [
+  'materiale che sembra staccarsi o cadere;',
+  'acqua, gocciolamenti o una superficie molto bagnata;',
+  'un cambiamento che ti sembra rapido o associato ad altri fenomeni;',
+  'una zona che richiede di salire, spostare elementi o fare prove per essere osservata.',
+];
+
+const faq = [
+  {
+    question: 'Una crepa sul soffitto è più preoccupante di una crepa sul muro?',
+    answer: 'La sola posizione non permette di stabilire causa o livello di attenzione. È utile descrivere stanza, superficie, contesto, cambiamenti e altri elementi osservati, lasciando la valutazione a un professionista sul posto.',
+  },
+  {
+    question: 'Devo salire su una scala per fotografare meglio?',
+    answer: 'No, la documentazione non deve creare un rischio. Fotografa da terra se puoi farlo in modo stabile e annota ciò che non è stato possibile osservare da vicino.',
+  },
+  {
+    question: 'Macchie o umidità sul soffitto indicano una perdita?',
+    answer: 'Sono osservazioni da riportare con posizione e data, ma non dimostrano da sole l’origine o la causa. Un confronto sul posto può aiutare a stabilire quali controlli siano appropriati.',
+  },
+  {
+    question: 'Posso controllare se il soffitto è cavo o instabile?',
+    answer: 'Non improvvisare colpi, pressioni, fori o rimozioni. Se non puoi osservare la zona senza toccarla o avvicinarti in sicurezza, interrompi la verifica e segnala il limite nella richiesta.',
+  },
+  {
+    question: 'Quando devo chiedere una verifica?',
+    answer: 'Puoi farlo quando il segno persiste, è cambiato, compare con macchie o distacchi oppure quando devi decidere come procedere con un ripristino. In caso di condizioni che potrebbero richiedere attenzione urgente, evita la zona e rivolgiti tempestivamente a un professionista qualificato o alle autorità competenti.',
+  },
+];
+---
+
+<BaseLayout
+  title="Crepe sul soffitto: cosa osservare"
+  description="Crepe sul soffitto: come descrivere posizione, superficie, macchie, fotografie e limiti dell’osservazione senza fare diagnosi online."
+  canonical="https://crepeincasa.it/crepe-nei-muri/crepe-sul-soffitto/"
+>
+  <article class="ceiling-page">
+    <header class="ceiling-hero">
+      <div class="container ceiling-hero-inner">
+        <p class="eyebrow">Guida al contesto del soffitto</p>
+        <h1>Crepe sul soffitto: cosa osservare</h1>
+        <p class="ceiling-lead">
+          Una fessurazione sul soffitto va descritta insieme alla stanza, alla superficie e agli altri
+          elementi visibili. Puoi documentare ciò che noti senza salire, toccare o rimuovere materiale.
+        </p>
+        <p class="ceiling-meta">Lettura di circa 7 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container ceiling-layout">
+      <aside class="ceiling-index" aria-label="In questa guida">
+        <p class="ceiling-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#contesto">Tre elementi di contesto</a>
+          <a href="#checklist">Checklist delle osservazioni</a>
+          <a href="#foto">Come fotografare</a>
+          <a href="#attenzione">Quando fermarsi</a>
+          <a href="#faq">Domande frequenti</a>
+        </nav>
+      </aside>
+
+      <div class="ceiling-content">
+        <section class="ceiling-section ceiling-intro" id="risposta" aria-labelledby="answer-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="answer-title">La posizione sul soffitto è un dato, non una diagnosi</h2>
+          <p>
+            Per preparare una descrizione utile indica dove si trova il segno, quale finitura è visibile,
+            quando l’hai notato e se sono comparsi altri elementi come macchie o distacchi. La sola presenza
+            sul soffitto non consente di stabilire la causa o l’intervento necessario.
+          </p>
+          <div class="ceiling-note">
+            <strong>Descrivi anche ciò che non hai potuto controllare</strong>
+            <p>“Non posso vedere da vicino perché la zona è alta” è un’informazione corretta. Non serve salire o fare prove per completare la scheda.</p>
+          </div>
+        </section>
+
+        <section class="ceiling-section" id="contesto" aria-labelledby="context-title">
+          <p class="eyebrow">Prima di interpretare</p>
+          <h2 id="context-title">Tre elementi da osservare dalla posizione più sicura</h2>
+          <p>
+            Parti da ciò che puoi riconoscere senza avvicinarti oltre il necessario. Se un elemento non è
+            visibile, segnala semplicemente che non è noto.
+          </p>
+          <div class="ceiling-contexts">
+            {ceilingContexts.map((item) => (
+              <article class="ceiling-context">
+                <p class="ceiling-number">{item.number}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="ceiling-section" id="checklist" aria-labelledby="checklist-title">
+          <p class="eyebrow">Raccogliere informazioni</p>
+          <h2 id="checklist-title">Checklist per descrivere una crepa sul soffitto</h2>
+          <p>
+            Puoi copiare questi punti in una nota e completarli con date e fotografie. Mantieni separate
+            le osservazioni dalle ipotesi sulla causa.
+          </p>
+          <ul class="ceiling-list">
+            {checklist.map((item, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="ceiling-section" id="foto" aria-labelledby="photos-title">
+          <p class="eyebrow">Documentazione non invasiva</p>
+          <h2 id="photos-title">Come fotografare il soffitto senza aumentare il rischio</h2>
+          <p>
+            La priorità è restare in una posizione stabile. Una fotografia meno ravvicinata ma sicura è
+            preferibile a un dettaglio ottenuto salendo o toccando la superficie.
+          </p>
+          <div class="ceiling-cards">
+            {photoSteps.map((item) => (
+              <article class="ceiling-card">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <div class="ceiling-limit">
+            <strong>Non rimuovere finiture o pannelli</strong>
+            <p>Fori, raschiature, pressioni e smontaggi non sono necessari per creare un riepilogo delle osservazioni e possono alterare la superficie o esporti a rischi.</p>
+          </div>
+        </section>
+
+        <section class="ceiling-section ceiling-alert" id="attenzione" aria-labelledby="attention-title">
+          <p class="eyebrow">Prima la sicurezza</p>
+          <h2 id="attention-title">Quando interrompere l’osservazione</h2>
+          <p>
+            Se noti elementi che rendono rischioso restare nella zona, non cercare fotografie più precise.
+            Allontanati se necessario e chiedi tempestivamente supporto qualificato o alle autorità competenti.
+          </p>
+          <ul class="ceiling-list ceiling-list-plain">
+            {attentionPoints.map((item) => <li><span aria-hidden="true">—</span><p>{item}</p></li>)}
+          </ul>
+        </section>
+
+        <section class="ceiling-section" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Crepe sul soffitto</h2>
+          <div class="ceiling-faq">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="ceiling-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dalle osservazioni alla richiesta</h2>
+          <p>
+            Puoi approfondire la documentazione fotografica, preparare le informazioni per un tecnico o
+            usare il modulo per creare un riepilogo neutro della situazione osservata.
+          </p>
+          <div class="ceiling-links">
+            <a href="/crepe-nei-muri/come-fotografare-monitorare-crepa/">Come fotografare e monitorare una crepa <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/informazioni-per-tecnico/">Quali informazioni preparare per un tecnico <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/interne-o-esterne/">Crepe interne o esterne <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .ceiling-page { background: var(--paper); }
+  .ceiling-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .ceiling-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .ceiling-hero h1 { max-width: 15ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .ceiling-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .ceiling-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .ceiling-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .ceiling-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .ceiling-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .ceiling-index nav { display: grid; gap: 0.7rem; }
+  .ceiling-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .ceiling-index a:hover, .ceiling-index a:focus-visible { color: var(--accent); }
+  .ceiling-content { min-width: 0; }
+  .ceiling-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .ceiling-intro { padding-top: 0; border-top: 0; }
+  .ceiling-section h2, .ceiling-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .ceiling-section > p:not(.eyebrow), .ceiling-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .ceiling-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .ceiling-note, .ceiling-limit { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .ceiling-note strong, .ceiling-limit strong { color: var(--brand-dark); }
+  .ceiling-note p, .ceiling-limit p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .ceiling-contexts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .ceiling-context { padding: 1.5rem; background: var(--surface); }
+  .ceiling-number { margin: 0 0 1.3rem; color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
+  .ceiling-context h3, .ceiling-card h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .ceiling-context p:last-child, .ceiling-card p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .ceiling-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .ceiling-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .ceiling-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .ceiling-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .ceiling-list-plain li { grid-template-columns: 1rem 1fr; }
+  .ceiling-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+  .ceiling-card { padding: 1.5rem; border: 1px solid var(--line); border-radius: 0.9rem; background: var(--surface); }
+  .ceiling-limit { border-left-color: var(--brand); background: var(--surface-alt); }
+  .ceiling-alert { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .ceiling-faq { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .ceiling-faq details { border-bottom: 1px solid var(--line); }
+  .ceiling-faq summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .ceiling-faq p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .ceiling-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; background: var(--surface-alt); }
+  .ceiling-links { display: grid; gap: 0.8rem; margin-top: 1.6rem; }
+  .ceiling-links a { color: var(--brand); font-size: 0.9rem; font-weight: 750; text-underline-offset: 0.2em; }
+  .ceiling-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .ceiling-layout { grid-template-columns: 1fr; }
+    .ceiling-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .ceiling-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .ceiling-index a { font-size: 0.82rem; }
+    .ceiling-contexts, .ceiling-cards { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .ceiling-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+  }
+</style>

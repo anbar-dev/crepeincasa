@@ -34,4 +34,9 @@ export const supportingGuides = [
     title: 'Crepe nei muri interni o esterni',
     description: 'Come distinguere i contesti osservabili tra interno, facciata e superfici corrispondenti.',
   },
+  {
+    href: '/crepe-nei-muri/crepe-sul-soffitto/',
+    title: 'Crepe sul soffitto',
+    description: 'Come osservare posizione, superficie e contesto del soffitto senza fare prove rischiose.',
+  },
 ] as const;
