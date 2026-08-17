@@ -1,0 +1,271 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const contexts = [
+  {
+    number: '01',
+    title: 'Sul lato interno',
+    text: 'Indica la stanza, la parete, la finitura visibile e il rapporto con angoli, aperture, arredi o altri elementi che puoi riconoscere senza spostarli.',
+  },
+  {
+    number: '02',
+    title: 'Sul lato esterno',
+    text: 'Descrivi la facciata o la superficie accessibile da terra, l’esposizione e ciò che è visibile intorno, senza salire o rimuovere rivestimenti.',
+  },
+  {
+    number: '03',
+    title: 'Su entrambi i lati',
+    text: 'Se noti segni che sembrano trovarsi in zone corrispondenti, annota posizione e date di osservazione. La corrispondenza apparente non dimostra da sola un collegamento.',
+  },
+];
+
+const observations = [
+  'dove compare il segno: ambiente interno, facciata, balcone, muro di confine o altra superficie;',
+  'quale materiale o finitura è visibile, per esempio pittura, intonaco, piastrella, rivestimento o altro;',
+  'se sono presenti macchie, umidità, distacchi di finitura o altri cambiamenti osservabili;',
+  'se il punto interno e quello esterno sembrano allineati, indicando però la posizione senza dedurre un rapporto;',
+  'quando hai notato ciascun segno e quali fotografie o ricordi permettono di confrontare le date;',
+  'quali zone non hai potuto osservare perché richiedevano scale, accessi particolari o operazioni sulla superficie.',
+];
+
+const photoSets = [
+  {
+    title: 'Vista dell’ambiente',
+    text: 'Per l’interno, includi stanza e riferimenti fissi. Per l’esterno, mostra la porzione di facciata raggiungibile senza esporti a rischi.',
+  },
+  {
+    title: 'Rapporto con la superficie',
+    text: 'Una seconda immagine può rendere leggibile il rapporto tra il segno e la parete, l’angolo, l’apertura o il rivestimento vicino.',
+  },
+  {
+    title: 'Dettaglio datato',
+    text: 'Conserva un dettaglio non sfocato e annota data e punto di ripresa. Non usare la fotografia per attribuire una causa.',
+  },
+];
+
+const faq = [
+  {
+    question: 'Una crepa interna ed esterna nella stessa zona ha la stessa causa?',
+    answer: 'La posizione apparentemente corrispondente è un’informazione da riferire, non una conclusione. Materiali, stratigrafia, storia dell’immobile e condizioni reali devono essere valutati sul posto.',
+  },
+  {
+    question: 'È diverso osservare una crepa dentro o fuori casa?',
+    answer: 'Cambia il contesto che puoi descrivere: ambiente, finitura e condizioni interne da una parte; facciata, esposizione e accessibilità dall’altra. Nessuno dei due contesti permette da solo una diagnosi.',
+  },
+  {
+    question: 'Devo controllare anche il lato esterno?',
+    answer: 'Solo se puoi farlo da una posizione ordinaria e senza arrampicarti, spostare materiali o avvicinarti a zone instabili. Se non è accessibile, annotalo e lascia la verifica a un professionista qualificato.',
+  },
+  {
+    question: 'Macchie o umidità indicano da dove arriva il problema?',
+    answer: 'Sono elementi da documentare con luogo e data, ma il loro significato non può essere stabilito da una fotografia o dalla sola presenza visibile. Può essere utile descriverli insieme al resto del contesto.',
+  },
+  {
+    question: 'Quando conviene chiedere un confronto sul posto?',
+    answer: 'Puoi farlo quando vuoi valutare insieme segni interni ed esterni, quando hai osservato cambiamenti o quando devi decidere come procedere con manutenzione e ripristini. La verifica serve a esaminare l’immobile reale.',
+  },
+];
+---
+
+<BaseLayout
+  title="Crepe nei muri interni o esterni: cosa osservare"
+  description="Crepe nei muri interni o esterni: come descrivere posizione, finiture, contesto e fotografie senza attribuire una causa online."
+  canonical="https://crepeincasa.it/crepe-nei-muri/interne-o-esterne/"
+>
+  <article class="surface-page">
+    <header class="surface-hero">
+      <div class="container surface-hero-inner">
+        <p class="eyebrow">Guida al contesto della superficie</p>
+        <h1>Crepe nei muri interni o esterni: cosa osservare</h1>
+        <p class="surface-lead">
+          Il lato interno e quello esterno raccontano contesti diversi. Puoi confrontare ciò che vedi,
+          senza trasformare la posizione del segno in una spiegazione già pronta.
+        </p>
+        <p class="surface-meta">Lettura di circa 7 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container surface-layout">
+      <aside class="surface-index" aria-label="In questa guida">
+        <p class="surface-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#contesti">Tre contesti</a>
+          <a href="#osservazioni">Cosa annotare</a>
+          <a href="#foto">Come fotografare</a>
+          <a href="#verifica">Quando chiedere un confronto</a>
+          <a href="#faq">Domande frequenti</a>
+        </nav>
+      </aside>
+
+      <div class="surface-content">
+        <section class="surface-section surface-intro" id="risposta" aria-labelledby="answer-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="answer-title">Interno ed esterno sono descrizioni del contesto</h2>
+          <p>
+            Dire dove compare una fessurazione aiuta a organizzare le osservazioni. All’interno puoi
+            descrivere stanza, finitura e rapporto con gli elementi dell’ambiente; all’esterno puoi
+            indicare facciata, esposizione e accessibilità. Questi dati non stabiliscono da soli la causa.
+          </p>
+          <div class="surface-note">
+            <strong>Confronta le osservazioni, non le conclusioni</strong>
+            <p>“Vedo un segno nella parete del soggiorno e uno sulla superficie esterna nella stessa zona” è un dato da verificare. “Il muro è lesionato da parte a parte” è un’interpretazione che non può essere confermata online.</p>
+          </div>
+        </section>
+
+        <section class="surface-section" id="contesti" aria-labelledby="contexts-title">
+          <p class="eyebrow">Tre punti di vista</p>
+          <h2 id="contexts-title">Che cosa cambia tra interno, esterno e possibile corrispondenza</h2>
+          <p>
+            Usa questi tre blocchi per separare ciò che è visibile da ciò che richiederebbe un esame più
+            approfondito dell’immobile.
+          </p>
+          <div class="surface-contexts">
+            {contexts.map((item) => (
+              <article class="surface-context">
+                <p class="surface-number">{item.number}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="surface-section" id="osservazioni" aria-labelledby="observations-title">
+          <p class="eyebrow">Raccogliere informazioni</p>
+          <h2 id="observations-title">Cosa annotare senza fare prove sulla superficie</h2>
+          <p>
+            Una descrizione ordinata rende più facile raccontare il contesto. Non è necessario usare
+            termini tecnici: indica ciò che hai visto, quando e dove.
+          </p>
+          <ul class="surface-list">
+            {observations.map((item, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="surface-section" id="foto" aria-labelledby="photos-title">
+          <p class="eyebrow">Documentare il confronto</p>
+          <h2 id="photos-title">Fotografa interno ed esterno con riferimenti leggibili</h2>
+          <p>
+            Se entrambi i lati sono accessibili senza rischi, crea serie separate e annota per ciascuna
+            luogo, data e punto di ripresa. Non forzare l’accesso a una facciata e non rimuovere pittura,
+            intonaco o rivestimenti per cercare un collegamento.
+          </p>
+          <div class="surface-cards">
+            {photoSets.map((item) => (
+              <article class="surface-card">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <div class="surface-limit">
+            <strong>Una foto non mostra tutto</strong>
+            <p>Le immagini possono perdere profondità, strati, collegamenti tra ambienti e condizioni non visibili. Usale per documentare, non per stabilire se il segno sia strutturale, sicuro o pericoloso.</p>
+          </div>
+        </section>
+
+        <section class="surface-section" id="verifica" aria-labelledby="verification-title">
+          <p class="eyebrow">Il prossimo passo</p>
+          <h2 id="verification-title">Quando può essere utile chiedere una verifica</h2>
+          <p>
+            Puoi preparare un confronto sul posto se vuoi leggere insieme il contesto interno ed esterno,
+            se hai notato cambiamenti o se devi valutare un ripristino senza sapere ancora quale intervento
+            sia appropriato.
+          </p>
+          <p>
+            Se per osservare l’esterno servono scale, passaggi non accessibili o operazioni sulla superficie,
+            fermati. In presenza di condizioni che potrebbero richiedere attenzione urgente, evita la zona
+            se necessario e rivolgiti tempestivamente a un professionista qualificato o alle autorità competenti.
+          </p>
+        </section>
+
+        <section class="surface-section" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Crepe interne o esterne</h2>
+          <div class="surface-faq">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="surface-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dalla superficie alla richiesta</h2>
+          <p>
+            Per ordinare meglio le osservazioni puoi leggere la guida alla documentazione, preparare le
+            informazioni per un tecnico o usare il modulo per creare un riepilogo neutro.
+          </p>
+          <div class="surface-links">
+            <a href="/crepe-nei-muri/come-fotografare-monitorare-crepa/">Come fotografare e monitorare una crepa <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/informazioni-per-tecnico/">Quali informazioni preparare per un tecnico <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/quando-chiedere-verifica/">Quando chiedere una verifica <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .surface-page { background: var(--paper); }
+  .surface-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .surface-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .surface-hero h1 { max-width: 15ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .surface-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .surface-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .surface-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .surface-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .surface-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .surface-index nav { display: grid; gap: 0.7rem; }
+  .surface-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .surface-index a:hover, .surface-index a:focus-visible { color: var(--accent); }
+  .surface-content { min-width: 0; }
+  .surface-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .surface-intro { padding-top: 0; border-top: 0; }
+  .surface-section h2, .surface-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .surface-section > p:not(.eyebrow), .surface-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .surface-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .surface-note, .surface-limit { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .surface-note strong, .surface-limit strong { color: var(--brand-dark); }
+  .surface-note p, .surface-limit p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .surface-contexts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .surface-context { padding: 1.5rem; background: var(--surface); }
+  .surface-number { margin: 0 0 1.3rem; color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
+  .surface-context h3, .surface-card h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .surface-context p:last-child, .surface-card p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .surface-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .surface-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .surface-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .surface-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .surface-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+  .surface-card { padding: 1.5rem; border: 1px solid var(--line); border-radius: 0.9rem; background: var(--surface); }
+  .surface-limit { border-left-color: var(--brand); background: var(--surface-alt); }
+  .surface-faq { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .surface-faq details { border-bottom: 1px solid var(--line); }
+  .surface-faq summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .surface-faq p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .surface-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; background: var(--surface-alt); }
+  .surface-links { display: grid; gap: 0.8rem; margin-top: 1.6rem; }
+  .surface-links a { color: var(--brand); font-size: 0.9rem; font-weight: 750; text-underline-offset: 0.2em; }
+  .surface-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .surface-layout { grid-template-columns: 1fr; }
+    .surface-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .surface-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .surface-index a { font-size: 0.82rem; }
+    .surface-contexts, .surface-cards { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .surface-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+  }
+</style>

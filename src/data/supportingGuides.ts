@@ -29,4 +29,9 @@ export const supportingGuides = [
     title: 'Quali informazioni preparare per un tecnico',
     description: 'Una checklist neutra di contesto, cronologia, foto e domande da portare al confronto.',
   },
+  {
+    href: '/crepe-nei-muri/interne-o-esterne/',
+    title: 'Crepe nei muri interni o esterni',
+    description: 'Come distinguere i contesti osservabili tra interno, facciata e superfici corrispondenti.',
+  },
 ] as const;

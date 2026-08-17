@@ -155,7 +155,7 @@ giustificano:
 
 - [x] `/crepe-nei-muri/crepe-vicino-porte-finestre/` — pagina contestuale su posizione e osservazioni;
 - [ ] crepe in casa nuova o dopo lavori;
-- [ ] crepe interne ed esterne;
+- [x] `/crepe-nei-muri/interne-o-esterne/` - guida comparativa su contesto interno, facciata e osservazioni corrispondenti;
 - [ ] crepe sul soffitto;
 - [ ] crepe sul pavimento;
 - [ ] crepe che cambiano nel tempo;

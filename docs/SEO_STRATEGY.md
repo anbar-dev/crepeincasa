@@ -61,7 +61,8 @@ validare sono:
    telai, finiture e documentazione; non una promessa di classificazione.
 5. **Crepe interne, esterne, soffitto o pavimento** — da separare solo se i dati
    Search Console mostrano domanda e se ogni pagina ha un contenuto realmente
-   diverso.
+   diverso. La guida `/crepe-nei-muri/interne-o-esterne/` accorpa i primi due
+   contesti; soffitto e pavimento restano da valutare separatamente.
 6. **Come documentare e monitorare una fessurazione** — foto datate,
    posizione, confronto nel tempo e limiti delle misure domestiche.
 7. **Quali informazioni preparare per un tecnico** — cronologia, contesto,
