@@ -1,0 +1,275 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const changeExamples = [
+  {
+    title: 'Il segno sembra diverso',
+    text: 'Puoi annotare se la linea appare più lunga, più visibile, interrotta o accompagnata da altri segni. Sono descrizioni da confrontare, non classificazioni della crepa.',
+  },
+  {
+    title: 'È cambiato il contesto',
+    text: 'Umidità, macchie, distacchi di finitura, lavori, variazioni d’uso o condizioni ambientali possono essere informazioni utili da collegare alla data in cui le hai osservate.',
+  },
+  {
+    title: 'È ricomparsa dopo un ripristino',
+    text: 'Se il punto è stato stuccato, tinteggiato o riparato, conserva la data e descrivi che cosa è stato fatto. La ricomparsa non spiega da sola il motivo.',
+  },
+];
+
+const observations = [
+  'data della prima osservazione e delle fotografie successive;',
+  'stanza, parete, posizione e rapporto con porte, finestre, angoli o altri elementi;',
+  'differenza precisa tra due immagini: per esempio “il segno è più visibile vicino all’angolo”;',
+  'presenza di umidità, macchie, distacchi, polvere o altri cambiamenti sulla finitura;',
+  'lavori, infiltrazioni, modifiche dell’ambiente o periodi di inutilizzo ricordati nello stesso intervallo;',
+  'eventuale ripristino e aspetto del punto prima e dopo l’intervento.',
+];
+
+const comparisonSteps = [
+  {
+    title: 'Metti in ordine le date',
+    text: 'Rinomina le foto con data e posizione oppure usa una tabella semplice. Conserva gli originali e annota anche quando non hai notato differenze.',
+  },
+  {
+    title: 'Controlla il confronto',
+    text: 'Prima di interpretare una variazione, verifica se distanza, luce, angolazione, fuoco o finitura diversa possono rendere le immagini poco confrontabili.',
+  },
+  {
+    title: 'Descrivi senza concludere',
+    text: 'Scrivi quale differenza vedi e in quale data. Evita di trasformare il confronto in una diagnosi o in una decisione su lavori e tecniche.',
+  },
+];
+
+const faq = [
+  {
+    question: 'Una crepa che cambia nel tempo è necessariamente strutturale?',
+    answer: 'No. Il fatto che un segno sembri diverso o ricompaia non permette, da solo, di stabilirne la causa, la rilevanza o l’elemento coinvolto. Il contesto reale va valutato sul posto.',
+  },
+  {
+    question: 'Come capisco se è davvero cambiata?',
+    answer: 'Non sempre è possibile capirlo con fotografie domestiche. Usa immagini confrontabili, date e note precise; considera però che luce, prospettiva e finitura possono alterare l’aspetto. Un professionista può indicare quali controlli siano appropriati.',
+  },
+  {
+    question: 'Devo aspettare altre fotografie prima di chiedere una verifica?',
+    answer: 'No. Puoi chiedere un confronto anche con una documentazione incompleta, spiegando quando hai notato il segno e che cosa ti sembra diverso. Non è necessario attendere che aumenti o raggiunga una soglia.',
+  },
+  {
+    question: 'Posso continuare a monitorarla se vedo materiale staccarsi?',
+    answer: 'Non avvicinarti né fare prove se la documentazione richiede di entrare in una zona che percepisci come non sicura. Allontanati se necessario e chiedi tempestivamente supporto a un professionista qualificato o alle autorità competenti.',
+  },
+];
+---
+
+<BaseLayout
+  title="Crepe nei muri che cambiano nel tempo: cosa annotare"
+  description="Crepe nei muri che cambiano nel tempo: come confrontare foto e osservazioni, cosa annotare e quando chiedere una verifica, senza diagnosi a distanza."
+  canonical="https://crepeincasa.it/crepe-nei-muri/crepe-che-cambiano-nel-tempo/"
+>
+  <article class="change-page">
+    <header class="change-hero">
+      <div class="container change-hero-inner">
+        <p class="eyebrow">Guida alle osservazioni nel tempo</p>
+        <h1>Crepe nei muri che cambiano nel tempo: cosa annotare</h1>
+        <p class="change-lead">
+          Quando un segno sembra diverso, il primo passo è ricostruire che cosa hai osservato e in quali date.
+          Il confronto aiuta a preparare una richiesta, ma non stabilisce da solo la causa o la sicurezza dell’immobile.
+        </p>
+        <p class="change-meta">Lettura di circa 6 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container change-layout">
+      <aside class="change-index" aria-label="In questa guida">
+        <p class="change-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#cambiamento">Che cosa può essere cambiato</a>
+          <a href="#annotare">Cosa annotare</a>
+          <a href="#confrontare">Come confrontare</a>
+          <a href="#verifica">Quando chiedere una verifica</a>
+          <a href="#faq">Domande frequenti</a>
+        </nav>
+      </aside>
+
+      <div class="change-content">
+        <section class="change-section change-intro" id="risposta" aria-labelledby="answer-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="answer-title">Il cambiamento va descritto prima di essere interpretato</h2>
+          <p>
+            “È aumentata” può significare cose diverse: una linea più visibile, un’estensione che sembra diversa,
+            una finitura che si è distaccata o un confronto reso poco chiaro dalla luce. Mettere in ordine le date,
+            le immagini e il contesto rende la descrizione più utile.
+          </p>
+          <p>
+            Anche una sequenza ordinata non consente di concludere che esista un cedimento, che la crepa sia
+            strutturale o che serva un intervento specifico. Per capire il caso concreto può essere necessaria una
+            valutazione sul posto.
+          </p>
+          <div class="change-note">
+            <strong>Il tempo è un dato da riferire</strong>
+            <p>Una crepa che sembra stabile, una che sembra cambiata e una ricomparsa dopo un ripristino sono descrizioni diverse. Nessuna, da sola, è una diagnosi.</p>
+          </div>
+        </section>
+
+        <section class="change-section" id="cambiamento" aria-labelledby="change-title">
+          <p class="eyebrow">Possibili osservazioni</p>
+          <h2 id="change-title">Che cosa può essere cambiato nel tempo</h2>
+          <p>
+            Non serve scegliere una categoria tecnica. Puoi partire da ciò che riesci a confrontare tra due date
+            e segnalare anche le incertezze.
+          </p>
+          <div class="change-cards">
+            {changeExamples.map((item) => (
+              <article class="change-card">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="change-section" id="annotare" aria-labelledby="notes-title">
+          <p class="eyebrow">Diario semplice</p>
+          <h2 id="notes-title">Annota fatti, date e contesto</h2>
+          <p>
+            Una nota breve collegata a ogni fotografia può aiutare a ricostruire la sequenza. Scrivi ciò che vedi
+            o ricordi, separandolo da quello che pensi possa significare.
+          </p>
+          <ul class="change-list">
+            {observations.map((observation, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{observation}</p></li>
+            ))}
+          </ul>
+          <div class="change-limit">
+            <strong>Un esempio di formulazione</strong>
+            <p>“Nella foto del 18 agosto il segno appare più visibile vicino alla finestra rispetto alla foto del 4 agosto; la luce e il punto di ripresa non sono identici.” È più utile di attribuire subito una causa.</p>
+          </div>
+        </section>
+
+        <section class="change-section" id="confrontare" aria-labelledby="compare-title">
+          <p class="eyebrow">Confronto prudente</p>
+          <h2 id="compare-title">Tre passaggi per leggere meglio una sequenza</h2>
+          <div class="change-steps">
+            {comparisonSteps.map((item, index) => (
+              <article class="change-step">
+                <p class="change-step-number">{String(index + 1).padStart(2, '0')}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p>
+            Per una procedura più dettagliata su inquadrature, file e note puoi consultare la guida su
+            <a href="/crepe-nei-muri/come-fotografare-monitorare-crepa/">come fotografare e monitorare una crepa</a>.
+          </p>
+        </section>
+
+        <section class="change-section change-alert" id="verifica" aria-labelledby="verification-title">
+          <p class="eyebrow">Il prossimo passo</p>
+          <h2 id="verification-title">Quando può essere utile chiedere una verifica</h2>
+          <p>
+            Puoi organizzare un confronto sul posto se hai osservato un cambiamento, se il punto è ricomparso dopo
+            un ripristino, se sono presenti altri fenomeni che non sai interpretare o se devi decidere come procedere
+            con manutenzione e lavori.
+          </p>
+          <p>
+            Prepara una cronologia essenziale e indica che cosa vuoi capire. Non è necessario arrivare con una
+            classificazione della crepa o con la scelta di una tecnica: il professionista qualificato potrà valutare
+            quali controlli siano appropriati nel caso concreto.
+          </p>
+          <p>
+            Se per osservare devi avvicinarti a materiale che sembra instabile, salire o entrare in una zona che
+            percepisci come non sicura, fermati. Allontanati se necessario e rivolgiti tempestivamente a un
+            professionista qualificato o alle autorità competenti. Le indicazioni di sicurezza in caso di terremoto
+            sono disponibili sul sito del <a href="https://www.protezionecivile.gov.it/it/approfondimento/se-arriva-il-terremoto/" target="_blank" rel="noreferrer">Dipartimento della Protezione Civile</a>.
+          </p>
+        </section>
+
+        <section class="change-section change-faq" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Crepe che cambiano nel tempo</h2>
+          <div class="change-faq-list">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="change-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dalla cronologia alla richiesta</h2>
+          <p>
+            Puoi approfondire il contesto generale, capire quando chiedere un confronto o preparare un riepilogo
+            neutro delle osservazioni disponibili.
+          </p>
+          <div class="change-links">
+            <a href="/crepe-nei-muri/">Guida generale sulle crepe nei muri <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/quando-chiedere-verifica/">Quando chiedere una verifica <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/informazioni-per-tecnico/">Informazioni da preparare per un tecnico <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .change-page { background: var(--paper); }
+  .change-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .change-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .change-hero h1 { max-width: 15ch; font-size: clamp(3.1rem, 7vw, 6.4rem); }
+  .change-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .change-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .change-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .change-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .change-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .change-index nav { display: grid; gap: 0.7rem; }
+  .change-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .change-index a:hover, .change-index a:focus-visible { color: var(--accent); }
+  .change-content { min-width: 0; }
+  .change-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .change-intro { padding-top: 0; border-top: 0; }
+  .change-section h2, .change-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .change-section > p:not(.eyebrow), .change-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .change-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .change-section a { color: var(--brand); text-underline-offset: 0.2em; }
+  .change-note, .change-limit { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .change-note strong, .change-limit strong { color: var(--brand-dark); }
+  .change-note p, .change-limit p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .change-cards, .change-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .change-card, .change-step { padding: 1.5rem; background: var(--surface); }
+  .change-card h3, .change-step h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .change-card p, .change-step p:last-child { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .change-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .change-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .change-list li > span, .change-step-number { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .change-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .change-step-number { margin: 0 0 1.3rem; }
+  .change-alert { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .change-alert + .change-section { margin-top: clamp(1rem, 3vw, 2.5rem); }
+  .change-faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .change-faq-list details { border-bottom: 1px solid var(--line); }
+  .change-faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .change-faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .change-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; background: var(--surface-alt); }
+  .change-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
+  .change-links a { color: var(--brand); font-size: 0.88rem; font-weight: 750; }
+  .change-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .change-layout { grid-template-columns: 1fr; }
+    .change-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .change-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .change-index a { font-size: 0.82rem; }
+    .change-cards, .change-steps { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .change-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .change-links { grid-template-columns: 1fr; }
+  }
+</style>

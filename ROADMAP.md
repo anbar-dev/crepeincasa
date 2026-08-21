@@ -158,13 +158,19 @@ giustificano:
 - [x] `/crepe-nei-muri/interne-o-esterne/` - guida comparativa su contesto interno, facciata e osservazioni corrispondenti;
 - [x] `/crepe-nei-muri/crepe-sul-soffitto/` - guida contestuale su posizione, superficie e osservazioni dal basso;
 - [x] `/crepe-nei-muri/crepe-sul-pavimento/` - guida contestuale su finitura, posizione e cambiamenti osservabili;
-- [ ] crepe che cambiano nel tempo;
+- [x] `/crepe-nei-muri/crepe-che-cambiano-nel-tempo/` — guida a cronologia, confronto tra osservazioni e descrizione prudente dei cambiamenti;
 - [x] `/crepe-nei-muri/come-fotografare-monitorare-crepa/` - guida a foto, date e confronto nel tempo;
 - [x] `/crepe-nei-muri/informazioni-per-tecnico/` - checklist di contesto, cronologia, allegati e domande da preparare.
 
 > La prima pagina del Phase 9 è stata pubblicata il 2026-08-08. Il contenuto
 > tratta il contesto vicino a porte e finestre senza attribuire automaticamente
 > una causa e collega le guide già attive al modulo di richiesta.
+
+La guida sulle crepe che cambiano nel tempo è stata aggiunta il 2026-08-21.
+Integra il percorso di documentazione con una pagina distinta dalla guida
+fotografica: il focus è il confronto tra date, contesto e osservazioni. La
+sezione di sicurezza rimanda alle indicazioni del Dipartimento della Protezione
+Civile; resta da completare una revisione specialistica dei passaggi tecnici.
 
 Le pagine "crepe diagonali", "verticali" e "orizzontali" restano ritirate
 finché non emerge un intento autonomo e un contenuto realmente differente.

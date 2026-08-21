@@ -30,6 +30,11 @@ export const supportingGuides = [
     description: 'Una checklist neutra di contesto, cronologia, foto e domande da portare al confronto.',
   },
   {
+    href: '/crepe-nei-muri/crepe-che-cambiano-nel-tempo/',
+    title: 'Crepe che cambiano nel tempo',
+    description: 'Come confrontare osservazioni in date diverse e descrivere i cambiamenti senza diagnosticare.',
+  },
+  {
     href: '/crepe-nei-muri/interne-o-esterne/',
     title: 'Crepe nei muri interni o esterni',
     description: 'Come distinguere i contesti osservabili tra interno, facciata e superfici corrispondenti.',
