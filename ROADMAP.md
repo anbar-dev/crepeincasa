@@ -178,7 +178,7 @@ finché non emerge un intento autonomo e un contenuto realmente differente.
 ## Phase 10 — Cedimenti e fondazioni
 
 - [x] `/cedimento-fondazioni/` — guida a contesto, cronologia e preparazione di una verifica, senza diagnosticare un cedimento;
-- [ ] cedimento del terreno;
+- [x] `/cedimento-terreno/` — guida a acqua, pendenze, lavori e cambiamenti osservabili, senza diagnosticare un cedimento;
 - [ ] cedimento differenziale;
 - [ ] casa che cede;
 - [ ] pavimento che sprofonda.
@@ -192,6 +192,12 @@ e interpretazioni, evita di proporre tecniche e rimanda a fonti istituzionali
 per il contesto delle verifiche. Restano da sviluppare le pagine distinte sul
 terreno, sul cedimento differenziale, sulla casa che cede e sul pavimento che
 sprofonda.
+
+La guida sul cedimento del terreno è stata aggiunta il 2026-08-21. Il focus è
+la raccolta prudente di contesto su acqua, pendenze, lavori e cronologia, con
+indicazioni istituzionali per la sicurezza e la segnalazione di variazioni del
+terreno. Restano da sviluppare le pagine distinte sul cedimento differenziale,
+sulla casa che cede e sul pavimento che sprofonda.
 
 ## Phase 11 — Tecniche e costi
 

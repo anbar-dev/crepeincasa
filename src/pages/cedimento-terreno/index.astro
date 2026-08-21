@@ -1,0 +1,343 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const contexts = [
+  {
+    number: '01',
+    title: 'Acqua e drenaggio',
+    text: 'Segnala perdite, ristagni, infiltrazioni, nuovi ruscellamenti o cambiamenti nello smaltimento dell’acqua. Sono informazioni di contesto, non una spiegazione già dimostrata.',
+  },
+  {
+    number: '02',
+    title: 'Pendenza e terreno visibile',
+    text: 'Descrivi pendenze, avvallamenti, rigonfiamenti, fessure nel terreno o piccoli distacchi che puoi vedere dalla posizione sicura, senza avvicinarti a zone instabili.',
+  },
+  {
+    number: '03',
+    title: 'Lavori e cambiamenti recenti',
+    text: 'Scavi, muri, strade, modifiche al giardino o interventi sugli edifici vicini possono essere elementi da riferire con date e posizione, senza attribuire un rapporto di causa.',
+  },
+];
+
+const checklist = [
+  'dove si trova l’area osservata rispetto alla casa, ai confini, a muri, strade, pendii o corsi d’acqua;',
+  'che cosa vedi sul terreno: avvallamenti, fessure, rigonfiamenti, piccoli distacchi o accumuli;',
+  'quando hai notato il cambiamento e se esistono fotografie o immagini precedenti dello stesso punto;',
+  'pioggia intensa, perdite, ristagni, lavori di drenaggio o altri cambiamenti dell’acqua ricordati nello stesso periodo;',
+  'scavi, costruzioni, demolizioni, modifiche del pendio o lavori eseguiti vicino alla proprietà;',
+  'eventuali effetti osservati nell’edificio, come fessure o porte che funzionano diversamente, sempre con posizione e data.',
+];
+
+const comparisonSteps = [
+  {
+    title: 'Individua un riferimento',
+    text: 'Usa un albero, un muro, una recinzione o un altro elemento stabile per riconoscere il punto nelle fotografie. Non entrare in aree che non puoi raggiungere in sicurezza.',
+  },
+  {
+    title: 'Confronta date diverse',
+    text: 'Conserva immagini originali e note datate. Luce, vegetazione, pioggia e prospettiva possono cambiare l’aspetto: indica anche quando il confronto non è preciso.',
+  },
+  {
+    title: 'Collega il contesto',
+    text: 'Annota se nello stesso periodo sono comparsi acqua, lavori, fessure nell’edificio o altri cambiamenti, senza trasformare la coincidenza in una causa.',
+  },
+];
+
+const questions = [
+  {
+    title: 'Quale area va esaminata?',
+    text: 'Chiedi quali parti del terreno, dell’edificio e delle opere vicine siano pertinenti al caso concreto e quali informazioni manchino.',
+  },
+  {
+    title: 'Quali verifiche servono?',
+    text: 'Domanda quali rilievi, documenti o approfondimenti possano aiutare a comprendere il contesto, senza partire da una tecnica di intervento.',
+  },
+  {
+    title: 'Come gestire l’acqua?',
+    text: 'Riferisci perdite, drenaggi e ristagni e chiedi se siano necessari controlli specifici. Non modificare scarichi o pendenze come prova domestica.',
+  },
+];
+
+const attentionPoints = [
+  'fessure o distacchi del terreno vicino a un pendio, a un bordo o a una struttura;',
+  'acqua che scorre in modo anomalo, terreno molto saturo o una zona che sembra muoversi;',
+  'muri, recinzioni, alberi o altri elementi che appaiono inclinati o instabili;',
+  'un’area che richiederebbe di scavalcare, scavare, spostare materiali o avvicinarsi a un bordo.',
+];
+
+const faq = [
+  {
+    question: 'Una crepa nel terreno dimostra che il terreno sta cedendo?',
+    answer: 'No. Una fessura può avere contesti diversi e una fotografia non mostra la profondità, la storia o il rapporto con l’edificio. Descrivi posizione e cambiamenti e chiedi una valutazione sul posto quando serve.',
+  },
+  {
+    question: 'L’acqua può spiegare un cedimento del terreno?',
+    answer: 'Acqua, perdite e drenaggio sono elementi da riferire, ma non spiegano da soli l’origine di una variazione. Il loro ruolo va valutato insieme alla morfologia, ai lavori e alla storia dell’area.',
+  },
+  {
+    question: 'Devo livellare il terreno o riempire una fessura?',
+    answer: 'Non usare riempimenti, scavi o modifiche del drenaggio come test. Potresti alterare l’osservazione o creare nuovi problemi. Documenta ciò che è visibile e chiedi indicazioni qualificate.',
+  },
+  {
+    question: 'Una variazione del terreno vicino alla casa è sempre collegata alle fondazioni?',
+    answer: 'Non è possibile stabilirlo a distanza. Terreno, fondazioni, acqua, opere vicine e caratteristiche dell’edificio possono richiedere valutazioni diverse; la vicinanza non dimostra un rapporto di causa.',
+  },
+  {
+    question: 'Quando devo coinvolgere le autorità?',
+    answer: 'Se osservi condizioni che potrebbero richiedere attenzione urgente, non avvicinarti e chiedi tempestivamente supporto qualificato o alle autorità competenti. Le indicazioni locali dipendono dal tipo di fenomeno e dal contesto.',
+  },
+];
+---
+
+<BaseLayout
+  title="Cedimento del terreno: cosa osservare prima di una verifica"
+  description="Cedimento del terreno: come descrivere acqua, pendenze, lavori e cambiamenti osservabili senza concludere online che esista un cedimento o una frana."
+  canonical="https://crepeincasa.it/cedimento-terreno/"
+>
+  <article class="ground-page">
+    <header class="ground-hero">
+      <div class="container ground-hero-inner">
+        <p class="eyebrow">Guida al contesto del terreno</p>
+        <h1>Cedimento del terreno: cosa osservare prima di una verifica</h1>
+        <p class="ground-lead">
+          “Cedimento del terreno” descrive una possibilità da esaminare, non un fatto che si possa confermare da una
+          fotografia o da una crepa. Puoi raccogliere posizione, date, acqua e cambiamenti senza alterare l’area.
+        </p>
+        <p class="ground-meta">Lettura di circa 8 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container ground-layout">
+      <aside class="ground-index" aria-label="In questa guida">
+        <p class="ground-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#contesto">Tre contesti da riferire</a>
+          <a href="#checklist">Cosa raccogliere</a>
+          <a href="#confronto">Come confrontare</a>
+          <a href="#verifica">Come preparare la verifica</a>
+          <a href="#attenzione">Quando fermarsi</a>
+          <a href="#faq">Domande frequenti</a>
+          <a href="#fonti">Fonti istituzionali</a>
+        </nav>
+      </aside>
+
+      <div class="ground-content">
+        <section class="ground-section ground-intro" id="risposta" aria-labelledby="answer-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="answer-title">Il terreno va descritto nel suo contesto, non etichettato da una foto</h2>
+          <p>
+            Avvallamenti, fessure, ristagni e piccoli cambiamenti possono essere osservazioni utili, ma non dicono
+            da soli quale fenomeno sia presente. Anche il rapporto con la casa, le fondazioni o le opere vicine va
+            valutato sul posto.
+          </p>
+          <p>
+            Una cronologia può aiutare a riferire che cosa è cambiato dopo piogge, perdite, scavi o lavori. Se non
+            conosci la causa, scrivilo: un dato incerto è più utile di una spiegazione anticipata.
+          </p>
+          <div class="ground-note">
+            <strong>Una variazione non è una diagnosi</strong>
+            <p>“Dopo una settimana di piogge vedo un avvallamento vicino alla recinzione” è un’osservazione. “Il terreno sta cedendo” richiede una verifica del terreno e del contesto reale.</p>
+          </div>
+        </section>
+
+        <section class="ground-section" id="contesto" aria-labelledby="context-title">
+          <p class="eyebrow">Possibili elementi di contesto</p>
+          <h2 id="context-title">Tre aree da osservare senza modificare il terreno</h2>
+          <p>
+            Parti da ciò che puoi vedere dalla posizione normale e accessibile. Non rimuovere terra, vegetazione o
+            materiali per rendere più leggibile un dettaglio.
+          </p>
+          <div class="ground-contexts">
+            {contexts.map((item) => (
+              <article class="ground-context">
+                <p class="ground-number">{item.number}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="ground-section" id="checklist" aria-labelledby="checklist-title">
+          <p class="eyebrow">Raccogliere informazioni</p>
+          <h2 id="checklist-title">Checklist per descrivere il terreno</h2>
+          <p>
+            Scrivi posizione, data e confronto in parole semplici. Se una parte non è visibile o non è sicura da
+            raggiungere, indicalo senza cercare di completare l’ispezione.
+          </p>
+          <ul class="ground-list">
+            {checklist.map((item, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
+            ))}
+          </ul>
+          <div class="ground-limit">
+            <strong>Non confondere vicinanza e causa</strong>
+            <p>“La fessura è a due metri dal muro” indica una posizione. “La fessura dipende dalle fondazioni” è un’interpretazione che richiede dati e verifica.</p>
+          </div>
+        </section>
+
+        <section class="ground-section" id="confronto" aria-labelledby="comparison-title">
+          <p class="eyebrow">Cronologia prudente</p>
+          <h2 id="comparison-title">Confronta il punto senza fare prove</h2>
+          <div class="ground-steps">
+            {comparisonSteps.map((item, index) => (
+              <article class="ground-step">
+                <p class="ground-step-number">{String(index + 1).padStart(2, '0')}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p>
+            Se il cambiamento interessa anche l’edificio, puoi affiancare questa cronologia a una documentazione delle
+            fessurazioni. La sequenza serve a riferire i fatti, non a stabilire se il terreno o le fondazioni abbiano
+            una causa comune.
+          </p>
+        </section>
+
+        <section class="ground-section" id="verifica" aria-labelledby="verification-title">
+          <p class="eyebrow">Confronto qualificato</p>
+          <h2 id="verification-title">Che cosa chiedere prima di valutare lavori</h2>
+          <p>
+            Una verifica può partire dalle osservazioni e dalla storia del luogo. Non serve proporre un rimedio o
+            scegliere in anticipo tra opere sul terreno, fondazioni o drenaggi.
+          </p>
+          <div class="ground-questions">
+            {questions.map((item) => (
+              <article class="ground-question">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p>
+            Un professionista qualificato può indicare quali dati siano pertinenti e se siano necessari approfondimenti.
+            Il riepilogo online trasmette le tue osservazioni e non sostituisce un sopralluogo.
+          </p>
+        </section>
+
+        <section class="ground-section ground-alert" id="attenzione" aria-labelledby="attention-title">
+          <p class="eyebrow">Prima la sicurezza</p>
+          <h2 id="attention-title">Quando interrompere l’osservazione</h2>
+          <p>
+            Non avvicinarti a bordi, pendii, scavi o aree in cui il terreno appare instabile. Non usare scale,
+            attrezzi o veicoli per raggiungere un punto non accessibile.
+          </p>
+          <ul class="ground-list ground-list-plain">
+            {attentionPoints.map((item) => <li><span aria-hidden="true">—</span><p>{item}</p></li>)}
+          </ul>
+          <p>
+            Se noti variazioni del terreno o piccoli movimenti vicino alla tua abitazione, il Dipartimento della
+            Protezione Civile indica di segnalarli alle autorità competenti. In condizioni che potrebbero richiedere
+            attenzione urgente, allontanati se necessario e chiedi tempestivamente supporto qualificato.
+            Approfondisci le <a href="https://rischi.protezionecivile.gov.it/it/meteo-idro/sei-preparato/" target="_blank" rel="noreferrer">indicazioni di autoprotezione per il rischio meteo-idro</a>.
+          </p>
+        </section>
+
+        <section class="ground-section ground-faq" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Cedimento del terreno</h2>
+          <div class="ground-faq-list">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="ground-sources" id="fonti" aria-labelledby="sources-title">
+          <p class="eyebrow">Per approfondire</p>
+          <h2 id="sources-title">Fonti istituzionali su terreno e instabilità</h2>
+          <p>
+            Le fonti seguenti spiegano aspetti generali di prevenzione e gestione del rischio. Non sono strumenti per
+            diagnosticare un lotto o un edificio a distanza.
+          </p>
+          <ul>
+            <li><a href="https://rischi.protezionecivile.gov.it/it/meteo-idro/sei-preparato/" target="_blank" rel="noreferrer">Dipartimento della Protezione Civile — Rischio meteo-idro: sei preparato?</a></li>
+            <li><a href="https://www.protezionecivile.gov.it/en/approfondimento/frane/" target="_blank" rel="noreferrer">Dipartimento della Protezione Civile — Frane</a></li>
+            <li><a href="https://rischi.protezionecivile.gov.it/it/approfondimento/microzonazione-sismica/" target="_blank" rel="noreferrer">Dipartimento della Protezione Civile — Microzonazione sismica</a></li>
+          </ul>
+        </section>
+
+        <section class="ground-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dal terreno all’edificio</h2>
+          <p>
+            Puoi approfondire il rapporto con le fondazioni, descrivere una fessurazione sul pavimento o preparare un
+            riepilogo neutro delle osservazioni disponibili.
+          </p>
+          <div class="ground-links">
+            <a href="/cedimento-fondazioni/">Cedimento delle fondazioni: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/crepe-sul-pavimento/">Crepe sul pavimento: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/crepe-che-cambiano-nel-tempo/">Crepe che cambiano nel tempo <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .ground-page { background: var(--paper); }
+  .ground-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .ground-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .ground-hero h1 { max-width: 14ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .ground-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .ground-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .ground-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .ground-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .ground-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .ground-index nav { display: grid; gap: 0.7rem; }
+  .ground-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .ground-index a:hover, .ground-index a:focus-visible { color: var(--accent); }
+  .ground-content { min-width: 0; }
+  .ground-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .ground-intro { padding-top: 0; border-top: 0; }
+  .ground-section h2, .ground-sources h2, .ground-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .ground-section > p:not(.eyebrow), .ground-sources > p:not(.eyebrow), .ground-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .ground-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .ground-section a, .ground-sources a { color: var(--brand); text-underline-offset: 0.2em; }
+  .ground-note, .ground-limit { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .ground-note strong, .ground-limit strong { color: var(--brand-dark); }
+  .ground-note p, .ground-limit p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .ground-contexts, .ground-steps, .ground-questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .ground-context, .ground-step, .ground-question { padding: 1.5rem; background: var(--surface); }
+  .ground-number, .ground-step-number { margin: 0 0 1.3rem; color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
+  .ground-context h3, .ground-step h3, .ground-question h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .ground-context p:last-child, .ground-step p:last-child, .ground-question p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .ground-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .ground-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .ground-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .ground-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .ground-list-plain li { grid-template-columns: 1rem 1fr; }
+  .ground-alert { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .ground-alert + .ground-section { margin-top: clamp(1rem, 3vw, 2.5rem); }
+  .ground-faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .ground-faq-list details { border-bottom: 1px solid var(--line); }
+  .ground-faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .ground-faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .ground-sources, .ground-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; }
+  .ground-sources { background: var(--surface); border: 1px solid var(--line); }
+  .ground-sources ul { display: grid; gap: 0.7rem; margin: 1.5rem 0 0; padding-left: 1.2rem; color: var(--muted); line-height: 1.6; }
+  .ground-related { background: var(--surface-alt); }
+  .ground-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
+  .ground-links a { color: var(--brand); font-size: 0.88rem; font-weight: 750; }
+  .ground-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .ground-layout { grid-template-columns: 1fr; }
+    .ground-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .ground-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .ground-index a { font-size: 0.82rem; }
+    .ground-contexts, .ground-steps, .ground-questions { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .ground-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .ground-links { grid-template-columns: 1fr; }
+  }
+</style>
