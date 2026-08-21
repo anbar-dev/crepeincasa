@@ -1,0 +1,308 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const contexts = [
+  {
+    number: '01',
+    title: 'La storia dell’immobile',
+    text: 'Età, ampliamenti, ristrutturazioni, cambi d’uso e interventi vicini possono essere informazioni utili. Non indicano da soli quale elemento sia coinvolto.',
+  },
+  {
+    number: '02',
+    title: 'Il rapporto con il terreno',
+    text: 'Pendenza, acqua, scavi, drenaggio o modifiche del terreno sono aspetti da riferire se li conosci. Non è necessario interpretare il loro rapporto con le fessurazioni.',
+  },
+  {
+    number: '03',
+    title: 'I cambiamenti osservati',
+    text: 'Crepe, dislivelli percepiti, porte che funzionano diversamente o tracce di umidità possono essere descritti con posizione e data, senza usarli come prova di un cedimento.',
+  },
+];
+
+const checklist = [
+  'quando hai notato per la prima volta il segno o la differenza e se hai fotografie datate;',
+  'stanza, parete, pavimento, soglia o area esterna in cui si trova l’osservazione;',
+  'che cosa è cambiato secondo la tua percezione, distinguendo il confronto da una misura tecnica;',
+  'lavori, ampliamenti, scavi, perdite d’acqua, infiltrazioni o variazioni del drenaggio che ricordi;',
+  'eventuali ripristini già eseguiti e il loro periodo, senza considerarli una conferma della causa;',
+  'documenti disponibili: planimetrie, relazioni, fotografie precedenti, pratiche di lavori o comunicazioni ricevute.',
+];
+
+const questions = [
+  {
+    title: 'Quale elemento va osservato?',
+    text: 'Chiedi quali parti dell’immobile e del terreno debbano essere esaminate nel caso concreto, senza partire dalla tecnica di intervento.',
+  },
+  {
+    title: 'Quali verifiche sono appropriate?',
+    text: 'Domanda quali controlli, rilievi o documenti possano servire e quali limiti abbiano le sole fotografie o descrizioni.',
+  },
+  {
+    title: 'Che cosa viene prima dei lavori?',
+    text: 'Se vengono prospettate opere, chiedi su quali osservazioni e valutazioni si basano e quali alternative o approfondimenti siano pertinenti.',
+  },
+];
+
+const attentionPoints = [
+  'materiale che sembra staccarsi, cadere o rendere instabile il passaggio;',
+  'acqua, gas, cavi esposti o una condizione che rende rischioso avvicinarsi;',
+  'un cambiamento che percepisci come rapido o associato ad altri fenomeni;',
+  'una zona che richiederebbe scavi, demolizioni, sollevamenti o prove con strumenti non disponibili.',
+];
+
+const faq = [
+  {
+    question: 'Una crepa significa che le fondazioni stanno cedendo?',
+    answer: 'No. Una crepa può avere contesti e cause diverse e una fotografia non mostra tutto ciò che serve per valutare terreno, fondazioni e struttura. Il termine “cedimento” va verificato sul posto.',
+  },
+  {
+    question: 'Quali segnali indicano un cedimento delle fondazioni?',
+    answer: 'Non esiste un elenco visivo che permetta di confermarlo a distanza. Puoi descrivere fessure, dislivelli percepiti, umidità, cambiamenti e cronologia; il loro significato richiede una valutazione qualificata.',
+  },
+  {
+    question: 'Devo scavare vicino alle fondazioni per controllare?',
+    answer: 'No. Non improvvisare scavi, demolizioni, sollevamenti o prove sulla casa e sul terreno. Indica quali zone non hai controllato e chiedi a un professionista quali verifiche siano appropriate.',
+  },
+  {
+    question: 'Devo chiedere subito un intervento di consolidamento?',
+    answer: 'Non è possibile scegliere una tecnica sulla base di una descrizione o di una foto. Prima occorre comprendere il contesto e le verifiche necessarie; eventuali opere dipendono dal caso concreto.',
+  },
+  {
+    question: 'Cosa faccio se penso che la situazione possa essere urgente?',
+    answer: 'Non avvicinarti se la zona non ti sembra sicura. Allontanati se necessario e rivolgiti tempestivamente a un professionista qualificato o alle autorità competenti. Questo sito non è un servizio di emergenza.',
+  },
+];
+---
+
+<BaseLayout
+  title="Cedimento delle fondazioni: cosa osservare prima di una verifica"
+  description="Cedimento delle fondazioni: come descrivere contesto, terreno, fessure e cambiamenti senza concludere online che esista un cedimento o che serva un consolidamento."
+  canonical="https://crepeincasa.it/cedimento-fondazioni/"
+>
+  <article class="foundation-page">
+    <header class="foundation-hero">
+      <div class="container foundation-hero-inner">
+        <p class="eyebrow">Guida a fondazioni e contesto</p>
+        <h1>Cedimento delle fondazioni: cosa osservare prima di una verifica</h1>
+        <p class="foundation-lead">
+          “Cedimento delle fondazioni” è un’ipotesi tecnica, non una conclusione che si può ricavare da una crepa,
+          da una fotografia o da un questionario. Puoi però raccogliere contesto e cronologia per preparare un confronto qualificato.
+        </p>
+        <p class="foundation-meta">Lettura di circa 8 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container foundation-layout">
+      <aside class="foundation-index" aria-label="In questa guida">
+        <p class="foundation-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#contesto">Tre contesti da riferire</a>
+          <a href="#checklist">Cosa raccogliere</a>
+          <a href="#verifica">Come preparare la verifica</a>
+          <a href="#attenzione">Quando fermarsi</a>
+          <a href="#faq">Domande frequenti</a>
+          <a href="#fonti">Fonti istituzionali</a>
+        </nav>
+      </aside>
+
+      <div class="foundation-content">
+        <section class="foundation-section foundation-intro" id="risposta" aria-labelledby="answer-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="answer-title">Il termine descrive una possibilità da verificare, non un fatto già dimostrato</h2>
+          <p>
+            Le fondazioni collegano l’edificio al terreno, ma il solo aspetto di una parete o di un pavimento non
+            permette di capire quale elemento sia coinvolto. Fessure, umidità, dislivelli percepiti e cambiamenti
+            nell’uso degli ambienti sono dati da ordinare, non etichette da applicare.
+          </p>
+          <p>
+            Una valutazione riferita all’immobile reale può considerare la storia dell’edificio, il terreno, l’acqua,
+            i lavori e le osservazioni disponibili. Solo dopo le verifiche appropriate si può discutere se servano
+            ulteriori controlli o interventi.
+          </p>
+          <div class="foundation-note">
+            <strong>Non partire dalla soluzione</strong>
+            <p>“Potrebbe esserci un problema alle fondazioni” può essere una richiesta di approfondimento. “Servono micropali” è invece una scelta tecnica che non si può dedurre online.</p>
+          </div>
+        </section>
+
+        <section class="foundation-section" id="contesto" aria-labelledby="context-title">
+          <p class="eyebrow">Possibili elementi di contesto</p>
+          <h2 id="context-title">Tre aree da descrivere senza fare diagnosi</h2>
+          <p>
+            Parti da informazioni che puoi conoscere direttamente. Se un dato manca, dichiaralo: non è necessario
+            colmare i vuoti con un’interpretazione.
+          </p>
+          <div class="foundation-contexts">
+            {contexts.map((item) => (
+              <article class="foundation-context">
+                <p class="foundation-number">{item.number}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="foundation-section" id="checklist" aria-labelledby="checklist-title">
+          <p class="eyebrow">Raccogliere informazioni</p>
+          <h2 id="checklist-title">Checklist per preparare il confronto</h2>
+          <p>
+            Una cronologia ordinata aiuta a raccontare la situazione senza presentare una diagnosi già pronta.
+            Fotografa solo ciò che puoi raggiungere in sicurezza e conserva gli originali.
+          </p>
+          <ul class="foundation-list">
+            {checklist.map((item, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
+            ))}
+          </ul>
+          <div class="foundation-limit">
+            <strong>Separa osservazione e interpretazione</strong>
+            <p>“La porta sfrega da marzo e vicino alla soglia vedo una fessura” riporta due osservazioni. “La fondazione è scesa” è una conclusione che richiede una verifica.</p>
+          </div>
+        </section>
+
+        <section class="foundation-section" id="verifica" aria-labelledby="verification-title">
+          <p class="eyebrow">Confronto qualificato</p>
+          <h2 id="verification-title">Che cosa chiedere prima di valutare lavori</h2>
+          <p>
+            Una richiesta utile può partire dal problema osservato e dalla domanda a cui vuoi rispondere. Non serve
+            scegliere in anticipo tra consolidamento, micropali, resine o altre tecniche.
+          </p>
+          <div class="foundation-questions">
+            {questions.map((item) => (
+              <article class="foundation-question">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p>
+            Un tecnico qualificato può indicare quali dati siano pertinenti al caso concreto e se siano necessari
+            approfondimenti. Il riepilogo online serve a trasmettere le tue osservazioni, non a sostituire il sopralluogo.
+          </p>
+        </section>
+
+        <section class="foundation-section foundation-alert" id="attenzione" aria-labelledby="attention-title">
+          <p class="eyebrow">Prima la sicurezza</p>
+          <h2 id="attention-title">Quando interrompere l’osservazione</h2>
+          <p>
+            Non rendere più rischiosa la raccolta delle informazioni. Evita di entrare in zone non accessibili,
+            rimuovere elementi o fare prove sulla casa e sul terreno.
+          </p>
+          <ul class="foundation-list foundation-list-plain">
+            {attentionPoints.map((item) => <li><span aria-hidden="true">—</span><p>{item}</p></li>)}
+          </ul>
+          <p>
+            In condizioni che potrebbero richiedere attenzione urgente, allontanati se necessario e rivolgiti
+            tempestivamente a un professionista qualificato o alle autorità competenti. Per le verifiche post-sisma,
+            il Dipartimento della Protezione Civile descrive procedure di sopralluogo e valutazione dedicate, non
+            sostituibili da una lettura domestica: consulta la <a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/" target="_blank" rel="noreferrer">scheda AeDES</a> per il contesto istituzionale.
+          </p>
+        </section>
+
+        <section class="foundation-section foundation-faq" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Cedimento delle fondazioni</h2>
+          <div class="foundation-faq-list">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="foundation-sources" id="fonti" aria-labelledby="sources-title">
+          <p class="eyebrow">Per approfondire</p>
+          <h2 id="sources-title">Fonti istituzionali sul rapporto tra edificio, terreno e verifiche</h2>
+          <p>
+            Le fonti seguenti descrivono procedure e norme tecniche generali. Non sono strumenti per diagnosticare
+            una casa a distanza e non sostituiscono una valutazione professionale riferita all’immobile.
+          </p>
+          <ul>
+            <li><a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/" target="_blank" rel="noreferrer">Dipartimento della Protezione Civile — Scheda AeDES</a></li>
+            <li><a href="https://www.protezionecivile.gov.it/static/93fa320e2365a8bad0e2804610837d6e/norme-tecniche-il-progetto-sismico-di-opere-di-fondazione-edi-sostegno-dei.pdf" target="_blank" rel="noreferrer">Norme tecniche per il progetto sismico di opere di fondazione e sostegno dei terreni</a></li>
+          </ul>
+        </section>
+
+        <section class="foundation-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dalla descrizione alla richiesta</h2>
+          <p>
+            Se hai notato una fessurazione o un cambiamento nel tuo immobile, puoi partire dalla guida generale,
+            approfondire il pavimento o preparare un riepilogo neutro per un professionista.
+          </p>
+          <div class="foundation-links">
+            <a href="/crepe-nei-muri/">Crepe nei muri: da dove cominciare <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/crepe-sul-pavimento/">Crepe sul pavimento: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/crepe-che-cambiano-nel-tempo/">Crepe che cambiano nel tempo <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .foundation-page { background: var(--paper); }
+  .foundation-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .foundation-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .foundation-hero h1 { max-width: 14ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .foundation-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .foundation-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .foundation-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .foundation-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .foundation-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .foundation-index nav { display: grid; gap: 0.7rem; }
+  .foundation-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .foundation-index a:hover, .foundation-index a:focus-visible { color: var(--accent); }
+  .foundation-content { min-width: 0; }
+  .foundation-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .foundation-intro { padding-top: 0; border-top: 0; }
+  .foundation-section h2, .foundation-sources h2, .foundation-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .foundation-section > p:not(.eyebrow), .foundation-sources > p:not(.eyebrow), .foundation-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .foundation-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .foundation-section a, .foundation-sources a { color: var(--brand); text-underline-offset: 0.2em; }
+  .foundation-note, .foundation-limit { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .foundation-note strong, .foundation-limit strong { color: var(--brand-dark); }
+  .foundation-note p, .foundation-limit p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .foundation-contexts, .foundation-questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .foundation-context, .foundation-question { padding: 1.5rem; background: var(--surface); }
+  .foundation-number { margin: 0 0 1.3rem; color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
+  .foundation-context h3, .foundation-question h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .foundation-context p:last-child, .foundation-question p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .foundation-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .foundation-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .foundation-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .foundation-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .foundation-list-plain li { grid-template-columns: 1rem 1fr; }
+  .foundation-alert { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .foundation-alert + .foundation-section { margin-top: clamp(1rem, 3vw, 2.5rem); }
+  .foundation-faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .foundation-faq-list details { border-bottom: 1px solid var(--line); }
+  .foundation-faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .foundation-faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .foundation-sources, .foundation-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; }
+  .foundation-sources { background: var(--surface); border: 1px solid var(--line); }
+  .foundation-sources ul { display: grid; gap: 0.7rem; margin: 1.5rem 0 0; padding-left: 1.2rem; color: var(--muted); line-height: 1.6; }
+  .foundation-related { background: var(--surface-alt); }
+  .foundation-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
+  .foundation-links a { color: var(--brand); font-size: 0.88rem; font-weight: 750; }
+  .foundation-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .foundation-layout { grid-template-columns: 1fr; }
+    .foundation-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .foundation-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .foundation-index a { font-size: 0.82rem; }
+    .foundation-contexts, .foundation-questions { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .foundation-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .foundation-links { grid-template-columns: 1fr; }
+  }
+</style>

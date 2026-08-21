@@ -154,7 +154,7 @@ Da valutare una pagina alla volta, solo se i dati o l’analisi dell’intento l
 giustificano:
 
 - [x] `/crepe-nei-muri/crepe-vicino-porte-finestre/` — pagina contestuale su posizione e osservazioni;
-- [ ] crepe in casa nuova o dopo lavori;
+- [x] `/crepe-nei-muri/casa-nuova-dopo-lavori/` — pagina già coperta nella Phase 8;
 - [x] `/crepe-nei-muri/interne-o-esterne/` - guida comparativa su contesto interno, facciata e osservazioni corrispondenti;
 - [x] `/crepe-nei-muri/crepe-sul-soffitto/` - guida contestuale su posizione, superficie e osservazioni dal basso;
 - [x] `/crepe-nei-muri/crepe-sul-pavimento/` - guida contestuale su finitura, posizione e cambiamenti osservabili;
@@ -177,7 +177,7 @@ finché non emerge un intento autonomo e un contenuto realmente differente.
 
 ## Phase 10 — Cedimenti e fondazioni
 
-- [ ] cedimento delle fondazioni;
+- [x] `/cedimento-fondazioni/` — guida a contesto, cronologia e preparazione di una verifica, senza diagnosticare un cedimento;
 - [ ] cedimento del terreno;
 - [ ] cedimento differenziale;
 - [ ] casa che cede;
@@ -185,6 +185,13 @@ finché non emerge un intento autonomo e un contenuto realmente differente.
 
 Queste pagine richiedono particolare prudenza: descrivere il problema e il
 bisogno di verifica, senza concludere che esista un cedimento.
+
+La guida sul cedimento delle fondazioni è stata aggiunta il 2026-08-21. Il
+contenuto introduce il termine come ipotesi da verificare, separa osservazioni
+e interpretazioni, evita di proporre tecniche e rimanda a fonti istituzionali
+per il contesto delle verifiche. Restano da sviluppare le pagine distinte sul
+terreno, sul cedimento differenziale, sulla casa che cede e sul pavimento che
+sprofonda.
 
 ## Phase 11 — Tecniche e costi
 
