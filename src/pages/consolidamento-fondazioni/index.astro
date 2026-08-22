@@ -1,0 +1,347 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const contexts = [
+  {
+    number: '01',
+    title: 'Il problema da inquadrare',
+    text: 'Fessure, dislivelli o cambiamenti nell’edificio sono osservazioni da verificare. Il termine “consolidamento” non conferma da solo che esista un problema alle fondazioni.',
+  },
+  {
+    number: '02',
+    title: 'Edificio, fondazioni e terreno',
+    text: 'Storia, carichi, ampliamenti, acqua, caratteristiche del terreno e opere vicine possono incidere sul quadro. La loro relazione va valutata sul posto e con dati pertinenti.',
+  },
+  {
+    number: '03',
+    title: 'Progetto e controllo',
+    text: 'Un eventuale intervento richiede valutazioni tecniche, progetto, dettagli di collegamento e controlli coerenti con il caso. Non è una scelta da fare sulla base di una fotografia.',
+  },
+];
+
+const checklist = [
+  'quali segni o cambiamenti hanno portato a chiedere informazioni, con posizione e date, senza chiamarli già cedimento;',
+  'età dell’edificio, ampliamenti, cambi d’uso, ristrutturazioni e modifiche dei carichi che conosci;',
+  'planimetrie, fotografie precedenti, relazioni, pratiche edilizie, documenti di lavori o valutazioni già ricevute;',
+  'acqua, perdite, infiltrazioni, scavi, pendenze e lavori nelle vicinanze ricordati nello stesso periodo;',
+  'eventuali ripristini o interventi già eseguiti, indicando che cosa è stato fatto e quando, senza considerarli una prova della causa;',
+  'domande da rivolgere al tecnico: quali verifiche servono, quali alternative esistono e come verranno controllati risultati e limiti.',
+];
+
+const processSteps = [
+  {
+    title: 'Descrivere il contesto',
+    text: 'Si parte dalle osservazioni e dalla storia dell’immobile. Una richiesta neutra aiuta a distinguere dati disponibili, ipotesi e informazioni ancora mancanti.',
+  },
+  {
+    title: 'Verificare prima di scegliere',
+    text: 'Il tecnico può indicare quali rilievi, documenti o approfondimenti siano pertinenti. La tecnica non dovrebbe essere il punto di partenza della richiesta.',
+  },
+  {
+    title: 'Valutare progetto e controlli',
+    text: 'Se viene proposto un lavoro, chiedi che siano chiari obiettivi, collegamenti con l’esistente, fasi, controlli, limiti e adempimenti applicabili.',
+  },
+];
+
+const questions = [
+  {
+    title: 'Quale problema risolve l’intervento?',
+    text: 'Chiedi quale osservazione o verifica sostiene la proposta e quale risultato si intende ottenere, senza accettare una tecnica come diagnosi già dimostrata.',
+  },
+  {
+    title: 'Quali alternative sono pertinenti?',
+    text: 'Domanda se esistano opzioni diverse, ulteriori verifiche o interventi sul contesto da considerare. La risposta dipende dall’immobile reale.',
+  },
+  {
+    title: 'Come si controlla il lavoro?',
+    text: 'Chiedi quali controlli, documenti e figure professionali siano previsti e quali condizioni possano modificare il progetto o i tempi.',
+  },
+];
+
+const attentionPoints = [
+  'non iniziare scavi, demolizioni, sollevamenti o iniezioni come prova domestica;',
+  'non rimuovere elementi dalle fondazioni o dal pavimento per cercare la causa;',
+  'non entrare in zone con distacchi, acqua, gas, cavi esposti o altri elementi che rendono rischioso avvicinarsi;',
+  'interrompere la raccolta se per documentare servirebbero attrezzi, scale, accessi non sicuri o modifiche all’immobile.',
+];
+
+const faq = [
+  {
+    question: 'Che cosa significa consolidamento delle fondazioni?',
+    answer: 'È un’espressione generale per interventi che possono riguardare fondazioni esistenti, terreno o il loro rapporto. Non indica una tecnica unica e non conferma da sola che un consolidamento serva nel caso concreto.',
+  },
+  {
+    question: 'Quando si valuta un consolidamento?',
+    answer: 'La valutazione può entrare in discussione quando rilievi e verifiche mostrano un problema che richiede un intervento. Fessure o dislivelli descritti online non bastano per arrivare a questa conclusione.',
+  },
+  {
+    question: 'Il consolidamento delle fondazioni risolve ogni crepa?',
+    answer: 'No. Una crepa può avere contesti diversi e un intervento alle fondazioni non è automaticamente pertinente. Prima occorre comprendere il problema e il rapporto tra osservazioni, edificio e terreno.',
+  },
+  {
+    question: 'Consolidamento significa sempre micropali o resine?',
+    answer: 'No. Sono termini riferiti a soluzioni diverse e la scelta non può essere fatta da una fotografia o da un questionario. Un progetto qualificato deve partire dalle verifiche del caso.',
+  },
+  {
+    question: 'Quanto costa consolidare le fondazioni?',
+    answer: 'Non esiste un prezzo generale utile senza conoscere edificio, accessibilità, terreno, lavorazioni, progetto e adempimenti. Diffida di una cifra presentata come valida per ogni caso senza una valutazione pertinente.',
+  },
+  {
+    question: 'Posso chiedere un preventivo senza una verifica?',
+    answer: 'Puoi chiedere quali informazioni servano per formulare una proposta, ma un preventivo attendibile dipende dal contesto reale e dal progetto. Il modulo online può solo raccogliere le osservazioni fornite.',
+  },
+];
+---
+
+<BaseLayout
+  title="Consolidamento fondazioni: quando si valuta e cosa sapere"
+  description="Consolidamento fondazioni: significato, verifiche, documenti e domande da preparare senza scegliere online una tecnica o concludere che l’intervento serva."
+  canonical="https://crepeincasa.it/consolidamento-fondazioni/"
+>
+  <article class="consolidation-page">
+    <header class="consolidation-hero">
+      <div class="container consolidation-hero-inner">
+        <p class="eyebrow">Guida a fondazioni e interventi</p>
+        <h1>Consolidamento fondazioni: quando si valuta e cosa sapere</h1>
+        <p class="consolidation-lead">
+          “Consolidamento fondazioni” indica una possibile categoria di interventi, non una risposta automatica a una
+          crepa o a un dislivello. Prima della tecnica vengono il contesto, le verifiche e un progetto riferito all’immobile.
+        </p>
+        <p class="consolidation-meta">Lettura di circa 8 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container consolidation-layout">
+      <aside class="consolidation-index" aria-label="In questa guida">
+        <p class="consolidation-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#contesto">Tre elementi da distinguere</a>
+          <a href="#checklist">Cosa preparare</a>
+          <a href="#percorso">Il percorso generale</a>
+          <a href="#domande">Domande da fare</a>
+          <a href="#attenzione">Cosa non fare</a>
+          <a href="#faq">Domande frequenti</a>
+          <a href="#fonti">Fonti istituzionali</a>
+        </nav>
+      </aside>
+
+      <div class="consolidation-content">
+        <section class="consolidation-section consolidation-intro" id="risposta" aria-labelledby="answer-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="answer-title">Prima si verifica il problema, poi si valuta se un intervento è pertinente</h2>
+          <p>
+            Una fondazione trasferisce i carichi dell’edificio al terreno, ma una descrizione online non permette di
+            stabilire se la fondazione, il terreno o un altro elemento sia coinvolto. Il termine “consolidamento” non è una diagnosi.
+          </p>
+          <p>
+            In un edificio esistente possono contare storia, geometria, lavori, acqua, terreno, accessibilità e
+            documentazione disponibile. Solo una valutazione riferita al caso può chiarire quali approfondimenti e quali
+            decisioni progettuali siano pertinenti.
+          </p>
+          <div class="consolidation-note">
+            <strong>Non partire dal catalogo delle tecniche</strong>
+            <p>“Ho notato una fessura vicino all’ampliamento e vorrei capire quali verifiche servano” è una richiesta. “Voglio fare micropali” è già una scelta tecnica che non si deduce online.</p>
+          </div>
+        </section>
+
+        <section class="consolidation-section" id="contesto" aria-labelledby="context-title">
+          <p class="eyebrow">Possibili elementi di contesto</p>
+          <h2 id="context-title">Tre aspetti da tenere distinti</h2>
+          <p>
+            Questi aspetti possono entrare in una valutazione, ma non sono un test domestico e non permettono di
+            stabilire da soli che cosa occorra fare.
+          </p>
+          <div class="consolidation-contexts">
+            {contexts.map((item) => (
+              <article class="consolidation-context">
+                <p class="consolidation-number">{item.number}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="consolidation-section" id="checklist" aria-labelledby="checklist-title">
+          <p class="eyebrow">Preparare il confronto</p>
+          <h2 id="checklist-title">Checklist prima di parlare di lavori</h2>
+          <p>
+            Raccogli informazioni accessibili e verificabili. Se un documento o un dato manca, dichiaralo senza
+            sostituirlo con un’ipotesi.
+          </p>
+          <ul class="consolidation-list">
+            {checklist.map((item, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
+            ))}
+          </ul>
+          <div class="consolidation-limit">
+            <strong>Un preventivo non sostituisce il progetto</strong>
+            <p>Una stima economica può descrivere un’ipotesi di lavorazione, ma non dimostra che quella soluzione sia necessaria o adeguata al tuo immobile.</p>
+          </div>
+        </section>
+
+        <section class="consolidation-section" id="percorso" aria-labelledby="process-title">
+          <p class="eyebrow">Dal problema al progetto</p>
+          <h2 id="process-title">Un percorso generale in tre passaggi</h2>
+          <div class="consolidation-steps">
+            {processSteps.map((item, index) => (
+              <article class="consolidation-step">
+                <p class="consolidation-step-number">{String(index + 1).padStart(2, '0')}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p>
+            Il percorso concreto può cambiare in base al tipo di edificio, al contesto e agli adempimenti applicabili.
+            Questa guida serve a orientare le domande, non a sostituire rilievi, calcoli o autorizzazioni.
+          </p>
+        </section>
+
+        <section class="consolidation-section" id="domande" aria-labelledby="questions-title">
+          <p class="eyebrow">Confronto qualificato</p>
+          <h2 id="questions-title">Domande utili prima di accettare una proposta</h2>
+          <p>
+            Una proposta comprensibile dovrebbe collegare osservazioni, verifiche, obiettivi e controlli. Chiedi
+            spiegazioni sul caso concreto senza dover scegliere tu la tecnica.
+          </p>
+          <div class="consolidation-questions">
+            {questions.map((item) => (
+              <article class="consolidation-question">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p>
+            Per opere su edifici esistenti possono essere rilevanti rilievi, progetto, responsabilità professionali,
+            pratiche e controlli: chiedi quali passaggi siano previsti e quali documenti riceverai.
+          </p>
+        </section>
+
+        <section class="consolidation-section consolidation-alert" id="attenzione" aria-labelledby="attention-title">
+          <p class="eyebrow">Prima la sicurezza</p>
+          <h2 id="attention-title">Cosa non fare per “controllare” le fondazioni</h2>
+          <p>
+            Le fondazioni e il terreno non sono elementi da testare improvvisando. Non modificare l’immobile per
+            ottenere una risposta più rapida.
+          </p>
+          <ul class="consolidation-list consolidation-list-plain">
+            {attentionPoints.map((item) => <li><span aria-hidden="true">—</span><p>{item}</p></li>)}
+          </ul>
+          <p>
+            In condizioni che potrebbero richiedere attenzione urgente, allontanati se necessario e rivolgiti
+            tempestivamente a un professionista qualificato o alle autorità competenti. Per il contesto delle verifiche
+            post-sisma, consulta la <a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/" target="_blank" rel="noreferrer">scheda AeDES</a>
+            del Dipartimento della Protezione Civile. Questo sito non è un servizio di emergenza.
+          </p>
+        </section>
+
+        <section class="consolidation-section consolidation-faq" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Consolidamento delle fondazioni</h2>
+          <div class="consolidation-faq-list">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="consolidation-sources" id="fonti" aria-labelledby="sources-title">
+          <p class="eyebrow">Per approfondire</p>
+          <h2 id="sources-title">Fonti istituzionali su costruzioni esistenti e fondazioni</h2>
+          <p>
+            Le fonti seguenti descrivono norme e procedure generali. Non sono strumenti per decidere online quale
+            intervento serva in una casa e non sostituiscono un progetto o una valutazione professionale.
+          </p>
+          <ul>
+            <li><a href="https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticoloDefault/originario?atto.codiceRedazionale=18A00716&amp;atto.dataPubblicazioneGazzetta=2018-02-20" target="_blank" rel="noreferrer">Gazzetta Ufficiale — Norme tecniche per le costruzioni</a></li>
+            <li><a href="https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticoloDefault/originario?atto.codiceRedazionale=19A00855&amp;atto.dataPubblicazioneGazzetta=2019-02-11&amp;atto.tipoProvvedimento=CIRCOLARE" target="_blank" rel="noreferrer">Gazzetta Ufficiale — Circolare applicativa delle Norme tecniche</a></li>
+            <li><a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/" target="_blank" rel="noreferrer">Dipartimento della Protezione Civile — Scheda AeDES</a></li>
+          </ul>
+        </section>
+
+        <section class="consolidation-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dal contesto alla verifica</h2>
+          <p>
+            Se stai cercando informazioni perché hai notato una fessurazione o un cambiamento, puoi prima ordinare le
+            osservazioni e poi preparare una richiesta neutra.
+          </p>
+          <div class="consolidation-links">
+            <a href="/cedimento-fondazioni/">Cedimento delle fondazioni: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/cedimento-differenziale/">Cedimento differenziale: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/casa-che-cede/">Casa che cede: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/pavimento-che-sprofonda/">Pavimento che sprofonda: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .consolidation-page { background: var(--paper); }
+  .consolidation-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .consolidation-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .consolidation-hero h1 { max-width: 14ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .consolidation-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .consolidation-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .consolidation-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .consolidation-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .consolidation-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .consolidation-index nav { display: grid; gap: 0.7rem; }
+  .consolidation-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .consolidation-index a:hover, .consolidation-index a:focus-visible { color: var(--accent); }
+  .consolidation-content { min-width: 0; }
+  .consolidation-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .consolidation-intro { padding-top: 0; border-top: 0; }
+  .consolidation-section h2, .consolidation-sources h2, .consolidation-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .consolidation-section > p:not(.eyebrow), .consolidation-sources > p:not(.eyebrow), .consolidation-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .consolidation-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .consolidation-section a, .consolidation-sources a { color: var(--brand); text-underline-offset: 0.2em; }
+  .consolidation-note, .consolidation-limit { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .consolidation-note strong, .consolidation-limit strong { color: var(--brand-dark); }
+  .consolidation-note p, .consolidation-limit p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .consolidation-contexts, .consolidation-steps, .consolidation-questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .consolidation-context, .consolidation-step, .consolidation-question { padding: 1.5rem; background: var(--surface); }
+  .consolidation-number, .consolidation-step-number { margin: 0 0 1.3rem; color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
+  .consolidation-context h3, .consolidation-step h3, .consolidation-question h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .consolidation-context p:last-child, .consolidation-step p:last-child, .consolidation-question p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .consolidation-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .consolidation-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .consolidation-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .consolidation-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .consolidation-list-plain li { grid-template-columns: 1rem 1fr; }
+  .consolidation-alert { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .consolidation-alert + .consolidation-section { margin-top: clamp(1rem, 3vw, 2.5rem); }
+  .consolidation-faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .consolidation-faq-list details { border-bottom: 1px solid var(--line); }
+  .consolidation-faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .consolidation-faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .consolidation-sources, .consolidation-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; }
+  .consolidation-sources { background: var(--surface); border: 1px solid var(--line); }
+  .consolidation-sources ul { display: grid; gap: 0.7rem; margin: 1.5rem 0 0; padding-left: 1.2rem; color: var(--muted); line-height: 1.6; }
+  .consolidation-related { background: var(--surface-alt); }
+  .consolidation-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
+  .consolidation-links a { color: var(--brand); font-size: 0.88rem; font-weight: 750; }
+  .consolidation-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .consolidation-layout { grid-template-columns: 1fr; }
+    .consolidation-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .consolidation-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .consolidation-index a { font-size: 0.82rem; }
+    .consolidation-contexts, .consolidation-steps, .consolidation-questions { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .consolidation-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .consolidation-links { grid-template-columns: 1fr; }
+  }
+</style>

@@ -214,7 +214,7 @@ cedimento e senza indicare tecniche.
 
 ## Phase 11 — Tecniche e costi
 
-- [ ] consolidamento fondazioni;
+- [x] `/consolidamento-fondazioni/` — guida generale a verifiche, progetto e domande, senza proporre una tecnica per il singolo caso;
 - [ ] micropali per fondazioni;
 - [ ] resine espandenti;
 - [ ] sottofondazioni;
@@ -255,3 +255,8 @@ individuale.
 - [ ] conversioni e qualità dei lead;
 - [ ] aggiornamento trimestrale della mappa delle query;
 - [ ] ritiro o consolidamento delle pagine che non dimostrano utilità.
+
+La guida sul consolidamento delle fondazioni è stata aggiunta il 2026-08-22.
+Il focus è spiegare il termine e il percorso generale tra osservazioni,
+verifiche, progetto e controlli, senza proporre tecniche, prezzi o interventi
+per un caso individuale.
