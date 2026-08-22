@@ -180,7 +180,7 @@ finché non emerge un intento autonomo e un contenuto realmente differente.
 - [x] `/cedimento-fondazioni/` — guida a contesto, cronologia e preparazione di una verifica, senza diagnosticare un cedimento;
 - [x] `/cedimento-terreno/` — guida a acqua, pendenze, lavori e cambiamenti osservabili, senza diagnosticare un cedimento;
 - [x] `/cedimento-differenziale/` — guida al confronto tra parti dell’immobile, cronologia e contesto, senza diagnosticare un cedimento;
-- [ ] casa che cede;
+- [x] `/casa-che-cede/` — guida a segni osservati nell’immobile, cronologia e contesto, senza diagnosticare un cedimento;
 - [ ] pavimento che sprofonda.
 
 Queste pagine richiedono particolare prudenza: descrivere il problema e il
@@ -190,19 +190,21 @@ La guida sul cedimento delle fondazioni è stata aggiunta il 2026-08-21. Il
 contenuto introduce il termine come ipotesi da verificare, separa osservazioni
 e interpretazioni, evita di proporre tecniche e rimanda a fonti istituzionali
 per il contesto delle verifiche. Restano da sviluppare le pagine distinte sul
-terreno, sul cedimento differenziale, sulla casa che cede e sul pavimento che
-sprofonda.
+terreno e sul pavimento che sprofonda.
 
 La guida sul cedimento del terreno è stata aggiunta il 2026-08-21. Il focus è
 la raccolta prudente di contesto su acqua, pendenze, lavori e cronologia, con
 indicazioni istituzionali per la sicurezza e la segnalazione di variazioni del
-terreno. Restano da sviluppare le pagine distinte sulla casa che cede e sul
-pavimento che sprofonda.
+terreno. Restava da sviluppare la pagina distinta sul pavimento che sprofonda.
 
 La guida sul cedimento differenziale è stata aggiunta il 2026-08-22. Il focus è
 il confronto prudente tra parti dell’immobile, date, terreno e lavori, senza
 usare una crepa o un dislivello come diagnosi e senza indicare tecniche di
 intervento.
+
+La guida sulla casa che cede è stata aggiunta il 2026-08-22. Il focus è la
+traduzione di una preoccupazione generale in osservazioni su ambienti,
+cambiamenti d’uso, cronologia e contesto, senza confermare online un cedimento.
 
 ## Phase 11 — Tecniche e costi
 
