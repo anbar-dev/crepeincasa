@@ -181,7 +181,7 @@ finché non emerge un intento autonomo e un contenuto realmente differente.
 - [x] `/cedimento-terreno/` — guida a acqua, pendenze, lavori e cambiamenti osservabili, senza diagnosticare un cedimento;
 - [x] `/cedimento-differenziale/` — guida al confronto tra parti dell’immobile, cronologia e contesto, senza diagnosticare un cedimento;
 - [x] `/casa-che-cede/` — guida a segni osservati nell’immobile, cronologia e contesto, senza diagnosticare un cedimento;
-- [ ] pavimento che sprofonda.
+- [x] `/pavimento-che-sprofonda/` — guida a dislivelli percepiti, finiture, acqua e cronologia, senza diagnosticare un cedimento.
 
 Queste pagine richiedono particolare prudenza: descrivere il problema e il
 bisogno di verifica, senza concludere che esista un cedimento.
@@ -195,7 +195,8 @@ terreno e sul pavimento che sprofonda.
 La guida sul cedimento del terreno è stata aggiunta il 2026-08-21. Il focus è
 la raccolta prudente di contesto su acqua, pendenze, lavori e cronologia, con
 indicazioni istituzionali per la sicurezza e la segnalazione di variazioni del
-terreno. Restava da sviluppare la pagina distinta sul pavimento che sprofonda.
+terreno. La pagina distinta sul pavimento che sprofonda completa ora questo
+blocco del cluster.
 
 La guida sul cedimento differenziale è stata aggiunta il 2026-08-22. Il focus è
 il confronto prudente tra parti dell’immobile, date, terreno e lavori, senza
@@ -205,6 +206,11 @@ intervento.
 La guida sulla casa che cede è stata aggiunta il 2026-08-22. Il focus è la
 traduzione di una preoccupazione generale in osservazioni su ambienti,
 cambiamenti d’uso, cronologia e contesto, senza confermare online un cedimento.
+
+La guida sul pavimento che sprofonda è stata aggiunta il 2026-08-22. Il focus
+è distinguere la percezione di un dislivello o abbassamento dalla finitura,
+dall’ambiente e dal contesto di acqua e lavori, senza confermare online un
+cedimento e senza indicare tecniche.
 
 ## Phase 11 — Tecniche e costi
 
