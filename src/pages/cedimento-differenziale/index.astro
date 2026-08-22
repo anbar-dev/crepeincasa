@@ -1,0 +1,348 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const contexts = [
+  {
+    number: '01',
+    title: 'Porzioni diverse dell’edificio',
+    text: 'Descrivi se il segno o il dislivello percepito riguarda una stanza, un ampliamento, una soglia o una parte specifica della casa. La posizione aiuta a orientare il confronto, non identifica da sola la causa.',
+  },
+  {
+    number: '02',
+    title: 'Passaggi e geometrie',
+    text: 'Giunti, cambi di materiale, pareti vicine, aperture e collegamenti tra parti costruite in momenti diversi possono essere contesti da riferire senza trasformarli in una spiegazione tecnica.',
+  },
+  {
+    number: '03',
+    title: 'Terreno, acqua e cronologia',
+    text: 'Pendenze, ristagni, perdite, scavi, lavori e cambiamenti osservati nello stesso periodo possono completare il quadro. Una coincidenza temporale non dimostra un rapporto di causa.',
+  },
+];
+
+const checklist = [
+  'la posizione precisa dell’osservazione: stanza, parete, pavimento, soglia, facciata o area esterna;',
+  'se il fenomeno sembra limitato a una parte dell’immobile oppure compare anche in zone corrispondenti;',
+  'quando hai notato il segno o il cambiamento e quali fotografie datate, planimetrie o documenti puoi recuperare;',
+  'eventuali ampliamenti, ristrutturazioni, cambi di pavimentazione o altri lavori, con periodo e area interessata;',
+  'acqua, infiltrazioni, perdite, scavi o modifiche del terreno ricordati nello stesso periodo, senza considerarli una prova;',
+  'che cosa è osservato direttamente e che cosa invece è una tua ipotesi sul rapporto tra le parti dell’edificio.',
+];
+
+const comparisonSteps = [
+  {
+    title: 'Disegna una mappa semplice',
+    text: 'Segna su una pianta o su uno schizzo dove si trova ogni osservazione. Se non conosci la disposizione delle fondazioni o dei giunti, non ricostruirla a intuito.',
+  },
+  {
+    title: 'Confronta punti e date',
+    text: 'Fotografa dalla stessa posizione quando è possibile e conserva gli originali. Indica se luce, arredi, finiture o prospettiva rendono il confronto incompleto.',
+  },
+  {
+    title: 'Racconta la sequenza',
+    text: 'Ordina i fatti: prima la fessura, poi un lavoro, una perdita o un cambiamento? La sequenza è utile per il confronto, ma non consente di stabilire da sola la causa.',
+  },
+];
+
+const questions = [
+  {
+    title: 'Che cosa significa “differenziale” nel caso concreto?',
+    text: 'Chiedi quale osservazione giustifica il termine e quali alternative o informazioni manchino prima di trarre conclusioni.',
+  },
+  {
+    title: 'Quali parti devono essere esaminate?',
+    text: 'Domanda se il confronto debba riguardare edificio, terreno, elementi vicini, documenti dei lavori o più aree dell’immobile.',
+  },
+  {
+    title: 'Quali approfondimenti sono pertinenti?',
+    text: 'Chiedi quali rilievi o verifiche siano appropriati e quali limiti abbiano fotografie, misure domestiche e descrizioni a distanza.',
+  },
+];
+
+const attentionPoints = [
+  'distacchi, cadute di materiale o parti che sembrano instabili;',
+  'acqua, gas, cavi esposti o una condizione che rende rischioso avvicinarsi;',
+  'un cambiamento che percepisci come rapido o associato ad altri fenomeni nell’edificio o nel terreno;',
+  'una verifica che richiederebbe scavi, demolizioni, sollevamenti o accesso a zone non sicure.',
+];
+
+const faq = [
+  {
+    question: 'Che cos’è un cedimento differenziale?',
+    answer: 'È un termine tecnico che riguarda differenze di movimento o di abbassamento tra parti di un’opera o tra punti diversi. La presenza di una crepa o di un dislivello non permette di confermarlo a distanza.',
+  },
+  {
+    question: 'Una crepa inclinata dimostra un cedimento differenziale?',
+    answer: 'No. La forma e la posizione sono osservazioni utili, ma possono avere contesti diversi. Il significato richiede una valutazione riferita all’edificio, al terreno, alla storia e alle verifiche appropriate.',
+  },
+  {
+    question: 'Le parti costruite in tempi diversi sono sempre un problema?',
+    answer: 'No. Un ampliamento o un cambio di materiali sono informazioni da riferire, non una diagnosi. Il loro rapporto con le osservazioni deve essere valutato nel caso concreto.',
+  },
+  {
+    question: 'Posso controllare il dislivello con strumenti domestici?',
+    answer: 'Puoi annotare ciò che percepisci e documentare il contesto senza alterare le superfici. Non usare prove, demolizioni o misure improvvisate per confermare un’ipotesi tecnica.',
+  },
+  {
+    question: 'Devo chiedere subito un consolidamento?',
+    answer: 'Non è possibile scegliere una tecnica sulla base di una fotografia o di una descrizione. Prima occorre comprendere il contesto e stabilire quali verifiche siano pertinenti.',
+  },
+  {
+    question: 'Cosa faccio se la situazione può richiedere attenzione urgente?',
+    answer: 'Non avvicinarti se la zona non ti sembra sicura. Allontanati se necessario e rivolgiti tempestivamente a un professionista qualificato o alle autorità competenti. Questo sito non è un servizio di emergenza.',
+  },
+];
+---
+
+<BaseLayout
+  title="Cedimento differenziale: cosa osservare prima di una verifica"
+  description="Cedimento differenziale: come descrivere parti dell’edificio, cronologia, terreno e cambiamenti senza confermare online un cedimento o indicare una tecnica."
+  canonical="https://crepeincasa.it/cedimento-differenziale/"
+>
+  <article class="differential-page">
+    <header class="differential-hero">
+      <div class="container differential-hero-inner">
+        <p class="eyebrow">Guida a edificio, terreno e contesto</p>
+        <h1>Cedimento differenziale: cosa osservare prima di una verifica</h1>
+        <p class="differential-lead">
+          “Cedimento differenziale” è un termine tecnico che richiede un confronto tra parti dell’immobile e del terreno.
+          Una crepa o un dislivello non bastano per confermarlo, ma puoi raccogliere posizione, cronologia e contesto.
+        </p>
+        <p class="differential-meta">Lettura di circa 8 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container differential-layout">
+      <aside class="differential-index" aria-label="In questa guida">
+        <p class="differential-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#contesto">Tre contesti da riferire</a>
+          <a href="#checklist">Cosa raccogliere</a>
+          <a href="#confronto">Come confrontare</a>
+          <a href="#verifica">Come preparare la verifica</a>
+          <a href="#attenzione">Quando fermarsi</a>
+          <a href="#faq">Domande frequenti</a>
+          <a href="#fonti">Fonti istituzionali</a>
+        </nav>
+      </aside>
+
+      <div class="differential-content">
+        <section class="differential-section differential-intro" id="risposta" aria-labelledby="answer-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="answer-title">“Differenziale” indica un confronto da verificare, non una diagnosi visiva</h2>
+          <p>
+            Il termine richiama una differenza tra movimenti o abbassamenti di punti o porzioni diverse. Per capire
+            se sia pertinente servono il contesto dell’edificio, il terreno, la storia dei lavori e verifiche riferite
+            all’immobile reale.
+          </p>
+          <p>
+            Fessure, pavimenti che sembrano fuori piano, soglie cambiate o porte che funzionano diversamente sono
+            osservazioni da ordinare. Non permettono da sole di stabilire quale elemento sia coinvolto o perché.
+          </p>
+          <div class="differential-note">
+            <strong>Descrivi prima di interpretare</strong>
+            <p>“Vedo una fessura vicino alla soglia dell’ampliamento, comparsa dopo l’inverno” è un riepilogo di osservazioni. “Le fondazioni si sono abbassate in modo diverso” è un’ipotesi da verificare.</p>
+          </div>
+        </section>
+
+        <section class="differential-section" id="contesto" aria-labelledby="context-title">
+          <p class="eyebrow">Possibili elementi di contesto</p>
+          <h2 id="context-title">Tre aree da mettere in relazione senza dedurre la causa</h2>
+          <p>
+            Parti da informazioni che puoi conoscere direttamente. Se una parte dell’immobile non è accessibile o non
+            hai documenti, segnalalo: non è necessario colmare i vuoti con un’interpretazione.
+          </p>
+          <div class="differential-contexts">
+            {contexts.map((item) => (
+              <article class="differential-context">
+                <p class="differential-number">{item.number}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="differential-section" id="checklist" aria-labelledby="checklist-title">
+          <p class="eyebrow">Raccogliere informazioni</p>
+          <h2 id="checklist-title">Checklist per confrontare le osservazioni</h2>
+          <p>
+            Una cronologia e una mappa semplice aiutano a raccontare il problema senza presentare una diagnosi già
+            pronta. Fotografa solo ciò che puoi raggiungere in sicurezza e conserva gli originali.
+          </p>
+          <ul class="differential-list">
+            {checklist.map((item, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
+            ))}
+          </ul>
+          <div class="differential-limit">
+            <strong>Separa il dato dal significato</strong>
+            <p>“La fessura è più evidente nel punto in cui cambia il pavimento” indica posizione e confronto. Non dimostra che quel passaggio sia la causa.</p>
+          </div>
+        </section>
+
+        <section class="differential-section" id="confronto" aria-labelledby="comparison-title">
+          <p class="eyebrow">Cronologia prudente</p>
+          <h2 id="comparison-title">Confronta parti e date senza fare prove sull’edificio</h2>
+          <div class="differential-steps">
+            {comparisonSteps.map((item, index) => (
+              <article class="differential-step">
+                <p class="differential-step-number">{String(index + 1).padStart(2, '0')}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p>
+            Un confronto domestico può aiutare a documentare, non a misurare in modo professionale né a confermare un
+            cedimento. Se il cambiamento sembra rapido o coinvolge più elementi, interrompi le prove e prepara una
+            richiesta di valutazione sul posto.
+          </p>
+        </section>
+
+        <section class="differential-section" id="verifica" aria-labelledby="verification-title">
+          <p class="eyebrow">Confronto qualificato</p>
+          <h2 id="verification-title">Che cosa chiedere prima di valutare lavori</h2>
+          <p>
+            Una richiesta utile parte da ciò che è stato osservato e dalla domanda a cui vuoi rispondere. Non serve
+            scegliere in anticipo tra consolidamento, micropali, resine o altre tecniche.
+          </p>
+          <div class="differential-questions">
+            {questions.map((item) => (
+              <article class="differential-question">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p>
+            Un tecnico qualificato può indicare quali dati siano pertinenti al caso concreto e se siano necessari
+            approfondimenti. Il riepilogo online trasmette le tue osservazioni e non sostituisce un sopralluogo.
+          </p>
+        </section>
+
+        <section class="differential-section differential-alert" id="attenzione" aria-labelledby="attention-title">
+          <p class="eyebrow">Prima la sicurezza</p>
+          <h2 id="attention-title">Quando interrompere l’osservazione</h2>
+          <p>
+            Non rendere più rischiosa la raccolta delle informazioni. Evita di entrare in zone non accessibili,
+            rimuovere elementi o fare prove sull’edificio, sul pavimento o sul terreno.
+          </p>
+          <ul class="differential-list differential-list-plain">
+            {attentionPoints.map((item) => <li><span aria-hidden="true">—</span><p>{item}</p></li>)}
+          </ul>
+          <p>
+            In condizioni che potrebbero richiedere attenzione urgente, allontanati se necessario e rivolgiti
+            tempestivamente a un professionista qualificato o alle autorità competenti. Per il contesto delle
+            verifiche post-sisma, consulta la <a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/" target="_blank" rel="noreferrer">scheda AeDES</a>
+            del Dipartimento della Protezione Civile. Questo sito non è un servizio di emergenza.
+          </p>
+        </section>
+
+        <section class="differential-section differential-faq" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Cedimento differenziale</h2>
+          <div class="differential-faq-list">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="differential-sources" id="fonti" aria-labelledby="sources-title">
+          <p class="eyebrow">Per approfondire</p>
+          <h2 id="sources-title">Fonti istituzionali sul contesto delle fondazioni e delle verifiche</h2>
+          <p>
+            Le fonti seguenti descrivono norme e procedure generali. Non sono strumenti per diagnosticare una casa a
+            distanza e non sostituiscono una valutazione professionale riferita all’immobile.
+          </p>
+          <ul>
+            <li><a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/" target="_blank" rel="noreferrer">Dipartimento della Protezione Civile — Scheda AeDES</a></li>
+            <li><a href="https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticoloDefault/originario?atto.dataPubblicazioneGazzetta=2018-02-20&amp;atto.codiceRedazionale=18A00716" target="_blank" rel="noreferrer">Gazzetta Ufficiale — Norme tecniche per le costruzioni</a></li>
+            <li><a href="https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.codiceRedazionale=088A1293&amp;elenco30giorni=false" target="_blank" rel="noreferrer">Gazzetta Ufficiale — Indagini sui terreni e opere di fondazione</a></li>
+          </ul>
+        </section>
+
+        <section class="differential-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dal confronto alla richiesta</h2>
+          <p>
+            Se stai raccogliendo informazioni su una fessurazione, una variazione del terreno o un possibile problema
+            alle fondazioni, puoi confrontare i contesti e preparare un riepilogo neutro.
+          </p>
+          <div class="differential-links">
+            <a href="/cedimento-fondazioni/">Cedimento delle fondazioni: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/cedimento-terreno/">Cedimento del terreno: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/crepe-che-cambiano-nel-tempo/">Crepe che cambiano nel tempo <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/crepe-sul-pavimento/">Crepe sul pavimento: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .differential-page { background: var(--paper); }
+  .differential-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .differential-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .differential-hero h1 { max-width: 14ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .differential-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .differential-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .differential-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .differential-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .differential-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .differential-index nav { display: grid; gap: 0.7rem; }
+  .differential-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .differential-index a:hover, .differential-index a:focus-visible { color: var(--accent); }
+  .differential-content { min-width: 0; }
+  .differential-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .differential-intro { padding-top: 0; border-top: 0; }
+  .differential-section h2, .differential-sources h2, .differential-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .differential-section > p:not(.eyebrow), .differential-sources > p:not(.eyebrow), .differential-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .differential-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .differential-section a, .differential-sources a { color: var(--brand); text-underline-offset: 0.2em; }
+  .differential-note, .differential-limit { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .differential-note strong, .differential-limit strong { color: var(--brand-dark); }
+  .differential-note p, .differential-limit p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .differential-contexts, .differential-steps, .differential-questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .differential-context, .differential-step, .differential-question { padding: 1.5rem; background: var(--surface); }
+  .differential-number, .differential-step-number { margin: 0 0 1.3rem; color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
+  .differential-context h3, .differential-step h3, .differential-question h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .differential-context p:last-child, .differential-step p:last-child, .differential-question p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .differential-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .differential-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .differential-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .differential-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .differential-list-plain li { grid-template-columns: 1rem 1fr; }
+  .differential-alert { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .differential-alert + .differential-section { margin-top: clamp(1rem, 3vw, 2.5rem); }
+  .differential-faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .differential-faq-list details { border-bottom: 1px solid var(--line); }
+  .differential-faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .differential-faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .differential-sources, .differential-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; }
+  .differential-sources { background: var(--surface); border: 1px solid var(--line); }
+  .differential-sources ul { display: grid; gap: 0.7rem; margin: 1.5rem 0 0; padding-left: 1.2rem; color: var(--muted); line-height: 1.6; }
+  .differential-related { background: var(--surface-alt); }
+  .differential-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
+  .differential-links a { color: var(--brand); font-size: 0.88rem; font-weight: 750; }
+  .differential-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .differential-layout { grid-template-columns: 1fr; }
+    .differential-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .differential-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .differential-index a { font-size: 0.82rem; }
+    .differential-contexts, .differential-steps, .differential-questions { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .differential-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .differential-links { grid-template-columns: 1fr; }
+  }
+</style>
