@@ -13,8 +13,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p class="eyebrow">Richiesta strutturata</p>
         <h1 id="page-title">Racconta ciò che hai osservato</h1>
         <p class="lead-intro">
-          In pochi passaggi puoi raccogliere le informazioni principali sul tuo immobile e sulle crepe
-          o fessurazioni che hai notato. Il risultato sarà un riepilogo neutro, non una diagnosi.
+          In quattro passaggi puoi raccogliere le informazioni essenziali sul tuo immobile e sulle crepe
+          o fessurazioni che hai notato. I dettagli aggiuntivi sono facoltativi e il risultato sarà un
+          riepilogo neutro, non una diagnosi.
         </p>
       </div>
     </header>
@@ -127,46 +128,51 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                   <option>Non so</option>
                 </select>
               </div>
-              <div class="field">
-                <label for="porte-finestre">Problemi a porte o finestre?</label>
-                <select id="porte-finestre" name="porteFinestre">
-                  <option value="">Non indicato</option>
-                  <option>Sì</option>
-                  <option>No</option>
-                  <option>Non so</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="pavimenti">Pavimenti apparentemente fuori livello?</label>
-                <select id="pavimenti" name="pavimenti">
-                  <option value="">Non indicato</option>
-                  <option>Sì</option>
-                  <option>No</option>
-                  <option>Non so</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="lavori">Lavori recenti?</label>
-                <select id="lavori" name="lavori">
-                  <option value="">Non indicato</option>
-                  <option>Sì</option>
-                  <option>No</option>
-                  <option>Non so</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="infiltrazioni">Infiltrazioni o umidità osservate?</label>
-                <select id="infiltrazioni" name="infiltrazioni">
-                  <option value="">Non indicato</option>
-                  <option>Sì</option>
-                  <option>No</option>
-                  <option>Non so</option>
-                </select>
-              </div>
-              <div class="field field-full">
-                <label for="note">Note aggiuntive</label>
-                <textarea id="note" name="note" rows="4" placeholder="Aggiungi dettagli che ritieni utili, senza formulare conclusioni"></textarea>
-              </div>
+              <details class="optional-context field-full">
+                <summary>Aggiungi altro contesto <span>(facoltativo)</span></summary>
+                <div class="form-grid optional-context-grid">
+                  <div class="field">
+                    <label for="porte-finestre">Problemi a porte o finestre?</label>
+                    <select id="porte-finestre" name="porteFinestre">
+                      <option value="">Non indicato</option>
+                      <option>Sì</option>
+                      <option>No</option>
+                      <option>Non so</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="pavimenti">Pavimenti apparentemente fuori livello?</label>
+                    <select id="pavimenti" name="pavimenti">
+                      <option value="">Non indicato</option>
+                      <option>Sì</option>
+                      <option>No</option>
+                      <option>Non so</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="lavori">Lavori recenti?</label>
+                    <select id="lavori" name="lavori">
+                      <option value="">Non indicato</option>
+                      <option>Sì</option>
+                      <option>No</option>
+                      <option>Non so</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="infiltrazioni">Infiltrazioni o umidità osservate?</label>
+                    <select id="infiltrazioni" name="infiltrazioni">
+                      <option value="">Non indicato</option>
+                      <option>Sì</option>
+                      <option>No</option>
+                      <option>Non so</option>
+                    </select>
+                  </div>
+                  <div class="field field-full">
+                    <label for="note">Note aggiuntive</label>
+                    <textarea id="note" name="note" rows="4" placeholder="Aggiungi dettagli che ritieni utili, senza formulare conclusioni"></textarea>
+                  </div>
+                </div>
+              </details>
             </div>
           </fieldset>
 
@@ -218,6 +224,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                 automatico a partner. Consulta la <a href="/privacy/">Privacy Policy</a> e la
                 <a href="/cookie/">Cookie Policy</a> prima dell'invio.
               </p>
+              <label class="checkbox-row" for="privacy-consenso">
+                <input id="privacy-consenso" name="privacyConsenso" type="checkbox" value="Sì" required />
+                <span>Ho letto l’informativa privacy e chiedo che i dati siano utilizzati per gestire questa richiesta. <span aria-hidden="true">*</span></span>
+              </label>
             </div>
           </fieldset>
 
@@ -332,11 +342,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .choice-card small { color: var(--muted); font-size: 0.86rem; line-height: 1.45; }
   .consent-box { margin-top: 2rem; padding: 1.2rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
   .checkbox-row { display: grid; grid-template-columns: auto 1fr; gap: 0.7rem; align-items: start; color: var(--ink); font-size: 0.88rem; font-weight: 500; line-height: 1.5; }
+  .checkbox-row > span { color: var(--ink); }
+  .checkbox-row > span > span { color: var(--accent); }
   .checkbox-row input { margin-top: 0.2rem; accent-color: var(--brand); }
   .consent-box p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
+  .consent-box .checkbox-row { margin-top: 1rem; }
+  .optional-context { margin-top: 0.8rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+  .optional-context summary { color: var(--brand); cursor: pointer; font-size: 0.88rem; font-weight: 750; text-underline-offset: 0.2em; }
+  .optional-context summary span { color: var(--muted); font-weight: 500; }
+  .optional-context[open] summary { margin-bottom: 1.1rem; }
+  .optional-context-grid { margin-top: 0; }
   .form-actions { display: flex; justify-content: space-between; gap: 0.8rem; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
   .form-actions .button:only-child { margin-left: auto; }
   .button { cursor: pointer; }
+  .form-actions button[hidden] { display: none; }
   .lead-aside { display: grid; gap: 1rem; position: sticky; top: 1.5rem; }
   .aside-card { padding: 1.5rem; border-radius: 1rem; background: var(--surface-alt); }
   .aside-card h2 { max-width: 12ch; margin: 0; color: var(--brand-dark); font-size: clamp(1.8rem, 3vw, 2.7rem); line-height: 1; letter-spacing: -0.06em; }

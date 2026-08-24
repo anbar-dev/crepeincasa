@@ -57,6 +57,7 @@
 - [x] Privacy Policy collegata al form e al footer
 - [x] Cookie Policy collegata al footer
 - [x] Termini d'uso e disclaimer pubblicati
+- [x] Consenso esplicito per la gestione della richiesta nel modulo
 - [ ] Effettuare il primo invio reale e confermare FormSubmit dalla mail di attivazione
 - [ ] Completare i dati identificativi del titolare e i periodi di conservazione
 - [ ] Verificare fornitori, trasferimenti e documenti legali con un professionista
@@ -247,7 +248,8 @@ individuale.
 
 ## Phase 14 — Audit continuativo
 
-- [ ] contenuti sottili e sovrapposizione d’intento;
+- [x] Audit dei flussi principali e semplificazione del percorso home → guida → richiesta
+- [ ] contenuti sottili e sovrapposizione d'intento;
 - [ ] title e meta description duplicati;
 - [ ] prudenza tecnica;
 - [ ] internal linking;

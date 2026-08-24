@@ -2,6 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { supportingGuides } from '../../data/supportingGuides';
 
+const primaryGuides = supportingGuides.slice(0, 3);
+const secondaryGuides = supportingGuides.slice(3);
+
 const possibleCauses = [
   {
     title: 'Movimenti e assestamenti',
@@ -198,16 +201,27 @@ const interventions = [
         <section class="related-content" aria-labelledby="related-title">
           <div>
             <p class="eyebrow">Approfondisci il contesto</p>
-            <h2 id="related-title">Scegli la guida più vicina alla tua osservazione</h2>
-            <p>Le guide attive affrontano momenti diversi dello stesso percorso: capire cosa fare, decidere quando chiedere un confronto, ricostruire il contesto e documentare meglio ciò che hai osservato.</p>
-            <nav class="cluster-link-grid" aria-label="Guide sulle crepe">
-              {supportingGuides.map((page) => (
+            <h2 id="related-title">Scegli il prossimo passo</h2>
+            <p>Se hai appena notato una crepa, inizia da una di queste tre guide. Le altre servono per situazioni più specifiche.</p>
+            <nav class="cluster-link-grid" aria-label="Percorso consigliato sulle crepe">
+              {primaryGuides.map((page) => (
                 <a href={page.href}>
                   <span class="cluster-link-title">{page.title}<span class="cluster-link-arrow" aria-hidden="true">→</span></span>
                   <small>{page.description}</small>
                 </a>
               ))}
             </nav>
+            <details class="secondary-guides">
+              <summary>Vedi altre guide per situazioni specifiche</summary>
+              <nav class="cluster-link-grid" aria-label="Altre guide sulle crepe">
+                {secondaryGuides.map((page) => (
+                  <a href={page.href}>
+                    <span class="cluster-link-title">{page.title}<span class="cluster-link-arrow" aria-hidden="true">→</span></span>
+                    <small>{page.description}</small>
+                  </a>
+                ))}
+              </nav>
+            </details>
           </div>
         </section>
 
@@ -267,6 +281,9 @@ const interventions = [
   .cluster-link-title { display: flex; align-items: start; justify-content: space-between; gap: 0.75rem; }
   .cluster-link-arrow { flex: 0 0 auto; color: var(--accent); text-decoration: none; }
   .cluster-link-grid small { display: block; margin-top: 0.55rem; color: var(--muted); font-size: 0.8rem; font-weight: 500; line-height: 1.45; }
+  .secondary-guides { margin-top: 1.4rem; }
+  .secondary-guides summary { color: var(--brand); cursor: pointer; font-size: 0.9rem; font-weight: 750; text-underline-offset: 0.2em; }
+  .secondary-guides[open] summary { margin-bottom: 1.2rem; }
   .article-cta { background: var(--brand-dark); }
   .article-cta h2 { color: var(--paper); }
   .article-cta .eyebrow { color: #e6a47c; }
