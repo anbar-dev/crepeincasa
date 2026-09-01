@@ -218,7 +218,7 @@ cedimento e senza indicare tecniche.
 - [x] `/consolidamento-fondazioni/` — guida generale a verifiche, progetto e domande, senza proporre una tecnica per il singolo caso;
 - [x] `/micropali-fondazioni/` — guida generale a significato, verifiche e collegamenti con l’esistente, senza prescrivere la tecnica;
 - [x] `/resine-espandenti-fondazioni/` — guida generale a significato, condizioni, verifiche e limiti, senza promettere risultati o prescrivere un trattamento;
-- [ ] sottofondazioni;
+- [x] `/sottofondazioni/` — guida generale a significato, fondazioni esistenti, fasi e controlli, senza prescrivere una tecnica;
 - [ ] confronto tra tecniche come guida generale;
 - [ ] costo consolidamento fondazioni;
 - [ ] costo micropali;
@@ -262,3 +262,7 @@ La guida sul consolidamento delle fondazioni è stata aggiunta il 2026-08-22.
 Il focus è spiegare il termine e il percorso generale tra osservazioni,
 verifiche, progetto e controlli, senza proporre tecniche, prezzi o interventi
 per un caso individuale.
+
+La guida sulle sottofondazioni è stata aggiunta il 2026-09-01. Il focus è il
+rapporto tra nuove opere e fondazioni esistenti, terreno, fasi e controlli,
+senza prescrivere un intervento per un caso individuale.
