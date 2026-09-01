@@ -1,0 +1,336 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const costAreas = [
+  {
+    number: '01',
+    title: 'Conoscere il caso',
+    text: 'Rilievi, documenti, storia dell’edificio, fondazioni esistenti, terreno e acqua aiutano a definire che cosa debba essere valutato. Senza questi dati, una cifra è spesso solo orientativa.',
+  },
+  {
+    number: '02',
+    title: 'Progettare e verificare',
+    text: 'Una proposta può comprendere indagini, calcoli, progetto, pratiche e coordinamento. Chiedi quali attività professionali sono incluse e quali restano da affidare separatamente.',
+  },
+  {
+    number: '03',
+    title: 'Organizzare il cantiere',
+    text: 'Accessi, spazi di lavoro, scavi o perforazioni, impianti, protezioni, occupazione degli ambienti e logistica possono incidere sull’organizzazione e sull’importo dei lavori.',
+  },
+  {
+    number: '04',
+    title: 'Controllare e ripristinare',
+    text: 'Controlli, documentazione finale, smaltimenti, chiusure, ripristini e gestione delle varianti fanno parte del quadro da chiarire, non di una nota a margine.',
+  },
+];
+
+const quoteChecks = [
+  'quale problema o obiettivo è stato verificato e quali dati sostengono la proposta;',
+  'quali indagini, rilievi, progetto, direzione o controlli sono inclusi e quali sono esclusi;',
+  'quali lavorazioni sono previste, con quali quantità o criteri di misurazione e in quali fasi;',
+  'come vengono considerati accessi, impianti, protezioni, scavi, perforazioni, acqua e ripristini;',
+  'se importi, oneri, imposte e voci eventuali sono indicati separatamente e in quale momento possono cambiare;',
+  'quali condizioni, autorizzazioni, documenti o risultati delle verifiche possono modificare la proposta.',
+];
+
+const priceFactors = [
+  {
+    title: 'Edificio e fondazioni',
+    text: 'Dimensioni, geometria, materiali, stato di fatto, carichi, ampliamenti e collegamenti con parti esistenti possono cambiare le lavorazioni da valutare.',
+  },
+  {
+    title: 'Terreno e acqua',
+    text: 'Informazioni geotecniche, stratigrafia, falda, infiltrazioni, pendenze e opere vicine possono incidere su indagini, progettazione e organizzazione del cantiere.',
+  },
+  {
+    title: 'Accessibilità e logistica',
+    text: 'Spazi ridotti, accessi difficili, ambienti abitati, impianti e necessità di protezione o ripristino possono modificare tempi e modalità operative.',
+  },
+  {
+    title: 'Obiettivo e controlli',
+    text: 'Una proposta deve chiarire quale obiettivo persegue e come controlla dati iniziali, esecuzione ed effetti, senza promettere risultati non verificabili.',
+  },
+];
+
+const processSteps = [
+  {
+    title: 'Raccogliere il contesto',
+    text: 'Prepara cronologia, fotografie datate, planimetrie e documenti disponibili. Indica ciò che hai osservato senza concludere che si tratti già di un problema strutturale.',
+  },
+  {
+    title: 'Chiarire il perimetro',
+    text: 'Chiedi che cosa comprende la valutazione e che cosa sarebbe invece una fase successiva: sopralluogo, indagini, progetto, lavori, controlli e ripristini.',
+  },
+  {
+    title: 'Confrontare voci equivalenti',
+    text: 'Metti a confronto proposte che descrivono lo stesso obiettivo e lo stesso perimetro. Un importo più basso può semplicemente escludere attività o rischi diversi.',
+  },
+];
+
+const faq = [
+  {
+    question: 'Quanto costa consolidare le fondazioni?',
+    answer: 'Non esiste una cifra generale affidabile. L’importo dipende da informazioni sull’edificio e sul terreno, verifiche, progetto, lavorazioni, accessibilità, controlli, ripristini e adempimenti. Un prezzo online non può stabilire se il consolidamento serva.',
+  },
+  {
+    question: 'È possibile avere un prezzo al metro?',
+    answer: 'Un prezzo unitario può essere utile solo se sono chiari unità di misura, quantità, inclusioni, esclusioni e condizioni. Da solo non permette di confrontare due proposte né di descrivere il costo complessivo.',
+  },
+  {
+    question: 'La tecnica scelta determina il costo?',
+    answer: 'La tecnica è soltanto una parte del quadro. Anche obiettivo, terreno, fondazioni esistenti, cantiere, controlli e ripristini possono incidere. Non è possibile scegliere online una soluzione in base al prezzo.',
+  },
+  {
+    question: 'Un sopralluogo è già un progetto?',
+    answer: 'No. Un sopralluogo può raccogliere informazioni e indicare approfondimenti, mentre progetto, verifiche, lavorazioni e controlli sono attività da distinguere e da descrivere nella proposta.',
+  },
+  {
+    question: 'Come confronto due preventivi?',
+    answer: 'Controlla che abbiano lo stesso obiettivo e perimetro. Confronta indagini, progetto, quantità, fasi, controlli, ripristini, accessi, voci eventuali, imposte, esclusioni e condizioni che fanno variare l’importo.',
+  },
+];
+---
+
+<BaseLayout
+  title="Costo consolidamento fondazioni: da cosa dipende"
+  description="Costo del consolidamento fondazioni: quali fattori incidono, come leggere un preventivo e cosa chiedere su verifiche, progetto, cantiere e controlli senza inventare prezzi."
+  canonical="https://crepeincasa.it/costo-consolidamento-fondazioni/"
+>
+  <article class="foundation-cost-page">
+    <header class="foundation-cost-hero">
+      <div class="container foundation-cost-hero-inner">
+        <p class="eyebrow">Guida a costi e verifiche</p>
+        <h1>Costo consolidamento fondazioni: da cosa dipende</h1>
+        <p class="foundation-cost-lead">
+          Non esiste un prezzo unico per il consolidamento delle fondazioni. Un confronto utile scompone il quadro in
+          verifiche, progetto, lavorazioni, cantiere, controlli e ripristini, senza usare una cifra per decidere se un
+          intervento sia necessario.
+        </p>
+        <p class="foundation-cost-meta">Lettura di circa 8 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container foundation-cost-layout">
+      <aside class="foundation-cost-index" aria-label="In questa guida">
+        <p class="foundation-cost-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#voci">Le voci principali</a>
+          <a href="#fattori">I fattori</a>
+          <a href="#preventivo">Come leggere un preventivo</a>
+          <a href="#percorso">Il percorso</a>
+          <a href="#faq">Domande frequenti</a>
+        </nav>
+      </aside>
+
+      <div class="foundation-cost-content">
+        <section class="foundation-cost-section foundation-cost-intro" id="risposta">
+          <p class="eyebrow">La risposta breve</p>
+          <h2>Una cifra senza contesto non è un preventivo completo</h2>
+          <p>
+            La richiesta “quanto costa consolidare le fondazioni?” non ha una risposta attendibile se mancano dati
+            sull’edificio, sul terreno e sull’obiettivo. Una crepa o un dislivello osservato non dimostrano da soli che
+            serva un consolidamento e non permettono di calcolarne il prezzo.
+          </p>
+          <p>
+            Il costo da confrontare è quello di un perimetro definito: quali verifiche vengono svolte, quale progetto è
+            previsto, quali opere sono comprese, come si organizza il cantiere, quali controlli seguono i lavori e quali
+            ripristini sono inclusi.
+          </p>
+          <div class="foundation-cost-note">
+            <strong>Evita i prezzi-esca</strong>
+            <p>
+              Una cifra “a partire da” o un importo al metro può essere soltanto un riferimento commerciale. Chiedi
+              sempre quali condizioni lo rendono applicabile e quali voci restano fuori.
+            </p>
+          </div>
+        </section>
+
+        <section class="foundation-cost-section" id="voci">
+          <p class="eyebrow">Che cosa compone il quadro</p>
+          <h2>Quattro aree da tenere separate</h2>
+          <p>
+            Separare le voci aiuta a non confrontare un lavoro completo con una sola fase. Non tutte le proposte hanno
+            la stessa struttura: l’importante è rendere esplicito che cosa è compreso.
+          </p>
+          <div class="foundation-cost-areas">
+            {costAreas.map((area) => (
+              <article class="foundation-cost-area">
+                <p class="foundation-cost-number">{area.number}</p>
+                <h3>{area.title}</h3>
+                <p>{area.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="foundation-cost-section" id="fattori">
+          <p class="eyebrow">Perché gli importi cambiano</p>
+          <h2>Il prezzo dipende dal contesto, non solo dal nome della tecnica</h2>
+          <div class="foundation-cost-factors">
+            {priceFactors.map((factor) => (
+              <article class="foundation-cost-factor">
+                <h3>{factor.title}</h3>
+                <p>{factor.text}</p>
+              </article>
+            ))}
+          </div>
+          <div class="foundation-cost-limit">
+            <strong>Nessuna tecnica è selezionabile dal prezzo.</strong>
+            <p>
+              Sottofondazioni, micropali e resine espandenti hanno presupposti, fasi e controlli da chiarire nel caso
+              concreto. Un importo inferiore non dimostra che una proposta sia più adatta, così come un importo maggiore
+              non dimostra che un’opera sia necessaria.
+            </p>
+          </div>
+        </section>
+
+        <section class="foundation-cost-section" id="preventivo">
+          <p class="eyebrow">Prima di confrontare</p>
+          <h2>Le domande da portare su ogni proposta</h2>
+          <p>
+            Chiedi risposte scritte e confronta voci equivalenti. Se una proposta non chiarisce una voce, trattala come
+            un punto da verificare e non come un dettaglio già incluso.
+          </p>
+          <ul class="foundation-cost-list">
+            {quoteChecks.map((check) => (
+              <li><span aria-hidden="true">—</span><p>{check}</p></li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="foundation-cost-alert" aria-labelledby="safety-title">
+          <p class="eyebrow">Limite importante</p>
+          <h2 id="safety-title">Non modificare l’immobile per ottenere un prezzo</h2>
+          <p>
+            Non fare scavi, perforazioni, demolizioni, iniezioni o rimozioni di terreno come prova. Non entrare in zone
+            con acqua, distacchi, impianti esposti o altre condizioni rischiose. Se osservi condizioni che possono
+            richiedere attenzione urgente, allontanati e rivolgiti tempestivamente a un professionista qualificato o
+            alle autorità competenti.
+          </p>
+        </section>
+
+        <section class="foundation-cost-section" id="percorso">
+          <p class="eyebrow">Dal dubbio alla proposta</p>
+          <h2>Un percorso più leggibile in tre passaggi</h2>
+          <div class="foundation-cost-steps">
+            {processSteps.map((step, index) => (
+              <article class="foundation-cost-step">
+                <p class="foundation-cost-step-number">0{index + 1}</p>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="foundation-cost-section" id="faq">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2>Costi, preventivi e limiti del confronto online</h2>
+          <div class="foundation-cost-faq-list">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="foundation-cost-sources" aria-labelledby="sources-title">
+          <p class="eyebrow">Fonti e contesto</p>
+          <h2 id="sources-title">Il costo va dopo la valutazione del caso</h2>
+          <p>
+            Le fonti istituzionali sulle costruzioni esistenti inquadrano valutazione, progetto e intervento in
+            relazione all’opera reale. Non forniscono un prezzo standard per una casa e non possono sostituire una
+            valutazione professionale sul posto.
+          </p>
+          <ul>
+            <li><a href="https://www.gazzettaufficiale.it/atto/vediMenuHTML?atto.codiceRedazionale=18A00716&atto.dataPubblicazioneGazzetta=2018-02-20&tipoSerie=serie_generale">Norme tecniche per le costruzioni — Decreto 17 gennaio 2018</a></li>
+            <li><a href="https://www.gazzettaufficiale.it/atto/vediMenuHTML?action=select-all&atto.codiceRedazionale=19A00855&art.dataPubblicazioneGazzetta=2019-02-11&tipoSerie=serie_generale&tipoVigenza=originario">Circolare 21 gennaio 2019 — istruzioni applicative NTC</a></li>
+            <li><a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/">Dipartimento della Protezione Civile — scheda AeDES</a></li>
+          </ul>
+        </section>
+
+        <section class="foundation-cost-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dal prezzo alle informazioni utili</h2>
+          <p>
+            Prima di chiedere un importo puoi approfondire il confronto tra categorie o preparare un riepilogo neutro
+            delle osservazioni da condividere con un professionista.
+          </p>
+          <div class="foundation-cost-links">
+            <a href="/confronto-tecniche-fondazioni/">Confronto tra tecniche per fondazioni <span aria-hidden="true">→</span></a>
+            <a href="/consolidamento-fondazioni/">Consolidamento fondazioni: quando si valuta <span aria-hidden="true">→</span></a>
+            <a href="/micropali-fondazioni/">Micropali per fondazioni: cosa sapere <span aria-hidden="true">→</span></a>
+            <a href="/resine-espandenti-fondazioni/">Resine espandenti per fondazioni: cosa sapere <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .foundation-cost-page { background: var(--paper); }
+  .foundation-cost-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .foundation-cost-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .foundation-cost-hero h1 { max-width: 14ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .foundation-cost-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .foundation-cost-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .foundation-cost-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .foundation-cost-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .foundation-cost-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .foundation-cost-index nav { display: grid; gap: 0.7rem; }
+  .foundation-cost-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .foundation-cost-index a:hover, .foundation-cost-index a:focus-visible { color: var(--accent); }
+  .foundation-cost-content { min-width: 0; }
+  .foundation-cost-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .foundation-cost-intro { padding-top: 0; border-top: 0; }
+  .foundation-cost-section h2, .foundation-cost-sources h2, .foundation-cost-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .foundation-cost-section > p:not(.eyebrow), .foundation-cost-sources > p:not(.eyebrow), .foundation-cost-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .foundation-cost-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .foundation-cost-section a, .foundation-cost-sources a { color: var(--brand); text-underline-offset: 0.2em; }
+  .foundation-cost-note, .foundation-cost-limit { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .foundation-cost-note strong, .foundation-cost-limit strong { color: var(--brand-dark); }
+  .foundation-cost-note p, .foundation-cost-limit p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .foundation-cost-areas, .foundation-cost-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .foundation-cost-area, .foundation-cost-step { padding: 1.5rem; background: var(--surface); }
+  .foundation-cost-number, .foundation-cost-step-number { margin: 0 0 1.3rem; color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
+  .foundation-cost-area h3, .foundation-cost-factor h3, .foundation-cost-step h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .foundation-cost-area p:last-child, .foundation-cost-factor p, .foundation-cost-step p:last-child { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .foundation-cost-factors { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .foundation-cost-factor { padding: 1.5rem; background: var(--surface); }
+  .foundation-cost-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .foundation-cost-list li { display: grid; grid-template-columns: 1rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .foundation-cost-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .foundation-cost-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .foundation-cost-alert { margin-block: clamp(1rem, 3vw, 2.5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; background: var(--accent-soft); }
+  .foundation-cost-alert h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .foundation-cost-alert p:last-child { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .foundation-cost-faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .foundation-cost-faq-list details { border-bottom: 1px solid var(--line); }
+  .foundation-cost-faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .foundation-cost-faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .foundation-cost-sources, .foundation-cost-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; }
+  .foundation-cost-sources { background: var(--surface); border: 1px solid var(--line); }
+  .foundation-cost-sources ul { display: grid; gap: 0.7rem; margin: 1.5rem 0 0; padding-left: 1.2rem; color: var(--muted); line-height: 1.6; }
+  .foundation-cost-related { background: var(--surface-alt); }
+  .foundation-cost-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
+  .foundation-cost-links a { color: var(--brand); font-size: 0.88rem; font-weight: 750; }
+  .foundation-cost-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .foundation-cost-layout { grid-template-columns: 1fr; }
+    .foundation-cost-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .foundation-cost-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .foundation-cost-index a { font-size: 0.82rem; }
+    .foundation-cost-areas, .foundation-cost-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 620px) {
+    .foundation-cost-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .foundation-cost-areas, .foundation-cost-factors, .foundation-cost-steps, .foundation-cost-links { grid-template-columns: 1fr; }
+  }
+</style>
