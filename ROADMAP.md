@@ -219,7 +219,7 @@ cedimento e senza indicare tecniche.
 - [x] `/micropali-fondazioni/` — guida generale a significato, verifiche e collegamenti con l’esistente, senza prescrivere la tecnica;
 - [x] `/resine-espandenti-fondazioni/` — guida generale a significato, condizioni, verifiche e limiti, senza promettere risultati o prescrivere un trattamento;
 - [x] `/sottofondazioni/` — guida generale a significato, fondazioni esistenti, fasi e controlli, senza prescrivere una tecnica;
-- [ ] confronto tra tecniche come guida generale;
+- [x] `/confronto-tecniche-fondazioni/` — confronto generale tra sottofondazioni, micropali e resine espandenti, basato su dati, fasi e controlli senza scegliere online una tecnica;
 - [ ] costo consolidamento fondazioni;
 - [ ] costo micropali;
 - [ ] costo resine;
@@ -266,3 +266,8 @@ per un caso individuale.
 La guida sulle sottofondazioni è stata aggiunta il 2026-09-01. Il focus è il
 rapporto tra nuove opere e fondazioni esistenti, terreno, fasi e controlli,
 senza prescrivere un intervento per un caso individuale.
+
+La guida sul confronto tra tecniche per fondazioni è stata aggiunta il
+2026-09-01. Il focus è fornire una griglia per leggere problema, terreno,
+cantiere, controlli e limiti, senza trasformare il confronto in una diagnosi o
+in una raccomandazione individuale.

@@ -1,0 +1,353 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const techniques = [
+  {
+    number: '01',
+    title: 'Sottofondazioni',
+    summary: 'È un’espressione ampia per opere che aggiungono o modificano elementi di fondazione in rapporto a una struttura esistente.',
+    focus: 'Il collegamento tra nuovo ed esistente, la sequenza delle lavorazioni e le condizioni del terreno.',
+    questions: 'Quale parte dell’opera esistente viene coinvolta? Come si procede per fasi e quali controlli sono previsti?',
+    link: '/sottofondazioni/',
+    linkLabel: 'Guida alle sottofondazioni',
+  },
+  {
+    number: '02',
+    title: 'Micropali',
+    summary: 'Indica elementi profondi di piccolo diametro che possono essere considerati in progetti diversi, con modalità e collegamenti da definire.',
+    focus: 'Terreno, profondità, accessibilità, attrezzature, collegamento alla struttura e controlli di esecuzione.',
+    questions: 'Quali indagini motivano la proposta? Come saranno trasferiti i carichi e come verranno gestite perforazioni e accessi?',
+    link: '/micropali-fondazioni/',
+    linkLabel: 'Guida ai micropali',
+  },
+  {
+    number: '03',
+    title: 'Resine espandenti',
+    summary: 'Raccoglie sistemi che prevedono l’iniezione di materiali capaci di espandersi; il risultato dipende da contesto, progetto e controlli.',
+    focus: 'Materiale e comportamento del terreno, obiettivo dichiarato, punti di iniezione, limiti e verifica degli effetti.',
+    questions: 'Quale problema verificato si intende affrontare? Quali misure prima e dopo consentono di controllare l’esito?',
+    link: '/resine-espandenti-fondazioni/',
+    linkLabel: 'Guida alle resine espandenti',
+  },
+];
+
+const comparisonAxes = [
+  {
+    number: 'A',
+    title: 'Problema e obiettivo',
+    text: 'Un nome commerciale o una tecnica non spiegano da soli perché sia stata proposta. Il confronto parte da un problema descritto e verificato, dall’obiettivo dell’opera e dai criteri con cui valutarla.',
+  },
+  {
+    number: 'B',
+    title: 'Edificio e terreno',
+    text: 'Fondazioni esistenti, stratigrafia, acqua, carichi, lavori vicini e accessibilità possono cambiare il quadro. Le stesse osservazioni non portano automaticamente alla stessa soluzione.',
+  },
+  {
+    number: 'C',
+    title: 'Cantiere e interferenze',
+    text: 'Scavi, perforazioni, iniezioni, spazi di lavoro, impianti e occupazione degli ambienti hanno effetti organizzativi da chiarire prima di confrontare tempi o costi.',
+  },
+  {
+    number: 'D',
+    title: 'Controlli e limiti',
+    text: 'Una proposta completa dovrebbe indicare come vengono verificati i dati iniziali, l’esecuzione e gli effetti dell’opera, oltre alle condizioni che possono richiedere approfondimenti.',
+  },
+];
+
+const documents = [
+  'cronologia delle osservazioni, con posizione, date e cambiamenti notati senza trasformarli in una diagnosi;',
+  'disegni, pratiche, relazioni, fotografie datate e informazioni disponibili sulle fondazioni o sui lavori precedenti;',
+  'dati conosciuti su terreno, acqua, infiltrazioni, scavi, pendenze, impianti e opere vicine;',
+  'vincoli di accesso, spazi disponibili, ambienti da liberare e condizioni che possono influire sul cantiere;',
+  'proposte ricevute, distinguendo ciò che è stato osservato, ciò che è stato verificato e ciò che viene ipotizzato.',
+];
+
+const processSteps = [
+  {
+    title: 'Definire la domanda',
+    text: 'Chiarisci quale cambiamento vuoi comprendere e quale obiettivo vuoi discutere: non è la stessa cosa chiedere una spiegazione, una verifica o un progetto.',
+  },
+  {
+    title: 'Confrontare i presupposti',
+    text: 'Per ogni proposta chiedi quali dati la sostengono, quali condizioni la rendono pertinente e quali alternative sono state considerate.',
+  },
+  {
+    title: 'Leggere fasi e controlli',
+    text: 'Metti a confronto lavorazioni, interferenze, controlli, documentazione finale e gestione di eventuali risultati diversi da quelli attesi.',
+  },
+];
+
+const faq = [
+  {
+    question: 'Qual è la tecnica migliore per una fondazione?',
+    answer: 'Non esiste una tecnica migliore in assoluto. La pertinenza dipende dal problema verificato, dal terreno, dall’edificio, dagli obiettivi, dalle fasi di cantiere e dal progetto.',
+  },
+  {
+    question: 'Si possono confrontare i prezzi delle tecniche?',
+    answer: 'Un confronto economico ha senso solo dopo aver chiarito che cosa comprende ciascuna proposta: indagini, progetto, lavorazioni, controlli, ripristini, accessi e adempimenti. Prezzi standard possono essere fuorvianti.',
+  },
+  {
+    question: 'Micropali, resine e sottofondazioni sono alternative?',
+    answer: 'Possono appartenere a progetti con obiettivi o condizioni differenti, ma non è possibile stabilire online se siano alternative nel tuo caso. Il confronto deve partire da dati e verifiche sul posto.',
+  },
+  {
+    question: 'Una crepa indica già quale intervento serve?',
+    answer: 'No. Una crepa, un dislivello o un cambiamento osservato non identificano da soli la causa né la tecnica. Possono essere elementi da documentare e da sottoporre a una valutazione qualificata.',
+  },
+  {
+    question: 'Che cosa devo chiedere prima di accettare una proposta?',
+    answer: 'Chiedi quale problema verificato viene affrontato, quali dati sostengono la proposta, quali fasi e controlli sono previsti, quali limiti esistono e quali opere o ripristini sono inclusi.',
+  },
+];
+---
+
+<BaseLayout
+  title="Confronto tecniche per fondazioni: cosa valutare"
+  description="Confronto generale tra sottofondazioni, micropali e resine espandenti: criteri, dati, fasi e controlli da discutere senza scegliere online una tecnica."
+  canonical="https://crepeincasa.it/confronto-tecniche-fondazioni/"
+>
+  <article class="comparison-page">
+    <header class="comparison-hero">
+      <div class="container comparison-hero-inner">
+        <p class="eyebrow">Guida a fondazioni e interventi</p>
+        <h1>Confronto tecniche per fondazioni: cosa valutare</h1>
+        <p class="comparison-lead">
+          Sottofondazioni, micropali e resine espandenti non sono risposte intercambiabili da scegliere online. Il
+          confronto utile riguarda dati, obiettivi, rapporto con l’esistente, cantiere e controlli.
+        </p>
+        <p class="comparison-meta">Lettura di circa 8 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container comparison-layout">
+      <aside class="comparison-index" aria-label="In questa guida">
+        <p class="comparison-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#tecniche">Le categorie</a>
+          <a href="#criteri">I criteri di confronto</a>
+          <a href="#preparare">Cosa preparare</a>
+          <a href="#domande">Le domande utili</a>
+          <a href="#faq">Domande frequenti</a>
+        </nav>
+      </aside>
+
+      <div class="comparison-content">
+        <section class="comparison-section comparison-intro" id="risposta">
+          <p class="eyebrow">La risposta breve</p>
+          <h2>Prima si confronta il problema, poi l’opera</h2>
+          <p>
+            Una tecnica di intervento non può essere selezionata da una fotografia, da una crepa o da una descrizione
+            sintetica. Prima occorre capire quali osservazioni sono state raccolte, quali verifiche servono e quale
+            obiettivo viene discusso.
+          </p>
+          <p>
+            Il confronto tra proposte diventa più leggibile quando usa gli stessi criteri: dati di partenza, rapporto
+            con fondazioni e terreno, fasi di cantiere, interferenze, controlli, limiti e contenuto effettivo del
+            preventivo.
+          </p>
+          <div class="comparison-note">
+            <strong>Il confronto non è una diagnosi.</strong>
+            <p>
+              Questa guida aiuta a formulare domande e a leggere le differenze tra categorie di intervento. Non può
+              stabilire se una tecnica serva, quale sia adatta o se un edificio sia sicuro.
+            </p>
+          </div>
+        </section>
+
+        <section class="comparison-section" id="tecniche">
+          <p class="eyebrow">Tre categorie da non confondere</p>
+          <h2>Lo stesso obiettivo apparente può richiedere dati diversi</h2>
+          <p>
+            Le definizioni qui sotto sono orientative. Una proposta concreta deve chiarire il progetto, le condizioni
+            dell’immobile e il modo in cui l’opera dovrebbe interagire con ciò che esiste già.
+          </p>
+          <div class="comparison-techniques">
+            {techniques.map((technique) => (
+              <article class="comparison-technique">
+                <p class="comparison-number">{technique.number}</p>
+                <h3>{technique.title}</h3>
+                <p>{technique.summary}</p>
+                <dl>
+                  <div>
+                    <dt>Da chiarire</dt>
+                    <dd>{technique.focus}</dd>
+                  </div>
+                  <div>
+                    <dt>Domanda utile</dt>
+                    <dd>{technique.questions}</dd>
+                  </div>
+                </dl>
+                <a href={technique.link}>{technique.linkLabel} <span aria-hidden="true">→</span></a>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="comparison-section" id="criteri">
+          <p class="eyebrow">Una griglia pratica</p>
+          <h2>Quattro criteri per leggere proposte diverse</h2>
+          <div class="comparison-axes">
+            {comparisonAxes.map((axis) => (
+              <article class="comparison-axis">
+                <p class="comparison-number">{axis.number}</p>
+                <h3>{axis.title}</h3>
+                <p>{axis.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="comparison-section" id="preparare">
+          <p class="eyebrow">Prima di chiedere un confronto</p>
+          <h2>Prepara dati comparabili, non conclusioni</h2>
+          <p>
+            Una richiesta ordinata consente di capire quali informazioni mancano e riduce il rischio di confrontare
+            descrizioni commerciali non equivalenti. Conserva i materiali originali e separa sempre osservazioni,
+            interpretazioni e indicazioni ricevute.
+          </p>
+          <ul class="comparison-list">
+            {documents.map((document) => (
+              <li><span aria-hidden="true">—</span><p>{document}</p></li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="comparison-alert" aria-labelledby="safety-title">
+          <p class="eyebrow">Limite importante</p>
+          <h2 id="safety-title">Non fare prove sul fabbricato</h2>
+          <p>
+            Non iniziare scavi, perforazioni, demolizioni, iniezioni o puntellamenti per capire quale tecnica usare.
+            Non entrare in zone con distacchi, acqua, impianti esposti o altre condizioni rischiose. Se compaiono
+            condizioni che possono richiedere attenzione urgente, allontanati e rivolgiti tempestivamente a un
+            professionista qualificato o alle autorità competenti.
+          </p>
+        </section>
+
+        <section class="comparison-section" id="domande">
+          <p class="eyebrow">Dal preventivo al progetto</p>
+          <h2>Che cosa confrontare, passo dopo passo</h2>
+          <div class="comparison-steps">
+            {processSteps.map((step, index) => (
+              <article class="comparison-step">
+                <p class="comparison-step-number">0{index + 1}</p>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="comparison-section" id="faq">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2>Confrontare senza semplificare troppo</h2>
+          <div class="comparison-faq-list">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="comparison-sources" aria-labelledby="sources-title">
+          <p class="eyebrow">Fonti e contesto</p>
+          <h2 id="sources-title">Perché contano valutazioni e progetto</h2>
+          <p>
+            Le norme e le istruzioni per le costruzioni esistenti richiamano la necessità di una valutazione coerente
+            con il caso e con l’intervento previsto. Sono riferimenti di contesto, non una diagnosi dell’immobile.
+          </p>
+          <ul>
+            <li><a href="https://www.gazzettaufficiale.it/atto/vediMenuHTML?atto.codiceRedazionale=18A00716&atto.dataPubblicazioneGazzetta=2018-02-20&tipoSerie=serie_generale">Norme tecniche per le costruzioni — Decreto 17 gennaio 2018</a></li>
+            <li><a href="https://www.gazzettaufficiale.it/atto/vediMenuHTML?action=select-all&atto.codiceRedazionale=19A00855&art.dataPubblicazioneGazzetta=2019-02-11&tipoSerie=serie_generale&tipoVigenza=originario">Circolare 21 gennaio 2019 — istruzioni applicative NTC</a></li>
+            <li><a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/">Dipartimento della Protezione Civile — scheda AeDES</a></li>
+          </ul>
+        </section>
+
+        <section class="comparison-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dalla categoria ai dati del tuo caso</h2>
+          <p>
+            Puoi approfondire una categoria oppure preparare un riepilogo neutro delle osservazioni da condividere con
+            un professionista. Il modulo non formula diagnosi e non assegna una tecnica.
+          </p>
+          <div class="comparison-links">
+            <a href="/sottofondazioni/">Sottofondazioni: cosa sono e quando si valutano <span aria-hidden="true">→</span></a>
+            <a href="/micropali-fondazioni/">Micropali per fondazioni: cosa sapere <span aria-hidden="true">→</span></a>
+            <a href="/resine-espandenti-fondazioni/">Resine espandenti per fondazioni: cosa sapere <span aria-hidden="true">→</span></a>
+            <a href="/consolidamento-fondazioni/">Consolidamento fondazioni: quando si valuta <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .comparison-page { background: var(--paper); }
+  .comparison-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .comparison-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .comparison-hero h1 { max-width: 15ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .comparison-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .comparison-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .comparison-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .comparison-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .comparison-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .comparison-index nav { display: grid; gap: 0.7rem; }
+  .comparison-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .comparison-index a:hover, .comparison-index a:focus-visible { color: var(--accent); }
+  .comparison-content { min-width: 0; }
+  .comparison-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .comparison-intro { padding-top: 0; border-top: 0; }
+  .comparison-section h2, .comparison-sources h2, .comparison-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .comparison-section > p:not(.eyebrow), .comparison-sources > p:not(.eyebrow), .comparison-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .comparison-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .comparison-section a, .comparison-sources a { color: var(--brand); text-underline-offset: 0.2em; }
+  .comparison-note { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .comparison-note strong { color: var(--brand-dark); }
+  .comparison-note p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .comparison-techniques, .comparison-axes, .comparison-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .comparison-technique, .comparison-axis, .comparison-step { padding: 1.5rem; background: var(--surface); }
+  .comparison-number, .comparison-step-number { margin: 0 0 1.3rem; color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
+  .comparison-technique h3, .comparison-axis h3, .comparison-step h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .comparison-technique > p:not(.comparison-number), .comparison-axis p:last-child, .comparison-step p:last-child { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .comparison-technique dl { display: grid; gap: 1rem; margin: 1.5rem 0 0; }
+  .comparison-technique dl div { padding-top: 1rem; border-top: 1px solid var(--line); }
+  .comparison-technique dt { color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .comparison-technique dd { margin: 0.45rem 0 0; color: var(--muted); font-size: 0.88rem; line-height: 1.55; }
+  .comparison-technique > a { display: inline-block; margin-top: 1.5rem; color: var(--brand); font-size: 0.88rem; font-weight: 750; }
+  .comparison-technique > a span, .comparison-links a span { color: var(--accent); text-decoration: none; }
+  .comparison-axes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .comparison-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .comparison-list li { display: grid; grid-template-columns: 1rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .comparison-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .comparison-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .comparison-alert { margin-block: clamp(1rem, 3vw, 2.5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; background: var(--accent-soft); }
+  .comparison-alert h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .comparison-alert p:last-child { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .comparison-faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .comparison-faq-list details { border-bottom: 1px solid var(--line); }
+  .comparison-faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .comparison-faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .comparison-sources, .comparison-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; }
+  .comparison-sources { background: var(--surface); border: 1px solid var(--line); }
+  .comparison-sources ul { display: grid; gap: 0.7rem; margin: 1.5rem 0 0; padding-left: 1.2rem; color: var(--muted); line-height: 1.6; }
+  .comparison-related { background: var(--surface-alt); }
+  .comparison-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
+  .comparison-links a { color: var(--brand); font-size: 0.88rem; font-weight: 750; }
+
+  @media (max-width: 820px) {
+    .comparison-layout { grid-template-columns: 1fr; }
+    .comparison-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .comparison-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .comparison-index a { font-size: 0.82rem; }
+    .comparison-techniques, .comparison-steps { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .comparison-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .comparison-axes, .comparison-links { grid-template-columns: 1fr; }
+  }
+</style>
