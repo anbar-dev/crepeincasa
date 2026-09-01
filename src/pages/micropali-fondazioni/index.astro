@@ -1,0 +1,346 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const contexts = [
+  {
+    number: '01',
+    title: 'Un sistema di fondazione',
+    text: 'I micropali sono elementi profondi di piccolo diametro che, in alcuni progetti, possono entrare in relazione con fondazioni esistenti e terreno. Il termine non indica da solo che siano necessari.',
+  },
+  {
+    number: '02',
+    title: 'Edificio e terreno reale',
+    text: 'Storia, carichi, fondazioni presenti, caratteristiche del terreno, acqua e accessibilità possono incidere sulla valutazione. Una fotografia non mostra tutti questi elementi.',
+  },
+  {
+    number: '03',
+    title: 'Collegamenti e controlli',
+    text: 'Un eventuale progetto deve chiarire come l’intervento si collega all’esistente, quali fasi prevede e quali controlli sono applicabili. Sono aspetti da valutare professionalmente.',
+  },
+];
+
+const checklist = [
+  'quali osservazioni hanno portato a cercare informazioni: fessure, dislivelli, lavori o altri cambiamenti, con posizione e date;',
+  'storia dell’edificio, ampliamenti, ristrutturazioni, variazioni dei carichi e documenti disponibili sulle fondazioni;',
+  'caratteristiche conosciute del terreno, acqua, perdite, scavi o opere vicine, indicando che cosa è osservato e che cosa non sai;',
+  'eventuali verifiche, ripristini o proposte già ricevute, con documenti e date, senza considerarli una conferma della soluzione;',
+  'accessi, spazi di lavoro, vincoli e uso degli ambienti che possono essere rilevanti per il progetto e per le fasi di cantiere;',
+  'domande su obiettivi, alternative, collegamenti, controlli, manutenzione, tempi e autorizzazioni applicabili al caso.',
+];
+
+const processSteps = [
+  {
+    title: 'Definire la domanda',
+    text: 'Si parte dal problema osservato e dall’informazione da chiarire, non dal nome di una tecnica. Il contesto aiuta a capire quali dati mancano.',
+  },
+  {
+    title: 'Verificare il sistema',
+    text: 'Edificio, fondazioni, terreno e acqua possono richiedere rilievi e approfondimenti diversi. La loro relazione va esaminata sul posto.',
+  },
+  {
+    title: 'Valutare una proposta',
+    text: 'Se i risultati lo giustificano, un professionista può confrontare opzioni e progetto, chiarendo collegamenti con l’esistente, fasi e controlli.',
+  },
+];
+
+const questions = [
+  {
+    title: 'Qual è l’obiettivo dell’intervento?',
+    text: 'Chiedi quale problema o risultato viene preso in considerazione e quali verifiche sostengono la proposta, senza confondere l’obiettivo con la tecnica.',
+  },
+  {
+    title: 'Come si collega all’esistente?',
+    text: 'Domanda come viene descritto il rapporto con le fondazioni presenti, quali fasi sono previste e quali aspetti devono essere controllati durante i lavori.',
+  },
+  {
+    title: 'Quali alternative e limiti esistono?',
+    text: 'Chiedi se ci sono altre opzioni pertinenti, quali condizioni possono modificare il progetto e quali limiti abbia la soluzione proposta.',
+  },
+];
+
+const attentionPoints = [
+  'non iniziare perforazioni, scavi, demolizioni o iniezioni per verificare se i micropali siano necessari;',
+  'non rimuovere parti delle fondazioni o del pavimento e non modificare il drenaggio come prova;',
+  'non entrare in zone con acqua, gas, cavi esposti, distacchi o altri elementi che rendono rischioso avvicinarsi;',
+  'interrompere la raccolta se per documentare servirebbero macchinari, accessi non sicuri o modifiche all’immobile.',
+];
+
+const faq = [
+  {
+    question: 'Che cosa sono i micropali per fondazioni?',
+    answer: 'In termini generali, sono elementi profondi di piccolo diametro che possono essere considerati in alcuni interventi su fondazioni o terreno. La descrizione non stabilisce se servano né come debbano essere progettati.',
+  },
+  {
+    question: 'I micropali servono se vedo crepe nei muri?',
+    answer: 'Non è possibile dirlo da una crepa, da una fotografia o da un questionario. Le fessure possono avere contesti diversi; prima occorre verificare edificio, fondazioni, terreno e cronologia.',
+  },
+  {
+    question: 'I micropali sono sempre una soluzione per il cedimento delle fondazioni?',
+    answer: 'No. Non esiste una tecnica valida per ogni situazione. La scelta dipende dal problema verificato, dal progetto, dal terreno, dall’edificio, dall’accessibilità e da altri fattori del caso concreto.',
+  },
+  {
+    question: 'Qual è la differenza tra micropali e pali?',
+    answer: 'Sono categorie tecniche diverse, ma il confronto utile non si può fare solo in base al nome o al diametro. Servono dati sul progetto, sulle azioni, sul terreno e sul collegamento con l’opera esistente.',
+  },
+  {
+    question: 'Quanto costano i micropali per fondazioni?',
+    answer: 'Non esiste un prezzo generale affidabile senza conoscere quantità, accessibilità, terreno, lavorazioni, progetto, controlli e adempimenti. Una cifra standard non dimostra che la soluzione sia necessaria.',
+  },
+  {
+    question: 'Posso chiedere un preventivo per micropali senza una verifica?',
+    answer: 'Puoi chiedere quali dati servano per una proposta, ma un preventivo attendibile dipende da una valutazione del caso e dal progetto. Il riepilogo online raccoglie solo le osservazioni fornite.',
+  },
+];
+---
+
+<BaseLayout
+  title="Micropali per fondazioni: cosa sono e quando si valutano"
+  description="Micropali per fondazioni: significato, verifiche, collegamenti con l’esistente e domande da preparare senza scegliere online una tecnica o un prezzo."
+  canonical="https://crepeincasa.it/micropali-fondazioni/"
+>
+  <article class="micropile-page">
+    <header class="micropile-hero">
+      <div class="container micropile-hero-inner">
+        <p class="eyebrow">Guida a tecniche e verifiche</p>
+        <h1>Micropali per fondazioni: cosa sono e quando si valutano</h1>
+        <p class="micropile-lead">
+          I micropali sono una possibile soluzione tecnica in alcuni progetti, non una risposta automatica a una crepa
+          o a un sospetto cedimento. Prima della scelta vengono il contesto, le verifiche e il progetto dell’immobile reale.
+        </p>
+        <p class="micropile-meta">Lettura di circa 8 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container micropile-layout">
+      <aside class="micropile-index" aria-label="In questa guida">
+        <p class="micropile-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#contesto">Tre elementi da distinguere</a>
+          <a href="#checklist">Cosa preparare</a>
+          <a href="#percorso">Il percorso generale</a>
+          <a href="#domande">Domande da fare</a>
+          <a href="#attenzione">Cosa non fare</a>
+          <a href="#faq">Domande frequenti</a>
+          <a href="#fonti">Fonti istituzionali</a>
+        </nav>
+      </aside>
+
+      <div class="micropile-content">
+        <section class="micropile-section micropile-intro" id="risposta" aria-labelledby="answer-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="answer-title">Il nome della tecnica non dimostra che sia necessaria</h2>
+          <p>
+            I micropali possono essere descritti, in modo generale, come elementi profondi di piccolo diametro. In
+            alcuni progetti possono entrare in relazione con fondazioni esistenti e terreno, ma il termine non è una diagnosi.
+          </p>
+          <p>
+            Una fessura, un dislivello o un cambiamento nell’edificio non permettono di scegliere una soluzione. La
+            valutazione può richiedere storia dell’immobile, rilievi, dati sul terreno, accessibilità, progetto e controlli.
+          </p>
+          <div class="micropile-note">
+            <strong>Prima la domanda, poi la tecnica</strong>
+            <p>“Quale problema è stato verificato e quali opzioni sono pertinenti?” è una domanda utile. “Mi servono micropali” è una conclusione che non si può ricavare online.</p>
+          </div>
+        </section>
+
+        <section class="micropile-section" id="contesto" aria-labelledby="context-title">
+          <p class="eyebrow">Possibili elementi di contesto</p>
+          <h2 id="context-title">Tre aspetti da valutare insieme</h2>
+          <p>
+            Nessuno di questi elementi è un test domestico. Può però aiutare a capire quali informazioni portare a un
+            confronto qualificato.
+          </p>
+          <div class="micropile-contexts">
+            {contexts.map((item) => (
+              <article class="micropile-context">
+                <p class="micropile-number">{item.number}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="micropile-section" id="checklist" aria-labelledby="checklist-title">
+          <p class="eyebrow">Preparare il confronto</p>
+          <h2 id="checklist-title">Checklist prima di valutare una proposta</h2>
+          <p>
+            Raccogli documenti e osservazioni accessibili. Se un dato manca, dichiaralo senza sostituirlo con
+            un’interpretazione tecnica.
+          </p>
+          <ul class="micropile-list">
+            {checklist.map((item, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
+            ))}
+          </ul>
+          <div class="micropile-limit">
+            <strong>Un preventivo non è una verifica</strong>
+            <p>Un’offerta può descrivere una lavorazione ipotizzata, ma non dimostra da sola che i micropali siano necessari o adeguati al tuo immobile.</p>
+          </div>
+        </section>
+
+        <section class="micropile-section" id="percorso" aria-labelledby="process-title">
+          <p class="eyebrow">Dal problema al progetto</p>
+          <h2 id="process-title">Un percorso generale in tre passaggi</h2>
+          <div class="micropile-steps">
+            {processSteps.map((item, index) => (
+              <article class="micropile-step">
+                <p class="micropile-step-number">{String(index + 1).padStart(2, '0')}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p>
+            Il percorso concreto cambia in base al tipo di edificio, al terreno, al contesto e agli adempimenti
+            applicabili. Questa guida orienta le domande, non sostituisce rilievi, calcoli o autorizzazioni.
+          </p>
+        </section>
+
+        <section class="micropile-section" id="domande" aria-labelledby="questions-title">
+          <p class="eyebrow">Confronto qualificato</p>
+          <h2 id="questions-title">Domande utili prima di accettare una proposta</h2>
+          <p>
+            Una proposta comprensibile dovrebbe collegare osservazioni, verifiche, obiettivi, fasi e controlli. Chiedi
+            spiegazioni sul caso concreto senza dover scegliere tu la soluzione.
+          </p>
+          <div class="micropile-questions">
+            {questions.map((item) => (
+              <article class="micropile-question">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p>
+            Per interventi sulle fondazioni esistenti possono essere rilevanti progetto, responsabilità professionali,
+            pratiche, controlli e gestione del cantiere: chiedi quali passaggi siano previsti e quali documenti riceverai.
+          </p>
+        </section>
+
+        <section class="micropile-section micropile-alert" id="attenzione" aria-labelledby="attention-title">
+          <p class="eyebrow">Prima la sicurezza</p>
+          <h2 id="attention-title">Cosa non fare per verificare i micropali</h2>
+          <p>
+            Perforazioni e lavori sulle fondazioni non sono prove domestiche. Non modificare l’immobile per ottenere
+            una risposta più rapida.
+          </p>
+          <ul class="micropile-list micropile-list-plain">
+            {attentionPoints.map((item) => <li><span aria-hidden="true">—</span><p>{item}</p></li>)}
+          </ul>
+          <p>
+            In condizioni che potrebbero richiedere attenzione urgente, allontanati se necessario e rivolgiti
+            tempestivamente a un professionista qualificato o alle autorità competenti. Per il contesto delle verifiche
+            post-sisma, consulta la <a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/" target="_blank" rel="noreferrer">scheda AeDES</a>
+            del Dipartimento della Protezione Civile. Questo sito non è un servizio di emergenza.
+          </p>
+        </section>
+
+        <section class="micropile-section micropile-faq" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Micropali per fondazioni</h2>
+          <div class="micropile-faq-list">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="micropile-sources" id="fonti" aria-labelledby="sources-title">
+          <p class="eyebrow">Per approfondire</p>
+          <h2 id="sources-title">Fonti istituzionali sulle fondazioni e gli interventi esistenti</h2>
+          <p>
+            Le fonti seguenti descrivono norme e procedure generali. Non sono strumenti per decidere online se i
+            micropali siano necessari e non sostituiscono un progetto o una valutazione professionale.
+          </p>
+          <ul>
+            <li><a href="https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticoloDefault/originario?atto.codiceRedazionale=19A00855&amp;atto.dataPubblicazioneGazzetta=2019-02-11&amp;atto.tipoProvvedimento=CIRCOLARE" target="_blank" rel="noreferrer">Gazzetta Ufficiale — Circolare applicativa delle Norme tecniche</a></li>
+            <li><a href="https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticoloDefault/originario?atto.codiceRedazionale=18A00716&amp;atto.dataPubblicazioneGazzetta=2018-02-20" target="_blank" rel="noreferrer">Gazzetta Ufficiale — Norme tecniche per le costruzioni</a></li>
+            <li><a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/" target="_blank" rel="noreferrer">Dipartimento della Protezione Civile — Scheda AeDES</a></li>
+          </ul>
+        </section>
+
+        <section class="micropile-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dal vocabolario alla verifica</h2>
+          <p>
+            Se stai cercando una soluzione perché hai notato una fessurazione o un cambiamento, puoi prima raccogliere
+            il contesto e poi preparare una richiesta neutra.
+          </p>
+          <div class="micropile-links">
+            <a href="/consolidamento-fondazioni/">Consolidamento fondazioni: quando si valuta <span aria-hidden="true">→</span></a>
+            <a href="/cedimento-fondazioni/">Cedimento delle fondazioni: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/cedimento-differenziale/">Cedimento differenziale: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/casa-che-cede/">Casa che cede: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .micropile-page { background: var(--paper); }
+  .micropile-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .micropile-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .micropile-hero h1 { max-width: 14ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .micropile-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .micropile-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .micropile-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .micropile-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .micropile-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .micropile-index nav { display: grid; gap: 0.7rem; }
+  .micropile-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .micropile-index a:hover, .micropile-index a:focus-visible { color: var(--accent); }
+  .micropile-content { min-width: 0; }
+  .micropile-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .micropile-intro { padding-top: 0; border-top: 0; }
+  .micropile-section h2, .micropile-sources h2, .micropile-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .micropile-section > p:not(.eyebrow), .micropile-sources > p:not(.eyebrow), .micropile-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .micropile-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .micropile-section a, .micropile-sources a { color: var(--brand); text-underline-offset: 0.2em; }
+  .micropile-note, .micropile-limit { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .micropile-note strong, .micropile-limit strong { color: var(--brand-dark); }
+  .micropile-note p, .micropile-limit p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .micropile-contexts, .micropile-steps, .micropile-questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .micropile-context, .micropile-step, .micropile-question { padding: 1.5rem; background: var(--surface); }
+  .micropile-number, .micropile-step-number { margin: 0 0 1.3rem; color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
+  .micropile-context h3, .micropile-step h3, .micropile-question h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .micropile-context p:last-child, .micropile-step p:last-child, .micropile-question p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .micropile-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .micropile-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .micropile-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .micropile-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .micropile-list-plain li { grid-template-columns: 1rem 1fr; }
+  .micropile-alert { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .micropile-alert + .micropile-section { margin-top: clamp(1rem, 3vw, 2.5rem); }
+  .micropile-faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .micropile-faq-list details { border-bottom: 1px solid var(--line); }
+  .micropile-faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .micropile-faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .micropile-sources, .micropile-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; }
+  .micropile-sources { background: var(--surface); border: 1px solid var(--line); }
+  .micropile-sources ul { display: grid; gap: 0.7rem; margin: 1.5rem 0 0; padding-left: 1.2rem; color: var(--muted); line-height: 1.6; }
+  .micropile-related { background: var(--surface-alt); }
+  .micropile-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
+  .micropile-links a { color: var(--brand); font-size: 0.88rem; font-weight: 750; }
+  .micropile-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .micropile-layout { grid-template-columns: 1fr; }
+    .micropile-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .micropile-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .micropile-index a { font-size: 0.82rem; }
+    .micropile-contexts, .micropile-steps, .micropile-questions { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .micropile-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .micropile-links { grid-template-columns: 1fr; }
+  }
+</style>

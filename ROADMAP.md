@@ -216,7 +216,7 @@ cedimento e senza indicare tecniche.
 ## Phase 11 — Tecniche e costi
 
 - [x] `/consolidamento-fondazioni/` — guida generale a verifiche, progetto e domande, senza proporre una tecnica per il singolo caso;
-- [ ] micropali per fondazioni;
+- [x] `/micropali-fondazioni/` — guida generale a significato, verifiche e collegamenti con l’esistente, senza prescrivere la tecnica;
 - [ ] resine espandenti;
 - [ ] sottofondazioni;
 - [ ] confronto tra tecniche come guida generale;
