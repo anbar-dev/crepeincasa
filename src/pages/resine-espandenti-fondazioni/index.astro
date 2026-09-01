@@ -1,0 +1,346 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const contexts = [
+  {
+    number: '01',
+    title: 'Il significato del termine',
+    text: '“Resine espandenti” indica sistemi di iniezione con materiali che possono espandersi in condizioni definite. Il nome commerciale non descrive da solo il problema, il risultato o l’idoneità per una casa.',
+  },
+  {
+    number: '02',
+    title: 'Finitura, terreno e acqua',
+    text: 'Fessure, dislivelli, vuoti, umidità, terreno e accessibilità possono entrare nella valutazione. Una fotografia non mostra tutti gli strati né il loro comportamento.',
+  },
+  {
+    number: '03',
+    title: 'Prodotto e progetto',
+    text: 'Caratteristiche del prodotto, condizioni del supporto, quantità, punti di iniezione, controlli e limiti devono essere riferiti al caso concreto e documentati in una proposta comprensibile.',
+  },
+];
+
+const checklist = [
+  'quale osservazione ha portato a cercare informazioni: dislivello, vuoto percepito, fessura, umidità o altro, con posizione e data;',
+  'tipo di pavimento o elemento interessato e quali parti non sono visibili senza rimuovere finiture o mobili;',
+  'storia di lavori, rifacimenti, perdite, infiltrazioni, scavi o modifiche del terreno, con il periodo conosciuto;',
+  'fotografie, planimetrie, documenti dei lavori, relazioni o proposte già ricevute, conservando date e originali;',
+  'accessibilità degli ambienti, presenza di impianti e vincoli che possono essere rilevanti per sopralluogo e cantiere;',
+  'domande su obiettivo, prodotto, condizioni di applicazione, controlli, limiti, garanzie, manutenzione e adempimenti.',
+];
+
+const processSteps = [
+  {
+    title: 'Definire che cosa si osserva',
+    text: 'Si descrivono posizione, finitura, cronologia e contesto senza chiamare già il fenomeno “vuoto” o “cedimento”. La domanda guida la verifica.',
+  },
+  {
+    title: 'Verificare il supporto',
+    text: 'Il sistema sotto la superficie, l’acqua, il terreno e gli elementi vicini possono richiedere valutazioni diverse. Non sono deducibili da una foto.',
+  },
+  {
+    title: 'Leggere la proposta',
+    text: 'Se viene proposta un’iniezione, chiedi che siano chiari obiettivi, materiale, modalità, controlli, limiti e condizioni che potrebbero cambiare il piano.',
+  },
+];
+
+const questions = [
+  {
+    title: 'Quale problema è stato verificato?',
+    text: 'Chiedi quale osservazione o rilievo sostiene la proposta e come viene distinto ciò che è visibile da ciò che si ipotizza sotto la superficie.',
+  },
+  {
+    title: 'Quali sono prodotto e condizioni?',
+    text: 'Domanda quali caratteristiche del sistema siano pertinenti, su quale supporto verrà applicato e quali condizioni possono influire sul risultato.',
+  },
+  {
+    title: 'Come si controllano risultato e limiti?',
+    text: 'Chiedi quali controlli e documenti sono previsti, che cosa non può essere garantito e come vengono gestiti eventuali imprevisti.',
+  },
+];
+
+const attentionPoints = [
+  'non forare, iniettare o rimuovere finiture per verificare da solo la presenza di un vuoto;',
+  'non modificare il drenaggio, bagnare il terreno o applicare carichi come prova del comportamento del pavimento;',
+  'non entrare in zone con acqua, gas, cavi esposti, distacchi o altri elementi che rendono rischioso avvicinarsi;',
+  'interrompere la raccolta se per documentare servirebbero attrezzi, macchinari, accessi non sicuri o modifiche all’immobile.',
+];
+
+const faq = [
+  {
+    question: 'Che cosa sono le resine espandenti per fondazioni?',
+    answer: 'È un’espressione usata per sistemi di iniezione con materiali che possono espandersi in condizioni definite. Il termine non indica una tecnica unica, non conferma un problema alle fondazioni e non basta per scegliere un prodotto.',
+  },
+  {
+    question: 'Le resine espandenti sollevano sempre il pavimento?',
+    answer: 'Non è possibile prometterlo in generale. Il comportamento dipende dal sistema, dal supporto, dal terreno, dalle condizioni del sito, dal progetto e dai controlli previsti; una fotografia non permette di valutarlo.',
+  },
+  {
+    question: 'Le resine risolvono le crepe nei muri?',
+    answer: 'Non necessariamente. Una fessura può avere contesti diversi e un’iniezione sotto un pavimento non è automaticamente pertinente. Prima occorre comprendere il problema e il rapporto tra edificio, terreno e acqua.',
+  },
+  {
+    question: 'Resine espandenti significa sempre consolidamento delle fondazioni?',
+    answer: 'No. Il termine può riferirsi a interventi in contesti diversi. Per capire se riguardi fondazioni, sottofondi o altri elementi servono una valutazione e una proposta riferite all’immobile reale.',
+  },
+  {
+    question: 'Quanto costano le resine espandenti?',
+    answer: 'Non esiste un prezzo generale affidabile senza conoscere area, accessibilità, prodotto, quantità, condizioni del supporto, controlli e progetto. Una cifra standard non dimostra che il trattamento sia necessario.',
+  },
+  {
+    question: 'Posso far iniettare resina senza un sopralluogo?',
+    answer: 'Una proposta attendibile dipende dal contesto e dalle verifiche necessarie. Non improvvisare fori o iniezioni: il modulo online può soltanto raccogliere le osservazioni fornite.',
+  },
+];
+---
+
+<BaseLayout
+  title="Resine espandenti per fondazioni: cosa sapere prima di valutarle"
+  description="Resine espandenti per fondazioni: significato, condizioni, verifiche e domande da preparare senza promettere risultati o scegliere online un trattamento."
+  canonical="https://crepeincasa.it/resine-espandenti-fondazioni/"
+>
+  <article class="resin-page">
+    <header class="resin-hero">
+      <div class="container resin-hero-inner">
+        <p class="eyebrow">Guida a tecniche e verifiche</p>
+        <h1>Resine espandenti per fondazioni: cosa sapere prima di valutarle</h1>
+        <p class="resin-lead">
+          Le resine espandenti sono una possibile categoria di sistemi di intervento, non una risposta automatica a una
+          crepa o a un pavimento irregolare. Prima della scelta vengono il contesto, le verifiche e una proposta riferita all’immobile.
+        </p>
+        <p class="resin-meta">Lettura di circa 8 minuti · Nessuna diagnosi online</p>
+      </div>
+    </header>
+
+    <div class="container resin-layout">
+      <aside class="resin-index" aria-label="In questa guida">
+        <p class="resin-index-title">In questa guida</p>
+        <nav>
+          <a href="#risposta">La risposta breve</a>
+          <a href="#contesto">Tre elementi da distinguere</a>
+          <a href="#checklist">Cosa preparare</a>
+          <a href="#percorso">Il percorso generale</a>
+          <a href="#domande">Domande da fare</a>
+          <a href="#attenzione">Cosa non fare</a>
+          <a href="#faq">Domande frequenti</a>
+          <a href="#fonti">Fonti istituzionali</a>
+        </nav>
+      </aside>
+
+      <div class="resin-content">
+        <section class="resin-section resin-intro" id="risposta" aria-labelledby="answer-title">
+          <p class="eyebrow">La risposta breve</p>
+          <h2 id="answer-title">Il nome del materiale non dimostra che il trattamento sia adatto</h2>
+          <p>
+            Una resina espandente può essere presentata come parte di un sistema di iniezione, ma il suo nome non
+            identifica da solo il problema sotto una superficie né il risultato possibile in un edificio esistente.
+          </p>
+          <p>
+            Fessure, dislivelli, umidità e vuoti percepiti possono avere contesti diversi. Prima di parlare di prodotto
+            servono informazioni sul pavimento o sulla fondazione, sul terreno, sull’acqua, sui lavori e sull’accessibilità.
+          </p>
+          <div class="resin-note">
+            <strong>Prima si verifica il contesto</strong>
+            <p>“Ho notato un dislivello vicino alla parete dopo una perdita e vorrei capire quali verifiche servano” è una richiesta. “Basta iniettare resina” è una conclusione che non si può ricavare online.</p>
+          </div>
+        </section>
+
+        <section class="resin-section" id="contesto" aria-labelledby="context-title">
+          <p class="eyebrow">Possibili elementi di contesto</p>
+          <h2 id="context-title">Tre aspetti da valutare insieme</h2>
+          <p>
+            Questi elementi possono entrare nella valutazione, ma non sono prove domestiche e non permettono di
+            scegliere da soli un materiale o una modalità di applicazione.
+          </p>
+          <div class="resin-contexts">
+            {contexts.map((item) => (
+              <article class="resin-context">
+                <p class="resin-number">{item.number}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="resin-section" id="checklist" aria-labelledby="checklist-title">
+          <p class="eyebrow">Preparare il confronto</p>
+          <h2 id="checklist-title">Checklist prima di valutare un’iniezione</h2>
+          <p>
+            Raccogli osservazioni e documenti accessibili. Se una parte non è visibile o un dato manca, dichiaralo
+            senza sostituirlo con un’ipotesi tecnica.
+          </p>
+          <ul class="resin-list">
+            {checklist.map((item, index) => (
+              <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
+            ))}
+          </ul>
+          <div class="resin-limit">
+            <strong>Una garanzia va letta nel suo perimetro</strong>
+            <p>Chiedi che siano chiari risultato promesso, condizioni, durata, esclusioni e modalità di controllo. Una formula commerciale non sostituisce una verifica del caso.</p>
+          </div>
+        </section>
+
+        <section class="resin-section" id="percorso" aria-labelledby="process-title">
+          <p class="eyebrow">Dal problema al progetto</p>
+          <h2 id="process-title">Un percorso generale in tre passaggi</h2>
+          <div class="resin-steps">
+            {processSteps.map((item, index) => (
+              <article class="resin-step">
+                <p class="resin-step-number">{String(index + 1).padStart(2, '0')}</p>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p>
+            Il percorso concreto cambia in base al tipo di edificio, alla superficie, al terreno, all’acqua e agli
+            adempimenti applicabili. Questa guida orienta le domande, non sostituisce rilievi, progetto o controlli.
+          </p>
+        </section>
+
+        <section class="resin-section" id="domande" aria-labelledby="questions-title">
+          <p class="eyebrow">Confronto qualificato</p>
+          <h2 id="questions-title">Domande utili prima di accettare una proposta</h2>
+          <p>
+            Una proposta comprensibile dovrebbe collegare osservazioni, verifiche, materiale, obiettivi, fasi e controlli.
+            Chiedi spiegazioni sul caso concreto senza dover scegliere tu il trattamento.
+          </p>
+          <div class="resin-questions">
+            {questions.map((item) => (
+              <article class="resin-question">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p>
+            Per interventi che coinvolgono pavimenti, sottofondi, terreno o fondazioni possono essere rilevanti rilievi,
+            progetto, responsabilità professionali e controlli: chiedi quali passaggi siano previsti e quali documenti riceverai.
+          </p>
+        </section>
+
+        <section class="resin-section resin-alert" id="attenzione" aria-labelledby="attention-title">
+          <p class="eyebrow">Prima la sicurezza</p>
+          <h2 id="attention-title">Cosa non fare per verificare le resine</h2>
+          <p>
+            Fori e iniezioni non sono prove domestiche. Non modificare la superficie, il terreno o gli impianti per
+            ottenere una risposta più rapida.
+          </p>
+          <ul class="resin-list resin-list-plain">
+            {attentionPoints.map((item) => <li><span aria-hidden="true">—</span><p>{item}</p></li>)}
+          </ul>
+          <p>
+            In condizioni che potrebbero richiedere attenzione urgente, allontanati se necessario e rivolgiti
+            tempestivamente a un professionista qualificato o alle autorità competenti. Per il contesto delle verifiche
+            post-sisma, consulta la <a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/" target="_blank" rel="noreferrer">scheda AeDES</a>
+            del Dipartimento della Protezione Civile. Questo sito non è un servizio di emergenza.
+          </p>
+        </section>
+
+        <section class="resin-section resin-faq" id="faq" aria-labelledby="faq-title">
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="faq-title">Resine espandenti per fondazioni</h2>
+          <div class="resin-faq-list">
+            {faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="resin-sources" id="fonti" aria-labelledby="sources-title">
+          <p class="eyebrow">Per approfondire</p>
+          <h2 id="sources-title">Fonti istituzionali sul contesto delle verifiche</h2>
+          <p>
+            Le fonti seguenti descrivono norme e procedure generali per costruzioni, fondazioni e sopralluoghi. Non
+            sono strumenti per decidere online se una resina sia necessaria o adatta a un immobile.
+          </p>
+          <ul>
+            <li><a href="https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticoloDefault/originario?atto.codiceRedazionale=19A00855&amp;atto.dataPubblicazioneGazzetta=2019-02-11&amp;atto.tipoProvvedimento=CIRCOLARE" target="_blank" rel="noreferrer">Gazzetta Ufficiale — Circolare applicativa delle Norme tecniche</a></li>
+            <li><a href="https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticoloDefault/originario?atto.codiceRedazionale=18A00716&amp;atto.dataPubblicazioneGazzetta=2018-02-20" target="_blank" rel="noreferrer">Gazzetta Ufficiale — Norme tecniche per le costruzioni</a></li>
+            <li><a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/" target="_blank" rel="noreferrer">Dipartimento della Protezione Civile — Scheda AeDES</a></li>
+          </ul>
+        </section>
+
+        <section class="resin-related" aria-labelledby="related-title">
+          <p class="eyebrow">Continua il percorso</p>
+          <h2 id="related-title">Dal trattamento alla verifica</h2>
+          <p>
+            Se stai cercando una soluzione perché hai notato un cambiamento, puoi prima raccogliere il contesto e poi
+            confrontare le possibili opzioni con un professionista.
+          </p>
+          <div class="resin-links">
+            <a href="/consolidamento-fondazioni/">Consolidamento fondazioni: quando si valuta <span aria-hidden="true">→</span></a>
+            <a href="/micropali-fondazioni/">Micropali per fondazioni: cosa sapere <span aria-hidden="true">→</span></a>
+            <a href="/cedimento-fondazioni/">Cedimento delle fondazioni: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/pavimento-che-sprofonda/">Pavimento che sprofonda: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .resin-page { background: var(--paper); }
+  .resin-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .resin-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
+  .resin-hero h1 { max-width: 14ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .resin-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
+  .resin-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
+  .resin-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
+  .resin-index { position: sticky; top: 1.5rem; padding-top: 0.35rem; }
+  .resin-index-title { margin: 0 0 1rem; color: var(--brand-dark); font-size: 0.78rem; font-weight: 800; }
+  .resin-index nav { display: grid; gap: 0.7rem; }
+  .resin-index a { color: var(--soft-muted); font-size: 0.78rem; line-height: 1.35; text-decoration: none; }
+  .resin-index a:hover, .resin-index a:focus-visible { color: var(--accent); }
+  .resin-content { min-width: 0; }
+  .resin-section { padding-block: clamp(3rem, 6vw, 5.5rem); border-top: 1px solid var(--line); }
+  .resin-intro { padding-top: 0; border-top: 0; }
+  .resin-section h2, .resin-sources h2, .resin-related h2 { max-width: 20ch; font-size: clamp(2.1rem, 4.5vw, 4rem); }
+  .resin-section > p:not(.eyebrow), .resin-sources > p:not(.eyebrow), .resin-related > p:not(.eyebrow) { max-width: 42rem; margin: 1.4rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
+  .resin-section > p + p:not(.eyebrow) { margin-top: 1rem; }
+  .resin-section a, .resin-sources a { color: var(--brand); text-underline-offset: 0.2em; }
+  .resin-note, .resin-limit { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: var(--accent-soft); }
+  .resin-note strong, .resin-limit strong { color: var(--brand-dark); }
+  .resin-note p, .resin-limit p { max-width: 38rem; margin: 0.6rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .resin-contexts, .resin-steps, .resin-questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 2.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: var(--line); }
+  .resin-context, .resin-step, .resin-question { padding: 1.5rem; background: var(--surface); }
+  .resin-number, .resin-step-number { margin: 0 0 1.3rem; color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; }
+  .resin-context h3, .resin-step h3, .resin-question h3 { margin: 0; color: var(--brand-dark); font-size: 1.15rem; letter-spacing: -0.03em; }
+  .resin-context p:last-child, .resin-step p:last-child, .resin-question p { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+  .resin-list { display: grid; gap: 0.9rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+  .resin-list li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.9rem; align-items: start; padding-bottom: 0.9rem; border-bottom: 1px solid var(--line); }
+  .resin-list li > span { color: var(--accent); font-family: Georgia, 'Times New Roman', serif; font-size: 1rem; }
+  .resin-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
+  .resin-list-plain li { grid-template-columns: 1rem 1fr; }
+  .resin-alert { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .resin-alert + .resin-section { margin-top: clamp(1rem, 3vw, 2.5rem); }
+  .resin-faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .resin-faq-list details { border-bottom: 1px solid var(--line); }
+  .resin-faq-list summary { padding: 1.25rem 2rem 1.25rem 0; color: var(--brand-dark); cursor: pointer; font-weight: 750; list-style-position: outside; }
+  .resin-faq-list p { max-width: 40rem; margin: -0.4rem 0 1.25rem; color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+  .resin-sources, .resin-related { margin-top: clamp(3rem, 6vw, 5rem); padding: clamp(2rem, 5vw, 3.5rem); border-radius: 1rem; }
+  .resin-sources { background: var(--surface); border: 1px solid var(--line); }
+  .resin-sources ul { display: grid; gap: 0.7rem; margin: 1.5rem 0 0; padding-left: 1.2rem; color: var(--muted); line-height: 1.6; }
+  .resin-related { background: var(--surface-alt); }
+  .resin-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem 1.5rem; margin-top: 1.6rem; }
+  .resin-links a { color: var(--brand); font-size: 0.88rem; font-weight: 750; }
+  .resin-links a span { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 820px) {
+    .resin-layout { grid-template-columns: 1fr; }
+    .resin-index { position: static; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .resin-index nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+    .resin-index a { font-size: 0.82rem; }
+    .resin-contexts, .resin-steps, .resin-questions { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .resin-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .resin-links { grid-template-columns: 1fr; }
+  }
+</style>

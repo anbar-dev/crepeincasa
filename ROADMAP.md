@@ -217,7 +217,7 @@ cedimento e senza indicare tecniche.
 
 - [x] `/consolidamento-fondazioni/` — guida generale a verifiche, progetto e domande, senza proporre una tecnica per il singolo caso;
 - [x] `/micropali-fondazioni/` — guida generale a significato, verifiche e collegamenti con l’esistente, senza prescrivere la tecnica;
-- [ ] resine espandenti;
+- [x] `/resine-espandenti-fondazioni/` — guida generale a significato, condizioni, verifiche e limiti, senza promettere risultati o prescrivere un trattamento;
 - [ ] sottofondazioni;
 - [ ] confronto tra tecniche come guida generale;
 - [ ] costo consolidamento fondazioni;
