@@ -250,7 +250,7 @@ individuale.
 ## Phase 14 — Audit continuativo
 
 - [x] Audit dei flussi principali e semplificazione del percorso home → guida → richiesta
-- [x] Revisione linguistica trasversale di pagine, CTA, modulo e documenti legali
+- [ ] Rifare in italiano corretto e naturale le pagine prioritarie, le CTA, il modulo e i documenti legali
 - [ ] contenuti sottili e sovrapposizione d'intento;
 - [ ] title e meta description duplicati;
 - [ ] prudenza tecnica;
@@ -259,6 +259,41 @@ individuale.
 - [ ] conversioni e qualità dei lead;
 - [ ] aggiornamento trimestrale della mappa delle query;
 - [ ] ritiro o consolidamento delle pagine che non dimostrano utilità.
+
+### Task editoriale prioritario — riscrittura in italiano naturale
+
+- [ ] **Rifai bene in italiano corretto e naturale le seguenti pagine**, senza
+  usare traduzioni letterali dall'inglese o formule da testo generato:
+  - `/` — homepage;
+  - `/crepe-nei-muri/` — pagina principale sulle crepe;
+  - `/crepe-nei-muri/cosa-fare/`;
+  - `/crepe-nei-muri/quando-chiedere-verifica/`;
+  - `/richiedi-valutazione/` — modulo e percorso di richiesta;
+  - `/pavimento-che-sprofonda/`;
+  - `/cedimento-terreno/`;
+  - `/cedimento-differenziale/`;
+  - `/crepe-nei-muri/crepe-sul-soffitto/`;
+  - `/casa-che-cede/`;
+  - `/crepe-nei-muri/crepe-sul-pavimento/`;
+  - `/crepe-nei-muri/informazioni-per-tecnico/`;
+  - `/cedimento-fondazioni/`.
+- [ ] Rivedere nello stesso passaggio titoli, sottotitoli, pulsanti, link,
+  microtesti, FAQ e messaggi del modulo: devono suonare scritti da un
+  italiano madrelingua, non tradotti o assemblati.
+- [ ] Eliminare l'uso ripetitivo e artificiale di formule come "osservare",
+  "raccogliere informazioni" e "preparare un riepilogo" quando non aiutano
+  davvero chi legge; usarle soltanto se sono necessarie e con parole naturali.
+- [ ] Ridurre i "compiti a casa": ogni pagina deve rispondere prima alla
+  domanda dell'utente e indicare un passo concreto, come cosa fare adesso, a
+  chi rivolgersi, quando chiedere un sopralluogo e cosa succede dopo la
+  richiesta.
+- [ ] Dare soluzioni pratiche senza fare diagnosi online: linguaggio chiaro,
+  prudente e non allarmistico, ma mai vago o evasivo.
+
+> La revisione linguistica del 2026-09-22 non è considerata conclusiva: questo
+> task la sostituisce e va svolto pagina per pagina, iniziando dalla homepage,
+> dalla pagina pilastro e dalle URL che hanno già prodotto impressioni in
+> Search Console. In questa attività non sono state modificate le pagine.
 
 La guida sul consolidamento delle fondazioni è stata aggiunta il 2026-08-22.
 Il focus è spiegare il termine e il percorso generale tra osservazioni,
@@ -279,11 +314,10 @@ La guida sul costo del consolidamento delle fondazioni è stata aggiunta il
 controlli e ripristini, senza pubblicare prezzi standard o usare il costo come
 indicazione della necessità di un intervento.
 
-La revisione linguistica trasversale è stata completata il 2026-09-22. Sono
-state uniformate le formule delle pagine, dei pulsanti, del modulo, dei
-documenti legali e dei componenti condivisi, sostituendo espressioni poco
-naturali o troppo vicine al linguaggio tecnico-organizzativo inglese con un
-italiano più diretto.
+Il 2026-09-22 è stata fatta una prima revisione linguistica trasversale, ma non
+è sufficiente: resta da riscrivere pagina per pagina il testo in italiano
+corretto e naturale, eliminando formule tradotte, ripetizioni e richieste
+eccessive di lavoro all'utente.
 
 Il 2026-09-22 sono stati rinnovati il marchio della testata, l'immagine hero
 della homepage e l'icona del sito.
