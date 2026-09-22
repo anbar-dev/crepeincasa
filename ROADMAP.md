@@ -1,5 +1,59 @@
 # Roadmap — Crepe in Casa
 
+## Prossime cose da fare
+
+### 1. Riscrittura editoriale in italiano naturale
+
+- [ ] **Riscrivere bene in italiano corretto e naturale** queste pagine:
+  - `/` — homepage;
+  - `/crepe-nei-muri/` — pagina principale sulle crepe;
+  - `/crepe-nei-muri/cosa-fare/`;
+  - `/crepe-nei-muri/quando-chiedere-verifica/`;
+  - `/richiedi-valutazione/` — modulo e percorso di richiesta;
+  - `/pavimento-che-sprofonda/`;
+  - `/cedimento-terreno/`;
+  - `/cedimento-differenziale/`;
+  - `/cedimento-fondazioni/`;
+  - `/casa-che-cede/`;
+  - `/crepe-nei-muri/crepe-sul-soffitto/`;
+  - `/crepe-nei-muri/crepe-sul-pavimento/`;
+  - `/crepe-nei-muri/informazioni-per-tecnico/`.
+
+Per “italiano naturale” non si intende soltanto correggere la grammatica. Ogni
+pagina deve sembrare scritta da una persona competente che parla a un
+proprietario di casa: frasi semplici, verbi comuni, titoli chiari, niente calchi
+dall'inglese, niente formule da testo generato e niente ripetizioni meccaniche.
+
+La pagina deve partire dal problema reale dell'utente e portarlo verso una
+decisione concreta. Prima deve spiegare che cosa può significare la situazione
+in termini prudenti; poi deve dire che cosa conviene fare, a chi rivolgersi,
+quando serve una valutazione sul posto e che cosa succede dopo. Non deve
+trasformare il lettore in un tecnico, né lasciarlo con una lista di cose da
+misurare, fotografare o compilare senza una conclusione utile.
+
+Da eliminare o ridurre drasticamente, salvo quando servono davvero:
+
+- “osservare”, “raccogliere informazioni” e “preparare un riepilogo” come
+  obiettivo principale della pagina;
+- checklist e richieste di lavoro che non cambiano il passo successivo;
+- formule vaghe come “può essere utile” senza spiegare a che cosa serve;
+- linguaggio allarmistico, diagnosi a distanza e indicazioni tecniche per il
+  singolo caso.
+
+Il risultato deve dimostrare competenza attraverso spiegazioni, distinzione tra
+possibili cause e limiti della valutazione online, non attraverso parole
+complicate. La CTA deve essere la conseguenza naturale della risposta e
+proporre un passo concreto.
+
+### 2. Controllo dopo la riscrittura
+
+- [ ] Verificare titoli, descrizioni, link interni, CTA, FAQ e modulo insieme
+  al nuovo testo.
+- [ ] Controllare che ogni pagina risponda a un intento distinto e non ripeta
+  la stessa spiegazione con parole diverse.
+- [ ] Eseguire build, controllo responsive e verifica dei dati Search Console
+  dopo la pubblicazione.
+
 ## Phase 0 — Foundation
 
 - [x] Inizializzare Astro
@@ -250,7 +304,7 @@ individuale.
 ## Phase 14 — Audit continuativo
 
 - [x] Audit dei flussi principali e semplificazione del percorso home → guida → richiesta
-- [ ] Rifare in italiano corretto e naturale le pagine prioritarie, le CTA, il modulo e i documenti legali
+- [ ] Riscrittura editoriale completa (vedi "Prossime cose da fare")
 - [ ] contenuti sottili e sovrapposizione d'intento;
 - [ ] title e meta description duplicati;
 - [ ] prudenza tecnica;
@@ -259,41 +313,6 @@ individuale.
 - [ ] conversioni e qualità dei lead;
 - [ ] aggiornamento trimestrale della mappa delle query;
 - [ ] ritiro o consolidamento delle pagine che non dimostrano utilità.
-
-### Task editoriale prioritario — riscrittura in italiano naturale
-
-- [ ] **Rifai bene in italiano corretto e naturale le seguenti pagine**, senza
-  usare traduzioni letterali dall'inglese o formule da testo generato:
-  - `/` — homepage;
-  - `/crepe-nei-muri/` — pagina principale sulle crepe;
-  - `/crepe-nei-muri/cosa-fare/`;
-  - `/crepe-nei-muri/quando-chiedere-verifica/`;
-  - `/richiedi-valutazione/` — modulo e percorso di richiesta;
-  - `/pavimento-che-sprofonda/`;
-  - `/cedimento-terreno/`;
-  - `/cedimento-differenziale/`;
-  - `/crepe-nei-muri/crepe-sul-soffitto/`;
-  - `/casa-che-cede/`;
-  - `/crepe-nei-muri/crepe-sul-pavimento/`;
-  - `/crepe-nei-muri/informazioni-per-tecnico/`;
-  - `/cedimento-fondazioni/`.
-- [ ] Rivedere nello stesso passaggio titoli, sottotitoli, pulsanti, link,
-  microtesti, FAQ e messaggi del modulo: devono suonare scritti da un
-  italiano madrelingua, non tradotti o assemblati.
-- [ ] Eliminare l'uso ripetitivo e artificiale di formule come "osservare",
-  "raccogliere informazioni" e "preparare un riepilogo" quando non aiutano
-  davvero chi legge; usarle soltanto se sono necessarie e con parole naturali.
-- [ ] Ridurre i "compiti a casa": ogni pagina deve rispondere prima alla
-  domanda dell'utente e indicare un passo concreto, come cosa fare adesso, a
-  chi rivolgersi, quando chiedere un sopralluogo e cosa succede dopo la
-  richiesta.
-- [ ] Dare soluzioni pratiche senza fare diagnosi online: linguaggio chiaro,
-  prudente e non allarmistico, ma mai vago o evasivo.
-
-> La revisione linguistica del 2026-09-22 non è considerata conclusiva: questo
-> task la sostituisce e va svolto pagina per pagina, iniziando dalla homepage,
-> dalla pagina pilastro e dalle URL che hanno già prodotto impressioni in
-> Search Console. In questa attività non sono state modificate le pagine.
 
 La guida sul consolidamento delle fondazioni è stata aggiunta il 2026-08-22.
 Il focus è spiegare il termine e il percorso generale tra osservazioni,
