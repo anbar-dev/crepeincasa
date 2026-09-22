@@ -4,18 +4,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Richiedi una valutazione | Crepe in Casa"
-  description="Prepara una richiesta strutturata sulle crepe o fessurazioni osservate nel tuo immobile. Il modulo crea un riepilogo neutro e non formula diagnosi."
+  description="Racconta il problema che hai notato nel tuo immobile e chiedi un confronto sul posto. Il modulo non formula diagnosi."
   canonical="https://crepeincasa.it/richiedi-valutazione/"
 >
   <article class="lead-page">
     <header class="lead-hero">
       <div class="container lead-hero-inner">
-        <p class="eyebrow">Richiesta strutturata</p>
-        <h1 id="page-title">Racconta ciò che hai osservato</h1>
+        <p class="eyebrow">Parliamo del problema</p>
+        <h1 id="page-title">Racconta che cosa sta succedendo</h1>
         <p class="lead-intro">
-          In quattro passaggi puoi raccogliere le informazioni essenziali sul tuo immobile e sulle crepe
-          o fessurazioni che hai notato. I dettagli aggiuntivi sono facoltativi e il risultato sarà un
-          riepilogo neutro, non una diagnosi.
+          In quattro passaggi puoi spiegare dove si trova il problema, da quando lo noti e che cosa ti
+          serve capire. I dettagli aggiuntivi sono facoltativi: non devi conoscere termini tecnici né
+          arrivare con una diagnosi.
         </p>
       </div>
     </header>
@@ -36,14 +36,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="form-progress" data-progress aria-live="polite">
             <div class="progress-heading">
-              <span class="eyebrow">Il tuo percorso</span>
+              <span class="eyebrow">Richiesta in quattro passaggi</span>
               <span data-progress-label>Passo 1 di 4</span>
             </div>
             <div class="progress-track" aria-hidden="true"><span data-progress-bar></span></div>
           </div>
 
           <fieldset data-step="0">
-            <legend>Immobile</legend>
+            <legend>La casa</legend>
             <p class="fieldset-intro">Dove si trova l’immobile e di che tipo è?</p>
             <div class="form-grid">
               <div class="field field-wide">
@@ -61,7 +61,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <div class="field field-wide">
                 <label for="tipologia">Tipologia di immobile <span aria-hidden="true">*</span></label>
                 <select id="tipologia" name="tipologia" required>
-                  <option value="">Seleziona un’opzione</option>
+                    <option value="">Scegli un’opzione</option>
                   <option>Casa indipendente</option>
                   <option>Appartamento</option>
                   <option>Edificio plurifamiliare</option>
@@ -88,17 +88,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </fieldset>
 
           <fieldset data-step="1" hidden>
-            <legend>Osservazioni</legend>
-            <p class="fieldset-intro">Descrivi quello che hai visto, senza cercare di interpretarlo.</p>
+            <legend>Il problema</legend>
+            <p class="fieldset-intro">Spiega con parole semplici dove si trova e che cosa noti.</p>
             <div class="form-grid">
               <div class="field field-full">
-                <label for="dove">Dove sono le crepe o fessurazioni? <span aria-hidden="true">*</span></label>
+                <label for="dove">Dove si trova il problema? <span aria-hidden="true">*</span></label>
                 <textarea id="dove" name="dove" rows="3" required placeholder="Es. parete del soggiorno, vicino alla finestra"></textarea>
               </div>
               <div class="field field-wide">
                 <label for="interno-esterno">Sono interne o esterne? <span aria-hidden="true">*</span></label>
                 <select id="interno-esterno" name="internoEsterno" required>
-                  <option value="">Seleziona un’opzione</option>
+                  <option value="">Scegli un’opzione</option>
                   <option>Interne</option>
                   <option>Esterne</option>
                   <option>Sia interne sia esterne</option>
@@ -106,11 +106,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                 </select>
               </div>
               <div class="field">
-                <label for="orientamento">Orientamento, se noto</label>
+                <label for="orientamento">Che forma ha, se riesci a descriverla?</label>
                 <input id="orientamento" name="orientamento" type="text" placeholder="Es. verticale, diagonale" />
               </div>
               <div class="field">
-                <label for="comparsa">Quando sono comparse?</label>
+                <label for="comparsa">Da quando la noti?</label>
                 <select id="comparsa" name="comparsa">
                   <option value="">Non indicato</option>
                   <option>Da pochi giorni</option>
@@ -120,16 +120,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                 </select>
               </div>
               <div class="field">
-                <label for="cambiamenti">Sembrano cambiare?</label>
+                <label for="cambiamenti">Ti sembra cambiata?</label>
                 <select id="cambiamenti" name="cambiamenti">
                   <option value="">Non indicato</option>
-                  <option>Sì, secondo la mia osservazione</option>
+                  <option>Sì, mi sembra cambiata</option>
                   <option>No, non ho notato cambiamenti</option>
                   <option>Non so</option>
                 </select>
               </div>
               <details class="optional-context field-full">
-                <summary>Aggiungi altro contesto <span>(facoltativo)</span></summary>
+                  <summary>Aggiungi qualche dettaglio <span>(facoltativo)</span></summary>
                 <div class="form-grid optional-context-grid">
                   <div class="field">
                     <label for="porte-finestre">Problemi a porte o finestre?</label>
@@ -141,7 +141,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                     </select>
                   </div>
                   <div class="field">
-                    <label for="pavimenti">Pavimenti apparentemente fuori livello?</label>
+                    <label for="pavimenti">Noti un dislivello nel pavimento?</label>
                     <select id="pavimenti" name="pavimenti">
                       <option value="">Non indicato</option>
                       <option>Sì</option>
@@ -159,7 +159,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                     </select>
                   </div>
                   <div class="field">
-                    <label for="infiltrazioni">Infiltrazioni o umidità osservate?</label>
+                    <label for="infiltrazioni">Ci sono infiltrazioni o umidità?</label>
                     <select id="infiltrazioni" name="infiltrazioni">
                       <option value="">Non indicato</option>
                       <option>Sì</option>
@@ -169,7 +169,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                   </div>
                   <div class="field field-full">
                     <label for="note">Note aggiuntive</label>
-                    <textarea id="note" name="note" rows="4" placeholder="Aggiungi dettagli che ritieni utili, senza formulare conclusioni"></textarea>
+                    <textarea id="note" name="note" rows="4" placeholder="Aggiungi ciò che pensi possa aiutare a capire il problema"></textarea>
                   </div>
                 </div>
               </details>
@@ -177,31 +177,31 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </fieldset>
 
           <fieldset data-step="2" hidden>
-            <legend>Richiesta</legend>
-            <p class="fieldset-intro">Qual è il motivo principale per cui stai raccogliendo queste informazioni?</p>
+            <legend>Che cosa ti serve?</legend>
+            <p class="fieldset-intro">Qual è il prossimo passo che vuoi valutare?</p>
             <div class="choice-list">
               <label class="choice-card">
                 <input type="radio" name="richiesta" value="Sopralluogo" required />
-                <span><strong>Sopralluogo</strong><small>Vorrei capire se può essere utile una verifica sul posto.</small></span>
+                <span><strong>Un sopralluogo</strong><small>Vorrei capire il problema direttamente sul posto.</small></span>
               </label>
               <label class="choice-card">
                 <input type="radio" name="richiesta" value="Valutazione del problema" />
-                <span><strong>Valutazione del problema</strong><small>Vorrei confrontarmi sul contesto che ho osservato.</small></span>
+                <span><strong>Capire come procedere</strong><small>Vorrei un parere sul problema che ho notato.</small></span>
               </label>
               <label class="choice-card">
                 <input type="radio" name="richiesta" value="Preventivo per un intervento" />
-                <span><strong>Preventivo per un intervento</strong><small>Vorrei informazioni su un possibile lavoro, senza indicare una tecnica.</small></span>
+                <span><strong>Valutare un lavoro</strong><small>Vorrei capire quali interventi possono essere presi in considerazione.</small></span>
               </label>
               <label class="choice-card">
                 <input type="radio" name="richiesta" value="Non so" />
-                <span><strong>Non so ancora</strong><small>Vorrei solo raccogliere in modo ordinato le osservazioni.</small></span>
+                <span><strong>Non lo so ancora</strong><small>Vorrei capire qual è il passo giusto.</small></span>
               </label>
             </div>
           </fieldset>
 
           <fieldset data-step="3" hidden>
-            <legend>Contatti</legend>
-            <p class="fieldset-intro">Lascia un recapito per poter gestire la richiesta. Non usare questi campi per informazioni urgenti.</p>
+            <legend>I tuoi recapiti</legend>
+            <p class="fieldset-intro">Lascia un recapito per ricevere risposta. Non usare il modulo per situazioni urgenti.</p>
             <div class="form-grid">
               <div class="field field-wide">
                 <label for="nome">Nome <span aria-hidden="true">*</span></label>
@@ -243,9 +243,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <aside class="lead-aside">
         <div class="aside-card">
           <p class="eyebrow">Prima di iniziare</p>
-          <h2>Una descrizione neutra è sufficiente.</h2>
-          <p>Non devi conoscere termini tecnici né scegliere una soluzione. Indica ciò che hai visto e ciò che ricordi.</p>
-          <a class="inline-link" href="/crepe-nei-muri/">Leggi prima la guida <span aria-hidden="true">→</span></a>
+          <h2>Non devi avere già la risposta.</h2>
+          <p>Racconta il problema come lo vivi. Non devi conoscere termini tecnici né scegliere una soluzione.</p>
+          <a class="inline-link" href="/crepe-nei-muri/">Leggi la guida generale <span aria-hidden="true">→</span></a>
         </div>
         <div class="aside-note">
           <strong>Attenzione</strong>

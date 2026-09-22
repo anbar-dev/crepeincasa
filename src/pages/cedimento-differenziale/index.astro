@@ -5,34 +5,34 @@ import NextStep from '../../components/NextStep.astro';
 const contexts = [
   {
     number: '01',
-    title: 'Porzioni diverse dell’edificio',
-    text: 'Descrivi se il segno o il dislivello percepito riguarda una stanza, un ampliamento, una soglia o una parte specifica della casa. La posizione aiuta a orientare il confronto, non identifica da sola la causa.',
+    title: 'Parti diverse della casa',
+    text: 'Indica se il segno o il dislivello riguarda una stanza, un ampliamento, una soglia o una parte specifica della casa. La posizione aiuta il confronto, ma non identifica da sola la causa.',
   },
   {
     number: '02',
-    title: 'Passaggi e geometrie',
-    text: 'Giunti, cambi di materiale, pareti vicine, aperture e collegamenti tra parti costruite in momenti diversi possono essere contesti da riferire senza trasformarli in una spiegazione tecnica.',
+    title: 'Giunti e cambi di costruzione',
+    text: 'Giunti, cambi di materiale, pareti vicine, aperture e parti costruite in momenti diversi possono spiegare perché il problema vada valutato nel suo insieme.',
   },
   {
     number: '03',
-    title: 'Terreno, acqua e cronologia',
-    text: 'Pendenze, ristagni, perdite, scavi, lavori e cambiamenti osservati nello stesso periodo possono completare il quadro. Una coincidenza temporale non dimostra un rapporto di causa.',
+    title: 'Terreno, acqua e tempi',
+    text: 'Pendenze, ristagni, perdite, scavi, lavori e cambiamenti nello stesso periodo completano la storia. Una coincidenza temporale non dimostra una causa.',
   },
 ];
 
 const checklist = [
-  'la posizione precisa dell’osservazione: stanza, parete, pavimento, soglia, facciata o area esterna;',
+  'dove si trova il problema: stanza, parete, pavimento, soglia, facciata o area esterna;',
   'se il fenomeno sembra limitato a una parte dell’immobile oppure compare anche in zone corrispondenti;',
   'quando hai notato il segno o il cambiamento e quali fotografie datate, planimetrie o documenti puoi recuperare;',
   'eventuali ampliamenti, ristrutturazioni, cambi di pavimentazione o altri lavori, con periodo e area interessata;',
   'acqua, infiltrazioni, perdite, scavi o modifiche del terreno ricordati nello stesso periodo, senza considerarli una prova;',
-  'che cosa è osservato direttamente e che cosa invece è una tua ipotesi sul rapporto tra le parti dell’edificio.',
+  'che cosa hai visto direttamente e che cosa invece è una tua ipotesi sul rapporto tra le parti dell’edificio.',
 ];
 
 const comparisonSteps = [
   {
     title: 'Disegna una mappa semplice',
-    text: 'Segna su una pianta o su uno schizzo dove si trova ogni osservazione. Se non conosci la disposizione delle fondazioni o dei giunti, non ricostruirla a intuito.',
+    text: 'Segna su una pianta o su uno schizzo dove si trova ogni segno. Se non conosci la disposizione delle fondazioni o dei giunti, non ricostruirla a intuito.',
   },
   {
     title: 'Confronta punti e date',
@@ -47,7 +47,7 @@ const comparisonSteps = [
 const questions = [
   {
     title: 'Che cosa significa “differenziale” nel caso concreto?',
-    text: 'Chiedi quale osservazione giustifica il termine e quali alternative o informazioni manchino prima di trarre conclusioni.',
+    text: 'Chiedi da quali elementi nasce il termine e quali alternative o informazioni manchino prima di trarre conclusioni.',
   },
   {
     title: 'Quali parti devono essere esaminate?',
@@ -81,7 +81,7 @@ const faq = [
   },
   {
     question: 'Posso controllare il dislivello con strumenti domestici?',
-    answer: 'Puoi annotare ciò che percepisci e documentare il contesto senza alterare le superfici. Non usare prove, demolizioni o misure improvvisate per confermare un’ipotesi tecnica.',
+    answer: 'Puoi descrivere ciò che percepisci e fotografare il contesto senza alterare le superfici. Non usare prove, demolizioni o misure improvvisate per confermare un’ipotesi tecnica.',
   },
   {
     question: 'Devo chiedere subito un consolidamento?',
@@ -95,18 +95,18 @@ const faq = [
 ---
 
 <BaseLayout
-  title="Cedimento differenziale: cosa osservare prima di una verifica"
-  description="Cedimento differenziale: come descrivere parti dell’edificio, cronologia, terreno e cambiamenti senza confermare online un cedimento o indicare una tecnica."
+  title="Cedimento differenziale: capire il termine e quando chiedere un sopralluogo"
+  description="Che cosa significa cedimento differenziale? Come inquadrare differenze tra parti della casa e quando chiedere una valutazione sul posto."
   canonical="https://crepeincasa.it/cedimento-differenziale/"
 >
   <article class="differential-page">
     <header class="differential-hero">
       <div class="container differential-hero-inner">
         <p class="eyebrow">Guida a edificio, terreno e contesto</p>
-        <h1>Cedimento differenziale: cosa osservare prima di una verifica</h1>
+        <h1>Cedimento differenziale: che cosa significa e come muoversi</h1>
         <p class="differential-lead">
           “Cedimento differenziale” è un termine tecnico che richiede un confronto tra parti dell’immobile e del terreno.
-          Una crepa o un dislivello non bastano per confermarlo, ma puoi raccogliere posizione, cronologia e contesto.
+          Una crepa o un dislivello non bastano per confermarlo: prima di scegliere lavori serve capire il caso concreto.
         </p>
         <p class="differential-meta">Tempo di lettura: circa 8 minuti · Nessuna diagnosi a distanza</p>
       </div>
@@ -117,11 +117,11 @@ const faq = [
         <p class="differential-index-title">In questa guida</p>
         <nav>
           <a href="#risposta">La risposta breve</a>
-          <a href="#contesto">Tre contesti da riferire</a>
-          <a href="#checklist">Cosa raccogliere</a>
-          <a href="#confronto">Come confrontare</a>
-          <a href="#verifica">Come preparare la verifica</a>
-          <a href="#attenzione">Quando fermarsi</a>
+          <a href="#contesto">Tre elementi da capire</a>
+          <a href="#checklist">Che cosa serve sapere</a>
+          <a href="#confronto">Come ricostruire la storia</a>
+          <a href="#verifica">Prima di valutare lavori</a>
+          <a href="#attenzione">Prima la sicurezza</a>
           <a href="#faq">Domande frequenti</a>
           <a href="#fonti">Fonti istituzionali</a>
         </nav>
@@ -130,7 +130,7 @@ const faq = [
       <div class="differential-content">
         <section class="differential-section differential-intro" id="risposta" aria-labelledby="answer-title">
           <p class="eyebrow">La risposta breve</p>
-          <h2 id="answer-title">“Differenziale” indica un confronto da verificare, non una diagnosi visiva</h2>
+          <h2 id="answer-title">“Differenziale” indica una differenza da verificare, non una diagnosi visiva</h2>
           <p>
             Il termine richiama una differenza tra movimenti o abbassamenti di punti o porzioni diverse. Per capire
             se sia pertinente servono il contesto dell’edificio, il terreno, la storia dei lavori e verifiche riferite
@@ -138,27 +138,27 @@ const faq = [
           </p>
           <p>
             Fessure, pavimenti che sembrano fuori piano, soglie cambiate o porte che funzionano diversamente sono
-            osservazioni da ordinare. Non permettono da sole di stabilire quale elemento sia coinvolto o perché.
+            segnali da mettere in relazione. Non permettono da soli di stabilire quale elemento sia coinvolto o perché.
           </p>
           <div class="differential-note">
             <strong>Descrivi prima di interpretare</strong>
-            <p>“Vedo una fessura vicino alla soglia dell’ampliamento, comparsa dopo l’inverno” è un riepilogo di osservazioni. “Le fondazioni si sono abbassate in modo diverso” è un’ipotesi da verificare.</p>
+            <p>“Vedo una fessura vicino alla soglia dell’ampliamento, comparsa dopo l’inverno” descrive ciò che hai visto. “Le fondazioni si sono abbassate in modo diverso” è un’ipotesi da verificare.</p>
           </div>
         </section>
 
         <NextStep
-          title="Dai un ordine alle osservazioni prima del confronto"
-          text="Puoi indicare le parti coinvolte, le date, i lavori e i cambiamenti che hai notato. Il riepilogo non formula una diagnosi e lascia al professionista la valutazione del caso concreto."
-          primary={{ href: '/richiedi-valutazione/', label: 'Prepara il riepilogo' }}
+          title="Vuoi capire come procedere?"
+          text="Indica le parti coinvolte, le date, i lavori e i cambiamenti. Non devi formulare una diagnosi: puoi chiedere un confronto sul posto."
+          primary={{ href: '/richiedi-valutazione/', label: 'Chiedi una valutazione' }}
           secondaryLinks={[
-            { href: '/crepe-nei-muri/informazioni-per-tecnico/', label: 'Quali informazioni preparare per un tecnico' },
+            { href: '/crepe-nei-muri/informazioni-per-tecnico/', label: 'Che cosa dire al tecnico' },
             { href: '/crepe-nei-muri/crepe-che-cambiano-nel-tempo/', label: 'Come confrontare date e cambiamenti' },
           ]}
         />
 
         <section class="differential-section" id="contesto" aria-labelledby="context-title">
           <p class="eyebrow">Possibili elementi di contesto</p>
-          <h2 id="context-title">Tre aree da mettere in relazione senza dedurre la causa</h2>
+          <h2 id="context-title">Tre elementi da mettere in relazione</h2>
           <p>
             Parti da informazioni che puoi conoscere direttamente. Se una parte dell’immobile non è accessibile o non
             hai documenti, segnalalo: non è necessario colmare i vuoti con un’interpretazione.
@@ -175,11 +175,11 @@ const faq = [
         </section>
 
         <section class="differential-section" id="checklist" aria-labelledby="checklist-title">
-          <p class="eyebrow">Raccogliere informazioni</p>
-          <h2 id="checklist-title">Informazioni da raccogliere per confrontare le osservazioni</h2>
+          <p class="eyebrow">Per spiegare il problema</p>
+          <h2 id="checklist-title">Che cosa serve sapere per confrontare le parti</h2>
           <p>
-            Una cronologia e una mappa semplice aiutano a raccontare il problema senza presentare una diagnosi già
-            pronta. Fotografa solo ciò che puoi raggiungere in sicurezza e conserva gli originali.
+            Una cronologia e una mappa semplice aiutano a raccontare il problema senza anticipare una diagnosi.
+            Usa solo immagini ottenute in sicurezza e conserva gli originali.
           </p>
           <ul class="differential-list">
             {checklist.map((item, index) => (
@@ -194,7 +194,7 @@ const faq = [
 
         <section class="differential-section" id="confronto" aria-labelledby="comparison-title">
           <p class="eyebrow">Cronologia prudente</p>
-          <h2 id="comparison-title">Confronta parti e date senza fare prove sull’edificio</h2>
+          <h2 id="comparison-title">Ricostruisci la sequenza senza fare prove sull’edificio</h2>
           <div class="differential-steps">
             {comparisonSteps.map((item, index) => (
               <article class="differential-step">
@@ -205,18 +205,18 @@ const faq = [
             ))}
           </div>
           <p>
-            Un confronto domestico può aiutare a documentare, non a misurare in modo professionale né a confermare un
-            cedimento. Se il cambiamento sembra rapido o coinvolge più elementi, interrompi le prove e prepara una
-            richiesta di valutazione sul posto.
+            Un confronto domestico può aiutare a raccontare la storia, non a misurare in modo professionale né a
+            confermare un cedimento. Se il cambiamento sembra rapido o coinvolge più elementi, fermati e chiedi una
+            valutazione sul posto.
           </p>
         </section>
 
         <section class="differential-section" id="verifica" aria-labelledby="verification-title">
           <p class="eyebrow">Valutazione professionale</p>
-          <h2 id="verification-title">Che cosa chiedere prima di valutare lavori</h2>
+          <h2 id="verification-title">Che cosa capire prima di valutare lavori</h2>
           <p>
-            Una richiesta utile parte da ciò che è stato osservato e dalla domanda a cui vuoi rispondere. Non serve
-            scegliere in anticipo tra consolidamento, micropali, resine o altre tecniche.
+            La prima domanda non è quale tecnica scegliere. Bisogna capire che cosa è cambiato e quali parti della casa
+            o del terreno vanno valutate.
           </p>
           <div class="differential-questions">
             {questions.map((item) => (
@@ -227,14 +227,14 @@ const faq = [
             ))}
           </div>
           <p>
-            Un tecnico qualificato può indicare quali dati siano pertinenti al caso concreto e se siano necessari
-            approfondimenti. Il riepilogo inviato dal modulo trasmette le tue osservazioni e non sostituisce un sopralluogo.
+            Un tecnico qualificato può indicare quali controlli servono e se siano necessari approfondimenti. Il modulo
+            serve a raccontare il problema e non sostituisce un sopralluogo.
           </p>
         </section>
 
         <section class="differential-section differential-alert" id="attenzione" aria-labelledby="attention-title">
           <p class="eyebrow">Prima la sicurezza</p>
-          <h2 id="attention-title">Quando interrompere l’osservazione</h2>
+          <h2 id="attention-title">Quando fermarti</h2>
           <p>
             Non rendere più rischiosa la raccolta delle informazioni. Evita di entrare in zone non accessibili,
             rimuovere elementi o fare prove sull’edificio, sul pavimento o sul terreno.
@@ -281,15 +281,15 @@ const faq = [
           <p class="eyebrow">Continua il percorso</p>
           <h2 id="related-title">Dal confronto alla richiesta</h2>
           <p>
-            Se stai raccogliendo informazioni su una fessurazione, una variazione del terreno o un possibile problema
-            alle fondazioni, puoi confrontare i contesti e preparare un riepilogo neutro.
+            Se hai una fessurazione, una variazione del terreno o un possibile problema alle fondazioni, puoi
+            confrontare i contesti e capire quale professionista contattare.
           </p>
           <div class="differential-links">
-            <a href="/cedimento-fondazioni/">Cedimento delle fondazioni: cosa osservare <span aria-hidden="true">→</span></a>
-            <a href="/cedimento-terreno/">Cedimento del terreno: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/cedimento-fondazioni/">Cedimento delle fondazioni: come orientarsi <span aria-hidden="true">→</span></a>
+            <a href="/cedimento-terreno/">Cedimento del terreno: come orientarsi <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/crepe-che-cambiano-nel-tempo/">Crepe che cambiano nel tempo <span aria-hidden="true">→</span></a>
-            <a href="/crepe-nei-muri/informazioni-per-tecnico/">Informazioni da preparare per un tecnico <span aria-hidden="true">→</span></a>
-            <a href="/richiedi-valutazione/">Prepara la tua richiesta <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/informazioni-per-tecnico/">Che cosa dire al tecnico <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Chiedi una valutazione <span aria-hidden="true">→</span></a>
           </div>
         </section>
       </div>

@@ -4,61 +4,61 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const questions = [
   {
     number: '01',
-    title: 'È cambiato qualcosa nel tempo?',
-    text: 'Annota se la linea ti sembra diversa, se è ricomparsa dopo un ripristino o se sono comparsi altri segni. Descrivi il confronto senza trasformarlo in una misurazione tecnica.',
+    title: 'Il problema è cambiato?',
+    text: 'Riferisci se la linea ti sembra diversa, se è ricomparsa dopo un ripristino o se sono comparsi altri segni. Non servono misure improvvisate.',
   },
   {
     number: '02',
-    title: 'Ci sono elementi di contesto?',
-    text: 'Lavori recenti, infiltrazioni, umidità, variazioni nell’ambiente o problemi d’uso sono informazioni da riferire. Non dimostrano da soli un rapporto di causa.',
+    title: 'È successo qualcosa intorno?',
+    text: 'Lavori recenti, infiltrazioni, umidità, variazioni nell’ambiente o problemi d’uso possono aiutare a ricostruire la storia. Non dimostrano da soli una causa.',
   },
   {
     number: '03',
-    title: 'Ti serve una valutazione dell’immobile reale?',
-    text: 'Se devi prendere una decisione su ripristini o lavori, una descrizione online non è sufficiente: può essere utile chiedere una valutazione sul posto a un professionista qualificato.',
+    title: 'Devi decidere come intervenire?',
+    text: 'Se devi scegliere un ripristino o un lavoro, una descrizione online non basta: serve una valutazione sul posto da parte di un professionista qualificato.',
   },
 ];
 
 const urgentObservations = [
   'materiale che sembra staccarsi o cadere;',
-  'acqua, gocciolamenti o una condizione che rende insicura l’osservazione;',
+  'acqua, gocciolamenti o una condizione che rende rischioso avvicinarsi;',
   'un cambiamento che percepisci come rapido o associato ad altri fenomeni;',
   'una zona che non puoi documentare senza avvicinarti, salire o fare prove rischiose.',
 ];
 
 const ordinaryReasons = [
-  'la situazione persiste e vuoi capire come descriverla correttamente;',
-  'non sai se il segno riguarda una finitura, un rivestimento o un altro elemento;',
-  'è comparso dopo lavori, modifiche, infiltrazioni o un periodo di inutilizzo;',
-  'hai bisogno di raccogliere informazioni prima di valutare un ripristino;',
-  'vuoi consegnare al professionista una cronologia e fotografie ordinate.',
+    'il problema persiste e vuoi capire come intervenire;',
+    'non sai se il segno riguarda una finitura, un rivestimento o un altro elemento;',
+    'è comparso dopo lavori, modifiche, infiltrazioni o un periodo di inutilizzo;',
+    'devi valutare un ripristino e vuoi evitare di scegliere al buio;',
+    'hai fotografie o documenti che possono aiutare a raccontare la storia.',
 ];
 
 const requestChecklist = [
-  'dove si trova il segno e con quali elementi dell’ambiente è in rapporto;',
-  'che cosa vedi sulla superficie, senza attribuire una causa;',
-  'quando l’hai notato e che cosa è cambiato secondo la tua osservazione;',
-  'quali lavori, acqua, umidità o modifiche ricordi;',
-  'quali fotografie e note datate puoi mettere a disposizione;',
-  'che cosa vuoi capire o decidere, senza indicare già una tecnica.',
+    'dove si trova il segno e con quali elementi dell’ambiente è in rapporto;',
+    'che cosa si vede sulla superficie, senza attribuire una causa;',
+    'da quando lo noti e che cosa è cambiato;',
+    'quali lavori, acqua, umidità o modifiche ricordi;',
+    'quali fotografie o documenti puoi mettere a disposizione;',
+    'che cosa vuoi decidere, senza indicare già una tecnica.',
 ];
 
 const faq = [
   {
     question: 'Devo aspettare che una crepa aumenti prima di chiedere una verifica?',
-    answer: 'Non è necessario aspettare un cambiamento per chiedere un confronto. Se hai bisogno di una valutazione riferita all’immobile, puoi preparare le informazioni disponibili senza presentarle come una diagnosi.',
+    answer: 'No. Puoi chiedere un confronto quando hai bisogno di capire il problema o decidere come procedere. Le informazioni disponibili servono a spiegare la situazione, non a formulare una diagnosi.',
   },
   {
     question: 'La sola presenza di una crepa richiede sempre un tecnico?',
-    answer: 'La sola presenza o forma visibile non permette di stabilire la causa o il livello di attenzione necessario. La decisione dipende dal contesto, da ciò che osservi e dal tipo di valutazione di cui hai bisogno.',
+    answer: 'No. La sola presenza o forma visibile non stabilisce la causa. La decisione dipende dal contesto e da ciò che devi capire o decidere.',
   },
   {
     question: 'La larghezza indica quando chiamare un professionista?',
-    answer: 'Una singola dimensione, soprattutto se rilevata senza strumenti e contesto, non è una regola sufficiente. Posizione, materiali, andamento nel tempo e altri elementi vanno considerati insieme sul posto.',
+    answer: 'No. Una singola dimensione, soprattutto se rilevata senza strumenti e contesto, non è una regola sufficiente. Servono posizione, materiali, storia e sopralluogo.',
   },
   {
     question: 'Posso chiedere un preventivo senza sapere la causa?',
-    answer: 'Puoi spiegare che stai cercando informazioni su un possibile lavoro, ma è prudente non indicare una tecnica come già necessaria. Prima di valutare opere, il caso concreto va esaminato.',
+    answer: 'Puoi chiedere informazioni, ma è prudente non indicare una tecnica come già necessaria. Prima di valutare opere, il caso concreto va esaminato.',
   },
   {
     question: 'Cosa faccio se la situazione sembra urgente?',
@@ -68,18 +68,18 @@ const faq = [
 ---
 
 <BaseLayout
-  title="Quando chiedere una verifica per una crepa nel muro"
-  description="Quando chiedere una verifica per una crepa nel muro: cambiamenti, contesto, documentazione e attenzione alla sicurezza, senza diagnosi a distanza."
+  title="Quando chiamare un tecnico per una crepa nel muro"
+  description="Quando chiamare un tecnico per una crepa nel muro: i casi in cui conviene chiedere un sopralluogo e cosa spiegare, senza diagnosi a distanza."
   canonical="https://crepeincasa.it/crepe-nei-muri/quando-chiedere-verifica/"
 >
   <article class="verification-page">
     <header class="verification-hero">
       <div class="container verification-hero-inner">
-        <p class="eyebrow">Guida al prossimo passo</p>
-        <h1 id="page-title">Quando chiedere una verifica per una crepa nel muro</h1>
+        <p class="eyebrow">Capire quando intervenire</p>
+        <h1 id="page-title">Quando chiamare un tecnico per una crepa nel muro</h1>
         <p class="verification-lead">
-          Non esiste una regola online basata soltanto sulla forma. La domanda utile è quale contesto
-          hai osservato e se ti serve una valutazione riferita all’immobile reale.
+          Non esiste una regola basata soltanto sulla forma. La domanda utile è più semplice: il
+          problema va capito meglio prima di riparare o decidere come intervenire?
         </p>
         <p class="verification-meta">Tempo di lettura: circa 7 minuti · Nessuna diagnosi a distanza</p>
       </div>
@@ -91,9 +91,9 @@ const faq = [
         <nav>
           <a href="#risposta">La risposta breve</a>
           <a href="#domande">Tre domande utili</a>
-          <a href="#attenzione">Quando interrompere l’osservazione</a>
-          <a href="#verifica">Quando organizzare una verifica</a>
-          <a href="#richiesta">Come preparare la richiesta</a>
+          <a href="#attenzione">Prima la sicurezza</a>
+          <a href="#verifica">Quando chiedere un sopralluogo</a>
+          <a href="#richiesta">Che cosa raccontare</a>
           <a href="#faq">Domande frequenti</a>
         </nav>
       </aside>
@@ -101,23 +101,21 @@ const faq = [
       <div class="verification-content">
         <section class="verification-section verification-intro" id="risposta" aria-labelledby="answer-title">
           <p class="eyebrow">La risposta breve</p>
-          <h2 id="answer-title">Una verifica serve a leggere il caso concreto, non a confermare un’etichetta</h2>
+          <h2 id="answer-title">Un sopralluogo serve a capire il caso concreto</h2>
           <p>
-            Una fotografia o una descrizione possono aiutarti a raccogliere in modo ordinato le osservazioni,
-            ma non mostrano tutto ciò che riguarda un immobile. Se la situazione persiste, cambia,
-            compare insieme ad altri elementi o ti richiede una decisione, può essere utile chiedere
-            una valutazione sul posto.
+            Una fotografia o una descrizione non mostrano tutto ciò che riguarda un immobile. Se il
+            problema persiste, cambia, compare insieme ad altri elementi o ti costringe a decidere,
+            chiedere una valutazione sul posto è il modo corretto per andare oltre le ipotesi.
           </p>
           <p>
-            Questo non significa che la forma della crepa abbia già spiegato la causa. Significa che
-            il contesto reale — materiali, posizione, storia dell’edificio e condizioni osservabili —
-            merita di essere valutato da chi può esaminarlo direttamente.
+            La forma della crepa non spiega da sola la causa. Il tecnico deve poter valutare materiali,
+            posizione, storia dell’edificio e condizioni reali direttamente sul posto.
           </p>
         </section>
 
         <section class="verification-section" id="domande" aria-labelledby="questions-title">
           <p class="eyebrow">Un criterio pratico</p>
-          <h2 id="questions-title">Parti da tre domande, non da una classificazione</h2>
+          <h2 id="questions-title">Parti da tre domande, non da una diagnosi</h2>
           <div class="verification-questions">
             {questions.map((question) => (
               <article class="verification-question">
@@ -131,10 +129,10 @@ const faq = [
 
         <section class="verification-section verification-alert" id="attenzione" aria-labelledby="attention-title">
           <p class="eyebrow">Prima la sicurezza</p>
-          <h2 id="attention-title">Quando interrompere l’osservazione e chiedere aiuto</h2>
+          <h2 id="attention-title">Quando fermarti e chiedere aiuto</h2>
           <p>
             Se per capire meglio devi avvicinarti a materiale instabile, salire su una scala non sicura
-            o fare una prova sulla superficie, fermati. La documentazione non deve creare un rischio.
+            o fare una prova sulla superficie, fermati. Non vale la pena rischiare per ottenere una fotografia o una misura in più.
           </p>
           <ul class="verification-list verification-list-plain">
             {urgentObservations.map((item) => <li><span aria-hidden="true">—</span><p>{item}</p></li>)}
@@ -148,11 +146,10 @@ const faq = [
 
         <section class="verification-section" id="verifica" aria-labelledby="ordinary-title">
           <p class="eyebrow">Una verifica ordinaria</p>
-          <h2 id="ordinary-title">Quando può essere utile chiedere una valutazione sul posto</h2>
+          <h2 id="ordinary-title">Quando chiedere un sopralluogo</h2>
           <p>
-            Non devi aspettare di avere una spiegazione completa. Puoi chiedere una valutazione quando
-            vuoi capire meglio il contesto reale o quando devi decidere come procedere con manutenzione,
-            ripristini o altri lavori.
+            Non devi arrivare con una spiegazione completa. Chiedi un sopralluogo quando vuoi capire
+            meglio il problema o devi decidere come procedere con manutenzione, ripristini o lavori.
           </p>
           <ul class="verification-list">
             {ordinaryReasons.map((reason, index) => (
@@ -160,11 +157,10 @@ const faq = [
             ))}
           </ul>
           <div class="verification-note">
-            <strong>Il tempo è un’informazione, non una diagnosi</strong>
+            <strong>Il tempo aiuta a ricostruire la storia</strong>
             <p>
-              Una crepa che sembra stabile, una che sembra cambiata e una che è comparsa dopo un lavoro
-              sono situazioni da descrivere in modo diverso. Nessuna di queste descrizioni, da sola,
-              stabilisce causa, sicurezza o intervento necessario.
+              Una crepa stabile, una che sembra cambiata e una comparsa dopo un lavoro richiedono domande
+              diverse. Nessuna descrizione, da sola, stabilisce causa, sicurezza o intervento necessario.
             </p>
           </div>
         </section>
@@ -183,7 +179,7 @@ const faq = [
             </article>
             <article class="verification-card">
               <h3>L’età dell’edificio</h3>
-              <p>Una casa nuova o vecchia può avere storie, materiali e modifiche molto diverse. L’età non sostituisce l’osservazione del caso concreto.</p>
+              <p>Una casa nuova o vecchia può avere storie, materiali e modifiche molto diverse. L’età non sostituisce il sopralluogo.</p>
             </article>
             <article class="verification-card">
               <h3>La fotografia</h3>
@@ -193,11 +189,11 @@ const faq = [
         </section>
 
         <section class="verification-section" id="richiesta" aria-labelledby="request-title">
-          <p class="eyebrow">Prepararsi bene</p>
-          <h2 id="request-title">Che cosa inserire nella richiesta di verifica</h2>
+          <p class="eyebrow">Per spiegare il problema</p>
+          <h2 id="request-title">Che cosa raccontare nella richiesta</h2>
           <p>
-            Una richiesta utile non deve anticipare la conclusione. Deve permettere a chi la riceve di
-            capire che cosa hai osservato e quali informazioni sono già disponibili.
+            Una richiesta utile deve far capire che cosa è successo e quale risposta stai cercando.
+            Non serve anticipare la conclusione.
           </p>
           <div class="verification-request">
             <ul class="verification-list verification-list-compact">
@@ -205,8 +201,8 @@ const faq = [
             </ul>
           </div>
           <p>
-            Puoi usare il nostro modulo per creare un riepilogo neutro delle osservazioni. Il riepilogo
-            non formula una diagnosi e non sostituisce una verifica sul posto.
+            Puoi usare il nostro modulo per raccontare il problema e chiedere un confronto. Il modulo
+            non formula una diagnosi e non sostituisce un sopralluogo.
           </p>
         </section>
 
@@ -225,16 +221,16 @@ const faq = [
 
         <section class="verification-related" aria-labelledby="related-title">
           <p class="eyebrow">Continua da qui</p>
-          <h2 id="related-title">Prima osserva, poi prepara il confronto</h2>
+          <h2 id="related-title">Capisci il problema, poi chiedi il confronto</h2>
           <p>
-            La guida pratica spiega come documentare una crepa senza alterare la superficie. Dopo aver
-            raccolto le informazioni, puoi creare il tuo riepilogo neutro.
+            La guida pratica spiega cosa fare appena noti una crepa. Se hai già deciso di chiedere un
+            confronto, puoi passare direttamente al modulo.
           </p>
           <div class="verification-links">
             <a href="/crepe-nei-muri/cosa-fare/">Leggi cosa fare dopo aver notato una crepa <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/casa-nuova-dopo-lavori/">Casa nuova o dopo lavori <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/">Vai alla guida generale <span aria-hidden="true">→</span></a>
-            <a href="/richiedi-valutazione/">Prepara la tua richiesta <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Chiedi una valutazione <span aria-hidden="true">→</span></a>
           </div>
         </section>
       </div>

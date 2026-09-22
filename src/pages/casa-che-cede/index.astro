@@ -4,18 +4,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const contexts = [
   {
     number: '01',
-    title: 'Segni nell’abitazione',
-    text: 'Fessure, distacchi, pavimenti percepiti come irregolari o cambiamenti nelle finiture si possono descrivere con stanza, posizione e data. Nessuno di questi elementi identifica da solo una causa.',
+    title: 'Che cosa è cambiato in casa',
+    text: 'Fessure, distacchi, pavimenti percepiti come irregolari o cambiamenti nelle finiture aiutano a raccontare il problema con stanza, posizione e data. Nessuno identifica da solo una causa.',
   },
   {
     number: '02',
-    title: 'Cambiamenti nell’uso',
-    text: 'Porte o finestre che funzionano diversamente, soglie cambiate o arredi che sembrano fuori piano sono osservazioni da annotare, senza usarle come prova di un movimento dell’edificio.',
+    title: 'Porte, finestre e pavimenti',
+    text: 'Porte o finestre che funzionano diversamente, soglie cambiate o arredi che sembrano fuori piano sono elementi da riferire, non prove di un movimento dell’edificio.',
   },
   {
     number: '03',
     title: 'Storia e ambiente',
-    text: 'Età, ampliamenti, lavori, acqua, terreno, scavi o eventi recenti possono completare il contesto. La loro presenza non dimostra un rapporto di causa con ciò che hai notato.',
+    text: 'Età, ampliamenti, lavori, acqua, terreno, scavi o eventi recenti possono completare la storia. La loro presenza non dimostra da sola una causa.',
   },
 ];
 
@@ -68,7 +68,7 @@ const attentionPoints = [
 const faq = [
   {
     question: 'Come faccio a capire se una casa sta cedendo?',
-    answer: 'Non è possibile confermarlo da una fotografia, da una crepa o da un questionario. Puoi raccogliere posizione, date, cambiamenti e contesto; il loro significato richiede una valutazione riferita all’immobile reale.',
+    answer: 'Non è possibile confermarlo da una fotografia, da una crepa o da un questionario. Puoi riferire posizione, date, cambiamenti e contesto; il loro significato richiede una valutazione riferita all’immobile reale.',
   },
   {
     question: 'Una casa con crepe è una casa che cede?',
@@ -76,7 +76,7 @@ const faq = [
   },
   {
     question: 'Porte e finestre che si chiudono male sono una prova?',
-    answer: 'Sono cambiamenti che puoi annotare con data e posizione, ma non costituiscono da soli una prova della causa. Vanno considerati insieme alla storia dell’immobile e agli altri elementi pertinenti.',
+    answer: 'Sono cambiamenti da riferire con data e posizione, ma non costituiscono da soli una prova della causa. Vanno considerati insieme alla storia dell’immobile e agli altri elementi pertinenti.',
   },
   {
     question: 'Devo controllare il pavimento con una livella o rompere una parete?',
@@ -94,18 +94,18 @@ const faq = [
 ---
 
 <BaseLayout
-  title="Casa che cede: cosa osservare prima di una verifica"
-  description="Casa che cede: come raccogliere osservazioni su ambienti, fessure, cambiamenti, storia e terreno senza confermare online un cedimento o indicare una tecnica."
+  title="Casa che cede: capire la situazione e come muoversi"
+  description="La casa sembra cedere? Come distinguere una preoccupazione dai fatti e quando chiedere una valutazione sul posto senza improvvisare diagnosi."
   canonical="https://crepeincasa.it/casa-che-cede/"
 >
   <article class="house-page">
     <header class="house-hero">
       <div class="container house-hero-inner">
-        <p class="eyebrow">Guida a osservazioni e contesto</p>
-        <h1>Casa che cede: cosa osservare prima di una verifica</h1>
+        <p class="eyebrow">Capire il problema</p>
+        <h1>Casa che cede: che cosa significa e come muoversi</h1>
         <p class="house-lead">
           “Casa che cede” è un modo per descrivere una preoccupazione, non una conclusione ricavabile da una foto o
-          da un singolo segno. Puoi ordinare ciò che osservi nella casa e intorno ad essa per preparare una valutazione professionale.
+          da un singolo segno. Prima di decidere come intervenire, bisogna capire quale problema stai davvero descrivendo.
         </p>
         <p class="house-meta">Tempo di lettura: circa 8 minuti · Nessuna diagnosi a distanza</p>
       </div>
@@ -116,11 +116,11 @@ const faq = [
         <p class="house-index-title">In questa guida</p>
         <nav>
           <a href="#risposta">La risposta breve</a>
-          <a href="#contesto">Tre contesti da riferire</a>
-          <a href="#checklist">Cosa raccogliere</a>
-          <a href="#confronto">Come ordinare le osservazioni</a>
-          <a href="#verifica">Come preparare la verifica</a>
-          <a href="#attenzione">Quando fermarsi</a>
+          <a href="#contesto">Tre elementi da capire</a>
+          <a href="#checklist">Che cosa serve sapere</a>
+          <a href="#confronto">Come ricostruire la storia</a>
+          <a href="#verifica">Prima di valutare lavori</a>
+          <a href="#attenzione">Prima la sicurezza</a>
           <a href="#faq">Domande frequenti</a>
           <a href="#fonti">Fonti istituzionali</a>
         </nav>
@@ -129,7 +129,7 @@ const faq = [
       <div class="house-content">
         <section class="house-section house-intro" id="risposta" aria-labelledby="answer-title">
           <p class="eyebrow">La risposta breve</p>
-          <h2 id="answer-title">Una preoccupazione generale va trasformata in osservazioni verificabili</h2>
+          <h2 id="answer-title">“La casa cede” è una preoccupazione, non una diagnosi</h2>
           <p>
             Quando una persona dice che “la casa cede”, può riferirsi a una fessura, a un pavimento percepito come
             irregolare, a un cambiamento nelle aperture o a una variazione del terreno. Sono situazioni diverse, che
@@ -137,8 +137,7 @@ const faq = [
           </p>
           <p>
             Una valutazione sul posto può considerare l’edificio nel suo insieme, la storia dei lavori, il terreno,
-            l’acqua e la cronologia. Prima di quel confronto, il compito utile è descrivere i fatti senza anticipare
-            la spiegazione.
+            l’acqua e la cronologia. Prima di quel confronto, serve solo spiegare che cosa è cambiato e in quale zona.
           </p>
           <div class="house-note">
             <strong>Racconta che cosa è cambiato</strong>
@@ -148,7 +147,7 @@ const faq = [
 
         <section class="house-section" id="contesto" aria-labelledby="context-title">
           <p class="eyebrow">Possibili elementi di contesto</p>
-          <h2 id="context-title">Tre aree da descrivere senza attribuire la causa</h2>
+          <h2 id="context-title">Tre elementi che aiutano a capire la situazione</h2>
           <p>
             Parti da ciò che puoi vedere o ricordare direttamente. Se un dato manca, indicalo: un’informazione
             incompleta è più utile di una spiegazione costruita a intuito.
@@ -165,11 +164,11 @@ const faq = [
         </section>
 
         <section class="house-section" id="checklist" aria-labelledby="checklist-title">
-          <p class="eyebrow">Raccogliere informazioni</p>
-          <h2 id="checklist-title">Informazioni da raccogliere per descrivere la casa</h2>
+          <p class="eyebrow">Per spiegare il problema</p>
+          <h2 id="checklist-title">Che cosa serve sapere prima di chiamare un tecnico</h2>
           <p>
-            Una richiesta ordinata aiuta a separare la sensazione generale dai singoli elementi osservati. Fotografa
-            solo ciò che puoi raggiungere in sicurezza e conserva gli originali.
+            Una spiegazione ordinata aiuta a separare la sensazione generale dai singoli problemi. Usa solo fotografie
+            ottenute in sicurezza e conserva gli originali.
           </p>
           <ul class="house-list">
             {checklist.map((item, index) => (
@@ -184,7 +183,7 @@ const faq = [
 
         <section class="house-section" id="confronto" aria-labelledby="comparison-title">
           <p class="eyebrow">Cronologia prudente</p>
-          <h2 id="comparison-title">Metti in ordine le osservazioni senza fare prove</h2>
+          <h2 id="comparison-title">Ricostruisci la storia senza fare prove</h2>
           <div class="house-steps">
             {comparisonSteps.map((item, index) => (
               <article class="house-step">
@@ -195,17 +194,17 @@ const faq = [
             ))}
           </div>
           <p>
-            Confrontare fotografie e date serve a documentare ciò che hai notato. Non sostituisce rilievi professionali
-            e non consente di stabilire se esista un cedimento, quale elemento sia coinvolto o quale intervento possa servire.
+            Confrontare fotografie e date serve a raccontare la storia. Non sostituisce rilievi professionali e non
+            consente di stabilire se esista un cedimento, quale elemento sia coinvolto o quale intervento serva.
           </p>
         </section>
 
         <section class="house-section" id="verifica" aria-labelledby="verification-title">
           <p class="eyebrow">Valutazione professionale</p>
-          <h2 id="verification-title">Che cosa chiedere prima di valutare lavori</h2>
+          <h2 id="verification-title">Che cosa capire prima di valutare lavori</h2>
           <p>
-            Una richiesta utile parte dalla domanda concreta e dal contesto che puoi documentare. Non serve scegliere
-            in anticipo tra consolidamento, micropali, resine o altre tecniche.
+            La prima domanda non è quale tecnica scegliere. Bisogna capire che cosa è cambiato e quali parti della casa
+            o del terreno vanno valutate.
           </p>
           <div class="house-questions">
             {questions.map((item) => (
@@ -216,14 +215,14 @@ const faq = [
             ))}
           </div>
           <p>
-            Un tecnico qualificato può indicare quali dati siano pertinenti al caso concreto e se siano necessari
-            approfondimenti. Il riepilogo inviato dal modulo trasmette le tue osservazioni e non sostituisce un sopralluogo.
+            Un tecnico qualificato può indicare quali controlli servono e se siano necessari approfondimenti. Il modulo
+            serve a raccontare il problema e non sostituisce un sopralluogo.
           </p>
         </section>
 
         <section class="house-section house-alert" id="attenzione" aria-labelledby="attention-title">
           <p class="eyebrow">Prima la sicurezza</p>
-          <h2 id="attention-title">Quando interrompere l’osservazione</h2>
+          <h2 id="attention-title">Quando fermarti</h2>
           <p>
             Non rendere più rischiosa la raccolta delle informazioni. Evita di entrare in zone non accessibili,
             rimuovere elementi o fare prove sulla casa, sul pavimento o sul terreno.
@@ -270,16 +269,16 @@ const faq = [
           <p class="eyebrow">Continua il percorso</p>
           <h2 id="related-title">Dal dubbio alla richiesta</h2>
           <p>
-            Se stai raccogliendo informazioni su una fessurazione, sul terreno o su un possibile problema alle
-            fondazioni, puoi confrontare le guide e preparare un riepilogo neutro.
+            Se hai una fessurazione, un cambiamento del terreno o un dubbio sulle fondazioni, puoi confrontare le
+            guide e capire quale professionista contattare.
           </p>
           <div class="house-links">
-            <a href="/pavimento-che-sprofonda/">Pavimento che sprofonda: cosa osservare <span aria-hidden="true">→</span></a>
-            <a href="/cedimento-fondazioni/">Cedimento delle fondazioni: cosa osservare <span aria-hidden="true">→</span></a>
-            <a href="/cedimento-differenziale/">Cedimento differenziale: cosa osservare <span aria-hidden="true">→</span></a>
-            <a href="/cedimento-terreno/">Cedimento del terreno: cosa osservare <span aria-hidden="true">→</span></a>
-            <a href="/crepe-nei-muri/crepe-sul-pavimento/">Crepe sul pavimento: cosa osservare <span aria-hidden="true">→</span></a>
-            <a href="/richiedi-valutazione/">Prepara la tua richiesta <span aria-hidden="true">→</span></a>
+            <a href="/pavimento-che-sprofonda/">Pavimento che sprofonda: come orientarsi <span aria-hidden="true">→</span></a>
+            <a href="/cedimento-fondazioni/">Cedimento delle fondazioni: come orientarsi <span aria-hidden="true">→</span></a>
+            <a href="/cedimento-differenziale/">Cedimento differenziale: come orientarsi <span aria-hidden="true">→</span></a>
+            <a href="/cedimento-terreno/">Cedimento del terreno: come orientarsi <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/crepe-sul-pavimento/">Crepe sul pavimento: cosa fare <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Chiedi una valutazione <span aria-hidden="true">→</span></a>
           </div>
         </section>
       </div>

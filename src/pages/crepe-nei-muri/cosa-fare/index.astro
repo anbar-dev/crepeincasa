@@ -4,46 +4,46 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const steps = [
   {
     number: '01',
-    title: 'Fermati prima di intervenire',
-    text: 'Non coprire subito il segno e non fare prove sulla superficie. Prima raccogli ciò che puoi osservare senza esporti a rischi.',
+    title: 'Non coprire subito il segno',
+    text: 'Evita di raschiare, forare o rifare la finitura prima di aver capito il contesto. Se la zona non è sicura, non avvicinarti.',
   },
   {
     number: '02',
-    title: 'Descrivi il contesto',
-    text: 'Annota stanza, parete, posizione, finitura, rapporto con porte o finestre e tutto ciò che è successo di recente.',
+    title: 'Spiega dove si trova',
+    text: 'Indica stanza, parete, finitura, rapporto con porte o finestre e ciò che è successo di recente: sono dati che aiutano il tecnico.',
   },
   {
     number: '03',
-    title: 'Documenta nel tempo',
-    text: 'Scatta una vista dell’ambiente e un dettaglio, conserva le date e indica soltanto i cambiamenti che hai realmente notato.',
+    title: 'Conserva le immagini',
+    text: 'Se hai fotografie, tieni una vista dell’ambiente e un dettaglio, con le date. Non servono misure improvvisate.',
   },
   {
     number: '04',
-    title: 'Scegli il prossimo passo',
-    text: 'Se la situazione persiste, cambia o richiede una valutazione riferita all’immobile, prepara le informazioni per un professionista qualificato.',
+    title: 'Chiedi un parere sul posto',
+    text: 'Se il problema persiste, cambia o richiede una decisione, rivolgiti a un professionista qualificato per una valutazione dell’immobile.',
   },
 ];
 
 const facts = [
   'In quale locale si trova e su quale parete, soffitto o pavimento.',
   'Se la superficie è interna o esterna e quale finitura si vede.',
-  'Dove inizia e termina la linea, se è facile descriverlo senza fare prove.',
-  'Quando l’hai notata e se hai osservato cambiamenti nel tempo.',
-  'Se sono presenti acqua, umidità, distacchi o altri elementi visibili.',
+  'Dove inizia e termina la linea, se si riesce a dirlo senza fare prove.',
+  'Quando l’hai notata e se ti sembra diversa rispetto a prima.',
+  'Se ci sono acqua, umidità, distacchi o altri segni nella stessa zona.',
   'Se ci sono stati lavori, fori, modifiche o cambiamenti d’uso recenti.',
 ];
 
 const avoid = [
   {
-    title: 'Non trasformare la forma in una diagnosi',
-    text: 'Dire che una crepa è diagonale, verticale o orizzontale descrive un andamento. Non basta per stabilire quale strato sia coinvolto o quale sia la causa.',
+    title: 'La forma non basta',
+    text: 'Dire che una crepa è diagonale, verticale o orizzontale descrive un andamento. Non dice quale strato sia coinvolto né quale sia la causa.',
   },
   {
-    title: 'Non alterare ciò che vuoi documentare',
-    text: 'Evita di raschiare, forare, allargare o coprire il segno prima di aver raccolto le informazioni che possono servire a ricostruire il contesto.',
+    title: 'Non modificare la superficie',
+    text: 'Evita di raschiare, forare, allargare o coprire il segno prima che un professionista abbia potuto valutare il contesto.',
   },
   {
-    title: 'Non scegliere una tecnica a distanza',
+    title: 'Non scegliere il rimedio al buio',
     text: 'Ripristino, gestione dell’acqua, opere locali o interventi su terreno e fondazioni dipendono dal caso concreto e da una verifica qualificata.',
   },
 ];
@@ -51,7 +51,7 @@ const avoid = [
 const requestItems = [
   'Comune, provincia e tipologia dell’immobile.',
   'Stanza o zona interessata, con posizione rispetto ad angoli, aperture e altri elementi.',
-  'Data della prima osservazione e cronologia dei cambiamenti percepiti.',
+  'Quando l’hai notata e in che periodo è cambiata, se lo sai.',
   'Fotografie datate, con una vista ampia e un dettaglio della superficie.',
   'Lavori recenti, infiltrazioni, umidità o modifiche che ricordi.',
   'Domande che vuoi portare al professionista, senza dover formulare una conclusione.',
@@ -60,19 +60,19 @@ const requestItems = [
 const faq = [
   {
     question: 'Devo riparare subito una crepa nel muro?',
-    answer: 'Prima di un ripristino è utile documentare ciò che osservi, se farlo è sicuro. La scelta del momento e del tipo di riparazione dipende dal contesto reale; una pagina online non può stabilirlo per il tuo immobile.',
+    answer: 'Prima di un ripristino conviene capire se il segno riguarda solo la finitura o se va valutato nel contesto dell’immobile. La scelta del momento e del tipo di riparazione dipende dal sopralluogo.',
   },
   {
     question: 'Una crepa diagonale è più preoccupante di una verticale?',
-    answer: 'La direzione è un dato da descrivere, non una classificazione affidabile della causa o della sicurezza dell’edificio. Servono posizione, materiali, storia e una valutazione sul posto quando necessaria.',
+    answer: 'La direzione è un dato, non una classificazione della causa o della sicurezza dell’edificio. Servono posizione, materiali, storia e una valutazione sul posto.',
   },
   {
     question: 'Una fotografia può bastare per capire che cosa sta succedendo?',
-    answer: 'Una fotografia può documentare un’osservazione, ma non mostra sempre il contesto, gli strati o la storia dell’immobile. Può accompagnare una richiesta, non sostituire una verifica.',
+    answer: 'Una fotografia mostra il segno, ma non sempre il contesto, gli strati o la storia dell’immobile. Può accompagnare una richiesta, non sostituire un sopralluogo.',
   },
   {
     question: 'Devo misurare la larghezza della crepa?',
-    answer: 'Puoi annotare una dimensione solo se riesci a farlo in modo semplice e senza rischi, ma non è necessario fare prove improvvisate. Posizione, data, fotografie e cambiamenti percepiti sono già informazioni utili.',
+    answer: 'Non è necessario fare prove improvvisate. Se hai una misura ottenuta senza rischi puoi riferirla, ma posizione, data, fotografie e cambiamenti sono sufficienti per iniziare.',
   },
   {
     question: 'A chi posso chiedere una verifica?',
@@ -82,18 +82,18 @@ const faq = [
 ---
 
 <BaseLayout
-  title="Crepe nei muri: cosa fare dopo averne notata una"
-  description="Crepe nei muri: cosa fare, cosa osservare, come documentare la situazione e quando può essere utile chiedere una verifica professionale."
+  title="Crepe nei muri: cosa fare e quando chiamare un tecnico"
+  description="Hai notato una crepa nel muro? Ecco cosa conviene fare, cosa evitare e quando chiedere una valutazione sul posto senza improvvisare diagnosi."
   canonical="https://crepeincasa.it/crepe-nei-muri/cosa-fare/"
 >
   <article class="action-page">
     <header class="action-hero">
       <div class="container action-hero-inner">
-        <p class="eyebrow">Guida pratica</p>
+        <p class="eyebrow">Cosa fare adesso</p>
         <h1 id="page-title">Crepe nei muri: cosa fare dopo averne notata una</h1>
         <p class="action-lead">
-          La prima cosa da fare non è indovinare la causa. È raccogliere in modo ordinato ciò che vedi,
-          documentare il contesto e capire se può essere utile una verifica sul posto.
+          La prima cosa da fare non è indovinare la causa. È evitare di peggiorare la situazione,
+          capire che cosa è successo e decidere se serve una valutazione sul posto.
         </p>
         <p class="action-meta">Tempo di lettura: circa 8 minuti · Nessuna diagnosi a distanza</p>
       </div>
@@ -104,8 +104,8 @@ const faq = [
         <p class="action-index-title">In questa guida</p>
         <nav>
           <a href="#subito">Cosa fare subito</a>
-          <a href="#osservazioni">Cosa annotare</a>
-          <a href="#documentare">Come documentare</a>
+          <a href="#osservazioni">Che cosa serve sapere</a>
+          <a href="#documentare">Foto e cronologia</a>
           <a href="#evitare">Cosa evitare</a>
           <a href="#verifica">Quando chiedere una verifica</a>
           <a href="#faq">Domande frequenti</a>
@@ -115,23 +115,23 @@ const faq = [
       <div class="action-content">
         <section class="action-section action-intro" id="subito" aria-labelledby="subito-title">
           <p class="eyebrow">La risposta breve</p>
-          <h2 id="subito-title">Osserva, documenta, poi decidi il passo successivo</h2>
+          <h2 id="subito-title">Prima evita errori, poi decidi come procedere</h2>
           <p>
             Una crepa può riguardare una finitura, un rivestimento o altri elementi dell’edificio,
             e può avere contesti diversi. Dalla sola forma o da una fotografia non è possibile
             stabilirne l’origine.
           </p>
           <p>
-            Se la situazione lo consente, procedi con calma: non modificare la superficie, raccogli
-            informazioni concrete e conserva fotografie datate. Se invece noti distacchi, caduta di
-            materiale o condizioni che potrebbero richiedere attenzione urgente, evita la zona e
+            Se la situazione lo consente, non modificare la superficie e conserva le fotografie che hai.
+            Se invece noti distacchi, caduta di materiale o condizioni che potrebbero richiedere
+            attenzione urgente, evita la zona e
             rivolgiti tempestivamente a un professionista qualificato o alle autorità competenti.
           </p>
         </section>
 
         <section class="action-section" aria-labelledby="steps-title">
-          <p class="eyebrow">Un percorso semplice</p>
-          <h2 id="steps-title">Quattro passi per non perdere il contesto</h2>
+          <p class="eyebrow">Il percorso più utile</p>
+          <h2 id="steps-title">Quattro passi per capire come muoversi</h2>
           <div class="action-steps">
             {steps.map((step) => (
               <article class="action-step">
@@ -144,12 +144,11 @@ const faq = [
         </section>
 
         <section class="action-section" id="osservazioni" aria-labelledby="observations-title">
-          <p class="eyebrow">Prima di interpretare</p>
-          <h2 id="observations-title">Quali informazioni puoi annotare</h2>
+          <p class="eyebrow">Per spiegare bene il problema</p>
+          <h2 id="observations-title">Quali informazioni servono davvero</h2>
           <p>
-            Scrivi ciò che hai visto o ricordato, separandolo dalle ipotesi. Non servono termini
-            tecnici: una descrizione concreta aiuta a ricostruire il quadro senza anticipare una
-            conclusione.
+            Non devi fare un’indagine tecnica. Indica in modo semplice dove si trova il segno,
+            da quando lo noti e che cosa è cambiato: il professionista potrà partire da qui.
           </p>
           <ul class="action-list">
             {facts.map((fact, index) => (
@@ -159,20 +158,18 @@ const faq = [
           <div class="action-note">
             <strong>Un esempio di descrizione neutra</strong>
             <p>
-              “Nel soggiorno, sulla parete vicino alla finestra, ho notato una linea sull’intonaco.
-              L’ho fotografata il 7 agosto e non so se fosse già presente. A giugno è stata tinteggiata
-              la parete.”
+              “Nel soggiorno, sulla parete vicino alla finestra, noto una linea sull’intonaco.
+              Ho una fotografia del 7 agosto; a giugno la parete è stata tinteggiata.”
             </p>
           </div>
         </section>
 
         <section class="action-section" id="documentare" aria-labelledby="document-title">
-          <p class="eyebrow">Fotografie e cronologia</p>
-          <h2 id="document-title">Come documentare senza fare prove improvvisate</h2>
+          <p class="eyebrow">Se hai già delle fotografie</p>
+          <h2 id="document-title">Come usarle per spiegare meglio il problema</h2>
           <p>
-            Le fotografie sono più utili quando conservano il rapporto tra il segno e l’ambiente.
-            Puoi creare una piccola cronologia personale, senza presentarla come una misurazione
-            tecnica.
+            Una vista dell’ambiente e un dettaglio aiutano a capire dove si trova il segno. Le date
+            servono solo a raccontare quando l’hai notato e che cosa è successo nel frattempo.
           </p>
           <div class="action-cards">
             <article class="action-card">
@@ -185,18 +182,18 @@ const faq = [
             </article>
             <article class="action-card">
               <h3>La data</h3>
-              <p>Conserva la data dello scatto e annota luce, acqua, lavori o altre condizioni che possono cambiare il confronto.</p>
+              <p>Conserva la data dello scatto e riferisci eventuali lavori, acqua o altri cambiamenti nello stesso periodo.</p>
             </article>
             <article class="action-card">
-              <h3>Lo stesso punto di vista</h3>
-              <p>Se scatti altre foto, prova a mantenere un’inquadratura simile: prospettiva e luce possono modificare l’impressione.</p>
+              <h3>Un confronto leggibile</h3>
+              <p>Se hai più fotografie, indica se sono state scattate da punti diversi: prospettiva e luce possono cambiare l’impressione.</p>
             </article>
           </div>
         </section>
 
         <section class="action-section" id="evitare" aria-labelledby="avoid-title">
           <p class="eyebrow">Errori frequenti</p>
-          <h2 id="avoid-title">Cosa è meglio non fare prima di capire il contesto</h2>
+          <h2 id="avoid-title">Cosa è meglio non fare prima del sopralluogo</h2>
           <div class="action-cards action-cards-plain">
             {avoid.map((item) => (
               <article class="action-card">
@@ -206,10 +203,10 @@ const faq = [
             ))}
           </div>
           <div class="action-warning">
-            <strong>La sicurezza viene prima della documentazione</strong>
+            <strong>La sicurezza viene prima delle fotografie</strong>
             <p>
-              Non salire su mobili o scale instabili per fotografare e non avvicinarti a materiale
-              che sembra distaccato. Se l’osservazione non è sicura, interrompila e chiedi supporto.
+              Non salire su mobili o scale instabili e non avvicinarti a materiale che sembra distaccato.
+              Se la zona non è sicura, allontanati e chiedi supporto.
             </p>
           </div>
         </section>
@@ -218,31 +215,28 @@ const faq = [
           <p class="eyebrow">Un limite importante</p>
           <h2 id="limit-title">Online non si può stabilire la causa della crepa</h2>
           <p>
-            Testo, immagini e questionari possono aiutare a preparare una richiesta, ma non bastano
-            per concludere che una crepa sia strutturale, che esista un cedimento, che l’edificio sia
-            sicuro o pericoloso oppure che serva una tecnica specifica.
+            Testo, immagini e questionari non bastano per concludere che una crepa abbia una causa
+            precisa o per scegliere un intervento.
           </p>
           <p>
             Anche termini come “diagonale”, “passante” o “profonda” vanno usati soltanto per riportare
-            ciò che è stato osservato o riferito, non come etichette tecniche assegnate online.
+            ciò che hai visto o ti è stato riferito, non come etichette tecniche assegnate online.
           </p>
         </section>
 
         <section class="action-section" id="verifica" aria-labelledby="verification-title">
           <p class="eyebrow">Il prossimo passo</p>
-          <h2 id="verification-title">Quando può essere utile chiedere una verifica</h2>
+          <h2 id="verification-title">Quando è il momento di chiamare un tecnico</h2>
           <p>
-            Può essere ragionevole chiedere una valutazione sul posto se la situazione persiste, se
-            noti cambiamenti, se compare insieme ad altri fenomeni che non sai interpretare o se hai
-            bisogno di una valutazione riferita all’immobile reale.
+            Chiedi una valutazione sul posto se il problema persiste, cambia, compare insieme ad altri
+            segnali o se devi decidere come procedere con un ripristino o un lavoro.
           </p>
           <p>
-            La richiesta non deve contenere una diagnosi. È sufficiente raccontare dove si trova il
-            segno, che cosa hai osservato, quando lo hai notato e quali informazioni sul contesto sono
-            disponibili.
+            Non devi indicare una diagnosi: racconta dove si trova il segno, da quando lo noti e quali
+            lavori, infiltrazioni o altri eventi possono aiutare a ricostruire la storia.
           </p>
           <div class="action-request">
-            <h3>Prepara queste informazioni</h3>
+            <h3>Che cosa raccontare al tecnico</h3>
             <ul class="action-list action-list-compact">
               {requestItems.map((item) => <li><span aria-hidden="true">✓</span><p>{item}</p></li>)}
             </ul>
@@ -266,14 +260,14 @@ const faq = [
           <p class="eyebrow">Per approfondire</p>
           <h2 id="related-title">Parti dalla guida generale sulle crepe</h2>
           <p>
-            Se vuoi capire meglio quali elementi osservare e quali limiti ha una valutazione online,
-            puoi leggere la guida principale prima di preparare il riepilogo.
+            Se vuoi capire meglio quali elementi possono entrare in gioco e quali limiti ha una
+            valutazione online, puoi leggere la guida principale o chiedere direttamente un confronto.
           </p>
           <div class="action-related-links">
             <a href="/crepe-nei-muri/">Leggi la guida sulle crepe nei muri <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/quando-chiedere-verifica/">Quando chiedere una verifica <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/casa-nuova-dopo-lavori/">Casa nuova o dopo lavori <span aria-hidden="true">→</span></a>
-            <a href="/richiedi-valutazione/">Prepara la tua richiesta <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Chiedi una valutazione <span aria-hidden="true">→</span></a>
           </div>
         </section>
       </div>

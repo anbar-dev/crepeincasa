@@ -5,18 +5,18 @@ import NextStep from '../../../components/NextStep.astro';
 const ceilingContexts = [
   {
     number: '01',
-    title: 'La posizione nella stanza',
+    title: 'Dove si trova nella stanza',
     text: 'Indica se il segno è al centro, vicino a una parete, a un angolo, a un’apertura o a un elemento come una trave o un controsoffitto visibile.',
   },
   {
     number: '02',
-    title: 'La superficie visibile',
-    text: 'Descrivi pittura, intonaco, cartongesso, pannello o altra finitura senza rimuovere materiale per capire che cosa ci sia sotto.',
+    title: 'Che superficie si vede',
+    text: 'Indica se vedi pittura, intonaco, cartongesso, pannelli o altre finiture. Non rimuovere materiale per capire che cosa ci sia sotto.',
   },
   {
     number: '03',
-    title: 'Gli elementi vicini',
-    text: 'Annota macchie, umidità, distacchi di finitura, lampade o passaggi di impianti che puoi vedere senza smontare nulla.',
+    title: 'Che cosa c’è intorno',
+    text: 'Riferisci macchie, umidità, distacchi di finitura, lampade o passaggi di impianti visibili senza smontare nulla.',
   },
 ];
 
@@ -26,7 +26,7 @@ const checklist = [
   'data in cui hai notato la fessurazione e fotografie precedenti, se disponibili;',
   'macchie, umidità, gocciolamenti, distacchi o altri cambiamenti osservati nella zona;',
   'lavori recenti, perdite, modifiche o interventi eseguiti sopra o vicino all’ambiente, se noti;',
-  'limiti dell’osservazione: altezza, accessibilità e qualsiasi elemento che non hai potuto controllare.',
+    'limiti della verifica: altezza, accessibilità e qualsiasi elemento che non hai potuto controllare.',
 ];
 
 const photoSteps = [
@@ -58,7 +58,7 @@ const faq = [
   },
   {
     question: 'Devo salire su una scala per fotografare meglio?',
-    answer: 'No, la documentazione non deve creare un rischio. Fotografa da terra se puoi farlo in modo stabile e annota ciò che non è stato possibile osservare da vicino.',
+    answer: 'No, non vale la pena rischiare. Fotografa da terra se puoi farlo in modo stabile e riferisci ciò che non è stato possibile vedere da vicino.',
   },
   {
     question: 'Macchie o umidità sul soffitto indicano una perdita?',
@@ -66,7 +66,7 @@ const faq = [
   },
   {
     question: 'Posso controllare se il soffitto è cavo o instabile?',
-    answer: 'Non improvvisare colpi, pressioni, fori o rimozioni. Se non puoi osservare la zona senza toccarla o avvicinarti in sicurezza, interrompi la verifica e segnala il limite nella richiesta.',
+    answer: 'Non improvvisare colpi, pressioni, fori o rimozioni. Se non puoi vedere la zona senza toccarla o avvicinarti in sicurezza, fermati e riferiscilo nella richiesta.',
   },
   {
     question: 'Quando devo chiedere una verifica?',
@@ -76,18 +76,18 @@ const faq = [
 ---
 
 <BaseLayout
-  title="Crepe sul soffitto: cosa osservare"
-  description="Crepe sul soffitto: come descrivere posizione, superficie, macchie, fotografie e limiti dell’osservazione senza fare diagnosi online."
+  title="Crepe sul soffitto: cosa fare e quando chiamare un tecnico"
+  description="Hai notato una crepa sul soffitto? Come capire il contesto, fotografare senza rischi e sapere quando chiedere una valutazione sul posto."
   canonical="https://crepeincasa.it/crepe-nei-muri/crepe-sul-soffitto/"
 >
   <article class="ceiling-page">
     <header class="ceiling-hero">
       <div class="container ceiling-hero-inner">
         <p class="eyebrow">Guida al contesto del soffitto</p>
-        <h1>Crepe sul soffitto: cosa osservare</h1>
+        <h1>Crepe sul soffitto: cosa fare e quando chiamare un tecnico</h1>
         <p class="ceiling-lead">
-          Una fessurazione sul soffitto va descritta insieme alla stanza, alla superficie e agli altri
-          elementi visibili. Puoi documentare ciò che noti senza salire, toccare o rimuovere materiale.
+          Una fessurazione sul soffitto va capita insieme alla stanza, alla superficie e agli altri
+          elementi visibili. Prima di fare lavori, puoi fotografare in sicurezza e chiedere un sopralluogo.
         </p>
         <p class="ceiling-meta">Tempo di lettura: circa 7 minuti · Nessuna diagnosi a distanza</p>
       </div>
@@ -98,10 +98,10 @@ const faq = [
         <p class="ceiling-index-title">In questa guida</p>
         <nav>
           <a href="#risposta">La risposta breve</a>
-          <a href="#contesto">Tre elementi di contesto</a>
-          <a href="#checklist">Osservazioni da raccogliere</a>
-          <a href="#foto">Come fotografare</a>
-          <a href="#attenzione">Quando fermarsi</a>
+          <a href="#contesto">Tre elementi da capire</a>
+          <a href="#checklist">Che cosa serve sapere</a>
+          <a href="#foto">Come fotografare in sicurezza</a>
+          <a href="#attenzione">Prima la sicurezza</a>
           <a href="#faq">Domande frequenti</a>
         </nav>
       </aside>
@@ -109,11 +109,11 @@ const faq = [
       <div class="ceiling-content">
         <section class="ceiling-section ceiling-intro" id="risposta" aria-labelledby="answer-title">
           <p class="eyebrow">La risposta breve</p>
-          <h2 id="answer-title">La posizione sul soffitto è un dato, non una diagnosi</h2>
+          <h2 id="answer-title">La posizione sul soffitto non basta per capire la causa</h2>
           <p>
-            Per preparare una descrizione utile indica dove si trova il segno, quale finitura è visibile,
-            quando l’hai notato e se sono comparsi altri elementi come macchie o distacchi. La sola presenza
-            sul soffitto non consente di stabilire la causa o l’intervento necessario.
+            Per spiegare bene il problema indica dove si trova il segno, quale finitura è visibile,
+            quando l’hai notato e se sono comparsi elementi come macchie o distacchi. La sola posizione
+            sul soffitto non stabilisce la causa o l’intervento necessario.
           </p>
           <div class="ceiling-note">
             <strong>Descrivi anche ciò che non hai potuto controllare</strong>
@@ -122,18 +122,18 @@ const faq = [
         </section>
 
         <NextStep
-          title="Hai già descritto quello che riesci a vedere?"
-          text="Puoi fermarti alle osservazioni accessibili, preparare qualche fotografia sicura e inviare un riepilogo senza stabilire la causa della fessurazione."
-          primary={{ href: '/richiedi-valutazione/', label: 'Prepara la tua richiesta' }}
+          title="Vuoi capire come procedere?"
+          text="Puoi fotografare solo ciò che è accessibile e chiedere un confronto senza stabilire online la causa della fessurazione."
+          primary={{ href: '/richiedi-valutazione/', label: 'Chiedi una valutazione' }}
           secondaryLinks={[
             { href: '/crepe-nei-muri/come-fotografare-monitorare-crepa/', label: 'Come fotografare e monitorare una crepa' },
-            { href: '/crepe-nei-muri/informazioni-per-tecnico/', label: 'Quali informazioni preparare per un tecnico' },
+            { href: '/crepe-nei-muri/informazioni-per-tecnico/', label: 'Che cosa dire al tecnico' },
           ]}
         />
 
         <section class="ceiling-section" id="contesto" aria-labelledby="context-title">
           <p class="eyebrow">Prima di interpretare</p>
-          <h2 id="context-title">Tre elementi da osservare dalla posizione più sicura</h2>
+          <h2 id="context-title">Tre elementi da capire dalla posizione più sicura</h2>
           <p>
             Parti da ciò che puoi riconoscere senza avvicinarti oltre il necessario. Se un elemento non è
             visibile, segnala semplicemente che non è noto.
@@ -150,11 +150,11 @@ const faq = [
         </section>
 
         <section class="ceiling-section" id="checklist" aria-labelledby="checklist-title">
-          <p class="eyebrow">Raccogliere informazioni</p>
-          <h2 id="checklist-title">Informazioni da raccogliere per descrivere una crepa sul soffitto</h2>
+          <p class="eyebrow">Per spiegare il problema</p>
+          <h2 id="checklist-title">Che cosa serve sapere per una valutazione</h2>
           <p>
-            Puoi copiare questi punti in una nota e completarli con date e fotografie. Mantieni separate
-            le osservazioni dalle ipotesi sulla causa.
+            Non devi compilare una scheda tecnica. Bastano posizione, superficie, data e altri elementi
+            visibili per spiegare il problema senza anticipare la causa.
           </p>
           <ul class="ceiling-list">
             {checklist.map((item, index) => (
@@ -164,11 +164,11 @@ const faq = [
         </section>
 
         <section class="ceiling-section" id="foto" aria-labelledby="photos-title">
-          <p class="eyebrow">Documentazione non invasiva</p>
-          <h2 id="photos-title">Come fotografare il soffitto senza aumentare il rischio</h2>
+          <p class="eyebrow">Foto senza rischi</p>
+          <h2 id="photos-title">Come fotografare il soffitto senza rischiare</h2>
           <p>
             La priorità è restare in una posizione stabile. Una fotografia meno ravvicinata ma sicura è
-            preferibile a un dettaglio ottenuto salendo o toccando la superficie.
+            preferibile a un dettaglio ottenuto salendo o toccando il soffitto.
           </p>
           <div class="ceiling-cards">
             {photoSteps.map((item) => (
@@ -180,13 +180,13 @@ const faq = [
           </div>
           <div class="ceiling-limit">
             <strong>Non rimuovere finiture o pannelli</strong>
-            <p>Fori, raschiature, pressioni e smontaggi non sono necessari per creare un riepilogo delle osservazioni e possono alterare la superficie o esporti a rischi.</p>
+            <p>Fori, raschiature, pressioni e smontaggi non servono per capire il problema e possono alterare la superficie o esporti a rischi.</p>
           </div>
         </section>
 
         <section class="ceiling-section ceiling-alert" id="attenzione" aria-labelledby="attention-title">
           <p class="eyebrow">Prima la sicurezza</p>
-          <h2 id="attention-title">Quando interrompere l’osservazione</h2>
+          <h2 id="attention-title">Quando fermarti</h2>
           <p>
             Se noti elementi che rendono rischioso restare nella zona, non cercare fotografie più precise.
             Allontanati se necessario e chiedi tempestivamente supporto qualificato o alle autorità competenti.
@@ -211,16 +211,15 @@ const faq = [
 
         <section class="ceiling-related" aria-labelledby="related-title">
           <p class="eyebrow">Continua il percorso</p>
-          <h2 id="related-title">Dalle osservazioni alla richiesta</h2>
+          <h2 id="related-title">Capire il problema e chiedere il confronto</h2>
           <p>
-            Puoi approfondire la documentazione fotografica, preparare le informazioni per un tecnico o
-            usare il modulo per creare un riepilogo neutro della situazione osservata.
+            Puoi approfondire come usare le fotografie oppure chiedere direttamente un confronto sul posto.
           </p>
           <div class="ceiling-links">
             <a href="/crepe-nei-muri/come-fotografare-monitorare-crepa/">Come fotografare e monitorare una crepa <span aria-hidden="true">→</span></a>
-            <a href="/crepe-nei-muri/informazioni-per-tecnico/">Quali informazioni preparare per un tecnico <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/informazioni-per-tecnico/">Che cosa dire al tecnico <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/quando-chiedere-verifica/">Quando chiedere una verifica <span aria-hidden="true">→</span></a>
-            <a href="/richiedi-valutazione/">Prepara la tua richiesta <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Chiedi una valutazione <span aria-hidden="true">→</span></a>
           </div>
         </section>
       </div>

@@ -4,7 +4,7 @@
 
 ### 1. Riscrittura editoriale in italiano naturale
 
-- [ ] **Riscrivere bene in italiano corretto e naturale** queste pagine:
+- [x] **Riscrivere bene in italiano corretto e naturale** queste pagine:
   - `/` — homepage;
   - `/crepe-nei-muri/` — pagina principale sulle crepe;
   - `/crepe-nei-muri/cosa-fare/`;
@@ -47,12 +47,16 @@ proporre un passo concreto.
 
 ### 2. Controllo dopo la riscrittura
 
-- [ ] Verificare titoli, descrizioni, link interni, CTA, FAQ e modulo insieme
+- [x] Verificare titoli, descrizioni, link interni, CTA, FAQ e modulo insieme
   al nuovo testo.
-- [ ] Controllare che ogni pagina risponda a un intento distinto e non ripeta
+- [x] Controllare che ogni pagina risponda a un intento distinto e non ripeta
   la stessa spiegazione con parole diverse.
-- [ ] Eseguire build, controllo responsive e verifica dei dati Search Console
-  dopo la pubblicazione.
+- [x] Eseguire build e controllo responsive.
+- [ ] Verificare i dati Search Console dopo la pubblicazione.
+
+> La riscrittura è stata completata il 2026-09-22. Il testo ora parte dal
+> problema concreto, spiega i possibili contesti con prudenza e accompagna
+> verso il passo successivo, senza trasformare l'utente in un tecnico.
 
 ## Phase 0 — Foundation
 
@@ -304,7 +308,7 @@ individuale.
 ## Phase 14 — Audit continuativo
 
 - [x] Audit dei flussi principali e semplificazione del percorso home → guida → richiesta
-- [ ] Riscrittura editoriale completa (vedi "Prossime cose da fare")
+- [x] Riscrittura editoriale completa (vedi "Prossime cose da fare")
 - [ ] contenuti sottili e sovrapposizione d'intento;
 - [ ] title e meta description duplicati;
 - [ ] prudenza tecnica;

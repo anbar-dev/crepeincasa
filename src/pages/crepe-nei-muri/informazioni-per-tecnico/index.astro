@@ -10,46 +10,46 @@ const informationBlocks = [
   },
   {
     number: '02',
-    title: 'Quando l’hai notata',
-    text: 'Scrivi una data o un periodo approssimativo. Se non lo ricordi, dichiaralo: una certezza non va sostituita con una supposizione.',
+    title: 'Da quando la noti',
+    text: 'Scrivi una data o un periodo approssimativo. Se non lo ricordi, dillo: una supposizione non aiuta a capire il problema.',
   },
   {
     number: '03',
     title: 'Che cosa è cambiato',
-    text: 'Descrivi ciò che ti sembra diverso rispetto a prima: posizione, aspetto, finitura o altri elementi osservati nello stesso periodo.',
+    text: 'Spiega che cosa ti sembra diverso rispetto a prima: posizione, aspetto, finitura o altri elementi nello stesso periodo.',
   },
   {
     number: '04',
-    title: 'Quale contesto ricordi',
-    text: 'Raccogli informazioni su lavori, infiltrazioni, umidità, cambi d’uso o altri eventi collegati, senza presentarli come spiegazione già acquisita.',
+    title: 'Che cosa è successo intorno',
+    text: 'Riferisci lavori, infiltrazioni, umidità, cambi d’uso o altri eventi collegati, senza presentarli come spiegazione già acquisita.',
   },
 ];
 
 const checklist = [
-  'indirizzo o zona dell’immobile, indicando soltanto i dati necessari al primo contatto;',
-  'stanza, superficie e posizione del segno rispetto agli elementi dell’ambiente;',
-  'data o periodo in cui l’hai notato e fotografie ordinate per data;',
-  'descrizione di ciò che vedi: andamento, finitura, macchie, distacchi o altri cambiamenti;',
-  'lavori recenti, infiltrazioni, modifiche o periodi di inutilizzo che ricordi;',
-  'domanda concreta che vuoi portare al confronto, senza indicare in anticipo una tecnica;',
+    'indirizzo o zona dell’immobile, limitandoti ai dati necessari al primo contatto;',
+    'stanza, superficie e posizione del segno rispetto agli elementi dell’ambiente;',
+    'data o periodo in cui l’hai notato e fotografie con data, se le hai;',
+    'che cosa si vede: andamento, finitura, macchie, distacchi o altri cambiamenti;',
+    'lavori recenti, infiltrazioni, modifiche o periodi di inutilizzo che ricordi;',
+    'la domanda a cui vuoi una risposta, senza indicare in anticipo una tecnica;',
 ];
 
 const attachments = [
   {
-    title: 'Fotografie non ritagliate',
-    text: 'Conserva una vista d’insieme, una vista intermedia e un dettaglio. Mantieni le immagini originali e indica la data dello scatto.',
+    title: 'Fotografie originali',
+    text: 'Conserva una vista d’insieme e un dettaglio. Mantieni le immagini originali e indica la data dello scatto, se la conosci.',
   },
   {
-    title: 'Cronologia breve',
-    text: 'Una pagina con date, lavori, cambiamenti e ciò che non sai può essere più utile di un racconto lungo e senza ordine.',
+    title: 'Una storia breve',
+    text: 'Date, lavori, cambiamenti e ciò che non sai possono essere più utili di un racconto lungo e senza ordine.',
   },
   {
-    title: 'Documenti già disponibili',
-    text: 'Se pertinenti, raccogli relazioni, fotografie di cantiere, fatture o comunicazioni che già possiedi. Non è necessario interpretarli da solo.',
+    title: 'Documenti che hai già',
+    text: 'Se pertinenti, porta relazioni, fotografie di cantiere, fatture o comunicazioni che già possiedi. Non devi interpretarli da solo.',
   },
   {
-    title: 'Domande da chiarire',
-    text: 'Annota che cosa vuoi capire: quali verifiche possono servire, quali dati portare e come distinguere un ripristino da un approfondimento.',
+    title: 'La domanda principale',
+    text: 'Chiarisci che cosa vuoi capire: quali verifiche servono, se puoi riparare o se prima occorre approfondire.',
   },
 ];
 
@@ -68,7 +68,7 @@ const faq = [
   },
   {
     question: 'Cosa scrivo se non ricordo quando è comparsa?',
-    answer: 'Scrivi che la data non è nota e indica il primo momento in cui l’hai osservata. Anche distinguere ricordi certi, ipotesi e informazioni mancanti aiuta a preparare la valutazione.',
+    answer: 'Scrivi che la data non è nota e indica il primo momento in cui l’hai notata. Anche distinguere ricordi certi, ipotesi e informazioni mancanti aiuta il tecnico a inquadrare il caso.',
   },
   {
     question: 'Posso chiedere direttamente un preventivo?',
@@ -78,18 +78,18 @@ const faq = [
 ---
 
 <BaseLayout
-  title="Crepa nel muro: quali informazioni preparare per un tecnico"
-  description="Crepa nel muro: quali informazioni preparare per un tecnico, tra cronologia, fotografie, contesto e domande, senza formulare diagnosi online."
+  title="Crepa nel muro: che cosa dire al tecnico"
+  description="Crepa nel muro: che cosa raccontare al tecnico, quali fotografie e documenti possono servire e come arrivare al confronto senza diagnosi online."
   canonical="https://crepeincasa.it/crepe-nei-muri/informazioni-per-tecnico/"
 >
   <article class="brief-page">
     <header class="brief-hero">
       <div class="container brief-hero-inner">
-        <p class="eyebrow">Guida alla preparazione</p>
-        <h1>Crepa nel muro: quali informazioni preparare per un tecnico</h1>
+        <p class="eyebrow">Parlare con un tecnico</p>
+        <h1>Crepa nel muro: che cosa dire al tecnico</h1>
         <p class="brief-lead">
-          Una richiesta chiara parte da ciò che hai osservato: luogo, date, fotografie, contesto e domande.
-          Non serve arrivare con una diagnosi già formulata.
+          Una richiesta chiara parte dal problema: luogo, date, fotografie, contesto e domanda principale.
+          Non devi arrivare con una diagnosi già formulata.
         </p>
         <p class="brief-meta">Tempo di lettura: circa 7 minuti · Nessuna diagnosi a distanza</p>
       </div>
@@ -100,10 +100,10 @@ const faq = [
         <p class="brief-index-title">In questa guida</p>
         <nav>
           <a href="#risposta">La risposta breve</a>
-          <a href="#blocchi">I quattro blocchi</a>
-          <a href="#checklist">Informazioni già organizzate</a>
+          <a href="#blocchi">I quattro elementi</a>
+          <a href="#checklist">Che cosa serve sapere</a>
           <a href="#allegati">Foto e documenti</a>
-          <a href="#domande">Domande da portare</a>
+          <a href="#domande">La domanda da chiarire</a>
           <a href="#faq">Domande frequenti</a>
         </nav>
       </aside>
@@ -111,22 +111,22 @@ const faq = [
       <div class="brief-content">
         <section class="brief-section brief-intro" id="risposta" aria-labelledby="answer-title">
           <p class="eyebrow">La risposta breve</p>
-          <h2 id="answer-title">Prepara un quadro ordinato delle osservazioni</h2>
+          <h2 id="answer-title">Spiega il problema con chiarezza</h2>
           <p>
-            Chi riceve la richiesta ha bisogno di capire dove si trova il segno, quando lo hai notato,
-            quali cambiamenti hai osservato e quali elementi del contesto puoi raccontare. Queste
-            informazioni aiutano a impostare il confronto, ma non sostituiscono l’esame dell’immobile.
+            Chi riceve la richiesta ha bisogno di capire dove si trova il segno, da quando lo noti,
+            che cosa è cambiato e quali eventi possono completare la storia. Sono informazioni utili,
+            ma non sostituiscono l’esame dell’immobile.
           </p>
           <div class="brief-note">
             <strong>Scrivi i fatti prima delle interpretazioni</strong>
-            <p>“Ho notato una linea vicino alla finestra il 10 agosto” descrive un’osservazione. “La parete sta cedendo” è una conclusione che una richiesta online non può dimostrare.</p>
+            <p>“Ho notato una linea vicino alla finestra il 10 agosto” descrive un fatto. “La parete sta cedendo” è una conclusione che una richiesta online non può dimostrare.</p>
           </div>
         </section>
 
         <NextStep
-          title="Puoi inviare anche un riepilogo ancora incompleto"
-          text="Non serve avere ogni documento o conoscere termini tecnici. Indica ciò che hai osservato, ciò che ricordi e ciò che non sai: il modulo aiuta a ordinare le informazioni disponibili."
-          primary={{ href: '/richiedi-valutazione/', label: 'Prepara la tua richiesta' }}
+          title="Non devi avere già tutte le risposte"
+          text="Non servono ogni documento né termini tecnici. Racconta il problema, ciò che ricordi e ciò che vuoi capire: il confronto sul posto farà il resto."
+          primary={{ href: '/richiedi-valutazione/', label: 'Chiedi una valutazione' }}
           secondaryLinks={[
             { href: '/crepe-nei-muri/come-fotografare-monitorare-crepa/', label: 'Come fotografare e monitorare una crepa' },
             { href: '/crepe-nei-muri/quando-chiedere-verifica/', label: 'Quando chiedere una verifica' },
@@ -134,11 +134,10 @@ const faq = [
         />
 
         <section class="brief-section" id="blocchi" aria-labelledby="blocks-title">
-          <p class="eyebrow">Un metodo semplice</p>
-          <h2 id="blocks-title">Raccogli le informazioni in quattro blocchi</h2>
+          <p class="eyebrow">Per spiegare il problema</p>
+          <h2 id="blocks-title">Bastano quattro elementi</h2>
           <p>
-            Puoi usare questi titoli come una scheda. Se un dato non è noto, indicarlo apertamente è più
-            utile che ricostruirlo per supposizioni.
+            Se un dato non è noto, dillo apertamente. È più utile di una ricostruzione fatta per supposizioni.
           </p>
           <div class="brief-blocks">
             {informationBlocks.map((item) => (
@@ -153,10 +152,10 @@ const faq = [
 
         <section class="brief-section" id="checklist" aria-labelledby="checklist-title">
           <p class="eyebrow">Prima del contatto</p>
-          <h2 id="checklist-title">Informazioni da preparare per una richiesta</h2>
+          <h2 id="checklist-title">Che cosa serve sapere per iniziare</h2>
           <p>
-            Non è necessario completare ogni punto prima di chiedere informazioni. La lista serve a
-            ricordare ciò che è già disponibile e a separarlo da ciò che manca.
+            Non devi completare una scheda prima di chiedere un confronto. Usa questi punti solo per
+            capire che cosa hai già e che cosa invece manca.
           </p>
           <ul class="brief-list">
             {checklist.map((item, index) => (
@@ -167,10 +166,10 @@ const faq = [
 
         <section class="brief-section" id="allegati" aria-labelledby="attachments-title">
           <p class="eyebrow">Materiale utile</p>
-          <h2 id="attachments-title">Che cosa puoi allegare o tenere pronto</h2>
+          <h2 id="attachments-title">Quali foto e documenti possono servire</h2>
           <p>
-            Invia soltanto materiale pertinente e necessario per il primo confronto. Le immagini e i
-            documenti devono accompagnare la descrizione, non essere usati per attribuire da soli una causa.
+            Invia solo materiale pertinente al primo confronto. Foto e documenti accompagnano la descrizione,
+            ma non permettono da soli di stabilire la causa.
           </p>
           <div class="brief-cards">
             {attachments.map((item) => (
@@ -187,15 +186,15 @@ const faq = [
         </section>
 
         <section class="brief-section" id="domande" aria-labelledby="questions-title">
-          <p class="eyebrow">Arrivare preparati</p>
-          <h2 id="questions-title">Quali domande portare al confronto</h2>
+          <p class="eyebrow">Per parlare con chiarezza</p>
+          <h2 id="questions-title">Quale domanda vuoi risolvere?</h2>
           <p>
-            Una verifica può lasciare alcuni aspetti da approfondire. Scrivere prima le domande ti aiuta
-            a non confondere ciò che hai osservato con ciò che vuoi ancora capire.
+            Arriva al confronto con una domanda concreta: ti aiuta a ottenere una risposta utile senza
+            trasformare la richiesta in una diagnosi.
           </p>
           <div class="brief-question-list">
-            <p>Quali elementi dell’immobile è utile osservare direttamente?</p>
-            <p>Quali informazioni o documenti mancano per descrivere meglio il contesto?</p>
+            <p>Quali elementi dell’immobile dovrà controllare direttamente il tecnico?</p>
+            <p>Quali informazioni o documenti servono per inquadrare meglio il contesto?</p>
             <p>È opportuno monitorare qualcosa e con quale modalità indicata dal professionista?</p>
             <p>Quali alternative vanno considerate prima di parlare di lavori?</p>
           </div>
@@ -203,10 +202,10 @@ const faq = [
 
         <section class="brief-section brief-alert" aria-labelledby="alert-title">
           <p class="eyebrow">Prima di documentare</p>
-          <h2 id="alert-title">Non fare prove rischiose per completare la scheda</h2>
+          <h2 id="alert-title">Non fare prove rischiose per completare la richiesta</h2>
           <p>
             Non salire su scale instabili, non rimuovere materiale e non avvicinarti a zone con distacchi
-            o condizioni che rendono rischiosa l’osservazione. Se la situazione potrebbe richiedere
+            o condizioni che rendono rischioso avvicinarsi. Se la situazione potrebbe richiedere
             attenzione urgente, allontanati se necessario e rivolgiti tempestivamente a un professionista
             qualificato o alle autorità competenti.
           </p>
@@ -214,7 +213,7 @@ const faq = [
 
         <section class="brief-section" id="faq" aria-labelledby="faq-title">
           <p class="eyebrow">Domande frequenti</p>
-          <h2 id="faq-title">Informazioni da preparare per un tecnico</h2>
+          <h2 id="faq-title">Che cosa dire al tecnico</h2>
           <div class="brief-faq">
             {faq.map((item) => (
               <details>
@@ -227,16 +226,16 @@ const faq = [
 
         <section class="brief-related" aria-labelledby="related-title">
           <p class="eyebrow">Continua il percorso</p>
-          <h2 id="related-title">Dalle osservazioni al riepilogo</h2>
+          <h2 id="related-title">Dalla descrizione al confronto</h2>
           <p>
-            Puoi prima leggere come fotografare e monitorare una crepa, oppure usare il modulo per
-            ordinare le informazioni disponibili in un riepilogo neutro.
+            Puoi approfondire come usare le fotografie oppure passare direttamente al modulo per chiedere
+            una valutazione.
           </p>
           <div class="brief-links">
             <a href="/crepe-nei-muri/come-fotografare-monitorare-crepa/">Come fotografare e monitorare una crepa <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/quando-chiedere-verifica/">Quando chiedere una verifica <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/cosa-fare/">Cosa fare dopo aver notato una crepa <span aria-hidden="true">→</span></a>
-            <a href="/richiedi-valutazione/">Prepara la tua richiesta <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Chiedi una valutazione <span aria-hidden="true">→</span></a>
           </div>
         </section>
       </div>

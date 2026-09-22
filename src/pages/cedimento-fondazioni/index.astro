@@ -4,24 +4,24 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const contexts = [
   {
     number: '01',
-    title: 'La storia dell’immobile',
-    text: 'Età, ampliamenti, ristrutturazioni, cambi d’uso e interventi vicini possono essere informazioni utili. Non indicano da soli quale elemento sia coinvolto.',
+    title: 'La storia della casa',
+    text: 'Età, ampliamenti, ristrutturazioni, cambi d’uso e interventi vicini possono aiutare a ricostruire il contesto. Non indicano da soli quale elemento sia coinvolto.',
   },
   {
     number: '02',
     title: 'Il rapporto con il terreno',
-    text: 'Pendenza, acqua, scavi, drenaggio o modifiche del terreno sono aspetti da riferire se li conosci. Non è necessario interpretare il loro rapporto con le fessurazioni.',
+    text: 'Pendenza, acqua, scavi, drenaggio o modifiche del terreno sono elementi da riferire se li conosci. Il loro rapporto con le fessurazioni va verificato.',
   },
   {
     number: '03',
-    title: 'I cambiamenti osservati',
-    text: 'Crepe, dislivelli percepiti, porte che funzionano diversamente o tracce di umidità possono essere descritti con posizione e data, senza usarli come prova di un cedimento.',
+    title: 'Che cosa è cambiato',
+    text: 'Crepe, dislivelli percepiti, porte che funzionano diversamente o tracce di umidità aiutano a raccontare il problema, ma non dimostrano da soli un cedimento.',
   },
 ];
 
 const checklist = [
   'quando hai notato per la prima volta il segno o la differenza e se hai fotografie datate;',
-  'stanza, parete, pavimento, soglia o area esterna in cui si trova l’osservazione;',
+  'stanza, parete, pavimento, soglia o area esterna in cui si trova il problema;',
   'che cosa è cambiato secondo la tua percezione, distinguendo il confronto da una misura tecnica;',
   'lavori, ampliamenti, scavi, perdite d’acqua, infiltrazioni o variazioni del drenaggio che ricordi;',
   'eventuali ripristini già eseguiti e il loro periodo, senza considerarli una conferma della causa;',
@@ -30,7 +30,7 @@ const checklist = [
 
 const questions = [
   {
-    title: 'Quale elemento va osservato?',
+    title: 'Quale elemento va verificato?',
     text: 'Chiedi quali parti dell’immobile e del terreno debbano essere esaminate nel caso concreto, senza partire dalla tecnica di intervento.',
   },
   {
@@ -39,7 +39,7 @@ const questions = [
   },
   {
     title: 'Che cosa viene prima dei lavori?',
-    text: 'Se vengono prospettate opere, chiedi su quali osservazioni e valutazioni si basano e quali alternative o approfondimenti siano pertinenti.',
+    text: 'Se vengono prospettate opere, chiedi su quali elementi e valutazioni si basano e quali alternative o approfondimenti siano pertinenti.',
   },
 ];
 
@@ -75,18 +75,18 @@ const faq = [
 ---
 
 <BaseLayout
-  title="Cedimento delle fondazioni: cosa osservare prima di una verifica"
-  description="Cedimento delle fondazioni: come descrivere contesto, terreno, fessure e cambiamenti senza concludere online che esista un cedimento o che serva un consolidamento."
+  title="Cedimento delle fondazioni: capire il problema e come muoversi"
+  description="Cedimento delle fondazioni: che cosa può significare, quali elementi aiutano a capire il contesto e quando chiedere una valutazione sul posto."
   canonical="https://crepeincasa.it/cedimento-fondazioni/"
 >
   <article class="foundation-page">
     <header class="foundation-hero">
       <div class="container foundation-hero-inner">
         <p class="eyebrow">Guida a fondazioni e contesto</p>
-        <h1>Cedimento delle fondazioni: cosa osservare prima di una verifica</h1>
+        <h1>Cedimento delle fondazioni: che cosa significa e come muoversi</h1>
         <p class="foundation-lead">
           “Cedimento delle fondazioni” è un’ipotesi tecnica, non una conclusione che si può ricavare da una crepa,
-          da una fotografia o da un questionario. Puoi però raccogliere contesto e cronologia per preparare una valutazione professionale.
+          da una fotografia o da un questionario. Prima di pensare a un intervento bisogna capire il contesto e chiedere una valutazione professionale.
         </p>
         <p class="foundation-meta">Tempo di lettura: circa 8 minuti · Nessuna diagnosi a distanza</p>
       </div>
@@ -97,10 +97,10 @@ const faq = [
         <p class="foundation-index-title">In questa guida</p>
         <nav>
           <a href="#risposta">La risposta breve</a>
-          <a href="#contesto">Tre contesti da riferire</a>
-          <a href="#checklist">Cosa raccogliere</a>
-          <a href="#verifica">Come preparare la verifica</a>
-          <a href="#attenzione">Quando fermarsi</a>
+          <a href="#contesto">Tre elementi da capire</a>
+          <a href="#checklist">Che cosa serve sapere</a>
+          <a href="#verifica">Prima di valutare lavori</a>
+          <a href="#attenzione">Prima la sicurezza</a>
           <a href="#faq">Domande frequenti</a>
           <a href="#fonti">Fonti istituzionali</a>
         </nav>
@@ -109,16 +109,14 @@ const faq = [
       <div class="foundation-content">
         <section class="foundation-section foundation-intro" id="risposta" aria-labelledby="answer-title">
           <p class="eyebrow">La risposta breve</p>
-          <h2 id="answer-title">Il termine descrive una possibilità da verificare, non un fatto già dimostrato</h2>
+          <h2 id="answer-title">Il termine descrive una possibilità, non un fatto già dimostrato</h2>
           <p>
-            Le fondazioni collegano l’edificio al terreno, ma il solo aspetto di una parete o di un pavimento non
-            permette di capire quale elemento sia coinvolto. Fessure, umidità, dislivelli percepiti e cambiamenti
-            nell’uso degli ambienti sono dati da ordinare, non etichette da applicare.
+            Le fondazioni collegano l’edificio al terreno, ma una crepa o un pavimento fuori piano non dicono da soli
+            quale elemento sia coinvolto. Sono segnali da mettere in relazione con la storia della casa e del terreno.
           </p>
           <p>
-            Una valutazione riferita all’immobile reale può considerare la storia dell’edificio, il terreno, l’acqua,
-            i lavori e le osservazioni disponibili. Solo dopo le verifiche appropriate si può discutere se servano
-            ulteriori controlli o interventi.
+            Una valutazione sul posto può considerare la storia dell’edificio, il terreno, l’acqua e i lavori. Solo dopo
+            le verifiche appropriate si può discutere se servano altri controlli o interventi.
           </p>
           <div class="foundation-note">
             <strong>Non partire dalla soluzione</strong>
@@ -127,8 +125,8 @@ const faq = [
         </section>
 
         <section class="foundation-section" id="contesto" aria-labelledby="context-title">
-          <p class="eyebrow">Possibili elementi di contesto</p>
-          <h2 id="context-title">Tre aree da descrivere senza fare diagnosi</h2>
+          <p class="eyebrow">Per capire il problema</p>
+          <h2 id="context-title">Tre elementi che il tecnico dovrà mettere in relazione</h2>
           <p>
             Parti da informazioni che puoi conoscere direttamente. Se un dato manca, dichiaralo: non è necessario
             colmare i vuoti con un’interpretazione.
@@ -145,11 +143,11 @@ const faq = [
         </section>
 
         <section class="foundation-section" id="checklist" aria-labelledby="checklist-title">
-          <p class="eyebrow">Raccogliere informazioni</p>
-          <h2 id="checklist-title">Informazioni da raccogliere prima della valutazione</h2>
+          <p class="eyebrow">Per spiegare il problema</p>
+          <h2 id="checklist-title">Che cosa serve sapere prima del sopralluogo</h2>
           <p>
-            Una cronologia ordinata aiuta a raccontare la situazione senza presentare una diagnosi già pronta.
-            Fotografa solo ciò che puoi raggiungere in sicurezza e conserva gli originali.
+            Una cronologia semplice aiuta a raccontare la situazione senza anticipare una diagnosi. Usa solo fotografie
+            ottenute in sicurezza e conserva gli originali.
           </p>
           <ul class="foundation-list">
             {checklist.map((item, index) => (
@@ -157,17 +155,17 @@ const faq = [
             ))}
           </ul>
           <div class="foundation-limit">
-            <strong>Separa osservazione e interpretazione</strong>
-            <p>“La porta sfrega da marzo e vicino alla soglia vedo una fessura” riporta due osservazioni. “La fondazione è scesa” è una conclusione che richiede una verifica.</p>
+            <strong>Separa ciò che vedi dall’interpretazione</strong>
+            <p>“La porta sfrega da marzo e vicino alla soglia vedo una fessura” descrive due fatti. “La fondazione è scesa” è una conclusione che richiede una verifica.</p>
           </div>
         </section>
 
         <section class="foundation-section" id="verifica" aria-labelledby="verification-title">
           <p class="eyebrow">Valutazione professionale</p>
-          <h2 id="verification-title">Che cosa chiedere prima di valutare lavori</h2>
+          <h2 id="verification-title">Che cosa capire prima di valutare lavori</h2>
           <p>
-            Una richiesta utile può partire dal problema osservato e dalla domanda a cui vuoi rispondere. Non serve
-            scegliere in anticipo tra consolidamento, micropali, resine o altre tecniche.
+            La domanda non è ancora quale tecnica scegliere. Prima bisogna capire che cosa è cambiato e quali verifiche
+            servono per il caso concreto.
           </p>
           <div class="foundation-questions">
             {questions.map((item) => (
@@ -178,14 +176,14 @@ const faq = [
             ))}
           </div>
           <p>
-            Un tecnico qualificato può indicare quali dati siano pertinenti al caso concreto e se siano necessari
-            approfondimenti. Il riepilogo inviato dal modulo serve a trasmettere le tue osservazioni, non a sostituire il sopralluogo.
+            Un tecnico qualificato può indicare quali controlli servono e se siano necessari approfondimenti. Il modulo
+            serve a raccontare il problema e non sostituisce il sopralluogo.
           </p>
         </section>
 
         <section class="foundation-section foundation-alert" id="attenzione" aria-labelledby="attention-title">
           <p class="eyebrow">Prima la sicurezza</p>
-          <h2 id="attention-title">Quando interrompere l’osservazione</h2>
+          <h2 id="attention-title">Quando fermarti</h2>
           <p>
             Non rendere più rischiosa la raccolta delle informazioni. Evita di entrare in zone non accessibili,
             rimuovere elementi o fare prove sulla casa e sul terreno.
@@ -232,17 +230,17 @@ const faq = [
           <h2 id="related-title">Dalla descrizione alla richiesta</h2>
           <p>
             Se hai notato una fessurazione o un cambiamento nel tuo immobile, puoi partire dalla guida generale,
-            approfondire il pavimento o preparare un riepilogo neutro per un professionista.
+            approfondire il pavimento o capire quale professionista contattare.
           </p>
           <div class="foundation-links">
             <a href="/consolidamento-fondazioni/">Consolidamento fondazioni: quando si valuta <span aria-hidden="true">→</span></a>
-            <a href="/casa-che-cede/">Casa che cede: cosa osservare <span aria-hidden="true">→</span></a>
-            <a href="/cedimento-differenziale/">Cedimento differenziale: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/casa-che-cede/">Casa che cede: come orientarsi <span aria-hidden="true">→</span></a>
+            <a href="/cedimento-differenziale/">Cedimento differenziale: come orientarsi <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/">Crepe nei muri: da dove cominciare <span aria-hidden="true">→</span></a>
-            <a href="/crepe-nei-muri/crepe-sul-pavimento/">Crepe sul pavimento: cosa osservare <span aria-hidden="true">→</span></a>
-            <a href="/cedimento-terreno/">Cedimento del terreno: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/crepe-sul-pavimento/">Crepe sul pavimento: cosa fare <span aria-hidden="true">→</span></a>
+            <a href="/cedimento-terreno/">Cedimento del terreno: come orientarsi <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/crepe-che-cambiano-nel-tempo/">Crepe che cambiano nel tempo <span aria-hidden="true">→</span></a>
-            <a href="/richiedi-valutazione/">Prepara la tua richiesta <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Chiedi una valutazione <span aria-hidden="true">→</span></a>
           </div>
         </section>
       </div>

@@ -4,18 +4,18 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const floorContexts = [
   {
     number: '01',
-    title: 'La finitura visibile',
+    title: 'Che superficie è coinvolta',
     text: 'Indica se il segno interessa piastrelle, fughe, massetto visibile, parquet, resina o un’altra superficie, senza sollevare o rompere il rivestimento.',
   },
   {
     number: '02',
-    title: 'La posizione nella stanza',
-    text: 'Descrivi se si trova al centro, vicino a una parete, a un angolo, a una soglia o a un elemento fisso che può aiutarti a riconoscere il punto.',
+    title: 'Dove si trova nella stanza',
+    text: 'Indica se si trova al centro, vicino a una parete, a un angolo, a una soglia o a un elemento fisso che aiuta a riconoscere il punto.',
   },
   {
     number: '03',
-    title: 'Ciò che cambia intorno',
-    text: 'Annota acqua, umidità, distacchi, bordi rialzati o una differenza che percepisci camminando, sempre come osservazione e senza attribuire una causa.',
+    title: 'Che cosa cambia intorno',
+    text: 'Riferisci acqua, umidità, distacchi, bordi rialzati o una differenza che percepisci camminando, senza attribuire subito una causa.',
   },
 ];
 
@@ -25,7 +25,7 @@ const checklist = [
   'data in cui hai notato la fessurazione e fotografie precedenti, se disponibili;',
   'presenza di umidità, acqua, distacchi, bordi rialzati o materiale che si muove senza essere spinto;',
   'eventuali lavori recenti, perdite, modifiche o cambi d’uso dell’ambiente che ricordi;',
-  'limiti dell’osservazione e qualsiasi zona che non hai controllato per non spostare mobili o fare prove.',
+  'qualsiasi zona che non hai controllato per non spostare mobili o fare prove.',
 ];
 
 const photoSteps = [
@@ -65,7 +65,7 @@ const faq = [
   },
   {
     question: 'Macchie o umidità sul pavimento spiegano la crepa?',
-    answer: 'Sono elementi da annotare con posizione e data, ma non spiegano da soli l’origine del segno. Possono essere valutati insieme agli altri dati durante una valutazione sul posto.',
+    answer: 'Sono elementi da riferire con posizione e data, ma non spiegano da soli l’origine del segno. Possono essere valutati insieme agli altri dati durante una valutazione sul posto.',
   },
   {
     question: 'Quando conviene chiedere una verifica?',
@@ -75,18 +75,18 @@ const faq = [
 ---
 
 <BaseLayout
-  title="Crepe sul pavimento: cosa osservare"
-  description="Crepe sul pavimento: come descrivere finitura, posizione, umidità, fotografie e cambiamenti senza concludere online che esista un cedimento."
+  title="Crepe sul pavimento: cosa fare e quando chiamare un tecnico"
+  description="Hai notato una crepa sul pavimento? Come capire se riguarda la finitura, che cosa evitare e quando chiedere una valutazione sul posto."
   canonical="https://crepeincasa.it/crepe-nei-muri/crepe-sul-pavimento/"
 >
   <article class="floor-page">
     <header class="floor-hero">
       <div class="container floor-hero-inner">
         <p class="eyebrow">Guida al contesto del pavimento</p>
-        <h1>Crepe sul pavimento: cosa osservare</h1>
+        <h1>Crepe sul pavimento: cosa fare e quando chiamare un tecnico</h1>
         <p class="floor-lead">
-          Una fessurazione sul pavimento va descritta insieme alla finitura, alla posizione e a ciò che
-          cambia intorno. Puoi documentare l’osservazione senza sollevare rivestimenti o fare prove.
+          Una fessurazione sul pavimento va capita insieme alla finitura, alla posizione e a ciò che
+          cambia intorno. Prima di rompere o riparare, conviene capire il contesto e decidere come procedere.
         </p>
         <p class="floor-meta">Tempo di lettura: circa 7 minuti · Nessuna diagnosi a distanza</p>
       </div>
@@ -97,10 +97,10 @@ const faq = [
         <p class="floor-index-title">In questa guida</p>
         <nav>
           <a href="#risposta">La risposta breve</a>
-          <a href="#contesto">Tre elementi di contesto</a>
-          <a href="#checklist">Osservazioni da raccogliere</a>
+          <a href="#contesto">Tre elementi da capire</a>
+          <a href="#checklist">Che cosa serve sapere</a>
           <a href="#foto">Come fotografare</a>
-          <a href="#attenzione">Quando fermarsi</a>
+          <a href="#attenzione">Prima la sicurezza</a>
           <a href="#faq">Domande frequenti</a>
         </nav>
       </aside>
@@ -108,21 +108,21 @@ const faq = [
       <div class="floor-content">
         <section class="floor-section floor-intro" id="risposta" aria-labelledby="answer-title">
           <p class="eyebrow">La risposta breve</p>
-          <h2 id="answer-title">La superficie del pavimento è un dato da descrivere</h2>
+          <h2 id="answer-title">Una crepa nel pavimento non indica da sola la causa</h2>
           <p>
-            Per preparare una richiesta indica che cosa vedi, dove si trova e quale finitura è coinvolta.
-            Se noti umidità, distacchi o una difficoltà nel camminare, annota anche questi elementi. Una
-            fotografia o una sensazione isolata non permettono di stabilire la causa.
+            Per spiegare bene il problema indica che cosa si vede, dove si trova e quale finitura è coinvolta.
+            Se ci sono umidità, distacchi o difficoltà nel camminare, riferisci anche questi elementi. Una
+            fotografia o una sensazione isolata non stabiliscono la causa.
           </p>
           <div class="floor-note">
-            <strong>Non confondere un’osservazione con un cedimento</strong>
+            <strong>Non confondere una sensazione con un cedimento</strong>
             <p>“Il pavimento sembra più basso vicino alla soglia” descrive ciò che percepisci. “Il terreno è ceduto” è una conclusione che richiede una verifica dell’immobile e del contesto.</p>
           </div>
         </section>
 
         <section class="floor-section" id="contesto" aria-labelledby="context-title">
           <p class="eyebrow">Prima di interpretare</p>
-          <h2 id="context-title">Tre elementi da osservare senza alterare il rivestimento</h2>
+          <h2 id="context-title">Tre elementi da capire senza alterare il rivestimento</h2>
           <p>
             Parti da ciò che è visibile dalla posizione normale. Se un mobile copre una parte della zona o
             un dettaglio non è accessibile, indicalo senza spostare oggetti pesanti per completare la verifica.
@@ -139,11 +139,10 @@ const faq = [
         </section>
 
         <section class="floor-section" id="checklist" aria-labelledby="checklist-title">
-          <p class="eyebrow">Raccogliere informazioni</p>
-          <h2 id="checklist-title">Informazioni da raccogliere per descrivere una crepa sul pavimento</h2>
+          <p class="eyebrow">Per spiegare il problema</p>
+          <h2 id="checklist-title">Che cosa serve sapere prima di chiamare un tecnico</h2>
           <p>
-            Completa i punti con parole semplici e date. Se non sai qualcosa, scrivilo: è meglio distinguere
-            un dato mancante da un’ipotesi.
+            Bastano parole semplici e date. Se non sai qualcosa, dillo: è meglio un dato mancante di un’ipotesi.
           </p>
           <ul class="floor-list">
             {checklist.map((item, index) => (
@@ -153,11 +152,11 @@ const faq = [
         </section>
 
         <section class="floor-section" id="foto" aria-labelledby="photos-title">
-          <p class="eyebrow">Documentazione non invasiva</p>
-          <h2 id="photos-title">Come fotografare il pavimento senza fare prove</h2>
+          <p class="eyebrow">Foto senza rischi</p>
+          <h2 id="photos-title">Come fotografare il pavimento senza rischiare</h2>
           <p>
-            Fotografa dalla posizione più stabile e accessibile. Le immagini servono a ricordare contesto,
-            finitura e data dell’osservazione; non sono sufficienti per valutare strati o cause non visibili.
+            Fotografa dalla posizione più stabile e accessibile. Le immagini aiutano a mostrare contesto,
+            finitura e data; non bastano per valutare strati o cause non visibili.
           </p>
           <div class="floor-cards">
             {photoSteps.map((item) => (
@@ -175,7 +174,7 @@ const faq = [
 
         <section class="floor-section floor-alert" id="attenzione" aria-labelledby="attention-title">
           <p class="eyebrow">Prima la sicurezza</p>
-          <h2 id="attention-title">Quando interrompere l’osservazione</h2>
+          <h2 id="attention-title">Quando fermarti</h2>
           <p>
             Se la superficie rende rischioso il passaggio o per documentarla dovresti spostare elementi
             pesanti, fermati. In condizioni che potrebbero richiedere attenzione urgente, evita la zona se
@@ -201,18 +200,17 @@ const faq = [
 
         <section class="floor-related" aria-labelledby="related-title">
           <p class="eyebrow">Continua il percorso</p>
-          <h2 id="related-title">Dalle osservazioni alla richiesta</h2>
+          <h2 id="related-title">Capire il problema e chiedere il confronto</h2>
           <p>
-            Puoi approfondire come documentare una fessurazione, preparare le informazioni per un tecnico o
-            usare il modulo per creare un riepilogo neutro della situazione osservata.
+            Puoi approfondire come usare le fotografie oppure chiedere direttamente un confronto sul posto.
           </p>
           <div class="floor-links">
-            <a href="/pavimento-che-sprofonda/">Pavimento che sprofonda: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/pavimento-che-sprofonda/">Pavimento che sprofonda: come orientarsi <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/come-fotografare-monitorare-crepa/">Come fotografare e monitorare una crepa <span aria-hidden="true">→</span></a>
-            <a href="/crepe-nei-muri/informazioni-per-tecnico/">Quali informazioni preparare per un tecnico <span aria-hidden="true">→</span></a>
-            <a href="/cedimento-fondazioni/">Cedimento delle fondazioni: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/informazioni-per-tecnico/">Che cosa dire al tecnico <span aria-hidden="true">→</span></a>
+            <a href="/cedimento-fondazioni/">Cedimento delle fondazioni: come orientarsi <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/interne-o-esterne/">Crepe interne o esterne <span aria-hidden="true">→</span></a>
-            <a href="/richiedi-valutazione/">Prepara la tua richiesta <span aria-hidden="true">→</span></a>
+            <a href="/richiedi-valutazione/">Chiedi una valutazione <span aria-hidden="true">→</span></a>
           </div>
         </section>
       </div>

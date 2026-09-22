@@ -2,51 +2,51 @@ export const supportingGuides = [
   {
     href: '/crepe-nei-muri/cosa-fare/',
     title: 'Cosa fare dopo aver notato una crepa',
-    description: 'Un percorso pratico per osservare, annotare e documentare senza improvvisare.',
+    description: 'Cosa fare subito, cosa evitare e quando chiamare un tecnico.',
   },
   {
     href: '/crepe-nei-muri/quando-chiedere-verifica/',
     title: 'Quando chiedere una verifica',
-    description: 'Cambiamenti, contesto e informazioni da preparare prima di parlare con un professionista.',
+    description: 'I casi in cui conviene chiedere un sopralluogo e come spiegare il problema.',
   },
   {
     href: '/crepe-nei-muri/casa-nuova-dopo-lavori/',
     title: 'Casa nuova o dopo lavori',
-    description: 'Cronologia, interventi recenti e documenti utili da raccogliere.',
+    description: 'Come distinguere il problema dai lavori recenti e capire come muoversi.',
   },
   {
     href: '/crepe-nei-muri/crepe-vicino-porte-finestre/',
     title: 'Crepe vicino a porte e finestre',
-    description: 'Come descrivere posizione, apertura e contesto senza dedurre la causa.',
+    description: 'Che cosa può significare una crepa vicino a un’apertura e quando farla valutare.',
   },
   {
     href: '/crepe-nei-muri/come-fotografare-monitorare-crepa/',
     title: 'Come fotografare e monitorare una crepa',
-    description: 'Foto, date e osservazioni per confrontare il contesto senza fare diagnosi.',
+    description: 'Come usare foto e date per spiegare meglio il problema, senza improvvisare misure.',
   },
   {
     href: '/crepe-nei-muri/informazioni-per-tecnico/',
-    title: 'Quali informazioni preparare per un tecnico',
-    description: 'Un elenco neutro di contesto, cronologia, foto e domande da discutere con un professionista.',
+    title: 'Che cosa dire al tecnico',
+    description: 'Il contesto, le fotografie e la domanda principale da portare al confronto.',
   },
   {
     href: '/crepe-nei-muri/crepe-che-cambiano-nel-tempo/',
     title: 'Crepe che cambiano nel tempo',
-    description: 'Come confrontare osservazioni in date diverse e descrivere i cambiamenti senza diagnosticare.',
+    description: 'Come raccontare un cambiamento nel tempo senza trasformarlo in una diagnosi.',
   },
   {
     href: '/crepe-nei-muri/interne-o-esterne/',
     title: 'Crepe nei muri interni o esterni',
-    description: 'Come distinguere i contesti osservabili tra interno, facciata e superfici corrispondenti.',
+    description: 'Che cosa cambia tra interno, facciata e superfici corrispondenti.',
   },
   {
     href: '/crepe-nei-muri/crepe-sul-soffitto/',
     title: 'Crepe sul soffitto',
-    description: 'Come osservare posizione, superficie e contesto del soffitto senza fare prove rischiose.',
+    description: 'Cosa fare davanti a una crepa sul soffitto e quando chiamare un tecnico.',
   },
   {
     href: '/crepe-nei-muri/crepe-sul-pavimento/',
     title: 'Crepe sul pavimento',
-    description: 'Come descrivere finitura, posizione, umidità e cambiamenti senza dedurre un cedimento.',
+    description: 'Come capire se il problema riguarda la finitura e quando chiedere un sopralluogo.',
   },
 ] as const;
