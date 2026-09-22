@@ -6,64 +6,39 @@ const contexts = [
   {
     number: '01',
     title: 'Acqua e drenaggio',
-    text: 'Riferisci perdite, ristagni, infiltrazioni, nuovi ruscellamenti o cambiamenti nello smaltimento dell’acqua. Sono elementi da mettere in relazione, non una spiegazione già dimostrata.',
+    text: 'Una perdita, un ristagno, un nuovo ruscellamento o un cambiamento nel drenaggio possono essere collegati al problema. Da soli, però, non spiegano che cosa sia successo.',
   },
   {
     number: '02',
-    title: 'Pendenza e terreno',
-    text: 'Indica pendenze, avvallamenti, rigonfiamenti, fessure o piccoli distacchi visibili dalla posizione sicura, senza avvicinarti a zone instabili.',
+    title: 'La forma del terreno',
+    text: 'Un avvallamento, una fessura, un rigonfiamento o un piccolo distacco possono richiedere controlli diversi. Da una fotografia non si può stabilire quale parte sia coinvolta.',
   },
   {
     number: '03',
     title: 'Lavori recenti',
-    text: 'Scavi, muri, strade, modifiche al giardino o interventi sugli edifici vicini possono aiutare a ricostruire la storia, senza attribuire subito una causa.',
+    text: 'Scavi, muri, strade, modifiche al giardino o lavori sugli edifici vicini sono informazioni da raccontare al tecnico. La loro presenza non dimostra da sola una causa.',
   },
 ];
 
 const checklist = [
-  'dove si trova l’area osservata rispetto alla casa, ai confini, a muri, strade, pendii o corsi d’acqua;',
-  'che cosa vedi sul terreno: avvallamenti, fessure, rigonfiamenti, piccoli distacchi o accumuli;',
-  'quando hai notato il cambiamento e se esistono fotografie o immagini precedenti dello stesso punto;',
-  'pioggia intensa, perdite, ristagni, lavori di drenaggio o altri cambiamenti dell’acqua ricordati nello stesso periodo;',
-  'scavi, costruzioni, demolizioni, modifiche del pendio o lavori eseguiti vicino alla proprietà;',
-  'eventuali effetti osservati nell’edificio, come fessure o porte che funzionano diversamente, sempre con posizione e data.',
-];
-
-const comparisonSteps = [
-  {
-    title: 'Individua un riferimento',
-    text: 'Usa un albero, un muro, una recinzione o un altro elemento stabile per riconoscere il punto nelle fotografie. Non entrare in aree che non puoi raggiungere in sicurezza.',
-  },
-  {
-    title: 'Confronta date diverse',
-    text: 'Conserva immagini originali e note datate. Luce, vegetazione, pioggia e prospettiva possono cambiare l’aspetto: indica anche quando il confronto non è preciso.',
-  },
-  {
-    title: 'Collega il contesto',
-    text: 'Annota se nello stesso periodo sono comparsi acqua, lavori, fessure nell’edificio o altri cambiamenti, senza trasformare la coincidenza in una causa.',
-  },
+  'Dove si trova: indica la posizione rispetto alla casa, a un muro, a una recinzione, a una strada o a un pendio;',
+  'Che cosa noti: descrivi avvallamenti, fessure, rigonfiamenti, ristagni o altri cambiamenti visibili;',
+  'Da quando succede: indica quando te ne sei accorto e se nello stesso periodo ricordi piogge intense, perdite, lavori o cambiamenti dell’acqua;',
 ];
 
 const questions = [
   {
-    title: 'Quale area va esaminata?',
-    text: 'Chiedi quali parti del terreno, dell’edificio e delle opere vicine siano pertinenti al caso concreto e quali informazioni manchino.',
+    title: 'Quale area deve essere controllata?',
+    text: 'Chiedi se il controllo deve riguardare soltanto il terreno oppure anche la casa, i muri, le strade, gli scarichi o le opere vicine.',
   },
   {
-    title: 'Quali verifiche servono?',
-    text: 'Domanda quali rilievi, documenti o approfondimenti possano aiutare a comprendere il contesto, senza partire da una tecnica di intervento.',
+    title: 'Quali verifiche servono per capire il problema?',
+    text: 'Chiedi quali controlli siano necessari e che cosa possano chiarire. Non scegliere un intervento prima di avere capito il contesto.',
   },
   {
-    title: 'Come gestire l’acqua?',
-    text: 'Riferisci perdite, drenaggi e ristagni e chiedi se siano necessari controlli specifici. Non modificare scarichi o pendenze come prova domestica.',
+    title: 'Che cosa fare con l’acqua?',
+    text: 'Riferisci perdite, drenaggi e ristagni. Non modificare scarichi, pendenze o canalizzazioni come prova: chiedi prima quali controlli servono.',
   },
-];
-
-const attentionPoints = [
-  'fessure o distacchi del terreno vicino a un pendio, a un bordo o a una struttura;',
-  'acqua che scorre in modo anomalo, terreno molto saturo o una zona che sembra muoversi;',
-  'muri, recinzioni, alberi o altri elementi che appaiono inclinati o instabili;',
-  'un’area che richiederebbe di scavalcare, scavare, spostare materiali o avvicinarsi a un bordo.',
 ];
 
 const faq = [
@@ -85,26 +60,27 @@ const faq = [
   },
   {
     question: 'Quando devo coinvolgere le autorità?',
-    answer: 'Se osservi condizioni che potrebbero richiedere attenzione urgente, non avvicinarti e chiedi tempestivamente supporto qualificato o alle autorità competenti. Le indicazioni locali dipendono dal tipo di fenomeno e dal contesto.',
+    answer: 'Se noti condizioni che potrebbero richiedere attenzione urgente, non avvicinarti e chiedi tempestivamente supporto qualificato o alle autorità competenti. Le indicazioni locali dipendono dal tipo di fenomeno e dal contesto.',
   },
 ];
 ---
 
 <BaseLayout
-  title="Cedimento del terreno: cosa fare e quando chiedere un sopralluogo"
+  title="Cedimento del terreno: cosa fare e quando chiamare un tecnico"
   description="Il terreno è cambiato? Come inquadrare acqua, pendenze e lavori e quando chiedere una valutazione sul posto senza improvvisare diagnosi."
   canonical="https://crepeincasa.it/cedimento-terreno/"
 >
   <article class="ground-page">
     <header class="ground-hero">
       <div class="container ground-hero-inner">
-        <p class="eyebrow">Guida al contesto del terreno</p>
-        <h1>Cedimento del terreno: cosa fare prima di una verifica</h1>
+        <p class="eyebrow">Se il terreno è cambiato vicino a casa</p>
+        <h1>Cedimento del terreno: cosa fare e quando chiamare un tecnico</h1>
         <p class="ground-lead">
-          “Cedimento del terreno” descrive una possibilità da esaminare, non un fatto che si possa confermare da una
-          fotografia o da una crepa. Prima di modificare l’area, conviene capire che cosa è cambiato e perché serve un sopralluogo.
+          Se noti un avvallamento, una fessura o un cambiamento nel terreno vicino a casa, non scavare, livellare o
+          riempire subito. Se il cambiamento è rapido, vicino a un pendio o associato ad acqua, muri o distacchi,
+          evita la zona e chiedi supporto qualificato.
         </p>
-        <p class="ground-meta">Tempo di lettura: circa 8 minuti · Nessuna diagnosi a distanza</p>
+        <p class="ground-meta">Guida pratica · Nessuna diagnosi a distanza</p>
       </div>
     </header>
 
@@ -112,52 +88,63 @@ const faq = [
       <aside class="ground-index" aria-label="In questa guida">
         <p class="ground-index-title">In questa guida</p>
         <nav>
-          <a href="#risposta">La risposta breve</a>
-          <a href="#contesto">Tre elementi da capire</a>
-          <a href="#checklist">Che cosa serve sapere</a>
-          <a href="#confronto">Come ricostruire la storia</a>
-          <a href="#verifica">Prima di valutare lavori</a>
-          <a href="#attenzione">Prima la sicurezza</a>
+          <a href="#risposta">La prima cosa da fare</a>
+          <a href="#attenzione">Se la zona non è sicura</a>
+          <a href="#contesto">Che cosa può essere cambiato</a>
+          <a href="#checklist">Che cosa dire al tecnico</a>
+          <a href="#verifica">Prima di fare lavori</a>
           <a href="#faq">Domande frequenti</a>
-          <a href="#fonti">Fonti istituzionali</a>
+          <a href="#fonti">Fonti per approfondire</a>
         </nav>
       </aside>
 
       <div class="ground-content">
         <section class="ground-section ground-intro" id="risposta" aria-labelledby="answer-title">
-          <p class="eyebrow">La risposta breve</p>
-          <h2 id="answer-title">Una variazione del terreno non dimostra da sola un cedimento</h2>
+          <p class="eyebrow">La prima cosa da fare</p>
+          <h2 id="answer-title">Prima di intervenire, racconta che cosa è cambiato</h2>
           <p>
-            Avvallamenti, fessure, ristagni e piccoli cambiamenti possono essere osservazioni utili, ma non dicono
-            da soli quale fenomeno sia presente. Anche il rapporto con la casa, le fondazioni o le opere vicine va
-            valutato sul posto.
+            Un avvallamento, una fessura o un ristagno possono avere cause diverse. Da una fotografia non si può
+            capire se il problema riguarda soltanto il terreno, la casa, un muro, una strada o il modo in cui scorre
+            l’acqua.
           </p>
           <p>
-            Una cronologia aiuta a capire che cosa è cambiato dopo piogge, perdite, scavi o lavori. Se non conosci
-            la causa, non devi inventarla: il sopralluogo serve proprio a chiarire il contesto.
+            Non devi individuare la causa da solo. Indica dove si trova il cambiamento, da quando lo noti e che cosa
+            è successo nello stesso periodo: un tecnico può poi stabilire quali parti controllare.
           </p>
           <div class="ground-note">
-            <strong>Una variazione non è una diagnosi</strong>
-            <p>“Dopo una settimana di piogge vedo un avvallamento vicino alla recinzione” descrive ciò che hai visto. “Il terreno sta cedendo” richiede una verifica del terreno e del contesto reale.</p>
+            <strong>Un esempio concreto</strong>
+            <p>Puoi dire: “Dopo una settimana di piogge è comparso un avvallamento vicino alla recinzione”. È più utile indicare luogo, periodo e cambiamento che concludere già che “il terreno sta cedendo”.</p>
           </div>
         </section>
 
+        <section class="ground-section ground-alert ground-alert-top" id="attenzione" aria-labelledby="attention-title">
+          <p class="eyebrow">Se la zona non è sicura</p>
+          <h2 id="attention-title">Non entrare e non fare prove</h2>
+          <p>
+            Evita bordi, pendii, scavi e aree in cui il terreno sembra muoversi o l’acqua scorre in modo anomalo.
+            Non usare scale, attrezzi o veicoli per raggiungere un punto che non puoi vedere o raggiungere in sicurezza.
+          </p>
+          <p>
+            Se ci sono muri, recinzioni, alberi o altre strutture che sembrano instabili, allontanati e rivolgiti
+            tempestivamente a un professionista qualificato o alle autorità competenti. Questo sito non è un servizio di emergenza.
+          </p>
+        </section>
+
         <NextStep
-          title="Vuoi capire come procedere?"
-          text="Racconta posizione, date, acqua, lavori e cambiamenti. Non devi spiegare online quale sia la causa: puoi chiedere un confronto sul posto."
-          primary={{ href: '/richiedi-valutazione/', label: 'Chiedi una valutazione' }}
+          title="Vuoi capire qual è il prossimo passo?"
+          text="Non devi stabilire la causa né scegliere un intervento. Racconta dove si trova il cambiamento e da quando lo noti: ti sarà più facile capire come procedere."
+          primary={{ href: '/richiedi-valutazione/', label: 'Racconta il problema' }}
           secondaryLinks={[
             { href: '/crepe-nei-muri/informazioni-per-tecnico/', label: 'Che cosa dire al tecnico' },
-            { href: '/crepe-nei-muri/crepe-che-cambiano-nel-tempo/', label: 'Come descrivere i cambiamenti nel tempo' },
           ]}
         />
 
         <section class="ground-section" id="contesto" aria-labelledby="context-title">
-          <p class="eyebrow">Possibili elementi di contesto</p>
-          <h2 id="context-title">Tre elementi da capire senza modificare il terreno</h2>
+          <p class="eyebrow">Possibili cause e contesti</p>
+          <h2 id="context-title">Che cosa può essere cambiato?</h2>
           <p>
-            Parti da ciò che puoi vedere dalla posizione normale e accessibile. Non rimuovere terra, vegetazione o
-            materiali per rendere più leggibile un dettaglio.
+            Da una pagina web non si può stabilire la causa. Durante un sopralluogo, invece, il tecnico può verificare
+            il terreno insieme alla casa, alle opere vicine e al percorso dell’acqua.
           </p>
           <div class="ground-contexts">
             {contexts.map((item) => (
@@ -171,11 +158,11 @@ const faq = [
         </section>
 
         <section class="ground-section" id="checklist" aria-labelledby="checklist-title">
-          <p class="eyebrow">Per spiegare il problema</p>
-          <h2 id="checklist-title">Che cosa serve sapere prima di chiamare un tecnico</h2>
+          <p class="eyebrow">Quando chiami un tecnico</p>
+          <h2 id="checklist-title">Racconta queste tre cose</h2>
           <p>
-            Bastano posizione, data e cambiamenti in parole semplici. Se una parte non è visibile o non è sicura da
-            raggiungere, dillo senza cercare di completare l’ispezione.
+            Non devi conoscere il tipo di terreno o la causa del problema. Bastano il luogo, quello che noti e il
+            periodo in cui è iniziato.
           </p>
           <ul class="ground-list">
             {checklist.map((item, index) => (
@@ -183,35 +170,17 @@ const faq = [
             ))}
           </ul>
           <div class="ground-limit">
-            <strong>Non confondere vicinanza e causa</strong>
-            <p>“La fessura è a due metri dal muro” indica una posizione. “La fessura dipende dalle fondazioni” è un’interpretazione che richiede dati e verifica.</p>
+            <strong>Non devi sapere quale sia la causa</strong>
+            <p>Dire “la fessura è a due metri dal muro” indica una posizione. Stabilire se dipende dalle fondazioni o dal terreno spetta al tecnico.</p>
           </div>
-        </section>
-
-        <section class="ground-section" id="confronto" aria-labelledby="comparison-title">
-          <p class="eyebrow">Cronologia prudente</p>
-          <h2 id="comparison-title">Ricostruisci la storia senza fare prove</h2>
-          <div class="ground-steps">
-            {comparisonSteps.map((item, index) => (
-              <article class="ground-step">
-                <p class="ground-step-number">{String(index + 1).padStart(2, '0')}</p>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-          <p>
-            Se il cambiamento interessa anche l’edificio, riferisci i due aspetti insieme. La sequenza aiuta a capire
-            il contesto, ma non stabilisce da sola se terreno e fondazioni abbiano una causa comune.
-          </p>
         </section>
 
         <section class="ground-section" id="verifica" aria-labelledby="verification-title">
-          <p class="eyebrow">Valutazione professionale</p>
-          <h2 id="verification-title">Che cosa capire prima di valutare lavori</h2>
+          <p class="eyebrow">Prima di fare lavori</p>
+          <h2 id="verification-title">Che cosa chiedere al tecnico</h2>
           <p>
-            Il primo obiettivo è capire che cosa è cambiato e quale parte del luogo va valutata. Non serve proporre
-            un rimedio o scegliere in anticipo tra opere sul terreno, fondazioni o drenaggi.
+            Prima di scavare, modificare il drenaggio o scegliere un consolidamento, chiedi che cosa è stato individuato
+            e quale parte del terreno o dell’immobile deve essere controllata.
           </p>
           <div class="ground-questions">
             {questions.map((item) => (
@@ -222,26 +191,8 @@ const faq = [
             ))}
           </div>
           <p>
-            Un professionista qualificato può indicare quali controlli servono e se siano necessari approfondimenti.
-            Il modulo serve a raccontare il problema e non sostituisce un sopralluogo.
-          </p>
-        </section>
-
-        <section class="ground-section ground-alert" id="attenzione" aria-labelledby="attention-title">
-          <p class="eyebrow">Prima la sicurezza</p>
-          <h2 id="attention-title">Quando fermarti</h2>
-          <p>
-            Non avvicinarti a bordi, pendii, scavi o aree in cui il terreno appare instabile. Non usare scale,
-            attrezzi o veicoli per raggiungere un punto non accessibile.
-          </p>
-          <ul class="ground-list ground-list-plain">
-            {attentionPoints.map((item) => <li><span aria-hidden="true">—</span><p>{item}</p></li>)}
-          </ul>
-          <p>
-            Se noti variazioni del terreno o piccoli movimenti vicino alla tua abitazione, il Dipartimento della
-            Protezione Civile indica di segnalarli alle autorità competenti. In condizioni che potrebbero richiedere
-            attenzione urgente, allontanati se necessario e chiedi tempestivamente supporto qualificato.
-            Approfondisci le <a href="https://rischi.protezionecivile.gov.it/it/meteo-idro/sei-preparato/" target="_blank" rel="noreferrer">indicazioni di autoprotezione per il rischio meteo-idro</a>.
+            Un professionista qualificato può spiegare quali controlli servono e se sono necessari ulteriori
+            approfondimenti. Il modulo serve a raccontare il problema, non sostituisce un sopralluogo e non sceglie i lavori al posto tuo.
           </p>
         </section>
 
@@ -260,10 +211,10 @@ const faq = [
 
         <section class="ground-sources" id="fonti" aria-labelledby="sources-title">
           <p class="eyebrow">Per approfondire</p>
-          <h2 id="sources-title">Fonti istituzionali su terreno e instabilità</h2>
+          <h2 id="sources-title">Fonti per approfondire</h2>
           <p>
-            Le fonti seguenti spiegano aspetti generali di prevenzione e gestione del rischio. Non sono strumenti per
-            diagnosticare un lotto o un edificio a distanza.
+            Queste fonti spiegano aspetti generali di prevenzione e gestione del rischio. Non permettono di capire a
+            distanza che cosa stia succedendo al tuo terreno e non sostituiscono una valutazione professionale.
           </p>
           <ul>
             <li><a href="https://rischi.protezionecivile.gov.it/it/meteo-idro/sei-preparato/" target="_blank" rel="noreferrer">Dipartimento della Protezione Civile — Rischio meteo-idro: sei preparato?</a></li>
@@ -274,14 +225,12 @@ const faq = [
 
         <section class="ground-related" aria-labelledby="related-title">
           <p class="eyebrow">Continua il percorso</p>
-          <h2 id="related-title">Dal terreno all’edificio</h2>
+          <h2 id="related-title">Se vuoi continuare a capire il problema</h2>
           <p>
-            Puoi approfondire il rapporto con le fondazioni, descrivere una fessurazione sul pavimento o capire
-            quale professionista contattare.
+            Puoi leggere come parlare con un tecnico oppure raccontarci direttamente che cosa sta succedendo.
           </p>
           <div class="ground-links">
             <a href="/cedimento-differenziale/">Cedimento differenziale: come capirlo <span aria-hidden="true">→</span></a>
-            <a href="/crepe-nei-muri/crepe-che-cambiano-nel-tempo/">Crepe che cambiano nel tempo <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/informazioni-per-tecnico/">Che cosa dire al tecnico <span aria-hidden="true">→</span></a>
             <a href="/richiedi-valutazione/">Chiedi una valutazione <span aria-hidden="true">→</span></a>
           </div>
@@ -295,7 +244,7 @@ const faq = [
   .ground-page { background: var(--paper); }
   .ground-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
   .ground-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
-  .ground-hero h1 { max-width: 14ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .ground-hero h1 { max-width: 17ch; font-size: clamp(2.8rem, 6vw, 5.4rem); }
   .ground-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
   .ground-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
   .ground-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
@@ -325,6 +274,7 @@ const faq = [
   .ground-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
   .ground-list-plain li { grid-template-columns: 1rem 1fr; }
   .ground-alert { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .ground-alert-top { margin-top: 2.5rem; }
   .ground-alert + .ground-section { margin-top: clamp(1rem, 3vw, 2.5rem); }
   .ground-faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
   .ground-faq-list details { border-bottom: 1px solid var(--line); }
@@ -347,7 +297,7 @@ const faq = [
   }
 
   @media (max-width: 620px) {
-    .ground-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .ground-hero h1 { font-size: clamp(2.5rem, 12vw, 4.2rem); }
     .ground-links { grid-template-columns: 1fr; }
   }
 </style>
