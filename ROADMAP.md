@@ -254,7 +254,7 @@ individuale.
 - [ ] contenuti sottili e sovrapposizione d'intento;
 - [ ] title e meta description duplicati;
 - [ ] prudenza tecnica;
-- [ ] internal linking;
+- [x] internal linking;
 - [ ] Core Web Vitals e responsive;
 - [ ] conversioni e qualità dei lead;
 - [ ] aggiornamento trimestrale della mappa delle query;
@@ -287,3 +287,7 @@ italiano più diretto.
 
 Il 2026-09-22 sono stati rinnovati il marchio della testata, l'immagine hero
 della homepage e l'icona del sito.
+
+Il 2026-09-22 è stata rivista la prima parte del funnel sulle cinque pagine
+prioritarie emerse da Search Console: blocco contestuale per il prossimo passo,
+link pratici verso il modulo e riduzione dei collegamenti correlati meno utili.

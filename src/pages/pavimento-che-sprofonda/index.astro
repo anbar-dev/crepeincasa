@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import NextStep from '../../components/NextStep.astro';
 
 const contexts = [
   {
@@ -144,6 +145,16 @@ const faq = [
           </div>
         </section>
 
+        <NextStep
+          title="Hai già raccolto alcune osservazioni?"
+          text="Non devi stabilire se il pavimento stia cedendo né scegliere un intervento. Puoi ordinare posizione, finitura, cronologia, acqua e lavori in un riepilogo neutro."
+          primary={{ href: '/richiedi-valutazione/', label: 'Prepara il riepilogo' }}
+          secondaryLinks={[
+            { href: '/crepe-nei-muri/informazioni-per-tecnico/', label: 'Quali informazioni preparare per un tecnico' },
+            { href: '/crepe-nei-muri/come-fotografare-monitorare-crepa/', label: 'Come documentare foto e date' },
+          ]}
+        />
+
         <section class="sinking-floor-section" id="contesto" aria-labelledby="context-title">
           <p class="eyebrow">Possibili elementi di contesto</p>
           <h2 id="context-title">Tre aree da osservare senza rimuovere la superficie</h2>
@@ -272,11 +283,9 @@ const faq = [
             guide e preparare un riepilogo neutro per un professionista.
           </p>
           <div class="sinking-floor-links">
-            <a href="/consolidamento-fondazioni/">Consolidamento fondazioni: quando si valuta <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/crepe-sul-pavimento/">Crepe sul pavimento: cosa osservare <span aria-hidden="true">→</span></a>
-            <a href="/cedimento-fondazioni/">Cedimento delle fondazioni: cosa osservare <span aria-hidden="true">→</span></a>
-            <a href="/cedimento-differenziale/">Cedimento differenziale: cosa osservare <span aria-hidden="true">→</span></a>
-            <a href="/casa-che-cede/">Casa che cede: cosa osservare <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/informazioni-per-tecnico/">Informazioni da preparare per un tecnico <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/come-fotografare-monitorare-crepa/">Come fotografare e monitorare una crepa <span aria-hidden="true">→</span></a>
             <a href="/richiedi-valutazione/">Prepara la tua richiesta <span aria-hidden="true">→</span></a>
           </div>
         </section>

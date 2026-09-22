@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NextStep from '../../../components/NextStep.astro';
 
 const informationBlocks = [
   {
@@ -122,6 +123,16 @@ const faq = [
           </div>
         </section>
 
+        <NextStep
+          title="Puoi inviare anche un riepilogo ancora incompleto"
+          text="Non serve avere ogni documento o conoscere termini tecnici. Indica ciò che hai osservato, ciò che ricordi e ciò che non sai: il modulo aiuta a ordinare le informazioni disponibili."
+          primary={{ href: '/richiedi-valutazione/', label: 'Prepara la tua richiesta' }}
+          secondaryLinks={[
+            { href: '/crepe-nei-muri/come-fotografare-monitorare-crepa/', label: 'Come fotografare e monitorare una crepa' },
+            { href: '/crepe-nei-muri/quando-chiedere-verifica/', label: 'Quando chiedere una verifica' },
+          ]}
+        />
+
         <section class="brief-section" id="blocchi" aria-labelledby="blocks-title">
           <p class="eyebrow">Un metodo semplice</p>
           <h2 id="blocks-title">Raccogli le informazioni in quattro blocchi</h2>
@@ -224,7 +235,7 @@ const faq = [
           <div class="brief-links">
             <a href="/crepe-nei-muri/come-fotografare-monitorare-crepa/">Come fotografare e monitorare una crepa <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/quando-chiedere-verifica/">Quando chiedere una verifica <span aria-hidden="true">→</span></a>
-            <a href="/crepe-nei-muri/">Guida generale sulle crepe nei muri <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/cosa-fare/">Cosa fare dopo aver notato una crepa <span aria-hidden="true">→</span></a>
             <a href="/richiedi-valutazione/">Prepara la tua richiesta <span aria-hidden="true">→</span></a>
           </div>
         </section>

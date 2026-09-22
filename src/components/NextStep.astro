@@ -1,0 +1,104 @@
+---
+interface LinkItem {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  text: string;
+  primary: LinkItem;
+  secondaryLinks: LinkItem[];
+}
+
+const {
+  eyebrow = 'Il prossimo passo',
+  title,
+  text,
+  primary,
+  secondaryLinks,
+} = Astro.props;
+---
+
+<section class="next-step" aria-labelledby="next-step-title">
+  <div class="next-step-copy">
+    <p class="eyebrow">{eyebrow}</p>
+    <h2 id="next-step-title">{title}</h2>
+    <p>{text}</p>
+  </div>
+  <div class="next-step-actions">
+    <a class="button button-primary" href={primary.href}>{primary.label} <span aria-hidden="true">→</span></a>
+    <nav aria-label="Approfondimenti utili prima della richiesta">
+      {secondaryLinks.map((link) => <a href={link.href}>{link.label} <span aria-hidden="true">→</span></a>)}
+    </nav>
+  </div>
+</section>
+
+<style>
+  .next-step {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(13rem, 0.75fr);
+    gap: clamp(1.5rem, 5vw, 4rem);
+    align-items: center;
+    margin-top: clamp(2rem, 5vw, 3.5rem);
+    padding: clamp(2rem, 5vw, 3.5rem);
+    border-radius: 1rem;
+    background: var(--brand-dark);
+  }
+
+  .next-step h2 {
+    max-width: 18ch;
+    color: var(--paper);
+    font-size: clamp(1.9rem, 4vw, 3.2rem);
+  }
+
+  .next-step .eyebrow { color: #e6a47c; }
+
+  .next-step-copy > p:not(.eyebrow) {
+    max-width: 38rem;
+    margin: 1.1rem 0 0;
+    color: #cbd8cf;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .next-step-actions {
+    display: grid;
+    justify-items: start;
+    gap: 1.25rem;
+  }
+
+  .next-step-actions .button-primary {
+    background: var(--paper);
+    color: var(--brand-dark);
+  }
+
+  .next-step-actions .button-primary:hover,
+  .next-step-actions .button-primary:focus-visible {
+    background: #fffefa;
+  }
+
+  .next-step-actions nav {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .next-step-actions nav a {
+    color: #f1c4a7;
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-underline-offset: 0.2em;
+  }
+
+  .next-step-actions nav a:hover,
+  .next-step-actions nav a:focus-visible {
+    color: var(--paper);
+  }
+
+  @media (max-width: 620px) {
+    .next-step { grid-template-columns: 1fr; }
+    .next-step-actions { justify-items: stretch; }
+    .next-step-actions .button { width: 100%; }
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import NextStep from '../../../components/NextStep.astro';
 
 const ceilingContexts = [
   {
@@ -120,6 +121,16 @@ const faq = [
           </div>
         </section>
 
+        <NextStep
+          title="Hai già descritto quello che riesci a vedere?"
+          text="Puoi fermarti alle osservazioni accessibili, preparare qualche fotografia sicura e inviare un riepilogo senza stabilire la causa della fessurazione."
+          primary={{ href: '/richiedi-valutazione/', label: 'Prepara la tua richiesta' }}
+          secondaryLinks={[
+            { href: '/crepe-nei-muri/come-fotografare-monitorare-crepa/', label: 'Come fotografare e monitorare una crepa' },
+            { href: '/crepe-nei-muri/informazioni-per-tecnico/', label: 'Quali informazioni preparare per un tecnico' },
+          ]}
+        />
+
         <section class="ceiling-section" id="contesto" aria-labelledby="context-title">
           <p class="eyebrow">Prima di interpretare</p>
           <h2 id="context-title">Tre elementi da osservare dalla posizione più sicura</h2>
@@ -208,7 +219,7 @@ const faq = [
           <div class="ceiling-links">
             <a href="/crepe-nei-muri/come-fotografare-monitorare-crepa/">Come fotografare e monitorare una crepa <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/informazioni-per-tecnico/">Quali informazioni preparare per un tecnico <span aria-hidden="true">→</span></a>
-            <a href="/crepe-nei-muri/interne-o-esterne/">Crepe interne o esterne <span aria-hidden="true">→</span></a>
+            <a href="/crepe-nei-muri/quando-chiedere-verifica/">Quando chiedere una verifica <span aria-hidden="true">→</span></a>
             <a href="/richiedi-valutazione/">Prepara la tua richiesta <span aria-hidden="true">→</span></a>
           </div>
         </section>
