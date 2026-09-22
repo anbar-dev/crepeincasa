@@ -25,6 +25,63 @@ const observationPoints = [
   'Quando è comparsa e se nel tempo sembra cambiata.',
   'Eventuali lavori recenti, infiltrazioni o cambiamenti nell’ambiente.',
 ];
+
+const topicGroups = [
+  {
+    id: 'crepe',
+    eyebrow: 'Crepe e fessurazioni',
+    title: 'Capire che cosa osservare',
+    text: 'Guide per descrivere posizione, contesto e cambiamenti senza attribuire una causa a distanza.',
+    links: [
+      { href: '/crepe-nei-muri/', label: 'Guida generale alle crepe nei muri' },
+      { href: '/crepe-nei-muri/cosa-fare/', label: 'Cosa fare dopo aver notato una crepa' },
+      { href: '/crepe-nei-muri/quando-chiedere-verifica/', label: 'Quando chiedere una verifica' },
+      { href: '/crepe-nei-muri/casa-nuova-dopo-lavori/', label: 'Crepe in casa nuova o dopo lavori' },
+      { href: '/crepe-nei-muri/crepe-vicino-porte-finestre/', label: 'Crepe vicino a porte e finestre' },
+      { href: '/crepe-nei-muri/interne-o-esterne/', label: 'Crepe interne o esterne' },
+      { href: '/crepe-nei-muri/crepe-sul-soffitto/', label: 'Crepe sul soffitto' },
+      { href: '/crepe-nei-muri/crepe-sul-pavimento/', label: 'Crepe sul pavimento' },
+    ],
+  },
+  {
+    id: 'documentare',
+    eyebrow: 'Documentare',
+    title: 'Raccogliere informazioni utili',
+    text: 'Foto, cronologia e domande da preparare prima di un confronto sul posto.',
+    links: [
+      { href: '/crepe-nei-muri/come-fotografare-monitorare-crepa/', label: 'Come fotografare e monitorare una crepa' },
+      { href: '/crepe-nei-muri/crepe-che-cambiano-nel-tempo/', label: 'Crepe che cambiano nel tempo' },
+      { href: '/crepe-nei-muri/informazioni-per-tecnico/', label: 'Informazioni da preparare per un tecnico' },
+    ],
+  },
+  {
+    id: 'contesto',
+    eyebrow: 'Terreno e fondazioni',
+    title: 'Quando l’osservazione riguarda l’immobile',
+    text: 'Guide su terreno, fondazioni, pavimenti e cambiamenti da descrivere con prudenza.',
+    links: [
+      { href: '/cedimento-fondazioni/', label: 'Possibili segnali da approfondire nelle fondazioni' },
+      { href: '/cedimento-terreno/', label: 'Cambiamenti del terreno da osservare' },
+      { href: '/cedimento-differenziale/', label: 'Differenze osservate tra parti dell’immobile' },
+      { href: '/casa-che-cede/', label: 'Quando una casa sembra cedere' },
+      { href: '/pavimento-che-sprofonda/', label: 'Quando il pavimento sembra sprofondare' },
+    ],
+  },
+  {
+    id: 'approfondimenti',
+    eyebrow: 'Approfondimenti',
+    title: 'Tecniche e fattori di costo',
+    text: 'Vocabolario, verifiche e criteri generali, senza scegliere online una tecnica per il singolo caso.',
+    links: [
+      { href: '/consolidamento-fondazioni/', label: 'Che cosa si intende per consolidamento' },
+      { href: '/confronto-tecniche-fondazioni/', label: 'Confronto tra tecniche per le fondazioni' },
+      { href: '/sottofondazioni/', label: 'Sottofondazioni: significato e verifiche' },
+      { href: '/micropali-fondazioni/', label: 'Micropali per le fondazioni' },
+      { href: '/resine-espandenti-fondazioni/', label: 'Resine espandenti per le fondazioni' },
+      { href: '/costo-consolidamento-fondazioni/', label: 'Da che cosa dipende il costo' },
+    ],
+  },
+];
 ---
 
 <BaseLayout
@@ -94,6 +151,37 @@ const observationPoints = [
             <h3>{step.title}</h3>
             <p>{step.text}</p>
           </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-directory" id="guide" aria-labelledby="directory-title">
+    <div class="container">
+      <div class="section-heading directory-heading">
+        <div>
+          <p class="eyebrow">Esplora per situazione</p>
+          <h2 id="directory-title">Scegli da dove partire</h2>
+        </div>
+        <p class="directory-intro">
+          Non tutte le persone arrivano con la stessa domanda. Parti dal contesto che assomiglia di più a ciò che hai osservato.
+        </p>
+      </div>
+      <div class="topic-directory">
+        {topicGroups.map((group) => (
+          <section class="topic-card" aria-labelledby={`topic-${group.id}`}>
+            <p class="topic-eyebrow">{group.eyebrow}</p>
+            <h3 id={`topic-${group.id}`}>{group.title}</h3>
+            <p class="topic-description">{group.text}</p>
+            <nav class="topic-links" aria-label={`Guide: ${group.title}`}>
+              {group.links.map((link) => (
+                <a href={link.href}>
+                  <span>{link.label}</span>
+                  <span class="topic-arrow" aria-hidden="true">↗</span>
+                </a>
+              ))}
+            </nav>
+          </section>
         ))}
       </div>
     </div>

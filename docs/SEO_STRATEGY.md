@@ -176,6 +176,28 @@ identificato.
 
 ## Link e promozione
 
+### Architettura dei collegamenti interni
+
+La homepage deve funzionare come ingresso ai principali percorsi, non come un
+elenco piatto di URL. La sezione "Scegli da dove partire" raggruppa quindi le
+pagine indicizzabili in quattro percorsi comprensibili dall'utente:
+
+- crepe e fessurazioni;
+- documentazione e preparazione;
+- terreno, fondazioni e pavimenti;
+- tecniche e fattori di costo.
+
+Ogni pagina informativa attiva è raggiungibile dalla homepage con un link HTML
+standard e un testo descrittivo. Le pagine continuano inoltre a collegarsi tra
+loro quando il passaggio è utile al percorso: la homepage orienta, le guide
+approfondiscono e il modulo raccoglie una richiesta neutra. Le pagine legali,
+di conferma e di servizio restano fuori dalla directory editoriale e sono
+raggiungibili dai percorsi dedicati.
+
+Questa struttura è una scelta di usabilità e crawling, non una promessa di
+posizionamento: la priorità resta la pertinenza della pagina per l'intento e
+la qualità del contenuto.
+
 Non usare backlink automatici. Gli asset più adatti a ottenere citazioni sono:
 
 - guida pilastro realmente completa;

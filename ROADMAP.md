@@ -291,3 +291,9 @@ della homepage e l'icona del sito.
 Il 2026-09-22 è stata rivista la prima parte del funnel sulle cinque pagine
 prioritarie emerse da Search Console: blocco contestuale per il prossimo passo,
 link pratici verso il modulo e riduzione dei collegamenti correlati meno utili.
+
+Il 2026-09-22 la homepage è stata organizzata come directory editoriale in
+quattro percorsi: crepe e fessurazioni, documentazione, terreno/fondazioni e
+tecniche/costi. Tutte le pagine informative attive sono ora raggiungibili dalla
+home con link descrittivi; le pagine di servizio e legali restano nei loro
+percorsi dedicati.
