@@ -5,62 +5,62 @@ import NextStep from '../../components/NextStep.astro';
 const contexts = [
   {
     number: '01',
-    title: 'Che cosa è cambiato',
-    text: 'Spiega se il pavimento sembra più basso, inclinato, deformato o diverso in un punto preciso. Questa sensazione non dice da sola che cosa ci sia sotto la finitura.',
+    title: 'La superficie',
+    text: 'Piastrelle, parquet, giunti, soglie e battiscopa possono essersi deformati o essersi staccati. Da una descrizione non si può capire se il problema riguarda solo la finitura o anche ciò che c’è sotto.',
   },
   {
     number: '02',
-    title: 'Finitura e ambiente',
-    text: 'Piastrelle, parquet, giunti, soglie, battiscopa e pareti vicine aiutano a capire dove si trova il problema. Un difetto della finitura non dimostra da solo un movimento del sottofondo o dell’edificio.',
+    title: 'La base sotto il pavimento',
+    text: 'Per capire se il dislivello riguarda il sottofondo o altri elementi sotto la superficie, serve un controllo sul posto. Il tecnico può stabilire quali parti esaminare.',
   },
   {
     number: '03',
     title: 'Acqua, lavori e terreno',
-    text: 'Perdite, infiltrazioni, umidità, scavi, ristrutturazioni e cambiamenti del terreno possono aiutare a ricostruire la storia. La loro coincidenza non stabilisce una causa.',
+    text: 'Una perdita, un’infiltrazione, un lavoro recente o un cambiamento del terreno possono essere collegati al problema. Da soli, però, non spiegano che cosa sia successo.',
   },
 ];
 
 const checklist = [
-  'in quale stanza e in quale punto si trova il problema, anche in modo approssimativo;',
-  'che cosa percepisci: inclinazione, avvallamento, rumore, movimento o un dislivello tra finiture;',
-  'quando l’hai notato e se nello stesso periodo ricordi perdite, infiltrazioni, lavori o altri cambiamenti;',
+  'Dove si trova: indica la stanza e il punto preciso, per esempio vicino a una soglia o a una parete;',
+  'Che cosa noti: descrivi se il pavimento sembra inclinato, più basso, deformato, rumoroso o instabile al passaggio;',
+  'Da quando succede: indica quando te ne sei accorto e se nello stesso periodo ricordi perdite, infiltrazioni, lavori o altri cambiamenti;',
 ];
 
 const questions = [
   {
-    title: 'Che cosa deve controllare il tecnico?',
-    text: 'Chiedi quali parti del pavimento, delle pareti, dell’edificio o del terreno siano pertinenti per il caso concreto.',
+    title: 'Quale parte deve essere controllata?',
+    text: 'Chiedi se il controllo deve riguardare soltanto la finitura oppure anche il sottofondo, le pareti, il terreno o altri elementi dell’immobile.',
   },
   {
-    title: 'Come distinguere finitura e sottofondo?',
-    text: 'Domanda quali verifiche possano chiarire il contesto e quali limiti abbiano fotografie, sensazioni al passaggio e controlli domestici.',
+    title: 'Quali verifiche servono per capire il problema?',
+    text: 'Chiedi quali controlli siano necessari e che cosa possano chiarire. Una fotografia o una prova fatta in casa non sostituiscono queste verifiche.',
   },
   {
-    title: 'Che cosa portare se hai già dei documenti?',
-    text: 'Se hai foto, fatture o documenti di lavori precedenti, puoi mostrarli. Non serve cercare documenti o ricostruire informazioni che non hai.',
+    title: 'Che cosa conviene fare prima di un lavoro?',
+    text: 'Prima di rompere, riparare o scegliere una tecnica, chiedi quale problema è stato individuato, su quali elementi si basa la valutazione e che cosa si vuole ottenere.',
   },
 ];
 
 const faq = [
   {
-    question: 'Come capire se il pavimento sta sprofondando?',
-    answer: 'Non è possibile confermarlo da una fotografia o dalla sola percezione di un dislivello. Puoi descrivere posizione, finitura, date, acqua e lavori; il loro significato richiede una valutazione riferita al caso reale.',
+    question: 'Come faccio a capire se il pavimento sta sprofondando?',
+    answer: 'Da solo non puoi stabilire la causa guardando un dislivello o una fotografia. Descrivi dove si trova il problema, che cosa noti e da quando; un tecnico può poi verificare il caso sul posto.',
   },
   {
     question: 'Un avvallamento dimostra un cedimento del terreno?',
-    answer: 'No. Un avvallamento può riguardare la finitura o altri elementi del pavimento e può avere contesti diversi. La vicinanza al terreno o alle fondazioni non dimostra da sola una causa.',
+    answer: 'No. Un avvallamento può riguardare la finitura o altri elementi del pavimento e può avere cause diverse. La vicinanza al terreno o alle fondazioni non basta per stabilire un collegamento.',
   },
   {
     question: 'Devo rompere le piastrelle per controllare?',
-    answer: 'No. Non rimuovere finiture, scavare o fare prove con colpi e pressioni per confermare un’ipotesi. Se hai già delle foto, puoi mostrarle; per il resto chiedi quali verifiche siano appropriate.',
+    answer: 'No. Non rimuovere finiture, scavare o fare prove con colpi e pressioni per cercare una conferma. Se hai già delle foto, puoi mostrarle al tecnico; non serve alterare il pavimento.',
   },
   {
     question: 'L’umidità può spiegare il pavimento che sprofonda?',
-    answer: 'Perdite, infiltrazioni e umidità sono informazioni da riferire, ma non spiegano da sole un cambiamento. Il loro ruolo va valutato insieme a finitura, sottofondo, ambiente, terreno e cronologia.',
+    answer: 'Perdite, infiltrazioni e umidità possono essere collegate al problema, ma non lo spiegano da sole. Il tecnico deve valutarle insieme alle condizioni del pavimento e dell’immobile.',
   },
   {
     question: 'Devo chiedere subito un consolidamento?',
-    answer: 'Non è possibile scegliere una tecnica sulla base di una descrizione o di una fotografia. Prima occorre comprendere che cosa è stato osservato e quali verifiche siano pertinenti.',
+    answer: 'Non scegliere un consolidamento soltanto perché il pavimento sembra abbassato. Prima bisogna capire quale parte dell’immobile è coinvolta e quali verifiche servono.',
   },
   {
     question: 'Cosa faccio se il passaggio o la zona possono richiedere attenzione urgente?',
@@ -92,41 +92,43 @@ const faq = [
       <aside class="sinking-floor-index" aria-label="In questa guida">
         <p class="sinking-floor-index-title">In questa guida</p>
         <nav>
-          <a href="#risposta">La risposta breve</a>
-          <a href="#attenzione">Quando fermarti</a>
-          <a href="#contesto">Tre elementi da capire</a>
+        <a href="#risposta">La prima cosa da fare</a>
+          <a href="#attenzione">Se la zona non è sicura</a>
+          <a href="#contesto">Che cosa può essere cambiato</a>
           <a href="#checklist">Che cosa dire al tecnico</a>
-          <a href="#verifica">Prima di valutare lavori</a>
+          <a href="#verifica">Prima di fare lavori</a>
           <a href="#faq">Domande frequenti</a>
-          <a href="#fonti">Fonti istituzionali</a>
+        <a href="#fonti">Fonti per approfondire</a>
         </nav>
       </aside>
 
       <div class="sinking-floor-content">
         <section class="sinking-floor-section sinking-floor-intro" id="risposta" aria-labelledby="answer-title">
-          <p class="eyebrow">La risposta breve</p>
-          <h2 id="answer-title">Un dislivello non dimostra da solo che il pavimento stia cedendo</h2>
+          <p class="eyebrow">La prima cosa da fare</p>
+          <h2 id="answer-title">Prima di rompere, racconta dove si trova il problema</h2>
           <p>
-            Un pavimento può apparire inclinato, presentare un avvallamento, avere una finitura sollevata o dare una
-            sensazione diversa al passaggio. Da questi segnali, da soli, non si può capire quale parte sia coinvolta.
+            Se il pavimento ti sembra più basso, inclinato o cedevole, non iniziare rompendo piastrelle e non cercare
+            di vedere sotto la superficie. Da una sensazione o da una fotografia non si può capire se il problema
+            riguarda la finitura, il sottofondo, il terreno o un altro elemento.
           </p>
           <p>
-            Prima di decidere se riparare o intervenire, evita di rompere la superficie. Un tecnico qualificato può
-            stabilire sul posto quali parti controllare e quali verifiche siano pertinenti.
+            Per prima cosa evita prove e lavori fai da te. Se il cambiamento è improvviso, il pavimento ostacola il
+            passaggio o ci sono acqua, distacchi o fessure, non usare la zona e chiedi tempestivamente supporto
+            qualificato.
           </p>
           <div class="sinking-floor-note">
-            <strong>Descrivi il punto prima di interpretarlo</strong>
-            <p>“Nel corridoio la soglia sembra più alta rispetto alla piastrella, dopo una perdita notata a maggio” descrive ciò che hai visto. “Il pavimento sta sprofondando” è un’ipotesi da verificare.</p>
+            <strong>Che cosa dire</strong>
+            <p>Puoi dire: “Nel corridoio sento un dislivello vicino alla soglia; me ne sono accorto dopo una perdita a maggio”. È più utile indicare luogo, sensazione e periodo che concludere già che “il pavimento sta sprofondando”.</p>
           </div>
         </section>
 
         <section class="sinking-floor-section sinking-floor-alert sinking-floor-alert-top" id="attenzione" aria-labelledby="attention-title">
-          <p class="eyebrow">Prima la sicurezza</p>
-          <h2 id="attention-title">Quando non devi avvicinarti</h2>
+          <p class="eyebrow">Se la zona non è sicura</p>
+          <h2 id="attention-title">Non entrare e non fare prove</h2>
           <p>
-            Se il cambiamento è improvviso, il pavimento ostacola il passaggio oppure ci sono acqua, distacchi o
-            fessure associate, evita la zona. Non spostare carichi, non rimuovere finiture e non fare prove per capire
-            che cosa c’è sotto.
+            Evita la zona se il pavimento ostacola il passaggio, se ci sono acqua, distacchi o fessure associate,
+            oppure se il cambiamento è avvenuto rapidamente. Non spostare carichi e non rimuovere piastrelle o altre
+            finiture per capire che cosa c’è sotto.
           </p>
           <p>
             Allontanati se necessario e rivolgiti tempestivamente a un professionista qualificato o alle autorità
@@ -135,8 +137,8 @@ const faq = [
         </section>
 
         <NextStep
-          title="Racconta che cosa sta succedendo"
-          text="Non devi stabilire se il pavimento stia cedendo né scegliere un intervento. Racconta dove si trova il problema e chiedi qual è il passo successivo."
+          title="Vuoi capire qual è il prossimo passo?"
+          text="Non devi stabilire la causa né scegliere un intervento. Racconta dove si trova il problema e da quando lo noti: ti sarà più facile capire come procedere."
           primary={{ href: '/richiedi-valutazione/', label: 'Racconta il problema' }}
           secondaryLinks={[
             { href: '/crepe-nei-muri/informazioni-per-tecnico/', label: 'Che cosa dire al tecnico' },
@@ -144,11 +146,11 @@ const faq = [
         />
 
         <section class="sinking-floor-section" id="contesto" aria-labelledby="context-title">
-          <p class="eyebrow">Possibili elementi di contesto</p>
-          <h2 id="context-title">Tre elementi da capire senza rompere la superficie</h2>
+          <p class="eyebrow">Possibili cause e contesti</p>
+          <h2 id="context-title">Che cosa può essere cambiato?</h2>
           <p>
-            Parti da ciò che puoi vedere senza spostare mobili o fare demolizioni. Se una parte non è raggiungibile,
-            basta dirlo.
+            Da una pagina web non si può stabilire la causa. Durante un sopralluogo, invece, il tecnico può verificare
+            se il segno riguarda la superficie, ciò che si trova sotto o il contesto dell’immobile.
           </p>
           <div class="sinking-floor-contexts">
             {contexts.map((item) => (
@@ -162,11 +164,11 @@ const faq = [
         </section>
 
         <section class="sinking-floor-section" id="checklist" aria-labelledby="checklist-title">
-          <p class="eyebrow">Per parlare con il tecnico</p>
-          <h2 id="checklist-title">Che cosa dire, senza diventare un tecnico</h2>
+          <p class="eyebrow">Quando chiami un tecnico</p>
+          <h2 id="checklist-title">Racconta queste tre cose</h2>
           <p>
-            Bastano posizione, cambiamento e periodo in cui l’hai notato. Se non sai che cosa si trovi sotto la finitura,
-            non devi indovinarlo.
+            Non devi conoscere i materiali o la struttura del pavimento. Bastano il luogo, quello che noti e il periodo
+            in cui è iniziato.
           </p>
           <ul class="sinking-floor-list">
             {checklist.map((item, index) => (
@@ -174,17 +176,17 @@ const faq = [
             ))}
           </ul>
           <div class="sinking-floor-limit">
-            <strong>Non confondere una sensazione con una misura</strong>
-            <p>“Sento un dislivello passando dalla stanza al corridoio” descrive una sensazione. Non dimostra che il sottofondo o il terreno si siano abbassati.</p>
+            <strong>Non devi sapere che cosa c’è sotto</strong>
+            <p>Dire “sento un dislivello passando dalla stanza al corridoio” è sufficiente per iniziare. Stabilire se il sottofondo o il terreno si siano abbassati spetta al tecnico.</p>
           </div>
         </section>
 
         <section class="sinking-floor-section" id="verifica" aria-labelledby="verification-title">
-          <p class="eyebrow">Valutazione professionale</p>
-          <h2 id="verification-title">Che cosa capire prima di valutare lavori</h2>
+          <p class="eyebrow">Prima di fare lavori</p>
+          <h2 id="verification-title">Che cosa chiedere al tecnico</h2>
           <p>
-            La domanda giusta non è ancora quale tecnica scegliere. Prima bisogna capire che cosa è successo e quale
-            parte dell’immobile va valutata.
+            Prima di rompere, riparare o scegliere un consolidamento, chiedi che cosa è stato individuato e quale parte
+            dell’immobile deve essere controllata.
           </p>
           <div class="sinking-floor-questions">
             {questions.map((item) => (
@@ -195,8 +197,8 @@ const faq = [
             ))}
           </div>
           <p>
-            Un tecnico qualificato può indicare quali controlli servono e se siano necessari approfondimenti. Il modulo
-            serve a raccontare il problema e non sostituisce un sopralluogo.
+            Un tecnico qualificato può spiegare quali controlli servono e se sono necessari ulteriori approfondimenti.
+            Il modulo serve a raccontare il problema, non sostituisce un sopralluogo e non sceglie i lavori al posto tuo.
           </p>
         </section>
 
@@ -215,10 +217,10 @@ const faq = [
 
         <section class="sinking-floor-sources" id="fonti" aria-labelledby="sources-title">
           <p class="eyebrow">Per approfondire</p>
-          <h2 id="sources-title">Fonti istituzionali sul contesto delle verifiche</h2>
+          <h2 id="sources-title">Fonti per approfondire</h2>
           <p>
-            Le fonti seguenti descrivono procedure e norme generali. Non sono strumenti per diagnosticare un pavimento
-            o un edificio a distanza e non sostituiscono una valutazione professionale riferita all’immobile.
+            Queste fonti descrivono procedure e norme generali. Non permettono di capire a distanza che cosa stia
+            succedendo al tuo pavimento e non sostituiscono una valutazione professionale.
           </p>
           <ul>
             <li><a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/" target="_blank" rel="noreferrer">Dipartimento della Protezione Civile — Scheda AeDES</a></li>
@@ -229,15 +231,13 @@ const faq = [
 
         <section class="sinking-floor-related" aria-labelledby="related-title">
           <p class="eyebrow">Continua il percorso</p>
-          <h2 id="related-title">Dalla superficie al contesto</h2>
+          <h2 id="related-title">Se vuoi continuare a capire il problema</h2>
           <p>
-            Se noti una crepa, un dislivello o un possibile cambiamento del terreno, puoi confrontare le guide
-            e capire quale professionista contattare.
+            Puoi leggere come parlare con un tecnico oppure raccontarci direttamente che cosa sta succedendo.
           </p>
           <div class="sinking-floor-links">
             <a href="/crepe-nei-muri/crepe-sul-pavimento/">Crepe sul pavimento: cosa fare <span aria-hidden="true">→</span></a>
             <a href="/crepe-nei-muri/informazioni-per-tecnico/">Che cosa dire al tecnico <span aria-hidden="true">→</span></a>
-            <a href="/crepe-nei-muri/come-fotografare-monitorare-crepa/">Come fotografare e monitorare una crepa <span aria-hidden="true">→</span></a>
             <a href="/richiedi-valutazione/">Chiedi una valutazione <span aria-hidden="true">→</span></a>
           </div>
         </section>
