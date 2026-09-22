@@ -68,11 +68,15 @@ a {
   width: 1.8rem;
   height: 1.8rem;
   place-items: center;
-  border: 1px solid var(--brand);
-  border-radius: 50%;
-  color: var(--accent);
-  font-size: 1.35rem;
-  line-height: 1;
+  border-radius: 0.6rem;
+  background: var(--brand-dark);
+  color: var(--paper);
+  box-shadow: 0 0.35rem 0.8rem rgb(24 61 56 / 16%);
+}
+
+.brand-mark svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .brand-muted {
@@ -251,117 +255,50 @@ h1 em {
 .hero-visual {
   position: relative;
   min-height: 31rem;
+  padding: 1.2rem 0 2.5rem;
 }
 
-.visual-card {
-  position: absolute;
-  width: min(100%, 27rem);
-  aspect-ratio: 0.82;
-  border-radius: 1.4rem;
-  transform: rotate(5deg);
-}
-
-.visual-card-back {
-  top: 1.8rem;
-  right: 1rem;
-  background: var(--accent-soft);
-}
-
-.visual-card-front {
-  top: 0;
-  right: 3.5rem;
+.hero-image-frame {
+  position: relative;
+  width: min(100%, 35rem);
+  margin: 0 0 0 auto;
   overflow: hidden;
-  background: #dbe5da;
-  box-shadow: 0 1.5rem 3rem rgb(33 52 50 / 12%);
-  transform: rotate(-5deg);
-}
-
-.visual-card-front::before,
-.visual-card-front::after {
-  position: absolute;
-  background: var(--brand);
-  content: '';
-  opacity: 0.85;
-}
-
-.visual-card-front::before {
-  top: -2rem;
-  left: 48%;
-  width: 0.16rem;
-  height: 16rem;
-  transform: rotate(32deg);
-}
-
-.visual-card-front::after {
-  top: 12rem;
-  left: 35%;
-  width: 11rem;
-  height: 0.16rem;
-  transform: rotate(-27deg);
-}
-
-.visual-label {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  color: var(--brand-dark);
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 2rem;
-  font-style: italic;
-}
-
-.visual-line {
-  position: absolute;
-  left: 2rem;
-  height: 1px;
-  background: rgb(33 52 50 / 28%);
-}
-
-.visual-line-one {
-  top: 6.5rem;
-  width: 6rem;
-}
-
-.visual-line-two {
-  top: 7.3rem;
-  width: 9rem;
-}
-
-.visual-line-three {
-  top: 8.1rem;
-  width: 7rem;
-}
-
-.visual-dot {
-  position: absolute;
-  width: 0.75rem;
-  height: 0.75rem;
-  border: 2px solid var(--accent);
-  border-radius: 50%;
+  border: 0.65rem solid var(--surface);
+  border-radius: 1.5rem;
   background: var(--surface);
+  box-shadow: 0 1.7rem 3.5rem rgb(33 52 50 / 18%);
+  transform: rotate(2deg);
 }
 
-.visual-dot-one {
-  top: 13.5rem;
-  left: 9rem;
+.hero-image-frame::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgb(255 253 249 / 68%);
+  border-radius: 0.9rem;
+  content: '';
+  pointer-events: none;
 }
 
-.visual-dot-two {
-  top: 20rem;
-  left: 14rem;
+.hero-image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
 }
 
 .visual-caption {
   position: absolute;
-  right: 0;
-  bottom: 1rem;
+  right: -0.5rem;
+  bottom: 0;
   padding: 0.8rem 1rem;
   border: 1px solid rgb(33 52 50 / 12%);
   border-radius: 0.75rem;
-  background: rgb(255 253 249 / 84%);
+  background: rgb(255 253 249 / 94%);
   color: var(--muted);
   font-size: 0.78rem;
   line-height: 1.45;
+  box-shadow: 0 0.7rem 1.4rem rgb(33 52 50 / 10%);
 }
 
 .section {
@@ -723,16 +660,9 @@ h2 {
     min-height: 20rem;
   }
 
-  .visual-card {
-    width: 72%;
-  }
-
-  .visual-card-front {
-    right: 17%;
-  }
-
-  .visual-card-back {
-    right: 7%;
+  .hero-image-frame {
+    width: 92%;
+    margin-inline: auto;
   }
 
   .visual-caption {

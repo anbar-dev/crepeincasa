@@ -28,6 +28,7 @@
 - [x] CTA richiesta valutazione
 - [x] Disclaimer corretti
 - [x] Controllo mobile
+- [x] Hero fotografico, marchio rinnovato e favicon
 
 > Phase 1 completata il 2026-08-06.
 
@@ -283,3 +284,6 @@ state uniformate le formule delle pagine, dei pulsanti, del modulo, dei
 documenti legali e dei componenti condivisi, sostituendo espressioni poco
 naturali o troppo vicine al linguaggio tecnico-organizzativo inglese con un
 italiano più diretto.
+
+Il 2026-09-22 sono stati rinnovati il marchio della testata, l'immagine hero
+della homepage e l'icona del sito.
