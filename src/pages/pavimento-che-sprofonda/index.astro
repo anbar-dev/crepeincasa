@@ -21,49 +21,24 @@ const contexts = [
 ];
 
 const checklist = [
-  'stanza, posizione e dimensione approssimativa dell’area in cui percepisci il cambiamento;',
-  'tipo di superficie visibile e condizioni della finitura: piastrelle, parquet, massetto, giunti, soglie o battiscopa;',
-  'che cosa percepisci esattamente: inclinazione, avvallamento, rumore, movimento o semplice dislivello tra finiture;',
-  'quando hai notato il cambiamento e se esistono fotografie, fatture o documenti di lavori precedenti;',
-  'perdite, infiltrazioni, ristagni, umidità o variazioni degli impianti ricordati nello stesso periodo;',
-  'quali pareti, porte, soglie, ambienti vicini o aree esterne presentano osservazioni contemporanee, senza dedurre un collegamento.',
-];
-
-const comparisonSteps = [
-  {
-    title: 'Indica un riferimento',
-    text: 'Usa la soglia, una parete o un giunto per riconoscere il punto nelle foto e nelle note. Non spostare mobili pesanti né rimuovere la finitura per vedere sotto.',
-  },
-  {
-    title: 'Confronta nel tempo',
-    text: 'Conserva foto originali e date. Luce, prospettiva, arredi e finiture possono cambiare la percezione: segnala quando il confronto non è preciso.',
-  },
-  {
-    title: 'Collega senza concludere',
-    text: 'Annota se nello stesso periodo hai notato acqua, lavori, fessure o cambiamenti nelle porte. La sequenza aiuta a raccontare i fatti, non a dimostrare la causa.',
-  },
+  'in quale stanza e in quale punto si trova il problema, anche in modo approssimativo;',
+  'che cosa percepisci: inclinazione, avvallamento, rumore, movimento o un dislivello tra finiture;',
+  'quando l’hai notato e se nello stesso periodo ricordi perdite, infiltrazioni, lavori o altri cambiamenti;',
 ];
 
 const questions = [
   {
-    title: 'Che cosa va osservato oltre alla superficie?',
-    text: 'Chiedi quali parti del pavimento, delle pareti, dell’edificio o del terreno siano pertinenti e quali informazioni manchino per il caso concreto.',
+    title: 'Che cosa deve controllare il tecnico?',
+    text: 'Chiedi quali parti del pavimento, delle pareti, dell’edificio o del terreno siano pertinenti per il caso concreto.',
   },
   {
     title: 'Come distinguere finitura e sottofondo?',
     text: 'Domanda quali verifiche possano chiarire il contesto e quali limiti abbiano fotografie, sensazioni al passaggio e controlli domestici.',
   },
   {
-    title: 'Quali documenti possono essere utili?',
-    text: 'Riferisci lavori, rifacimenti, perdite e ripristini con date. Chiedi quali documenti o informazioni siano pertinenti prima di valutare opere.',
+    title: 'Che cosa portare se hai già dei documenti?',
+    text: 'Se hai foto, fatture o documenti di lavori precedenti, puoi mostrarli. Non serve cercare documenti o ricostruire informazioni che non hai.',
   },
-];
-
-const attentionPoints = [
-  'piastrelle o altri materiali che si sollevano, si frantumano o creano un ostacolo al passaggio;',
-  'acqua, gas, cavi esposti o una condizione che rende rischioso entrare o avvicinarsi;',
-  'un cambiamento percepito come rapido o associato a fessure, distacchi o variazioni del terreno;',
-  'una verifica che richiederebbe di sollevare pavimenti, spostare carichi, scavare o usare strumenti non disponibili.',
 ];
 
 const faq = [
@@ -77,7 +52,7 @@ const faq = [
   },
   {
     question: 'Devo rompere le piastrelle per controllare?',
-    answer: 'No. Non rimuovere finiture, scavare o fare prove con colpi e pressioni per confermare un’ipotesi. Documenta ciò che puoi osservare senza alterare il pavimento e chiedi quali verifiche siano appropriate.',
+    answer: 'No. Non rimuovere finiture, scavare o fare prove con colpi e pressioni per confermare un’ipotesi. Se hai già delle foto, puoi mostrarle; per il resto chiedi quali verifiche siano appropriate.',
   },
   {
     question: 'L’umidità può spiegare il pavimento che sprofonda?',
@@ -102,13 +77,14 @@ const faq = [
   <article class="sinking-floor-page">
     <header class="sinking-floor-hero">
       <div class="container sinking-floor-hero-inner">
-        <p class="eyebrow">Guida a pavimento, ambiente e contesto</p>
-        <h1>Pavimento che sprofonda: cosa fare prima di una verifica</h1>
+        <p class="eyebrow">Se il pavimento sembra abbassato o inclinato</p>
+        <h1>Pavimento che sprofonda: cosa fare e quando chiamare un tecnico</h1>
         <p class="sinking-floor-lead">
-          “Pavimento che sprofonda” descrive una percezione o una preoccupazione, non un fatto che si possa confermare
-          da una fotografia. Prima di rompere o riparare, conviene capire dove si trova il problema e che cosa è successo.
+          Se il pavimento sembra abbassato, inclinato o cedevole, non romperlo e non provare a sistemarlo alla cieca.
+          Se il cambiamento è improvviso o ci sono acqua, distacchi o fessure, evita la zona e chiedi subito supporto
+          qualificato. Negli altri casi, il passo corretto è farlo vedere sul posto.
         </p>
-        <p class="sinking-floor-meta">Tempo di lettura: circa 8 minuti · Nessuna diagnosi a distanza</p>
+        <p class="sinking-floor-meta">Guida pratica · Nessuna diagnosi a distanza</p>
       </div>
     </header>
 
@@ -117,11 +93,10 @@ const faq = [
         <p class="sinking-floor-index-title">In questa guida</p>
         <nav>
           <a href="#risposta">La risposta breve</a>
+          <a href="#attenzione">Quando fermarti</a>
           <a href="#contesto">Tre elementi da capire</a>
-          <a href="#checklist">Che cosa serve sapere</a>
-          <a href="#confronto">Come ricostruire la storia</a>
+          <a href="#checklist">Che cosa dire al tecnico</a>
           <a href="#verifica">Prima di valutare lavori</a>
-          <a href="#attenzione">Prima la sicurezza</a>
           <a href="#faq">Domande frequenti</a>
           <a href="#fonti">Fonti istituzionali</a>
         </nav>
@@ -133,11 +108,11 @@ const faq = [
           <h2 id="answer-title">Un dislivello non dimostra da solo che il pavimento stia cedendo</h2>
           <p>
             Un pavimento può apparire inclinato, presentare un avvallamento, avere una finitura sollevata o dare una
-            sensazione diversa al passaggio. Queste osservazioni non dicono da sole quale strato o quale elemento sia coinvolto.
+            sensazione diversa al passaggio. Da questi segnali, da soli, non si può capire quale parte sia coinvolta.
           </p>
           <p>
-            Prima di decidere se riparare o intervenire, conviene distinguere superficie, ambiente, acqua, lavori e
-            cronologia. Un professionista può stabilire sul posto quali parti e quali verifiche siano pertinenti.
+            Prima di decidere se riparare o intervenire, evita di rompere la superficie. Un tecnico qualificato può
+            stabilire sul posto quali parti controllare e quali verifiche siano pertinenti.
           </p>
           <div class="sinking-floor-note">
             <strong>Descrivi il punto prima di interpretarlo</strong>
@@ -145,13 +120,26 @@ const faq = [
           </div>
         </section>
 
+        <section class="sinking-floor-section sinking-floor-alert sinking-floor-alert-top" id="attenzione" aria-labelledby="attention-title">
+          <p class="eyebrow">Prima la sicurezza</p>
+          <h2 id="attention-title">Quando non devi avvicinarti</h2>
+          <p>
+            Se il cambiamento è improvviso, il pavimento ostacola il passaggio oppure ci sono acqua, distacchi o
+            fessure associate, evita la zona. Non spostare carichi, non rimuovere finiture e non fare prove per capire
+            che cosa c’è sotto.
+          </p>
+          <p>
+            Allontanati se necessario e rivolgiti tempestivamente a un professionista qualificato o alle autorità
+            competenti. Questo sito non è un servizio di emergenza.
+          </p>
+        </section>
+
         <NextStep
-          title="Vuoi capire come procedere?"
-          text="Non devi stabilire se il pavimento stia cedendo né scegliere un intervento. Racconta dove si trova il problema e chiedi un confronto sul posto."
-          primary={{ href: '/richiedi-valutazione/', label: 'Chiedi una valutazione' }}
+          title="Racconta che cosa sta succedendo"
+          text="Non devi stabilire se il pavimento stia cedendo né scegliere un intervento. Racconta dove si trova il problema e chiedi qual è il passo successivo."
+          primary={{ href: '/richiedi-valutazione/', label: 'Racconta il problema' }}
           secondaryLinks={[
             { href: '/crepe-nei-muri/informazioni-per-tecnico/', label: 'Che cosa dire al tecnico' },
-            { href: '/crepe-nei-muri/come-fotografare-monitorare-crepa/', label: 'Come documentare foto e date' },
           ]}
         />
 
@@ -159,8 +147,8 @@ const faq = [
           <p class="eyebrow">Possibili elementi di contesto</p>
           <h2 id="context-title">Tre elementi da capire senza rompere la superficie</h2>
           <p>
-            Parti da ciò che puoi vedere dalla posizione normale e accessibile. Se una parte è coperta da mobili o non
-            è raggiungibile, segnalalo senza spostare carichi o fare demolizioni.
+            Parti da ciò che puoi vedere senza spostare mobili o fare demolizioni. Se una parte non è raggiungibile,
+            basta dirlo.
           </p>
           <div class="sinking-floor-contexts">
             {contexts.map((item) => (
@@ -174,10 +162,10 @@ const faq = [
         </section>
 
         <section class="sinking-floor-section" id="checklist" aria-labelledby="checklist-title">
-          <p class="eyebrow">Per spiegare il problema</p>
-          <h2 id="checklist-title">Che cosa serve sapere prima di chiamare un tecnico</h2>
+          <p class="eyebrow">Per parlare con il tecnico</p>
+          <h2 id="checklist-title">Che cosa dire, senza diventare un tecnico</h2>
           <p>
-            Bastano posizione, data e cambiamenti in parole semplici. Se non sai che cosa si trovi sotto la finitura,
+            Bastano posizione, cambiamento e periodo in cui l’hai notato. Se non sai che cosa si trovi sotto la finitura,
             non devi indovinarlo.
           </p>
           <ul class="sinking-floor-list">
@@ -189,24 +177,6 @@ const faq = [
             <strong>Non confondere una sensazione con una misura</strong>
             <p>“Sento un dislivello passando dalla stanza al corridoio” descrive una sensazione. Non dimostra che il sottofondo o il terreno si siano abbassati.</p>
           </div>
-        </section>
-
-        <section class="sinking-floor-section" id="confronto" aria-labelledby="comparison-title">
-          <p class="eyebrow">Cronologia prudente</p>
-          <h2 id="comparison-title">Ricostruisci la storia senza fare prove sul pavimento</h2>
-          <div class="sinking-floor-steps">
-            {comparisonSteps.map((item, index) => (
-              <article class="sinking-floor-step">
-                <p class="sinking-floor-step-number">{String(index + 1).padStart(2, '0')}</p>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-          <p>
-            Le fotografie e le date servono a raccontare il contesto, non a misurare professionalmente un dislivello
-            né a stabilire se esista un cedimento. Se il cambiamento sembra rapido o coinvolge più elementi, fermati.
-          </p>
         </section>
 
         <section class="sinking-floor-section" id="verifica" aria-labelledby="verification-title">
@@ -227,24 +197,6 @@ const faq = [
           <p>
             Un tecnico qualificato può indicare quali controlli servono e se siano necessari approfondimenti. Il modulo
             serve a raccontare il problema e non sostituisce un sopralluogo.
-          </p>
-        </section>
-
-        <section class="sinking-floor-section sinking-floor-alert" id="attenzione" aria-labelledby="attention-title">
-          <p class="eyebrow">Prima la sicurezza</p>
-          <h2 id="attention-title">Quando fermarti</h2>
-          <p>
-            Non rendere più rischiosa la raccolta delle informazioni. Evita di entrare in zone non accessibili,
-            spostare carichi, rimuovere finiture o fare prove sul pavimento e sul terreno.
-          </p>
-          <ul class="sinking-floor-list sinking-floor-list-plain">
-            {attentionPoints.map((item) => <li><span aria-hidden="true">—</span><p>{item}</p></li>)}
-          </ul>
-          <p>
-            In condizioni che potrebbero richiedere attenzione urgente, allontanati se necessario e rivolgiti
-            tempestivamente a un professionista qualificato o alle autorità competenti. Per il contesto delle verifiche
-            post-sisma, consulta la <a href="https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/" target="_blank" rel="noreferrer">scheda AeDES</a>
-            del Dipartimento della Protezione Civile. Questo sito non è un servizio di emergenza.
           </p>
         </section>
 
@@ -298,7 +250,7 @@ const faq = [
   .sinking-floor-page { background: var(--paper); }
   .sinking-floor-hero { border-bottom: 1px solid var(--line); background: var(--surface); }
   .sinking-floor-hero-inner { padding-block: clamp(4rem, 9vw, 7rem) clamp(3.5rem, 7vw, 5.5rem); }
-  .sinking-floor-hero h1 { max-width: 14ch; font-size: clamp(3rem, 7vw, 6rem); }
+  .sinking-floor-hero h1 { max-width: 17ch; font-size: clamp(2.8rem, 6vw, 5.4rem); }
   .sinking-floor-lead { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: clamp(1.12rem, 2vw, 1.4rem); line-height: 1.65; }
   .sinking-floor-meta { margin: 1.5rem 0 0; color: var(--soft-muted); font-size: 0.82rem; }
   .sinking-floor-layout { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: clamp(2rem, 7vw, 7rem); align-items: start; padding-block: clamp(3rem, 7vw, 6rem) clamp(5rem, 10vw, 9rem); }
@@ -328,6 +280,7 @@ const faq = [
   .sinking-floor-list p { margin: 0; color: var(--ink); font-size: 0.98rem; line-height: 1.6; }
   .sinking-floor-list-plain li { grid-template-columns: 1rem 1fr; }
   .sinking-floor-alert { padding: clamp(2rem, 5vw, 3.5rem); border: 0; border-radius: 1rem; background: var(--accent-soft); }
+  .sinking-floor-alert-top { margin-top: 2.5rem; }
   .sinking-floor-alert + .sinking-floor-section { margin-top: clamp(1rem, 3vw, 2.5rem); }
   .sinking-floor-faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
   .sinking-floor-faq-list details { border-bottom: 1px solid var(--line); }
@@ -350,7 +303,7 @@ const faq = [
   }
 
   @media (max-width: 620px) {
-    .sinking-floor-hero h1 { font-size: clamp(2.8rem, 14vw, 4.8rem); }
+    .sinking-floor-hero h1 { font-size: clamp(2.5rem, 12vw, 4.2rem); }
     .sinking-floor-links { grid-template-columns: 1fr; }
   }
 </style>
