@@ -36,7 +36,7 @@ const leadLink = '/richiedi-valutazione/';
           <a href="#risposta-breve">La risposta breve</a>
           <a href="#contesto">Il contesto</a>
           <a href="#osservare">Cosa osservare</a>
-          <a href="#limiti">Limiti online</a>
+          <a href="#limiti">Limiti della valutazione a distanza</a>
           <a href="#faq">Domande frequenti</a>
         </nav>
       </aside>
@@ -108,7 +108,7 @@ const leadLink = '/richiedi-valutazione/';
           <div>
             <p class="eyebrow">Per continuare</p>
             <h2 id="related-title">Confronta altri contesti</h2>
-            <p>Se la tua osservazione riguarda una forma o una posizione diversa, puoi consultare un’altra guida del cluster.</p>
+            <p>Se la tua osservazione riguarda una forma o una posizione diversa, puoi consultare un’altra guida sul tema.</p>
             <nav class="cluster-link-grid" aria-label="Guide correlate">
               {relatedPages.map((related) => (
                 <a href={`/crepe/${related.slug}/`}>{related.title.replace(':', ' —')} <span aria-hidden="true">→</span></a>
@@ -120,9 +120,9 @@ const leadLink = '/richiedi-valutazione/';
 
         <aside class="article-cta" aria-labelledby="cta-title">
           <p class="eyebrow">Un aiuto pratico</p>
-          <h2 id="cta-title">Vuoi mettere in ordine ciò che hai osservato?</h2>
+          <h2 id="cta-title">Vuoi raccogliere in modo ordinato ciò che hai osservato?</h2>
           <p>Il modulo crea soltanto un riepilogo neutro delle informazioni fornite. Non stabilisce la causa e non sostituisce una verifica sul posto.</p>
-          <a class="inline-link" href={leadLink}>Prepara una richiesta neutra <span aria-hidden="true">→</span></a>
+          <a class="inline-link" href={leadLink}>Prepara la tua richiesta <span aria-hidden="true">→</span></a>
         </aside>
       </div>
     </div>

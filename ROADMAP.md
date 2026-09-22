@@ -249,6 +249,7 @@ individuale.
 ## Phase 14 — Audit continuativo
 
 - [x] Audit dei flussi principali e semplificazione del percorso home → guida → richiesta
+- [x] Revisione linguistica trasversale di pagine, CTA, modulo e documenti legali
 - [ ] contenuti sottili e sovrapposizione d'intento;
 - [ ] title e meta description duplicati;
 - [ ] prudenza tecnica;
@@ -276,3 +277,9 @@ La guida sul costo del consolidamento delle fondazioni è stata aggiunta il
 2026-09-01. Il focus è distinguere verifiche, progetto, lavorazioni, cantiere,
 controlli e ripristini, senza pubblicare prezzi standard o usare il costo come
 indicazione della necessità di un intervento.
+
+La revisione linguistica trasversale è stata completata il 2026-09-22. Sono
+state uniformate le formule delle pagine, dei pulsanti, del modulo, dei
+documenti legali e dei componenti condivisi, sostituendo espressioni poco
+naturali o troppo vicine al linguaggio tecnico-organizzativo inglese con un
+italiano più diretto.

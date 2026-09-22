@@ -7,7 +7,7 @@ export const supportingGuides = [
   {
     href: '/crepe-nei-muri/quando-chiedere-verifica/',
     title: 'Quando chiedere una verifica',
-    description: 'Cambiamenti, contesto e informazioni da preparare prima di un confronto.',
+    description: 'Cambiamenti, contesto e informazioni da preparare prima di parlare con un professionista.',
   },
   {
     href: '/crepe-nei-muri/casa-nuova-dopo-lavori/',
@@ -27,7 +27,7 @@ export const supportingGuides = [
   {
     href: '/crepe-nei-muri/informazioni-per-tecnico/',
     title: 'Quali informazioni preparare per un tecnico',
-    description: 'Una checklist neutra di contesto, cronologia, foto e domande da portare al confronto.',
+    description: 'Un elenco neutro di contesto, cronologia, foto e domande da discutere con un professionista.',
   },
   {
     href: '/crepe-nei-muri/crepe-che-cambiano-nel-tempo/',
